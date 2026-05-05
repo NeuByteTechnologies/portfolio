@@ -40,10 +40,10 @@ Use Cases, and System Diagrams.
 For reviewer convenience, curated Markdown samples are provided:
 
 ### UI Specification Samples
-[!User  Interface Specification Sample Section](../portfolio/NeuByteTechnologies/FitnessApp/docs/UserInterfaceSpecs/UserInterfaceLogWorkout.md)]
+[User  Interface Specification Sample Section(../portfolio/NeuByteTechnologies/FitnessApp/docs/UserInterfaceSpecs/UserInterfaceLogWorkout.md)]
 
 ### Functional Specification Samples
-[Account Functional Specification](../portfolio//NeuByteTechnologies/FitnessApp/docs/FunctionalSpecs/Account/AccountFS.md)]
+[Account Functional Specification(../portfolio//NeuByteTechnologies/FitnessApp/docs/FunctionalSpecs/Account/AccountFS.md)]
 - Business Rules
 
 ### API Contract Samples
@@ -68,6 +68,6 @@ For reviewer convenience, curated Markdown samples are provided:
 - Data Flow Diagram
 - Domain Model
 
-Full documents (PDF , DOCX, XLSX) are available in [`/docs/API Contracts`](../portfolio/NeuByteTechnologies/FitnessApp/docs/API%20Contracts/)
+Full documents (PDF , DOCX, XLSX) are available in [`/docs/API Contracts`](../NeuByteTechnologies/FitnessApp/docs/API%20Contracts/)
 , [`/docs/BRD/`](../portfolio/NeuByteTechnologies/FitnessApp/docs/BRD/)
-, [`/docs/RTM/`](../portfolio/NeuByteTechnologies/FitnessApp/docs/RTM/), [`/docs/UserInterfaceSpecs/`](../portfolio/NeuByteTechnologies/FitnessApp/docs/UserInterfaceSpecs/).
+, [`/docs/RTM/`](../portfolio/NeuByteTechnologies/FitnessApp/docs/RTM/), [`/docs/UserInterfaceSpecs/`](../NeuByteTechnologies/FitnessApp/docs/UserInterfaceSpecs/).
