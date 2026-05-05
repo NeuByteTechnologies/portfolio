@@ -40,10 +40,10 @@ Use Cases, and System Diagrams.
 For reviewer convenience, curated Markdown samples are provided:
 
 ### UI Specification Samples
-[User  Interface Specification Sample Section(../portfolio/NeuByteTechnologies/FitnessApp/docs/UserInterfaceSpecs/UserInterfaceLogWorkout.md)]
+![User  Interface Specification Sample Section(../NeuByteTechnologies/FitnessApp/docs/UserInterfaceSpecs/UserInterfaceLogWorkout.md)]
 
 ### Functional Specification Samples
-[Account Functional Specification(../portfolio//NeuByteTechnologies/FitnessApp/docs/FunctionalSpecs/Account/AccountFS.md)]
+![Account Functional Specification(../NeuByteTechnologies/FitnessApp/docs/FunctionalSpecs/Account/AccountFS.md)]
 - Business Rules
 
 ### API Contract Samples
