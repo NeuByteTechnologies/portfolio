@@ -30,3 +30,44 @@ The backend support for the website it makes sense to update from my previous ex
 
 ### Power BI Reports
 To round out the full cycle reports will provide the platform to transform OLTP data to Star Schema for optimized reporting.
+
+## Documentation Samples (Reviewer-Friendly)
+
+This project includes full enterprise-grade documentation across Business Requirements,
+Functional Specifications, UI Specifications, API Contracts, Data Dictionary, Test Cases,
+Use Cases, and System Diagrams.
+
+For reviewer convenience, curated Markdown samples are provided:
+
+### UI Specification Samples
+[!User  Interface Specification Sample Section](../portfolio/NeuByteTechnologies/FitnessApp/docs/UserInterfaceSpecs/UserInterfaceLogWorkout.md)]
+
+### Functional Specification Samples
+[Account Functional Specification](../portfolio//NeuByteTechnologies/FitnessApp/docs/FunctionalSpecs/Account/AccountFS.md)]
+- Business Rules
+
+### API Contract Samples
+- Create Account
+- Login
+- MFA Enrollment
+
+### Data Dictionary Samples
+- Users Table
+- WeightEntries Table
+
+### Test Case Samples
+- Positive / Negative / Edge / Integration
+
+### Use Case Samples
+- Simple Use Case
+- Complex Use Case
+
+### System Diagram Samples
+- Context Diagram
+- Sequence Diagram
+- Data Flow Diagram
+- Domain Model
+
+Full documents (PDF , DOCX, XLSX) are available in [`/docs/API Contracts`](../portfolio/NeuByteTechnologies/FitnessApp/docs/API%20Contracts/)
+, [`/docs/BRD/`](../portfolio/NeuByteTechnologies/FitnessApp/docs/BRD/)
+, [`/docs/RTM/`](../portfolio/NeuByteTechnologies/FitnessApp/docs/RTM/), [`/docs/UserInterfaceSpecs/`](../portfolio/NeuByteTechnologies/FitnessApp/docs/UserInterfaceSpecs/).
