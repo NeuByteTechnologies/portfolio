@@ -33,43 +33,43 @@ These behaviors are referenced by many modules but are not owned by any single o
 
 ## Error Handling Use Cases (UC‑ERR‑01 → UC‑ERR‑10)
 
-### **UC‑ERR‑01 — Handle API Failure**
+### **[UC‑ERR‑01 — Handle API Failure](/NeuByteTechnologies/FitnessApp/docs/UseCases/Error/UC‑ERR‑01_HandleAPIFailure.md)**
 Provides a consistent response when any API call fails.  
 Includes error banner, retry, fallback values, and logging.
 
-### **UC‑ERR‑02 — Handle Network Connectivity Loss**
+### **[UC‑ERR‑02 — Handle Network Connectivity Loss](/NeuByteTechnologies/FitnessApp/docs/UseCases/Error/UC‑ERR‑02_HandleNetworkConnectivityLoss.md)**
 Detects offline state and displays offline UI.  
 Includes offline banner, retry logic, and prevention of destructive actions.
 
-### **UC‑ERR‑03 — Handle Missing or Corrupted Data**
+### **[UC‑ERR‑03 — Handle Missing or Corrupted Data](/NeuByteTechnologies/FitnessApp/docs/UseCases/Error/UC‑ERR‑03_HandleMissingCorruptedData.md)**
 Provides fallback UI when expected data is missing or invalid.  
 Includes empty states, placeholder values, and error messaging.
 
-### **UC‑ERR‑04 — Handle Unauthorized Access (401)**
+### **[UC‑ERR‑04 — Handle Unauthorized Access (401)](/NeuByteTechnologies/FitnessApp/docs/UseCases/Error/UC‑ERR‑04_HandleUnauthorizedAccess.md)**
 Redirects user to Login when session is invalid or expired.  
 Includes session check, redirect, and logging.
 
-### **UC‑ERR‑05 — Handle Forbidden Access (403)**
+### **[UC‑ERR‑05 — Handle Forbidden Access (403)](/NeuByteTechnologies/FitnessApp/docs/UseCases/Error/UC‑ERR‑05_HandleForbiddenAccess.md)**
 Displays “Access Denied” UI when user lacks permissions.  
 Includes error page, navigation options, and logging.
 
-### **UC‑ERR‑06 — Handle Server Errors (500)**
+### **[UC‑ERR‑06 — Handle Server Errors (500)](/NeuByteTechnologies/FitnessApp/docs/UseCases/Error/UC‑ERR‑06_HandleServerErrors.md)**
 Provides consistent UI for unexpected server failures.  
 Includes error page, retry, and logging.
 
-### **UC‑ERR‑07 — Handle Validation Errors**
+### **[UC‑ERR‑07 — Handle Validation Errors](/NeuByteTechnologies/FitnessApp/docs/UseCases/Error/UC‑ERR‑07_HandleValidationErrors.md)**
 Displays consistent validation error messages across modules.  
 Includes field‑level errors, form‑level errors, and accessibility compliance.
 
-### **UC‑ERR‑08 — Handle Timeout Errors**
+### **[UC‑ERR‑08 — Handle Timeout Errors](/NeuByteTechnologies/FitnessApp/docs/UseCases/Error/UC‑ERR‑08_HandleTimeoutErrors.md)**
 Handles long‑running operations that exceed time limits.  
 Includes timeout messaging, retry, and logging.
 
-### **UC‑ERR‑09 — Handle Rate Limiting (429)**
+### **[UC‑ERR‑09 — Handle Rate Limiting (429)](/NeuByteTechnologies/FitnessApp/docs/UseCases/Error/UC‑ERR‑09_HandleRateLimiting.md)**
 Provides user feedback when too many requests are made.  
 Includes cooldown messaging, retry timer, and logging.
 
-### **UC‑ERR‑10 — Handle Unexpected Client Errors**
+### **[UC‑ERR‑10 — Handle Unexpected Client Errors](/NeuByteTechnologies/FitnessApp/docs/UseCases/Error/UC‑ERR‑10_HandleUnexpectedClientErrors.md)**
 Catches all unhandled client‑side exceptions.  
 Includes generic error UI, logging, and safe recovery paths.
 

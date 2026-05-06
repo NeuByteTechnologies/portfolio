@@ -31,34 +31,34 @@ These behaviors are referenced by many modules (Dashboard, Login, Programs, Help
 
 ## Global Use Cases (UC‑GLOBAL‑01 → UC‑GLOBAL‑10)
 
-### **UC‑GLOBAL‑01 — Display Global Header**
+### **[UC‑GLOBAL‑01 — Display Global Header**](/NeuByteTechnologies/FitnessApp/docs/UseCases/Global/UC‑GLOBAL‑01_DisplayGlobalHeader.md)
 Ensures the global header (logo, notifications, menu) appears consistently across all authenticated pages.
 
-### **UC‑GLOBAL‑02 — Display Global Footer**
+### **[UC‑GLOBAL‑02 — Display Global Footer](/NeuByteTechnologies/FitnessApp/docs/UseCases/GlobalUC‑GLOBAL‑02_DisplayGlobalFooter.md)**
 Provides consistent navigation shortcuts and legal links across all authenticated pages.
 
-### **UC‑GLOBAL‑03 — Global Navigation**
+### **[UC‑GLOBAL‑03 — Global Navigation](/NeuByteTechnologies/FitnessApp/docs/UseCases/Global/UC‑GLOBAL‑03_GlobalNavigation.md**
 Handles cross‑module navigation, including menu interactions, deep linking, and routing between modules.
 
-### **UC‑GLOBAL‑04 — Session Validation**
+### **[UC‑GLOBAL‑04 — Session Validation](/NeuByteTechnologies/FitnessApp/docs/UseCases/Global/UC‑GLOBAL‑04_SessionValidation.md)**
 Validates session token on every protected page load and redirects unauthenticated users to Login.
 
-### **UC‑GLOBAL‑05 — Global Error Handling**
+### **[UC‑GLOBAL‑05 — Global Error Handling](/NeuByteTechnologies/FitnessApp/docs/UseCases/Global/UC‑GLOBAL‑05_GlobalErrorHandling)**
 Provides consistent error banners, fallback states, and retry logic across all modules.
 
-### **UC‑GLOBAL‑06 — Global Loading States**
+### **[UC‑GLOBAL‑06 — Global Loading States](/NeuByteTechnologies/FitnessApp/docs/UseCases/Global/UC‑GLOBAL‑06_GlobalLoadingStates.md)**
 Ensures consistent loading indicators and skeleton states across all modules.
 
-### **UC‑GLOBAL‑07 — Global Accessibility**
+### **[UC‑GLOBAL‑07 — Global Accessibility](/NeuByteTechnologies/FitnessApp/docs/UseCases/Global/UC‑GLOBAL‑07_GlobalAccessibility.md)**
 Ensures keyboard navigation, screen reader labels, focus order, and A11Y compliance across the application.
 
-### **UC‑GLOBAL‑08 — Global Analytics Logging**
+### **[UC‑GLOBAL‑08 — Global Analytics Logging](/NeuByteTechnologies/FitnessApp/docs/UseCases/Global/UC‑GLOBAL‑08_GlobalAnalyticsLogging.md)**
 Logs page loads, navigation events, user actions, and errors across all modules.
 
-### **UC‑GLOBAL‑09 — Global Caching**
+### **[UC‑GLOBAL‑09 — Global Caching](/NeuByteTechnologies/FitnessApp/docs/UseCases/Global/UC‑GLOBAL‑09_GlobalCaching.md)**
 Defines caching rules for frequently accessed data (program list, dashboard data, weight entries).
 
-### **UC‑GLOBAL‑10 — Global Empty States**
+### **[UC‑GLOBAL‑10 — Global Empty States](/NeuByteTechnologies/FitnessApp/docs/UseCases/Global/UC‑GLOBAL‑10_GlobalEmptyStates.md)**
 Provides consistent empty‑state messaging for no data, first‑time users, and zero‑result scenarios.
 
 ---

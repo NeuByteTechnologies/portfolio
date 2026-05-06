@@ -35,34 +35,34 @@ These events appear across Dashboard, Login, Programs, Log Workout, Weight Track
 
 ## Analytics Use Cases (UC‑ANL‑01 → UC‑ANL‑10)
 
-### **UC‑ANL‑01 — Log Page Load Events**
+### **[UC‑ANL‑01 — Log Page Load Events](/NeuByteTechnologies/FitnessApp/docs/UseCases/Analytics/UC‑ANL‑01_LogPageLoadEvents.md)**
 Logs when a user opens any major screen (Dashboard, Login, Programs, Reports).
 
-### **UC‑ANL‑02 — Log Navigation Events**
+### **[UC‑ANL‑02 — Log Navigation Events](/NeuByteTechnologies/FitnessApp/docs/UseCases/Analytics/UC‑ANL‑02_LogNavigationEvents.md)**
 Logs transitions between screens or modules (Menu → Dashboard, Dashboard → Program).
 
-### **UC‑ANL‑03 — Log User Action Events**
+### **[UC‑ANL‑03 — Log User Action Events](/NeuByteTechnologies/FitnessApp/docs/UseCases/Analytics/UC‑ANL‑03_LogUserActionEvents.md)**
 Logs meaningful interactions (program selected, workout logged, weight entry added).
 
-### **UC‑ANL‑04 — Log Authentication Events**
+### **[UC‑ANL‑04 — Log Authentication Events](/NeuByteTechnologies/FitnessApp/docs/UseCases/Analytics/UC‑ANL‑04_LogAuthenticationEvents.md)**
 Logs login success, login failure, logout, and password reset completion.
 
-### **UC‑ANL‑05 — Log Data Entry Events**
+### **[UC‑ANL‑05 — Log Data Entry Events](/NeuByteTechnologies/FitnessApp/docs/UseCases/Analytics/UC‑ANL‑05_LogDataEntryEvents.md)**
 Logs creation or modification of user data (weight entries, workouts).
 
-### **UC‑ANL‑06 — Log Feature Usage**
+### **[UC‑ANL‑06 — Log Feature Usage](/NeuByteTechnologies/FitnessApp/docs/UseCases/Analytics/UC‑ANL‑06_LogFeatureUsage.md)**
 Logs which features users interact with (Reports viewed, Help accessed).
 
-### **UC‑ANL‑07 — Log Notification Interactions**
+### **[UC‑ANL‑07 — Log Notification Interactions](/NeuByteTechnologies/FitnessApp/docs/UseCases/Analytics/UC‑ANL‑07_LogNotificationInteractions.md)**
 Logs notification opens, dismissals, and read status changes.
 
-### **UC‑ANL‑08 — Log Performance Metrics**
+### **[UC‑ANL‑08 — Log Performance Metrics](/NeuByteTechnologies/FitnessApp/docs/UseCases/Analytics/UC‑ANL‑08_LogPerformanceMetrics.md)**
 Logs performance‑related events (page load time, API latency, cache hit/miss).
 
-### **UC‑ANL‑09 — Log Error Events**
+### **[UC‑ANL‑09 — Log Error Events](/NeuByteTechnologies/FitnessApp/docs/UseCases/Analytics/UC‑ANL‑09_LogErrorEvents.md)**
 Logs error occurrences for analytics and debugging (ties into Error Handling).
 
-### **UC‑ANL‑10 — Log First‑Time User Events**
+### **[UC‑ANL‑10 — Log First‑Time User Events](/NeuByteTechnologies/FitnessApp/docs/UseCases/Analytics/UC‑ANL‑10_LogFirst‑TimeUserEvents.md)**
 Logs onboarding‑related events (first weight entry, first workout, first program selection).
 
 ---

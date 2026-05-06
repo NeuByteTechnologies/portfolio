@@ -2,18 +2,6 @@
 The Help module contains use cases related to displaying support content, FAQs, policies, and contact options within the application. These use cases define how users access self‑service help resources, view static informational content, and initiate support interactions.
 This module supports the user’s ability to resolve issues independently and understand the application’s policies and support channels.
 
-## Table of Contents
-Use Cases
--	UC‑HELP‑01 — View Help Page
-Displays the Help landing page with links to FAQs, policies, troubleshooting tips, and support contact information.
--	UC‑HELP‑02 — Contact Support
-Allows users to initiate a support request via email, including pre‑populated metadata such as app version and device information.
--	UC‑HELP‑03 — View FAQ
-Displays a list of frequently asked questions with expandable answers.
--	UC‑HELP‑04 — View Policies
-Displays static policy documents such as Privacy Policy and Terms of Service.
-(Additional Help UCs may be added as the module expands — e.g., Troubleshooting Guides, Support Ticket History, or In‑App Tutorials.)
-
 ## Purpose of This Module
 ## The Help module provides:
 -	A centralized location for self‑service support resources
@@ -25,6 +13,22 @@ Displays static policy documents such as Privacy Policy and Terms of Service.
 -	Support ticket integration
 -	A traceability anchor for BR‑HELP‑01 → BR‑HELP‑15 and related functional/UI specifications
 -	A clean separation between static content, support actions, and navigation flows
+
+---
+## Help Use Cases (UC-HELP-01 → UC-HELP-04)
+
+### **[UC‑HELP‑01 — View Help Page](/NeuByteTechnologies/FitnessApp/docs/UseCases/Help/UC-HELP-01_ViewHelpPage.md)**
+Displays the Help landing page with links to FAQs, policies, troubleshooting tips, and support contact information. 
+
+### **[UC‑HELP‑02 — Contact Support](/NeuByteTechnologies/FitnessApp/docs/UseCases/Help/UC-HELP-02_ContactSupport.md)**
+Allows users to initiate a support request via email, including pre‑populated metadata such as app version and device information.  
+
+### **[UC‑HELP‑03 — View FAQ](/NeuByteTechnologies/FitnessApp/docs/UseCases/Help/UC-HELP-03_ViewFAQ.md)**
+Displays a list of frequently asked questions with expandable answers.  
+
+### **[UC‑HELP‑04 — View Policies](/NeuByteTechnologies/FitnessApp/docs/UseCases/Help/UC-HELP-04_ViewPolicies.md)**
+Displays static policy documents such as Privacy Policy and Terms and Conditions.
+(Additional Help UCs may be added as the module expands — e.g., Troubleshooting Guides, Support Ticket History, or In‑App Tutorials.)
 
 ## Relationship to Other Modules
 The Help module interacts with:

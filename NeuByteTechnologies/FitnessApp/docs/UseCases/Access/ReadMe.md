@@ -33,43 +33,43 @@ These behaviors are referenced by many modules but are not owned by any single o
 
 ## Accessibility Use Cases (UC‑A11Y‑01 → UC‑A11Y‑10)
 
-### **UC‑A11Y‑01 — Keyboard‑Only Navigation**
+### **[UC‑A11Y‑01 — Keyboard‑Only Navigation](/NeuByteTechnologies/FitnessApp/docs/UseCases/Access/UC‑A11Y‑01_KeyboardOnlyNavigation.md)**
 Ensures all interactive elements across all modules are fully operable using keyboard only.  
 Includes tab order, focus states, skip‑to‑content, and keyboard shortcuts.
 
-### **UC‑A11Y‑02 — Screen Reader Support**
+### **[UC‑A11Y‑02 — Screen Reader Support](/NeuByteTechnologies/FitnessApp/docs/UseCases/Access/UC‑A11Y‑02_ScreenReaderSupport.md)**
 Ensures all UI elements expose correct semantic labels and roles to screen readers.  
 Includes ARIA labels, announcements, live regions, and hidden contextual text.
 
-### **UC‑A11Y‑03 — Focus Management**
+### **[UC‑A11Y‑03 — Focus Management](/NeuByteTechnologies/FitnessApp/docs/UseCases/Access/UC‑A11Y‑03_FocusManagement.md)**
 Ensures focus is placed correctly after navigation, modal open/close, errors, and dynamic updates.  
 Includes focus trapping, focus return, and focus on error.
 
-### **UC‑A11Y‑04 — Color Contrast Compliance**
+### **[UC‑A11Y‑04 — Color Contrast Compliance](/NeuByteTechnologies/FitnessApp/docs/UseCases/Access/UC‑A11Y‑04_ColorContrastCompliance.md)**
 Ensures all text, icons, and UI elements meet WCAG contrast ratios.  
 Includes light/dark mode, disabled states, and hover/focus states.
 
-### **UC‑A11Y‑05 — Text Resizing & Zoom Support**
+### **[UC‑A11Y‑05 — Text Resizing & Zoom Support](/NeuByteTechnologies/FitnessApp/docs/UseCases/Access/UC‑A11Y‑05_TextResizingZoomSupport.md)**
 Ensures UI remains usable when users zoom or increase text size.  
 Includes 200% zoom, responsive reflow, and no clipped text.
 
-### **UC‑A11Y‑06 — Accessible Forms**
+### **[UC‑A11Y‑06 — Accessible Forms](/NeuByteTechnologies/FitnessApp/docs/UseCases/Access/UC‑A11Y‑06_AccessibleForms.md)**
 Ensures all forms across modules are accessible.  
 Includes labels, error messages, instructions, required indicators, and grouping.
 
-### **UC‑A11Y‑07 — Accessible Error Messaging**
+### **[UC‑A11Y‑07 — Accessible Error Messaging](/NeuByteTechnologies/FitnessApp/docs/UseCases/Access/UC‑A11Y‑07_AccessibleErrorMessaging.md)**
 Ensures error messages are announced and visible to assistive technologies.  
 Includes ARIA‑live regions, focus on error, and descriptive messaging.
 
-### **UC‑A11Y‑08 — Accessible Interactive Components**
+### **[UC‑A11Y‑08 — Accessible Interactive Components](/NeuByteTechnologies/FitnessApp/docs/UseCases/Access/UC‑A11Y‑08_AccessibleInteractiveComponents.md)**
 Ensures all buttons, toggles, menus, tabs, and cards meet accessibility rules.  
 Includes roles, states, keyboard behavior, and ARIA attributes.
 
-### **UC‑A11Y‑09 — Motion & Animation Preferences**
+### **[UC‑A11Y‑09 — Motion & Animation Preferences](/NeuByteTechnologies/FitnessApp/docs/UseCases/Access/UC‑A11Y‑09_MotionAnimationPreferences.md)**
 Respects user system settings for reduced motion.  
 Includes disabling animations, reducing transitions, and providing alternatives.
 
-### **UC‑A11Y‑10 — Accessible Media & Images**
+### **[UC‑A11Y‑10 — Accessible Media & Images](/NeuByteTechnologies/FitnessApp/docs/UseCases/Access/UC‑A11Y‑10_AccessibleMediaImages.md)**
 Ensures all images, icons, and media have accessible alternatives.  
 Includes alt text, descriptions, captions, and transcripts.
 

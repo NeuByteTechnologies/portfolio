@@ -29,27 +29,27 @@ These states appear across Dashboard, Notifications, Weight Tracking, Programs, 
 
 ## Empty State Use Cases (UC‑EMPTY‑01 → UC‑EMPTY‑06)
 
-### **UC‑EMPTY‑01 — No Notifications**
+### **[UC‑EMPTY‑01 — No Notifications](/NeuByteTechnologies/FitnessApp/docs/UseCases/Empty/UC‑EMPTY‑01_NoNotifications.md)**
 Triggered when the notification list is empty.  
 Displays: “You have no notifications yet.”
 
-### **UC‑EMPTY‑02 — No Weight Entries**
+### **[UC‑EMPTY‑02 — No Weight Entries](/NeuByteTechnologies/FitnessApp/docs/UseCases/Empty/UC‑EMPTY‑02_NoWeightEntries.md)**
 Triggered when the user has never logged weight.  
 Displays: “Add your first weight entry to begin tracking.”
 
-### **UC‑EMPTY‑03 — No Program Selected**
+### **[UC‑EMPTY‑03 — No Program Selected](/NeuByteTechnologies/FitnessApp/docs/UseCases/Empty/UC‑EMPTY‑03_NoProgramSelected.md)**
 Triggered when the user has not chosen an exercise program.  
 Displays: “Select a program to get started.”
 
-### **UC‑EMPTY‑04 — No Workout History**
+### **[UC‑EMPTY‑04 — No Workout History](/NeuByteTechnologies/FitnessApp/docs/UseCases/Empty/UC‑EMPTY‑04_NoWorkoutHistory.md)**
 Triggered when the user has never logged a workout.  
 Displays: “No workouts logged yet.”
 
-### **UC‑EMPTY‑05 — Insufficient Data for Trends**
+### **[UC‑EMPTY‑05 — Insufficient Data for Trends](/NeuByteTechnologies/FitnessApp/docs/UseCases/Empty/UC‑EMPTY‑05_nsufficientDataforTrends.md)**
 Triggered when weight or workout data is too sparse to calculate trends.  
 Displays: “Not enough data to calculate trends.”
 
-### **UC‑EMPTY‑06 — No Progress Metrics**
+### **[UC‑EMPTY‑06 — No Progress Metrics](/NeuByteTechnologies/FitnessApp/docs/UseCases/Empty/UC‑EMPTY‑06_NoProgressMetrics.md)**
 Triggered when streaks, weekly summaries, or monthly summaries have no data.  
 Displays: “Progress metrics will appear once you start logging activity.”
 
