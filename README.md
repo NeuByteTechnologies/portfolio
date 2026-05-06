@@ -44,7 +44,6 @@ For reviewer convenience, curated Markdown samples are provided:
 
 ### Functional Specification Samples
 [Account Functional Specification](/NeuByteTechnologies/FitnessApp/docs/FunctionalSpecs/Account/AccountFS.md)
-- Business Rules
 
 ### API Contract Samples
 - Create Account
