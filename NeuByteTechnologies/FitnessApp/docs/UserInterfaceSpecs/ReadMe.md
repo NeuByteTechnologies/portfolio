@@ -1,4 +1,5 @@
 ## User Interface Specification
 
-['Sample'](UserInterfaceLogWorkout.md)  
-['Word Document'](NeuByteFitnessAppUISpecification.docx)
+This Directory contains:  
+[UserInterfaceLogWorkout](UserInterfaceLogWorkout.md)  
+[NewByteFittnessAppUISpecification](NeuByteFitnessAppUISpecification.docx)

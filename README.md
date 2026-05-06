@@ -68,6 +68,6 @@ For reviewer convenience, curated Markdown samples are provided:
 - Data Flow Diagram
 - Domain Model
 
-Full documents (PDF , DOCX, XLSX) are available in [`/docs/API Contracts`](../NeuByteTechnologies/FitnessApp/docs/API%20Contracts)
-, [`/docs/BRD/`](../portfolio/NeuByteTechnologies/FitnessApp/docs/BRD)
-, [`/docs/RTM/`](../portfolio/NeuByteTechnologies/FitnessApp/docs/RTM), [`/docs/UserInterfaceSpecs/`](../NeuByteTechnologies/FitnessApp/docs/UserInterfaceSpecs).
+Full documents (PDF , DOCX, XLSX) are available in [`/docs/API Contracts`](/NeuByteTechnologies/FitnessApp/docs/API%20Contracts/ReadMe.md)
+, [`/docs/BRD/`](/NeuByteTechnologies/FitnessApp/docs/BR/ReadMe.md)
+, [`/docs/RTM/`](/NeuByteTechnologies/FitnessApp/docs/RTM/ReadMe.md), [`/docs/UserInterfaceSpecs/`](/NeuByteTechnologies/FitnessApp/docs/UserInterfaceSpecs/ReadMe.md).
