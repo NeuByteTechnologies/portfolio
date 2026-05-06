@@ -15,7 +15,7 @@ Analytics is conceptually similar to Google Analytics, but implemented **inside 
 
 ---
 
-## 📌 Purpose of the Analytics Module
+## Purpose of the Analytics Module
 The Analytics module captures all system‑wide event‑logging behaviors that appear across multiple modules but must be defined once at the architectural level.
 
 This includes:
@@ -33,7 +33,7 @@ These events appear across Dashboard, Login, Programs, Log Workout, Weight Track
 
 ---
 
-## 📊 Analytics Use Cases (UC‑ANL‑01 → UC‑ANL‑10)
+## Analytics Use Cases (UC‑ANL‑01 → UC‑ANL‑10)
 
 ### **UC‑ANL‑01 — Log Page Load Events**
 Logs when a user opens any major screen (Dashboard, Login, Programs, Reports).
@@ -67,7 +67,7 @@ Logs onboarding‑related events (first weight entry, first workout, first progr
 
 ---
 
-## 🧩 Architectural Role
+## Architectural Role
 The Analytics module provides the **system‑wide telemetry framework** used by all feature modules. It defines:
 
 - **Unified event schema**  
@@ -82,5 +82,5 @@ This ensures that each module can focus on business logic while relying on a con
 
 ---
 
-## 🧱 Unified Event Schema (Recommended)
+## Unified Event Schema (Recommended)
 All analytics events follow a single, consistent structure:

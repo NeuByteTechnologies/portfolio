@@ -12,7 +12,7 @@ Empty states ensure:
 
 ---
 
-## 📌 Purpose of the Empty State Module
+## Purpose of the Empty State Module
 The Empty State module captures all cross‑module “zero data” behaviors that appear in multiple modules but must be defined once at the architectural level.
 
 This includes:
@@ -27,7 +27,7 @@ These states appear across Dashboard, Notifications, Weight Tracking, Programs, 
 
 ---
 
-## 🟦 Empty State Use Cases (UC‑EMPTY‑01 → UC‑EMPTY‑06)
+## Empty State Use Cases (UC‑EMPTY‑01 → UC‑EMPTY‑06)
 
 ### **UC‑EMPTY‑01 — No Notifications**
 Triggered when the notification list is empty.  
@@ -55,7 +55,7 @@ Displays: “Progress metrics will appear once you start logging activity.”
 
 ---
 
-## 🧩 Architectural Role
+## Architectural Role
 The Empty State module provides the **system‑wide zero‑data framework** used by all feature modules. It defines:
 
 - **When empty states trigger**  
@@ -68,7 +68,7 @@ This ensures that each module can focus on business logic while relying on a con
 
 ---
 
-## 🔗 Dependencies & Cross‑Module Relationships
+## Dependencies & Cross‑Module Relationships
 
 ### **Modules that depend on Empty States**
 - Dashboard  
@@ -95,7 +95,7 @@ This ensures that each module can focus on business logic while relying on a con
 
 ---
 
-## 🧪 Testing Considerations
+## Testing Considerations
 Empty State testing requires cross‑module validation:
 
 - No notifications  

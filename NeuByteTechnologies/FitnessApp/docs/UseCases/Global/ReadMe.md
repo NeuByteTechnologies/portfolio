@@ -12,7 +12,7 @@ Global functionality ensures:
 
 ---
 
-## 📌 Purpose of the Global Module
+## Purpose of the Global Module
 The Global module captures system‑wide behaviors that appear in multiple modules but are not owned by any single one. These include:
 
 - Global Header & Footer  
@@ -29,7 +29,7 @@ These behaviors are referenced by many modules (Dashboard, Login, Programs, Help
 
 ---
 
-## 📚 Global Use Cases (UC‑GLOBAL‑01 → UC‑GLOBAL‑10)
+## Global Use Cases (UC‑GLOBAL‑01 → UC‑GLOBAL‑10)
 
 ### **UC‑GLOBAL‑01 — Display Global Header**
 Ensures the global header (logo, notifications, menu) appears consistently across all authenticated pages.
@@ -63,7 +63,7 @@ Provides consistent empty‑state messaging for no data, first‑time users, and
 
 ---
 
-## 🧩 Architectural Role
+## Architectural Role
 The Global module acts as the **shared foundation** for all feature modules. It provides:
 
 - **UI Framework:** Header, footer, layout, responsive rules  
@@ -78,7 +78,7 @@ This ensures that each feature module (Dashboard, Login, Programs, etc.) can foc
 
 ---
 
-## 🔗 Dependencies & Cross‑Module Relationships
+## Dependencies & Cross‑Module Relationships
 
 ### **Modules that depend on Global behaviors**
 - Dashboard  
@@ -108,7 +108,7 @@ This ensures that each feature module (Dashboard, Login, Programs, etc.) can foc
 
 ---
 
-## 🧪 Testing Considerations
+## Testing Considerations
 Global behaviors require cross‑module test coverage:
 
 - Header/Footer visibility  

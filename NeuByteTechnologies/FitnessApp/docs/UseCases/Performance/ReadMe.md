@@ -14,7 +14,7 @@ Performance ensures:
 
 ---
 
-## 📌 Purpose of the Performance & Caching Module
+## Purpose of the Performance & Caching Module
 The Performance module captures system‑wide optimization behaviors that appear across multiple modules but must be defined once at the architectural level.
 
 This includes:
@@ -33,7 +33,7 @@ These behaviors are referenced by many modules but are not owned by any single o
 
 ---
 
-## 🚀 Performance & Caching Use Cases (UC‑PERF‑01 → UC‑PERF‑10)
+## Performance & Caching Use Cases (UC‑PERF‑01 → UC‑PERF‑10)
 
 ### **UC‑PERF‑01 — Cache Frequently Accessed Data**
 Caches high‑frequency data (dashboard, program list, weight entries) to improve performance.  
@@ -77,7 +77,7 @@ Includes page load time, API latency, cache hit/miss, and rendering time.
 
 ---
 
-## 🧩 Architectural Role
+## Architectural Role
 The Performance & Caching module provides the **system‑wide optimization framework** used by all feature modules. It defines:
 
 - **Caching strategy**  
@@ -95,7 +95,7 @@ This ensures that each module can focus on business logic while relying on a con
 
 ---
 
-## 🔗 Dependencies & Cross‑Module Relationships
+## Dependencies & Cross‑Module Relationships
 
 ### **Modules that depend on Performance behaviors**
 - Dashboard  

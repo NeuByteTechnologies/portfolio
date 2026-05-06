@@ -13,7 +13,7 @@ Error handling ensures:
 
 ---
 
-## 📌 Purpose of the Error Handling Module
+## Purpose of the Error Handling Module
 The Error Handling module captures system‑wide behaviors that appear in multiple modules but must be defined once at the architectural level.
 
 This includes:
@@ -31,7 +31,7 @@ These behaviors are referenced by many modules but are not owned by any single o
 
 ---
 
-## 📚 Error Handling Use Cases (UC‑ERR‑01 → UC‑ERR‑10)
+## Error Handling Use Cases (UC‑ERR‑01 → UC‑ERR‑10)
 
 ### **UC‑ERR‑01 — Handle API Failure**
 Provides a consistent response when any API call fails.  
@@ -75,7 +75,7 @@ Includes generic error UI, logging, and safe recovery paths.
 
 ---
 
-## 🧩 Architectural Role
+## Architectural Role
 The Error Handling module provides the **system‑wide error framework** used by all feature modules. It defines:
 
 - **Error surfaces:** banners, dialogs, fallback UI  
@@ -89,7 +89,7 @@ This ensures that each module can focus on business logic while relying on a con
 
 ---
 
-## 🔗 Dependencies & Cross‑Module Relationships
+## Dependencies & Cross‑Module Relationships
 
 ### **Modules that depend on Error Handling**
 - Dashboard  
@@ -119,7 +119,7 @@ This ensures that each module can focus on business logic while relying on a con
 
 ---
 
-## 🧪 Testing Considerations
+## Testing Considerations
 Error Handling requires cross‑module test coverage:
 
 - API failure simulation  

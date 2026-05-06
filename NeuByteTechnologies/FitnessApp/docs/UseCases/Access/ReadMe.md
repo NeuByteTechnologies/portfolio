@@ -12,7 +12,7 @@ Accessibility ensures:
 
 ---
 
-## 📌 Purpose of the Accessibility Module
+## Purpose of the Accessibility Module
 The Accessibility module captures system‑wide accessibility behaviors that appear in multiple modules but must be defined once at the architectural level.
 
 This includes:
@@ -31,7 +31,7 @@ These behaviors are referenced by many modules but are not owned by any single o
 
 ---
 
-## ♿ Accessibility Use Cases (UC‑A11Y‑01 → UC‑A11Y‑10)
+## Accessibility Use Cases (UC‑A11Y‑01 → UC‑A11Y‑10)
 
 ### **UC‑A11Y‑01 — Keyboard‑Only Navigation**
 Ensures all interactive elements across all modules are fully operable using keyboard only.  
@@ -75,7 +75,7 @@ Includes alt text, descriptions, captions, and transcripts.
 
 ---
 
-## 🧩 Architectural Role
+## Architectural Role
 The Accessibility module provides the **system‑wide accessibility framework** used by all feature modules. It defines:
 
 - **Keyboard navigation rules**  
@@ -91,7 +91,7 @@ This ensures that each module can focus on business logic while relying on a con
 
 ---
 
-## 🔗 Dependencies & Cross‑Module Relationships
+## Dependencies & Cross‑Module Relationships
 
 ### **Modules that depend on Accessibility**
 - Dashboard  
@@ -124,7 +124,7 @@ This ensures that each module can focus on business logic while relying on a con
 
 ---
 
-## 🧪 Testing Considerations
+## Testing Considerations
 Accessibility requires cross‑module test coverage:
 
 - Keyboard‑only navigation  
