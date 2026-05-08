@@ -51,15 +51,20 @@ For reviewer convenience, curated Markdown samples are provided:
 - MFA Enrollment
 
 ### Data Dictionary Samples
-- Users Table
-- WeightEntries Table
+- [Users Table](/NeuByteTechnologies/FitnessApp/docs/DataSpecs/users.md)
+- [WeightEntries Table](/NeuByteTechnologies/FitnessApp/docs/DataSpecs/weight-entries.md)
+
+
 
 ### Test Case Samples
 - Positive / Negative / Edge / Integration
 
 ### Use Case Samples
-- Simple Use Case
-- Complex Use Case
+- [UC-LOGIN-01_UserLogin](/NeuByteTechnologies/FitnessApp/docs/UseCases/Login/UC-LOGIN-01_UserLogin.md)
+- [UC-MENU-03_NavigateDashboard](/NeuByteTechnologies/FitnessApp/docs/UseCases/Menu/UC-MENU-03_NavigateDashboard.md)
+- [UC-EP-02_ViewProgramDetail](/NeuByteTechnologies/FitnessApp/docs/UseCases/ExercisePrograms/UC-EP-02_ViewProgramDetail.md)
+- [UC-LW-01_LogWorkout](/NeuByteTechnologies/FitnessApp/docs/UseCases/LogWorkout/UC-LW-01_LogWorkout.md)
+- [UC‑ANL‑06_LogFeatureUsage](/NeuByteTechnologies/FitnessApp/docs/UseCases/Analytics/UC‑ANL‑06_LogFeatureUsage.md)
 
 ### System Diagram Samples
 - Context Diagram
