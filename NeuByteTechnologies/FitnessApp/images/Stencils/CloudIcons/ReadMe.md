@@ -1,4 +1,4 @@
-# CloudIcons— README
+# CloudIcons
 This folder contains the normalized stencil elements for the Cloud Icon diagram set.  
 All elements in this folder follow the system‑wide Visual Grammar and Size Class standards defined in the Stencil System documentation.  
 
