@@ -9,7 +9,8 @@ Log meaningful user actions across modules.
 • 	Weight entry added
 • 	Notification opened or dismissed
 
-## Actors
+## Primary Actor
+
 | Actor      | Description |
 |------------|-------------|
 | App User   | Primary actor performing the workflow |

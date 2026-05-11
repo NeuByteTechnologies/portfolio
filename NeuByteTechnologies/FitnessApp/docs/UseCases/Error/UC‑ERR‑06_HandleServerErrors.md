@@ -7,7 +7,7 @@ Provide a consistent UI for unexpected server failures.
 - 	Retry
 - 	Logging  
 
-## Actors
+## Primary Actors
 | Actor      | Type       | Description |
 |------------|------------|-------------|
 | App User   | Primary    | Interacts with the UI and receives appropriate errors |

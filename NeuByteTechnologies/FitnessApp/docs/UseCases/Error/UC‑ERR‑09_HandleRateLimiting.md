@@ -8,7 +8,7 @@ Provide user feedback when too many requests are made.
 - 	Retry timer
 - 	Logging  
 
-## Actors
+## Primary Actors
 | Actor      | Type       | Description |
 |------------|------------|-------------|
 | App User   | Primary    | Interacts with the UI and receives appropriate errors |

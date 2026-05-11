@@ -8,7 +8,8 @@ Track which features users interact with.
 • 	Help accessed
 • 	Program detail viewed
 
-## Actors
+## Primary Actors
+
 | Actor      | Description |
 |------------|-------------|
 | App User   | Primary actor performing the workflow |

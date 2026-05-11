@@ -8,7 +8,7 @@ Provide fallback UI when expected data is missing or invalid.
 - 	Placeholder values
 - 	Error messaging  
 
-## Actors
+## Primary Actors
 | Actor      | Type       | Description |
 |------------|------------|-------------|
 | App User   | Primary    | Interacts with the UI and receives appropriate errors |

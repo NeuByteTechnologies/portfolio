@@ -8,7 +8,8 @@ Track how users engage with notifications.
 • 	Notification dismissed
 • 	Notification marked as read
 
-## Actors
+## Primary Actors
+
 | Actor      | Description |
 |------------|-------------|
 | App User   | Primary actor performing the workflow |

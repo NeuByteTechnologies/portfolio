@@ -8,7 +8,7 @@ Catch all unhandled client‑side exceptions.
 - 	Logging
 - 	Safe recovery path  
 
-## Actors
+## Primary Actors
 | Actor      | Type       | Description |
 |------------|------------|-------------|
 | App User   | Primary    | Interacts with the UI and receives appropriate errors |

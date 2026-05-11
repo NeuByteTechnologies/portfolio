@@ -1,17 +1,21 @@
 # UC‑DASH‑02 — Start Workout
+
 Use Case ID
 UC‑DASH‑02
 Use Case Name
 Start Workout
 Module
 Dashboard
-## Purpose
 
 ## Purpose
 To allow an authenticated user to begin their scheduled workout for the current day by navigating from the Dashboard into the Log Workout workflow, ensuring the correct workout plan is loaded, validated, and ready for logging. 
 ## Primary Actor
-Authenticated User
-Stakeholders & Interests
+
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Creates their own account through the app UI |
+
+## Stakeholders & Interests
 - 	User — wants to begin today’s workout quickly and seamlessly.
 - 	System — must load the correct workout for the current day and ensure data integrity.
 - 	Product Owner — wants a smooth transition from dashboard to workout logging.
@@ -115,8 +119,3 @@ E2 — System/Database Error
 
     %% Exception Flows
     C -->|System Error| E1[Display System Error Message]
-
-## Actors
-| Actor      | Type       | Description |
-|------------|------------|-------------|
-| App User   | Primary    | Creates their own account through the app UI |

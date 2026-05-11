@@ -10,8 +10,12 @@ Dashboard
 To allow an authenticated user to view details of a previously logged workout from the Dashboard’s Recent Activity list and optionally edit that workout entry, ensuring accurate historical workout data and a seamless transition into the Edit Log workflow
 
 ## Primary Actor
-Authenticated User
-Stakeholders & Interests
+
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Creates their own account through the app UI |
+
+## Stakeholders & Interests
 - 	User — wants to quickly review or correct previously logged workout entries.
 - 	System — must retrieve accurate workout log data and allow safe editing.
 - 	Product Owner — wants a smooth, intuitive drill‑down experience from Dashboard → Activity Detail → Edit Log.
@@ -119,8 +123,3 @@ E2 — Workout Log Retrieval Error
 
     %% Alternate Flow
     A -->|No Recent Activity| A1[Display Empty State]
-
-## Actors
-| Actor      | Type       | Description |
-|------------|------------|-------------|
-| App User   | Primary    | Creates their own account through the app UI |

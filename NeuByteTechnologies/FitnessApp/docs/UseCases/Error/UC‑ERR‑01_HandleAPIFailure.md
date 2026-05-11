@@ -9,7 +9,7 @@ Provide a consistent response when any API call fails.
 - 	Fallback values
 - 	Logging
 
-## Actors
+## Primary Actors
 | Actor      | Type       | Description |
 |------------|------------|-------------|
 | App User   | Primary    | Interacts with the UI and receives appropriate errors |

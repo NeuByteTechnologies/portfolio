@@ -9,7 +9,8 @@ Log when the user creates or updates personal data.
 • 	Workout created
 • 	Workout edited  
 
-## Actors
+## Primary Actor
+
 | Actor      | Description |
 |------------|-------------|
 | App User   | Primary actor performing the workflow |

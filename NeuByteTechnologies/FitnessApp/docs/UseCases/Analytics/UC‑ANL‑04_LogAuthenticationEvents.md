@@ -8,7 +8,8 @@ Log login, logout, and authentication outcomes.
 • 	Login failure
 • 	Password reset completed
 
-## Actors
+## Primary Actor
+
 | Actor      | Description |
 |------------|-------------|
 | App User   | Primary actor performing the workflow |

@@ -8,7 +8,7 @@ Handle long‑running operations that exceed time limits.
 - 	Retry
 - 	Logging  
 
-## Actors
+## Primary Actors
 | Actor      | Type       | Description |
 |------------|------------|-------------|
 | App User   | Primary    | Interacts with the UI and receives appropriate errors |

@@ -8,7 +8,7 @@ Display consistent validation error messages across modules.
 - 	Form‑level errors
 - 	Accessibility compliance  
 
-## Actors
+## Primary Actors
 | Actor      | Type       | Description |
 |------------|------------|-------------|
 | App User   | Primary    | Interacts with the UI and receives appropriate errors |

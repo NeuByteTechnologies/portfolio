@@ -1,4 +1,5 @@
 # UC‑CA‑01 — Create Account
+
 Use Case ID
 UC‑CA‑01
 Use Case Name
@@ -7,8 +8,14 @@ Module
 Create Account
 ## Purpose
 This Use Case defines the steps required for a new user to create an account in the NeuByte Fitness App, ensuring secure credential handling and a smooth onboarding experience.
-## Primary Actor
-New User
+
+## Primary Actors
+
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Creates their own account through the app UI |
+| App Admin  | Secondary  | Creates or manages accounts through backend/admin tools
+
 ## Stakeholders & Interests
 • 	New User — wants to quickly and securely create an account to access the app.
 • 	System — must validate inputs, prevent duplicates, and securely store credentials.
@@ -117,9 +124,3 @@ E1 — System/Database Error
     F -->|New| H[Hash Password]
     H --> I[Create User Record]
     I --> J[Redirect to Login Page]
-
-## Actors
-| Actor      | Type       | Description |
-|------------|------------|-------------|
-| App User   | Primary    | Creates their own account through the app UI |
-| App Admin  | Secondary  | Creates or manages accounts through backend/admin tools

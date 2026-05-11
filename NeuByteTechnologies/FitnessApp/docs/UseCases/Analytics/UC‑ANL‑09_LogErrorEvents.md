@@ -9,7 +9,8 @@ Log error occurrences for analytics and debugging.
 • 	Unauthorized access
 (This ties directly into the Error Handling module.)
 
-## Actors
+## Primary Actor
+
 | Actor      | Description |
 |------------|-------------|
 | App User   | Primary actor performing the workflow |

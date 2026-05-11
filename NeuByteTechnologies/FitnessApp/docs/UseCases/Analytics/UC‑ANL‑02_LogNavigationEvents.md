@@ -6,7 +6,8 @@ Log when a user navigates between modules or screens.
 ## Examples: 
 Menu → Dashboard, Dashboard → Program Detail.  
 
-## Actors
+## Primary Actor
+
 | Actor      | Description |
 |------------|-------------|
 | App User   | Primary actor performing the workflow |

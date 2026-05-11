@@ -1,13 +1,19 @@
 # UC‑DASH‑01 — View Dashboard
+
 Use Case ID
 UC‑DASH‑01
 Use Case Name
 View Dashboard
 Module
 Dashboard
-Primary Actor
-Authenticated User
-Stakeholders & Interests
+
+## Primary Actor
+
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Creates their own account through the app UI |
+
+## Stakeholders & Interests
 - 	User — wants immediate access to personalized fitness information after login.
 - 	System — must retrieve and display accurate, up‑to‑date dashboard data.
 - 	Product Owner — wants a clean, responsive, engaging dashboard experience.
@@ -169,8 +175,3 @@ E2 — Data Retrieval Failure
 
     %% End
     Z --> END[Dashboard Fully Displayed]
-
-## Actors
-| Actor      | Type       | Description |
-|------------|------------|-------------|
-| App User   | Primary    | Creates their own account through the app UI |

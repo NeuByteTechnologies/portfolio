@@ -13,7 +13,11 @@ Dashboard
 To allow an authenticated user to view system‑generated notifications from the Dashboard, ensuring they can quickly access unread alerts, review notification details, and maintain awareness of important activity or system events.
 
 ## Primary Actor
-Authenticated User
+
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Creates their own account through the app UI |
+
 ## Stakeholders & Interests
 - 	User — wants to easily see unread notifications and review important updates.
 - 	System — must retrieve accurate notification data and maintain read/unread status.
@@ -123,8 +127,3 @@ E2 — Notification Retrieval Error
 
     %% Exception Flow
     C -->|System Error| E1[Display Retrieval Error]
-
-## Actors
-| Actor      | Type       | Description |
-|------------|------------|-------------|
-| App User   | Primary    | Creates their own account through the app UI |

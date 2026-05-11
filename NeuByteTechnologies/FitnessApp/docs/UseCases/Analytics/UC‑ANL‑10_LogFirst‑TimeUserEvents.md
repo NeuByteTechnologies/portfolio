@@ -10,7 +10,8 @@ Track onboarding‑related events.
 • 	First time Dashboard loaded
 (This ties directly into the Empty States module.)
 
-## Actors
+## Primary Actor
+
 | Actor      | Description |
 |------------|-------------|
 | App User   | Primary actor performing the workflow |

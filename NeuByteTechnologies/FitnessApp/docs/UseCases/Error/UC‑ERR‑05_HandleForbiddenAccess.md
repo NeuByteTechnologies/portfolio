@@ -6,7 +6,7 @@ Display “Access Denied” UI when user lacks permissions.
 - 	Navigation options
 - 	Logging  
 
-## Actors
+## Primary Actors
 | Actor      | Type       | Description |
 |------------|------------|-------------|
 | App User   | Primary    | Interacts with the UI and receives appropriate errors |

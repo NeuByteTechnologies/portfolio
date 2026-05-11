@@ -9,7 +9,8 @@ Log performance‑related events for monitoring.
 • 	Cache hit/miss
 (This ties directly into the Performance module.)
 
-## Actors
+## Primary Actor
+
 | Actor      | Description |
 |------------|-------------|
 | App User   | Primary actor performing the workflow |
