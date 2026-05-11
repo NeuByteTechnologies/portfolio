@@ -111,3 +111,8 @@ Related UI Screens
     %% End
     I --> END[Program Detail Displayed]
     J --> END
+    
+## Actors
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Interacts with the UI and sorts the list of programs |

@@ -128,3 +128,8 @@ E2 — Program Detail Retrieval Error
     %% End
     L --> END[Program Activation Flow Begins]
     M --> END
+    
+## Actors
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Interacts with the UI and views a given program detail |

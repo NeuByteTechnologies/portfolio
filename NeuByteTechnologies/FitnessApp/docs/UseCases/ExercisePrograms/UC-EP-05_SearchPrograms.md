@@ -132,3 +132,9 @@ E2 — Program Initialization Error
 
     %% End
     N --> END[Program Activated]
+
+    
+## Actors
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Interacts with the UI and views or selects a given program |

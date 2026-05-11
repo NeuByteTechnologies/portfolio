@@ -115,3 +115,8 @@ E2 — Filter Processing Error
     %% End
     I --> END[Program Detail Displayed]
     J --> END
+
+## Actors
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Interacts with the UI and views filters the list of programs |
