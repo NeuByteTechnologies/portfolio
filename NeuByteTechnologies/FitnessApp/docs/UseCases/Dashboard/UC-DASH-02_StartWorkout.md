@@ -115,3 +115,8 @@ E2 — System/Database Error
 
     %% Exception Flows
     C -->|System Error| E1[Display System Error Message]
+
+## Actors
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Creates their own account through the app UI |

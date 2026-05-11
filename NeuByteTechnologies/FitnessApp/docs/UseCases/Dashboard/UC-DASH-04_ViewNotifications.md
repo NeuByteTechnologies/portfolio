@@ -123,3 +123,8 @@ E2 — Notification Retrieval Error
 
     %% Exception Flow
     C -->|System Error| E1[Display Retrieval Error]
+
+## Actors
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Creates their own account through the app UI |

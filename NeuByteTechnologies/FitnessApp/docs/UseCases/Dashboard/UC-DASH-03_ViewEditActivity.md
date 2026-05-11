@@ -119,3 +119,8 @@ E2 — Workout Log Retrieval Error
 
     %% Alternate Flow
     A -->|No Recent Activity| A1[Display Empty State]
+
+## Actors
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Creates their own account through the app UI |

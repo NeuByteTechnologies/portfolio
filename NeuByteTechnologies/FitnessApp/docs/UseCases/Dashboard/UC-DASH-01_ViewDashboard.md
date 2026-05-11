@@ -169,3 +169,8 @@ E2 — Data Retrieval Failure
 
     %% End
     Z --> END[Dashboard Fully Displayed]
+
+## Actors
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Creates their own account through the app UI |
