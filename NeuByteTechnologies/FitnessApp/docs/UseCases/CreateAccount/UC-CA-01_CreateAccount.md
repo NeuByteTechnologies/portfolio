@@ -117,3 +117,9 @@ E1 — System/Database Error
     F -->|New| H[Hash Password]
     H --> I[Create User Record]
     I --> J[Redirect to Login Page]
+
+## Actors
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Creates their own account through the app UI |
+| App Admin  | Secondary  | Creates or manages accounts through backend/admin tools
