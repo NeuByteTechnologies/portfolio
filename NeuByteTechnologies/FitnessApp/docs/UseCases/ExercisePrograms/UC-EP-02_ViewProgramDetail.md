@@ -11,7 +11,11 @@ Exercise Programs
 To allow an authenticated user to view detailed information about a selected exercise program, including goals, duration, weekly structure, and daily workout breakdown. This use case enables users to evaluate whether a program fits their fitness objectives before activating it.
 
 ## Primary Actor
-Authenticated User
+
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Interacts with the UI and views a given program detail |
+
 ## Stakeholders & Interests
 - 	User — wants to understand what a program includes before committing to it.
 - 	System — must retrieve accurate program details and present them clearly.
@@ -128,8 +132,3 @@ E2 — Program Detail Retrieval Error
     %% End
     L --> END[Program Activation Flow Begins]
     M --> END
-    
-## Actors
-| Actor      | Type       | Description |
-|------------|------------|-------------|
-| App User   | Primary    | Interacts with the UI and views a given program detail |

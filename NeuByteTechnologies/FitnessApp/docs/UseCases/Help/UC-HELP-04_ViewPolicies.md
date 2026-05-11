@@ -11,7 +11,11 @@ Help / Support
 ## Purpose
 To allow a user to view the application’s legal and policy documents—including Privacy Policy, Terms of Service, and Data Usage statements—ensuring transparency and compliance while giving users clear access to important legal information.
 ## Primary Actor
-User (Authenticated or Unauthenticated)
+
+| Actor | Notes |
+| --- | --- | 
+| App User | User opens Help, views FAQs, contacts support. Admin does not interact with Help UI. |
+
 ## Stakeholders & Interests
 -	User — wants to understand how their data is handled and what terms govern app usage.
 -	Legal/Compliance Team — requires that policy documents are accessible and up‑to‑date.

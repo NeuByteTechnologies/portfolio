@@ -11,8 +11,12 @@ Help / Support
 To allow a user to contact the support team by accessing the support email address from the Help page. This use case ensures users can quickly reach out for assistance when FAQs or self‑service guidance do not resolve their issue.
 
 ## Primary Actor
-User (Authenticated or Unauthenticated)
-Stakeholders & Interests
+
+| Actor(s) | Notes |
+| --- | --- | 
+| App User | User opens Help, views FAQs, contacts support. Admin does not interact with Help UI. |
+
+## Stakeholders & Interests
 -	User — wants a simple, reliable way to contact support when they need help.
 -	Support Team — wants users to reach the correct support channel with clear context.
 -	Product Owner — wants a lightweight support workflow without phone/chat overhead.

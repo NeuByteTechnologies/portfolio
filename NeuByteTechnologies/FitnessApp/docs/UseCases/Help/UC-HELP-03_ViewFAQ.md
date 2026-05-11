@@ -11,8 +11,12 @@ Help / Support
 To allow a user to view Frequently Asked Questions (FAQs) on the Help page, enabling them to quickly find answers to common issues without needing to contact support. This use case supports self‑service troubleshooting and reduces support load.
 
 ## Primary Actor
-User (Authenticated or Unauthenticated)
-Stakeholders & Interests
+
+| Actor(s) | Notes |
+| --- | --- | 
+| App User | User opens Help, views FAQs, contacts support. Admin does not interact with Help UI. |
+
+## Stakeholders & Interests
 • 	User — wants quick, clear answers to common questions.
 • 	Support Team — wants users to resolve common issues without direct assistance.
 • 	Product Owner — wants a well‑structured FAQ experience that improves usability.

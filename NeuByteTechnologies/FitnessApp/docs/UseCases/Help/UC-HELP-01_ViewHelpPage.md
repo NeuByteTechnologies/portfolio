@@ -10,8 +10,12 @@ Help / Support
 To allow an authenticated or unauthenticated user to access the Help page, where they can view FAQs, support information, and guidance on using the application. This use case ensures users can quickly find answers to common questions and understand how to resolve issues without requiring direct support.
 
 ## Primary Actor
-User (Authenticated or Unauthenticated)
-Stakeholders & Interests
+
+| Actor(s) | Notes |
+| --- | --- | 
+| App User | User opens Help, views FAQs, contacts support. Admin does not interact with Help UI. |
+
+## Stakeholders & Interests
 -	User — wants quick access to help content, FAQs, and support information.
 -	System — must display accurate, up‑to‑date help content.
 -	Product Owner — wants a self‑service support experience to reduce support overhead.
@@ -111,4 +115,3 @@ E1 — Help Content Retrieval Error
     G --> END[Help Content Viewed]
     I --> END
     J --> END
-

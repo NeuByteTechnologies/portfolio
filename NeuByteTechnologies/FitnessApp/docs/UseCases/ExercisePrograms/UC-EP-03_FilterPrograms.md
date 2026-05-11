@@ -11,6 +11,12 @@ Authenticated User
 ## Purpose
 To allow an authenticated user to filter the list of available exercise programs based on criteria such as difficulty, duration, and fitness goals. This use case helps users quickly narrow down programs that match their preferences, improving discoverability and reducing decision friction.
 
+## Primary Actor
+
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Interacts with the UI and views filters the list of programs |
+
 ## Stakeholders & Interests
 - 	User — wants to quickly find programs that match their fitness level, goals, and available time.
 - 	System — must apply filters accurately and efficiently.
@@ -115,8 +121,3 @@ E2 — Filter Processing Error
     %% End
     I --> END[Program Detail Displayed]
     J --> END
-
-## Actors
-| Actor      | Type       | Description |
-|------------|------------|-------------|
-| App User   | Primary    | Interacts with the UI and views filters the list of programs |

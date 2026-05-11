@@ -12,6 +12,12 @@ Authenticated User
 ## Purpose
 To allow an authenticated user to view all available exercise programs in a centralized list, enabling them to browse, compare, and select a program to activate or review. This use case provides the entry point into the Exercise Program module and ensures users can easily discover structured workout plans.
 
+## Primary Actor
+
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Interacts with the UI and views a given program detail |
+
 ## Stakeholders & Interests
 - 	User — wants to browse available exercise programs and choose one that fits their goals.
 - 	System — must retrieve accurate program metadata and present it consistently.

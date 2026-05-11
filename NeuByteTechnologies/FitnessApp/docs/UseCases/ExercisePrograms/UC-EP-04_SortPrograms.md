@@ -11,7 +11,11 @@ Exercise Programs
 To allow an authenticated user to sort the list of available exercise programs by criteria such as difficulty, duration, alphabetical order, or popularity. This use case helps users quickly organize programs in a meaningful way, improving discoverability and reducing cognitive load when browsing.
 
 ## Primary Actor
-Authenticated User
+
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Interacts with the UI and sorts the list of programs |
+
 ## Stakeholders & Interests
 - 	User — wants to easily reorder programs to find the most relevant options.
 - 	System — must apply sorting accurately and efficiently.
@@ -111,8 +115,3 @@ Related UI Screens
     %% End
     I --> END[Program Detail Displayed]
     J --> END
-    
-## Actors
-| Actor      | Type       | Description |
-|------------|------------|-------------|
-| App User   | Primary    | Interacts with the UI and sorts the list of programs |

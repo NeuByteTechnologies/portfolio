@@ -11,7 +11,11 @@ Exercise Programs
 To allow an authenticated user to activate a selected exercise program, making it their current program and initializing program progress tracking. This use case ensures the user can commit to a structured workout plan and that the system correctly sets up the program’s starting point.
 
 ## Primary Actor
-Authenticated User
+
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Interacts with the UI and views or selects a given program |
+
 ## Stakeholders & Interests
 - 	User — wants to begin a structured program and track progress from day one.
 - 	System — must correctly assign the program, initialize progress, and prevent conflicts.
@@ -132,9 +136,3 @@ E2 — Program Initialization Error
 
     %% End
     N --> END[Program Activated]
-
-    
-## Actors
-| Actor      | Type       | Description |
-|------------|------------|-------------|
-| App User   | Primary    | Interacts with the UI and views or selects a given program |
