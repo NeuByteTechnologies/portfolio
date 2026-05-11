@@ -117,3 +117,8 @@ E2 — Program Retrieval Error
 
     %% Exception Flow
     C -->|System Error| E1[Display Retrieval Error]
+    
+## Actors
+| Actor      | Type       | Description |
+|------------|------------|-------------|
+| App User   | Primary    | Interacts with the UI and views or selects a given program |
