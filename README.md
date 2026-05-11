@@ -73,3 +73,39 @@ For reviewer convenience, curated Markdown samples are provided:
 - Domain Model
 
 Full documents (PDF , DOCX, XLSX) are available in [`/docs/`](/NeuByteTechnologies/FitnessApp/docs/)
+
+## User Roles
+The Fitness App supports two primary system roles. These roles define how different actors interact with the application and determine the permissions, responsibilities, and system behaviors associated with each user type.  
+
+### 1. App User (Primary Role)
+The App User is the core consumer of the Fitness App. This role represents individuals who use the application to track and improve their personal fitness journey.
+
+**Responsibilities:**
+
+- Create and manage their user profile
+- Log workouts and daily activity
+- Track progress over time
+- View personalized analytics and insights
+- Manage personal settings and preferences
+
+**Characteristics:**
+
+- Primary actor for all functional use cases
+- Interacts exclusively through the mobile or web UI
+- Has no administrative or system‑level permissions
+
+### 2. App Admin (Operational Role)
+The App Admin is responsible for maintaining the operational integrity of the system. This role does not represent a typical end‑user but an internal system operator.  
+
+**Responsibilities:**
+
+- Manage user accounts (create, disable, reset passwords)
+- Monitor system logs and error events
+- Oversee data integrity and system health
+- Perform administrative tasks through backend tools or APIs
+
+**Characteristics:**
+
+- Does not use the app for fitness tracking
+- No dedicated UI in scope for this project
+- Exists to support RBAC, logging, and system governance requirements
