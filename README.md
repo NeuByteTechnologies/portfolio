@@ -1,5 +1,14 @@
 # Portfolio
 This is a repository I will be using to show off my skills with GitHub Projects, Python, Web, MySQL, Azure, and Power BI
+---
+Version: 1.0  
+Last Updated: 2026‑05‑13
+
+## Revision History
+| Version | Last Updated | Description |
+|---------|--------------|-------------|
+| 1.0     | 2026‑05‑13   | Initial creation of Standards folder README |
+---
 
 ## Reasoning for Fitness App
 Over the past eight or more years I have been on the weight loss fitness track. Over that time, I have used Fitbit, Samsung Health, and others to track both nutrition and fitness routines. Because of long term use of these types of applications, it made sense to use it as the basis for this portfolio. There are so many aspects of my experience over the years that align with this design.

@@ -1,4 +1,13 @@
 # Use Cases — Module Index
+---
+Version: 1.0  
+Last Updated: 2026‑05‑13
+
+## Revision History
+| Version | Last Updated | Description |
+|---------|--------------|-------------|
+| 1.0     | 2026‑05‑13   | Initial creation of Standards folder README |
+---
 The Use Cases directory contains all functional use cases for the FitnessApp system.
 Each module is organized into its own folder with a dedicated README.md and individual UC files following the naming pattern:
 

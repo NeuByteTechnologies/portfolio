@@ -5,7 +5,14 @@ These artifacts describe how the system is structured, how components interact, 
 Architecture documents provide the technical foundation that supports the Functional Specs, API Contracts, and UI Specifications.
 
 ---
+Version: 1.0  
+Last Updated: 2026‑05‑13
 
+## Revision History
+| Version | Last Updated | Description |
+|---------|--------------|-------------|
+| 1.0     | 2026‑05‑13   | Initial creation of Standards folder README |
+---
 ## Purpose of This Folder
 - Define the overall system structure and major components.
 - Document integration points, data flows, and service boundaries.

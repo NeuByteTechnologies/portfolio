@@ -1,3 +1,12 @@
+Version: 1.0  
+Last Updated: 2026‑05‑13
+
+## Revision History
+| Version | Last Updated | Description |
+|---------|--------------|-------------|
+| 1.0     | 2026‑05‑13   | Initial creation of Standards folder README |
+---
+
 # Purpose of This Folder
 The /docs directory contains all formal project documentation. Each subfolder represents a specific artifact type (UI Specifications, API Contracts, Data Specifications, Use Cases, Test Documentation, etc.). This structure mirrors enterprise documentation practices and provides clear, reviewer‑friendly navigation.
 

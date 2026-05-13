@@ -5,7 +5,14 @@ Each UI Spec defines the screen‑level layout, components, states, interactions
 These documents serve as the authoritative reference for how the user interface behaves and how it integrates with backend services.
 
 ---
+Version: 1.0  
+Last Updated: 2026‑05‑13
 
+## Revision History
+| Version | Last Updated | Description |
+|---------|--------------|-------------|
+| 1.0     | 2026‑05‑13   | Initial creation of Standards folder README |
+---
 ## Purpose of This Folder
 - Provide a centralized location for all UI Specifications.
 - Define the visual structure and interaction model for each screen.

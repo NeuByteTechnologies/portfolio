@@ -5,6 +5,14 @@ These artifacts define the policies, terms, and user‑facing legal statements r
 They serve as placeholders for portfolio purposes and are written in a lightweight, reviewer‑friendly format.
 
 ---
+Version: 1.0  
+Last Updated: 2026‑05‑13
+
+## Revision History
+| Version | Last Updated | Description |
+|---------|--------------|-------------|
+| 1.0     | 2026‑05‑13   | Initial creation of Standards folder README |
+---
 
 ## Purpose of This Folder
 - Provide a centralized location for all legal and compliance documents.

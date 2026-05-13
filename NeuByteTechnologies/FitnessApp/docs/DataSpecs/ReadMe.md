@@ -5,6 +5,14 @@ Each Data Specification defines the authoritative structure, constraints, and re
 These documents ensure consistency between UI fields, API payloads, backend storage, and validation rules.
 
 ---
+Version: 1.0  
+Last Updated: 2026‑05‑13
+
+## Revision History
+| Version | Last Updated | Description |
+|---------|--------------|-------------|
+| 1.0     | 2026‑05‑13   | Initial creation of Standards folder README |
+---
 
 ## Purpose of This Folder
 - Provide a centralized, structured location for all Data Specifications.

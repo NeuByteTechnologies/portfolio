@@ -3,7 +3,14 @@
 This folder contains the design‑time API Contracts for the system.  
 Each contract defines the service interface for a specific module, including endpoints, payload schemas, validation rules, and error models.  
 These documents serve as the authoritative reference for backend implementation and integration.
+---
+Version: 1.0  
+Last Updated: 2026‑05‑13
 
+## Revision History
+| Version | Last Updated | Description |
+|---------|--------------|-------------|
+| 1.0     | 2026‑05‑13   | Initial creation of Standards folder README |
 ---
 
 ## Purpose of This Folder

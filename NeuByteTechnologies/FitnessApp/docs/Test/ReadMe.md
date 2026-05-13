@@ -4,6 +4,14 @@ This folder contains all testing‑related documentation for the system, includi
 These artifacts define the testing approach, coverage expectations, validation rules, and traceability back to Business Requirements, Functional Specs, UI Specs, and API Contracts.
 
 ---
+Version: 1.0  
+Last Updated: 2026‑05‑13
+
+## Revision History
+| Version | Last Updated | Description |
+|---------|--------------|-------------|
+| 1.0     | 2026‑05‑13   | Initial creation of Standards folder README |
+---
 
 ## Purpose of This Folder
 - Provide a centralized location for all test documentation.

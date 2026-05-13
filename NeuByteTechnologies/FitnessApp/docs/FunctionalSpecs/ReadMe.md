@@ -4,7 +4,14 @@ This folder contains the Functional Specification (FS) documents for the system.
 Each FS defines **what the system must do** at the feature and module level, written from a product and system‑behavior perspective. These documents translate Business Requirements and Use Cases into clear, testable, implementation‑ready functionality.
 
 ---
+Version: 1.0  
+Last Updated: 2026‑05‑13
 
+## Revision History
+| Version | Last Updated | Description |
+|---------|--------------|-------------|
+| 1.0     | 2026‑05‑13   | Initial creation of Standards folder README |
+---
 ## Purpose of This Folder
 
 The Functional Specs serve as the authoritative source for:

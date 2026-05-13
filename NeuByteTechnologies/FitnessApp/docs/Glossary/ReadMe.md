@@ -5,6 +5,14 @@ The Glossary defines standardized terminology used across Business Requirements,
 It serves as the single source of truth for all domain, UX, technical, and fitness‑related terms.
 
 ---
+Version: 1.0  
+Last Updated: 2026‑05‑13
+
+## Revision History
+| Version | Last Updated | Description |
+|---------|--------------|-------------|
+| 1.0     | 2026‑05‑13   | Initial creation of Standards folder README |
+---
 
 ## Purpose of This Folder
 - Provide a centralized, authoritative definition for all system terminology.

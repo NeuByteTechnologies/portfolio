@@ -5,6 +5,14 @@ Each BRD defines the *business intent*, *scope*, and *requirements* for a specif
 These documents serve as the authoritative source for all downstream artifacts, including Use Cases, UI Specifications, API Contracts, and Test Cases.
 
 ---
+Version: 1.0  
+Last Updated: 2026‑05‑13
+
+## Revision History
+| Version | Last Updated | Description |
+|---------|--------------|-------------|
+| 1.0     | 2026‑05‑13   | Initial creation of Standards folder README |
+---
 
 ## Purpose of This Folder
 - Provide a centralized location for all BRDs.
