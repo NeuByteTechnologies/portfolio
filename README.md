@@ -10,6 +10,34 @@ Last Updated: 2026‑05‑13
 | 1.0     | 2026‑05‑13   | Initial creation of Standards folder README |
 ---
 
+
+# Visitor Feedback & Portfolio Log
+Your feedback helps improve the clarity, structure, and overall quality of this portfolio.
+If you're reviewing this project for hiring, collaboration, or professional interest, you’re invited to share your thoughts.
+
+## Portfolio Visitor Log  
+Please take a moment to sign the Visitor Log and optionally leave feedback about your experience.
+
+### [Visitor Log](https://forms.gle/XoUVUrbBHPHdKkpq9) 
+
+**What You Can Share:**
+- How you discovered this portfolio
+- Which modules or diagrams you reviewed
+- Any suggestions for clarity or improvement
+- Opportunities for collaboration or follow‑up
+
+**Why This Exists**  
+GitHub does not provide identity‑level analytics for repository views.
+This Visitor Log offers a simple, professional way for reviewers to:
+
+- Provide feedback
+- Identify themselves
+- Ask questions
+- Connect for follow‑up
+
+Your insights directly support the continuous improvement of this project.
+
+---
 ## Reasoning for Fitness App
 Over the past eight or more years I have been on the weight loss fitness track. Over that time, I have used Fitbit, Samsung Health, and others to track both nutrition and fitness routines. Because of long term use of these types of applications, it made sense to use it as the basis for this portfolio. There are so many aspects of my experience over the years that align with this design.
 
@@ -79,7 +107,7 @@ For reviewer convenience, curated Markdown samples are provided:
 - Context Diagram
 - Sequence Diagram
 - Data Flow Diagram
-- Domain Model
+- [Domain Model](/NeuByteTechnologies/FitnessApp/docs/Diagrams/EnitityRelationship/FitnessAppDiagram.svg)
 
 Full documents (PDF , DOCX, XLSX) are available in [`/docs/`](/NeuByteTechnologies/FitnessApp/docs/)
 
