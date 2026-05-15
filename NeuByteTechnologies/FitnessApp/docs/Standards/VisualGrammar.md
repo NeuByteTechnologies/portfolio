@@ -14,8 +14,8 @@ The visual grammar establishes:
 
 All lines, borders, connectors, lifelines, and arrows use:
 
-- Stroke Color: rgba(0, 0, 0, 0.85)
-- Hex Equivalent: #000000D9
+- Stroke Color: Neutral‑700
+- Hex: #4A4A4A
 - Stroke Width: 1.0 px
 - Line Join: Miter
 - Line Cap: Square
@@ -25,17 +25,18 @@ This stroke style is the global default across all stencil families.
 
 ## 3. Fill and Offset Colors
 
-### 3.1 Primary UI/Emphasis Fill
+### 3.1 Primary Emphasis Fill
 
-- Used for buttons, modals, highlighted UI elements, and emphasis boxes.
-- Color: rgba(0, 122, 255, 0.10)
-- Hex Equivalent: #007AFF1A
+- Used for emphasis boxes, highlighted regions, and key callouts.
+- Color: NeuByte Blue at low opacity
+- Hex: #2D6CDF
+- Recommended Opacity: 10–15%
 
 ### 3.2 Neutral Background / Grouping Fill
 
 - Used for grouping containers, optional steps, and low‑priority UI elements.
-- Color: rgba(0, 0, 0, 0.05)
-- Hex Equivalent: #0000000D
+- Color: Neutral‑100
+- Hex: #F2F2F2
 
 ### 3.3 No‑Fill Standard
 
@@ -43,17 +44,15 @@ This stroke style is the global default across all stencil families.
 
 ### 3.4 Typography
 
-- All diagrams use the following text standards:
-- Font: Inter, Segoe UI, or system sans‑serif
-- Font Color: rgba(0, 0, 0, 0.85)
+All diagrams use the NeuByte Typography Specification:
 
-- **Font Sizes:**
-  - Titles: 18–20 pt
-  - Shape Labels: 12–14 pt
-  - Connector Labels: 10–12 pt
-  - Metadata Tables: 10–12 pt
+- Font Family: Manrope
+- Approved Weights: Regular, Medium, SemiBold
+- Text Color: Neutral‑900 (#1A1A1A) for primary text
+- Secondary Text: Neutral‑700 (#4A4A4A)
+- Metadata: Neutral‑500 (#7A7A7A)
 
-Text is always left‑aligned inside shapes unless the stencil family specifies otherwise.
+For full rules, see `/Standards/Typography.md`.
 
 ### 3.5 Spacing and Alignment Rules
 
