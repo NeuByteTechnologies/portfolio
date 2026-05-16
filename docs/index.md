@@ -11,7 +11,7 @@ title: NeuByte Portfolio
 <head>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="assets/css/neubyte.css">
+ <link rel="stylesheet" href="/portfolio/assets/css/neubyte.css">
 </head>
 <body>
 
