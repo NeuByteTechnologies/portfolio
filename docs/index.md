@@ -7,7 +7,6 @@ layout: none
 title: NeuByte Portfolio
 ---
 
-<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -35,3 +34,5 @@ This site contains architecture, documentation, diagrams, and project details fo
 ---
 
 © NeuByte Technologies. All rights reserved.
+</body>
+</html>
