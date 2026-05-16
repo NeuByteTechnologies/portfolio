@@ -2,7 +2,20 @@
 layout: home
 title: NeuByte Technologies Portfolio
 ---
+---
+layout: none
+title: NeuByte Portfolio
+---
 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/neubyte.css">
+</head>
+<body>
+<!--
 # NeuByte Technologies  
 ### Engineering Portfolio & Project Documentation
 
@@ -19,7 +32,7 @@ This site contains architecture, documentation, diagrams, and project details fo
 
 - [About NeuByte](pages/about.md)
 - [Portfolio Overview](pages/portfolio.md)
-
+-->
 ---
 
 © NeuByte Technologies. All rights reserved.

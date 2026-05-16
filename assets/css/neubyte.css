@@ -1,0 +1,165 @@
+/* ---------------------------------------------------------
+   NeuByte Color System — Core Variables
+   Follows: minimal, semantic, grayscale-first, WCAG AA
+--------------------------------------------------------- */
+
+:root {
+  /* Grayscale Palette */
+  --nb-gray-0:   #ffffff;
+  --nb-gray-50:  #f7f7f7;
+  --nb-gray-100: #e6e6e6;
+  --nb-gray-200: #cccccc;
+  --nb-gray-300: #b3b3b3;
+  --nb-gray-400: #999999;
+  --nb-gray-500: #808080;
+  --nb-gray-600: #666666;
+  --nb-gray-700: #4d4d4d;
+  --nb-gray-800: #333333;
+  --nb-gray-900: #1a1a1a;
+  --nb-gray-1000:#000000;
+
+  /* NeuByte Brand Accent */
+  --nb-blue: #0077cc; /* NeuByte Blue */
+  --nb-blue-light: #3399ff;
+  --nb-blue-dark: #005fa3;
+
+  /* Semantic Tokens */
+  --nb-bg: var(--nb-gray-0);
+  --nb-surface: var(--nb-gray-50);
+  --nb-surface-alt: var(--nb-gray-100);
+
+  --nb-text: var(--nb-gray-900);
+  --nb-text-muted: var(--nb-gray-600);
+  --nb-text-inverse: var(--nb-gray-0);
+
+  --nb-border: var(--nb-gray-200);
+  --nb-border-strong: var(--nb-gray-400);
+
+  --nb-accent: var(--nb-blue);
+  --nb-accent-hover: var(--nb-blue-dark);
+
+  /* Stroke rules for diagrams + UI */
+  --nb-stroke-width: 2px;
+  --nb-stroke-color: var(--nb-gray-800);
+
+  /* Spacing Scale */
+  --nb-space-1: 0.25rem;
+  --nb-space-2: 0.5rem;
+  --nb-space-3: 0.75rem;
+  --nb-space-4: 1rem;
+  --nb-space-6: 1.5rem;
+  --nb-space-8: 2rem;
+
+  /* Radius */
+  --nb-radius-sm: 4px;
+  --nb-radius-md: 8px;
+  --nb-radius-lg: 12px;
+
+  /* Typography */
+  --nb-font: "Manrope", sans-serif;
+  --nb-font-size: 16px;
+  --nb-line-height: 1.6;
+}
+
+/* ---------------------------------------------------------
+   Base Reset + Typography
+--------------------------------------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--nb-bg);
+  color: var(--nb-text);
+  font-family: var(--nb-font);
+  font-size: var(--nb-font-size);
+  line-height: var(--nb-line-height);
+}
+
+h1, h2, h3, h4 {
+  color: var(--nb-text);
+  margin-top: var(--nb-space-8);
+  margin-bottom: var(--nb-space-4);
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: var(--nb-space-4);
+  color: var(--nb-text);
+}
+
+/* ---------------------------------------------------------
+   Links
+--------------------------------------------------------- */
+
+a {
+  color: var(--nb-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--nb-accent-hover);
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------
+   Surfaces + Cards
+--------------------------------------------------------- */
+
+.nb-card {
+  background: var(--nb-surface);
+  border: 1px solid var(--nb-border);
+  border-radius: var(--nb-radius-md);
+  padding: var(--nb-space-6);
+  margin-bottom: var(--nb-space-6);
+}
+
+/* ---------------------------------------------------------
+   Buttons
+--------------------------------------------------------- */
+
+.nb-button {
+  display: inline-block;
+  padding: var(--nb-space-3) var(--nb-space-6);
+  background: var(--nb-accent);
+  color: var(--nb-text-inverse);
+  border-radius: var(--nb-radius-sm);
+  font-weight: 600;
+}
+
+.nb-button:hover {
+  background: var(--nb-accent-hover);
+}
+
+/* ---------------------------------------------------------
+   Layout Utilities
+--------------------------------------------------------- */
+
+.nb-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--nb-space-8) var(--nb-space-4);
+}
+
+.nb-grid {
+  display: grid;
+  gap: var(--nb-space-6);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.nb-center {
+  text-align: center;
+}
+
+/* ---------------------------------------------------------
+   Header / Hero
+--------------------------------------------------------- */
+
+.nb-header {
+  padding: var(--nb-space-8) 0;
+  text-align: center;
+}
+
+.nb-logo {
+  width: 120px;
+  margin-bottom: var(--nb-space-4);
+}
