@@ -175,3 +175,27 @@ nav a {
   line-height: calc(1em + 6px);
 }
 
+.site-footer {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--text);
+  transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover svg {
+  fill: var(--accent);
+  transform: translateY(-2px);
+}
