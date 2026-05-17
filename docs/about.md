@@ -1,16 +1,14 @@
-<html>
-<head>
+
   <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=2">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="manifest" href="assets/site.webmanifest">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="assets/neubyte.css">
-</head>
-<body>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=2"/>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png"/>
+<link rel="manifest" href="assets/site.webmanifest"/>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+ <link rel="stylesheet" href="assets/neubyte.css"/>
+
 <section id="about" style="max-width: 820px; margin: 0 auto; padding: 2rem 1rem;">
 
-<div><image src="assets/NeuByteTechnologiesLogo59.png"></div>
+<div><image src="assets/NeuByteTechnologiesLogo59.png"/></div>
 
   <h1>About Me</h1>
 
@@ -77,4 +75,3 @@
 </p>
 
 </section>
-</body>

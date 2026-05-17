@@ -23,7 +23,7 @@ This site contains architecture, documentation, diagrams, and project details fo
 
 <b>FitnessApp</b>
   End‑to‑end architecture, diagrams, documentation, and sprint artifacts.  
- <a  href="../README.md"> View Project
+ <a  href="../../portfolio//README.md"> View Project
  </a>
 
 <h2>Documentation</h2>
