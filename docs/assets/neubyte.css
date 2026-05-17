@@ -181,6 +181,18 @@ nav a {
   color: var(--text-muted);
 }
 
+.site-footer .legal {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.site-footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
 .social-icons {
   margin-top: 1rem;
   display: flex;
