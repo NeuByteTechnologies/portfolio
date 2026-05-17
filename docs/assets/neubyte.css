@@ -170,3 +170,8 @@ nav {
   background-size: 600px;
   background-position: center;
 }
+
+nav a {
+  line-height: calc(1em + 3px);
+}
+
