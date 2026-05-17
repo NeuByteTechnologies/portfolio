@@ -1,0 +1,190 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=2">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="assets/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="assets/neubyte.css">
+</head>
+<style>
+  body { font-family: 'Manrope', sans-serif; }
+  h1, h2, h3 { font-weight: 600; }
+  .logo { text-align: center; margin-bottom: 2rem; }
+</style>
+
+<div class="logo">
+  <img src="assets/NeuByteTechnologiesLogo59.png" 
+       alt="NeuByte Logo" 
+       style="max-width: 160px; height: auto;">
+</div>
+
+<section style="max-width: 860px; margin: 0 auto; padding: 1rem;">
+<h1>Portfolio Overview</h1>
+<p>
+The NeuByte Fitness App Portfolio is a full‑cycle engineering project designed to demonstrate system design, documentation, architecture, UI/UX planning, and modern development practices.
+It showcases how I approach building maintainable, scalable systems with clarity, structure, and strong visual grammar.</p>
+
+<h1>Project Summary</h1>
+<p>
+The Fitness App is a comprehensive system for tracking workouts, nutrition, progress, and analytics.
+It is inspired by my own multi‑year fitness journey and long‑term use of platforms like Fitbit and Samsung Health
+</p>
+
+This project demonstrates:
+<ul>
+<li>Enterprise‑grade documentation</li>
+<li>lean architecture and system design</li>
+<li>UI/UX specification and workflow modeling</li>
+<li>API design and backend planning</li>
+<li>Azure‑hosted data and integration patterns</li>
+<li>GitHub‑based project management and pipelines</li>
+</ul>
+<h1>Why This Project</h1>
+<p>My experience with fitness tracking apps over the past eight years made this the perfect domain for a portfolio project.</p>
+
+It combines:
+
+<ul>
+<li>Data modeling</li>
+<li>API design</li>
+<li>UI/UX flows</li>
+<li>Reporting and analytics</li>
+<li>Cloud architecture</li>
+<li>Real‑world user behavior</li>
+</ul>
+
+<p>
+This allows me to demonstrate a complete engineering lifecycle from concept to documentation to implementation.
+</p>
+
+<h>Tech Stack Overview</h>
+
+<b>Backend & APIs</b>
+
+<ul>
+<li>Python (API layer)
+<li>Azure App Services
+<li>RESTful API design
+<li>Authentication & MFA flows
+<li>Database
+<li>Azure MySQL (cost‑optimized for portfolio use)
+<li>Data dictionary & schema documentation
+<li>Star schema for reporting models
+</ul>
+
+<b>Frontend</b>
+
+<ul>
+<li>Modern Web UI</li>
+<li>Lightweight components</li>
+<li>Minimal JavaScript footprint</li>
+<li>Razor / C# backend support</li>
+</ul>
+
+<b>Reporting</b>
+
+<ul>
+<li>Power BI</li>
+<li>Azure Pipelines for scheduled refresh</li>
+<li>OLTP → Star Schema transformation</li>
+</ul>
+
+<b>Tooling & DevOps</b>
+
+<ul>
+<li>GitHub Projects</li>
+<li>GitHub Issues</li>
+<li>GitHub Source Control</li>
+<li>Markdown‑based documentation</li>
+<li>UML & diagramming (Inkscape, Draw.io)</li>
+
+<h1>Key Artifacts & Documentation Samples</h1>
+This portfolio includes full enterprise‑grade documentation across:
+<ul>
+<li>Business Requirements</li>
+<li>unctional Specifications</li>
+<li>UI Specifications</li>
+<li>API Contracts</li>
+<li>Data Dictionary</li>
+<li>Test Cases</li>
+<li>Use Cases</li>
+<li>System Diagrams</li>
+
+Below are curated samples for reviewers:
+
+<b>UI Specification Samples</b>
+<ul><li>Log Workout UI Spec ( in Bing)</li></ul>
+
+<b>Functional Specification Samples</b>
+<ul></li>Account Functional Specification ( in Bing)</li></ul>
+
+<b>Data Dictionary Samples</b>
+<ul><li>Users Table ( in Bing)</li>
+<li>Weight Entries Table ( in Bing)</li></ul>
+
+<b>Use Case Samples</b>
+<ul>
+<li>UC‑LOGIN‑01 User Login ( in Bing)</li>
+<li>UC‑MENU‑03 Navigate Dashboard ( in Bing)</li>
+<li>UC‑EP‑02 View Program Detail ( in Bing)</li>
+<li>UC‑LW‑01 Log Workout ( in Bing)</li>
+<li>UC‑ANL‑06 Log Feature Usage ( in Bing)</li>
+</ul>
+
+<b>System Diagram Samples</b>
+<ul>
+<li>Context Diagram</li>
+<li>Sequence Diagram</li>
+<li>Data Flow Diagram</li>
+<li>Domain Model ( in Bing)</li>
+</ul>
+
+<h1>System Roles</h1>
+
+<h2>1. App User (Primary Role)</h2>
+The main user of the Fitness App.
+
+<b>Responsibilities include:</b>
+
+<ul>
+<li>Logging workouts</li>
+<li>Tracking progress</li>
+<li>Viewing analytics</li>
+<li>Managing profile and settings
+
+<h2>2. App Admin (Operational Role)</h2>
+Internal system operator for governance and support.
+
+<b>Responsibilities include:</b>
+<ul>
+<li>Managing user accounts</li>
+<li>Monitoring logs and system health</li>
+<li>Ensuring data integrity</li>
+
+<h2>Skills Demonstrated</h2>
+<ul>
+<li>System architecture & UML</li>
+<li>Enterprise documentation</li>
+<li>UI/UX specification</li>
+<li>API design</li>
+<li>Cloud architecture (Azure)</li>
+<li>Data modeling & analytics</li>
+<li>GitHub project management</li>
+<li>Modern web development</li>
+<li>Python backend development</li>
+<li>C# / Razor integration</li>
+</ul>
+
+<h1>Project Roadmap</h1>
+<ol>
+<li>✔ Documentation system  </li>
+<li>✔ Use cases & diagrams </li>
+<li>✔ Data dictionary </li>
+<li>✔ UI specification </li>
+<li>☐ API implementation </li> 
+<li>☐ Frontend development  </li>
+<li>☐ Power BI reporting  </li>
+<li>☐ Deployment & integration </li> 
+</section>
+<body>
