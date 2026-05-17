@@ -163,3 +163,10 @@ a:hover {
   width: 120px;
   margin-bottom: var(--nb-space-4);
 }
+
+nav {
+  background-image: url("assets/NeuByteGrIdMenuBar.svg");
+  background-repeat: no-repeat;
+  background-size: 897px;
+  background-position: center;
+}
