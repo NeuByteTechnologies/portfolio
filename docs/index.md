@@ -23,13 +23,14 @@ This site contains architecture, documentation, diagrams, and project details fo
 
 </b>FitnessApp</b>
   End‑to‑end architecture, diagrams, documentation, and sprint artifacts.  
-  [View Project](/README.md)
+ <href src="ReadMe.md">View Project</href>
 
 <h2>Documentation</h2>
 
-- [About NeuByte](about.md)
-- [Portfolio Overview](portfolio.md)
----
+<ul>
+<li><href src="about.md">About NeuByte</href></li>
+<li><href src="portfolio.md">Portfolio Overview</href></li>
+</ul>
 
 © NeuByte Technologies. All rights reserved.
 </body>
