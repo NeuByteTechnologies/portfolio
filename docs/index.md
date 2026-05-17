@@ -1,11 +1,3 @@
----
-layout: home
-title: NeuByte Technologies Portfolio
----
----
-layout: none
-title: NeuByte Portfolio
----
 
 <html>
 <head>
@@ -18,6 +10,7 @@ title: NeuByte Portfolio
  <!--This is supposed to build as /assets/css/neubyte.css-->
 </head>
 <body>
+<div><image src="assets/NeuByteTechnologiesLogo59.png"></div>
 
 # NeuByte Technologies  
 ### Engineering Portfolio & Project Documentation
@@ -29,7 +22,7 @@ This site contains architecture, documentation, diagrams, and project details fo
 
 - **FitnessApp**  
   End‑to‑end architecture, diagrams, documentation, and sprint artifacts.  
-  [View Project](NeuByteTechnologies/FitnessApp/README.md)
+  [View Project](/README.md)
 
 ## Documentation
 
