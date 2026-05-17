@@ -98,6 +98,7 @@ This allows me to demonstrate a complete engineering lifecycle from concept to d
 <li>GitHub Source Control</li>
 <li>Markdown‑based documentation</li>
 <li>UML & diagramming (Inkscape, Draw.io)</li>
+</ul>
 
 <h1>Key Artifacts & Documentation Samples</h1>
 This portfolio includes full enterprise‑grade documentation across:
@@ -139,6 +140,7 @@ Below are curated samples for reviewers:
 <li>Data Flow Diagram</li>
 <li>Domain Model ( in Bing)</li>
 </ul>
+</ul>
 
 <h1>System Roles</h1>
 
@@ -151,7 +153,8 @@ The main user of the Fitness App.
 <li>Logging workouts</li>
 <li>Tracking progress</li>
 <li>Viewing analytics</li>
-<li>Managing profile and settings
+<li>Managing profile and settings</li>
+</ul>
 
 <h2>2. App Admin (Operational Role)</h2>
 Internal system operator for governance and support.
@@ -161,6 +164,7 @@ Internal system operator for governance and support.
 <li>Managing user accounts</li>
 <li>Monitoring logs and system health</li>
 <li>Ensuring data integrity</li>
+</ul>
 
 <h2>Skills Demonstrated</h2>
 <ul>

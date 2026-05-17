@@ -12,22 +12,23 @@
 <body>
 <div><image src="assets/NeuByteTechnologiesLogo59.png"></div>
 
-# NeuByte Technologies  
-### Engineering Portfolio & Project Documentation
-
+<h1>NeuByte Technologies  </h1>
+<h2>Engineering Portfolio & Project Documentation</h2>
+<p>
 Welcome to the NeuByte Technologies portfolio.  
 This site contains architecture, documentation, diagrams, and project details for ongoing and completed engineering work.
+</p>
 
-## Featured Projects
+<h2> Featured Projects</h2>
 
-- **FitnessApp**  
+</b>FitnessApp</b>
   End‑to‑end architecture, diagrams, documentation, and sprint artifacts.  
   [View Project](/README.md)
 
-## Documentation
+<h2>Documentation</h2>
 
-- [About NeuByte](pages/about.md)
-- [Portfolio Overview](pages/portfolio.md)
+- [About NeuByte](about.md)
+- [Portfolio Overview](portfolio.md)
 ---
 
 © NeuByte Technologies. All rights reserved.
