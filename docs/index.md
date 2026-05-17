@@ -29,10 +29,10 @@ This site contains architecture, documentation, diagrams, and project details fo
 
 <ul>
 <li>
-  <a href="about.md">About NeuByte</a>
+  <a href="about.html">About NeuByte</a>
 </li>
 <li>
-  <a href="portfolio.md">Portfolio Overview</a>
+  <a href="portfolio.html">Portfolio Overview</a>
   </li>
 </ul>
 
