@@ -10,8 +10,13 @@
  <!--This is supposed to build as /assets/css/neubyte.css-->
 </head>
 <body>
-<image src="assets/NeuByteTechnologiesLogo59.png">
 
+<div class="logo">
+  <img src="assets/NeuByteTechnologiesLogo59.png" 
+       alt="NeuByte Logo" 
+       style="max-width: 160px; height: auto;">
+</div>
+<section style="max-width: 860px; margin: 0 auto; padding: 1rem;">
 <h1>NeuByte Technologies  </h1>
 <h2>Engineering Portfolio & Project Documentation</h2>
 <p>
@@ -37,5 +42,6 @@ This site contains architecture, documentation, diagrams, and project details fo
 </ul>
 
 © NeuByte Technologies. All rights reserved.
+</section>
 </body>
 </html>
