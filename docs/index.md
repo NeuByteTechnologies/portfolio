@@ -10,7 +10,7 @@ title: NeuByte Portfolio
 <html>
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="assets/neubyte.ico?=v=1">
+  <link rel="icon" type="image/x-icon" href="assets/NueByteTechnologiesLogo.ico?=v=1">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="assets/neubyte.css">
  <!--This is supposed to build as /assets/css/neubyte.css-->
