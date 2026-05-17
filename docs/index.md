@@ -23,7 +23,7 @@ This site contains architecture, documentation, diagrams, and project details fo
 
 <b>FitnessApp</b>
   End‑to‑end architecture, diagrams, documentation, and sprint artifacts.  
- [Main Read Me](/README.md)
+<a href="https://github.com/gordonneuls/portfolio">Portfolio  Repository</a>
 
 <h2>Documentation</h2>
 
