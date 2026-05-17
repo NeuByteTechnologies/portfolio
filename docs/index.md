@@ -10,7 +10,7 @@
  <!--This is supposed to build as /assets/css/neubyte.css-->
 </head>
 <body>
-<div><image src="assets/NeuByteTechnologiesLogo59.png"></div>
+<image src="assets/NeuByteTechnologiesLogo59.png">
 
 <h1>NeuByte Technologies  </h1>
 <h2>Engineering Portfolio & Project Documentation</h2>
@@ -22,7 +22,7 @@ This site contains architecture, documentation, diagrams, and project details fo
 <h2> Featured Projects</h2>
 
 <b>FitnessApp</b>
-  End‑to‑end architecture, diagrams, documentation, and sprint artifacts.  
+  End‑to‑end architecture, diagrams, documentation, and sprint artifacts. <br/> 
 <a href="https://github.com/gordonneuls/portfolio">Portfolio  Repository</a>
 
 <h2>Documentation</h2>
