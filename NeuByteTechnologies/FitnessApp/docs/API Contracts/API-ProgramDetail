@@ -1,0 +1,166 @@
+# API Contract — Program Detail
+## 1. Endpoint Summary
+
+| Endpoint | Method | Purpose | Authentication | Notes |
+| --- | --- | --- | --- | --- |
+| ``/programs/{program_id}/detail`` | GET | Get full program structure (weeks, days, workouts) | Required | Used by Program Detail screen |
+| ``/programs/{program_id}/day/{day_id}`` | GET | Get detail for a specific program day | Required | Used when user taps a specific day |
+| ``/programs/{program_id}/workout/{workout_id}`` | GET | Get workout detail (exercises) | Required | Used by Workout Detail screen |
+
+## 2. Response Schemas
+### 2.1 Program Detail (GET /programs/{program_id}/detail)
+This endpoint returns the entire program structure needed to render the Program Detail screen.
+
+**Response**
+json  
+{  
+  "program_id": "string",  
+  "name": "string",  
+  "description": "string",  
+  "duration_weeks": 8,  
+  "weeks": [  
+    {  
+      "week_number": 1,  
+      "days": [  
+        {  
+          "day_id": "string",  
+          "day_number": 1,  
+          "workout_id": "string",  
+          "workout_name": "Upper Body Strength",  
+          "estimated_duration": 42,  
+          "is_completed": false  
+        }  
+      ]  
+    }  
+  ]  
+}  
+### 2.2 Program Day Detail (GET /programs/{program_id}/day/{day_id})
+This endpoint returns the workout assigned to that day, including exercises.  
+
+**Response**
+json  
+{  
+  "day_id": "string",  
+  "day_number": 1,  
+  "workout_id": "string",  
+  "workout_name": "Upper Body Strength",  
+  "estimated_duration": 42,  
+  "exercises": [  
+    {  
+      "exercise_id": "string",  
+      "name": "Bench Press",  
+      "type": "Strength",  
+      "sets": 4,  
+      "reps": 8,  
+      "weight": null,  
+      "duration_seconds": null  
+    }  
+  ]  
+}  
+### 2.3 Workout Detail (GET /programs/{program_id}/workout/{workout_id})
+This endpoint returns the full exercise list for a workout.  
+
+**Response**
+json  
+{  
+  "workout_id": "string",  
+  "name": "Upper Body Strength",  
+  "estimated_duration": 42,  
+  "exercise_count": 8,  
+  "exercises": [  
+    {  
+      "exercise_id": "string",  
+      "name": "Bench Press",  
+      "type": "Strength",  
+      "sets": 4,  
+      "reps": 8,  
+      "weight": null,  
+      "duration_seconds": null  
+    }  
+  ]  
+  }
+## 3. Validation Rules
+**Program Detail**  
+- Program must exist
+- Program must be active
+- User must have access to the program (public or assigned)
+
+**Program Day Detail**  
+- Day must belong to the program
+- Day must exist
+- Workout must exist
+- Workout Detail
+- Workout must belong to the program
+- Workout must exist
+
+## 4. Business Rules
+**Program Structure**  
+- Programs are structured as:
+ - Weeks
+ - Days
+ - Workouts
+ - Exercises
+
+**Completion Status**
+- is_completed is derived from workout logs
+- A day is completed if its workout is completed
+- A week is completed if all days are completed
+
+**Workout Detail**
+- Exercises include:
+ - Strength (sets/reps/weight)
+ - Cardio (duration/distance)
+ - Interval (rounds/time)
+
+**Program Detail Screen**
+- UI uses this endpoint to render:
+ - Week cards
+ - Day tiles
+ - Workout preview
+
+## 5. Error Model
+
+| HTTP Code | Error Code | Message | Description |
+| --- | --- | --- | --- |
+| 400 | ``INVALID_REQUEST`` | Missing or invalid fields | Validation failure |
+| 401 | ``UNAUTHORIZED`` | Invalid or missing token | Auth required |
+| 404 | ``PROGRAM_NOT_FOUND`` | Program not found | Invalid ID |
+| 404 | ``DAY_NOT_FOUND`` | Day not found | Invalid day ID |
+| 404 | ``WORKOUT_NOT_FOUND`` | Workout not found | Invalid workout ID |
+| 500 | ``SERVER_ERROR`` | Internal error | Unexpected failure |
+
+## 6. Example Responses
+**Program Detail Example**
+json  
+{  
+  "program_id": "P001",  
+  "name": "8‑Week Strength",  
+  "description": "A progressive strength program.",  
+  "duration_weeks": 8,  
+  "weeks": [  
+    {  
+      "week_number": 1,  
+      "days": [  
+        {  
+          "day_id": "D001",  
+          "day_number": 1,  
+          "workout_id": "W045",  
+          "workout_name": "Upper Body Strength",  
+          "estimated_duration": 42,  
+          "is_completed": false  
+        }  
+      ]  
+    }  
+  ]  
+}  
+
+## 7. Notes / Edge Cases
+- Programs may have variable numbers of days per week
+- Some programs may include optional days
+- Exercises may include:
+ - weight
+ - reps
+ - sets
+ - duration
+ - distance
+- Program detail does not include user‑specific progress — that comes from Dashboard
