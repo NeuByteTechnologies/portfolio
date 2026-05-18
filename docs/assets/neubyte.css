@@ -68,7 +68,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: var(--nb-gray-50);
+  background: var(--nb-bg);
   color: var(--nb-text);
   font-family: var(--nb-font);
   font-size: var(--nb-font-size);
