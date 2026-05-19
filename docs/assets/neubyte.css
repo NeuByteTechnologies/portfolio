@@ -343,6 +343,7 @@ color: var(--nb-text-secondary);
 .education-card {
   padding: 1rem 0;
   border-bottom: 1px solid #ddd;
+  width:860px
 }
 
 .education-card:last-child {
@@ -382,6 +383,7 @@ color: var(--nb-text-secondary);
 .cert-card {
   padding: 1rem 0;
   border-bottom: 1px solid #ddd;
+  width:860px
 }
 
 .cert-card:last-child {
@@ -414,6 +416,7 @@ color: var(--nb-text-secondary);
    ---------------------------- */
 .skill-category {
   margin-bottom: 1.5rem;
+  width:860px
 }
 
 .skill-category-title {
