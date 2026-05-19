@@ -462,3 +462,40 @@ color: var(--nb-text-secondary);
   margin: 0.25rem 0;
   color: var(--nb-text-muted);
 }
+
+/* ---------------------------------------------------------
+   Print Styles — Resume PDF Export
+--------------------------------------------------------- */
+@media print {
+
+  body {
+    background: white !important;
+    color: var(--nb-text) !important;
+  }
+
+  nav, .site-footer {
+    display: none !important;
+  }
+
+  .resume-page {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .resume-container {
+    max-height: none !important;
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Avoid page breaks inside cards */
+  .job-card,
+  .education-card,
+  .cert-card,
+  .skill-category {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
