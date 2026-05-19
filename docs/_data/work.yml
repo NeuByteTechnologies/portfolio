@@ -1,9 +1,9 @@
-- company: Melaleuca: The Wellness Company
+- company: Melaleuca -  The Wellness Company
   role: Software Engineer II
   location: Idaho Falls, Idaho
   start: May 2018
   end: January 2026
-  summary: >
+  summary:
     Developed and maintained data integration workflows, optimizing order recovery and enhancing marketing efforts through Salesforce communication and web analytics. Focused on SSIS, T-SQL, and BigQuery to support data-driven decision-making.
   bullets:
     - Developed SSIS packages with C# scripting components for the credit card replacement process, recovering approximately $20K USD per month in previously declined orders across multiple countries.
@@ -29,7 +29,7 @@
   location: Temecula, CA
   start: February 2014
   end: March 2018
-  summary: >
+  summary: 
     Focused on enhancing software applications and data integration processes for public safety communications, including analytics, SSIS, and SSAS.
   bullets:
     - Designed and upgraded the VESTA Analytics web application, improving overall user experience.
@@ -41,7 +41,7 @@
   location: Ontario, California
   start: August 2013
   end: March 2014
-  summary: >
+  summary: 
     Supported medical coding remediation and application maintenance during the transition from ICD-9 to ICD-10.
   bullets:
     - Analyzed existing applications, databases, and reports for required upgrades from ICD-9 to ICD-10.
@@ -64,7 +64,7 @@
   location: Ontario, CA
   start: April 2013
   end: August 2013
-  summary: >
+  summary: 
     Developed tooling and web applications to improve consistency and efficiency in financial software development.
   bullets:
     - Created T4 templates to generate classes with properties for localization and enumerations from databases, ensuring consistency from database to business logic.
@@ -75,7 +75,7 @@
   role: Contractor - Software Engineer
   start: August 2012
   end: April 2013
-  summary: >
+  summary: 
     Supported software lifecycle governance, SharePoint environments, and operations for enterprise collaboration platforms.
   bullets:
     - Configured Team Foundation Server work item templates to improve software lifecycle management.
@@ -87,7 +87,7 @@
   role: Consultant, Business Metrics/Analytics
   start: July 2009
   end: June 2012
-  summary: >
+  summary: 
     Delivered data warehousing and analytics solutions using Kimball methodologies and Lean Six Sigma practices.
   bullets:
     - Developed data warehouses and data marts to enhance data accessibility.
@@ -98,7 +98,7 @@
   role: Senior Business Systems Analyst
   start: June 2008
   end: June 2009
-  summary: >
+  summary: 
     Focused on data warehousing, ETL, and process improvement using Kimball and Lean Six Sigma approaches.
   bullets:
     - Developed data warehouses and data marts utilizing Kimball methodologies with star schema databases.
@@ -109,7 +109,7 @@
   role: Senior Analyst, Application Design and Development
   start: May 2006
   end: June 2008
-  summary: >
+  summary: 
     Supported customer support operations with SharePoint administration, ASP.NET applications, and reporting solutions.
   bullets:
     - Managed SharePoint 2003 and 2007 administration for the Customer Support Operations department.
@@ -121,7 +121,7 @@
   role: Software Engineer
   start: May 2005
   end: May 2006
-  summary: >
+  summary: 
     Built customized financial software solutions using object-oriented techniques and Microsoft technologies.
   bullets:
     - Developed custom software configurations using object-oriented programming methodologies.
@@ -143,7 +143,7 @@
   role: Web Developer
   start: June 1999
   end: January 2000
-  summary: >
+  summary: 
     Developed web applications and shared code libraries for commercial real estate loan processing.
   bullets:
     - Developed an online loan application for commercial real estate loans.
@@ -153,7 +153,7 @@
   role: Web Developer
   start: 2000
   end: 2000
-  summary: >
+  summary: 
     Built and customized CRM-related web interfaces and support tools.
   bullets:
     - Developed web interfaces for the CRM online help system using ASP, XML, and SQL Server.
@@ -166,7 +166,7 @@
   location: San Diego, CA
   start: November 1998
   end: May 1999
-  summary: >
+  summary: 
     Contributed to web application development, collaborating closely with contractors and QA to stabilize products.
   bullets:
     - Developed the web interface for a wizard application, transitioning it from prototype to functional model.
@@ -178,7 +178,7 @@
   location: San Diego, CA
   start: August 1997
   end: October 1998
-  summary: >
+  summary: 
     Designed and developed corporate web presence and data-driven applications with reporting.
   bullets:
     - Designed and developed the corporate website, enhancing online presence.
