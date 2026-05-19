@@ -1,5 +1,5 @@
 - name: GH-900 GitHub Foundations
-  issuer:Microsoft
+  issuer: Microsoft
   year: 2026
   summary: >
     Demonstrates foundational knowledge of GitHub repositories, workflows,
