@@ -286,6 +286,7 @@ color: var(--nb-text-secondary);
   border-radius: 8px;
   background: #ffffff;
   border: 1px solid #e5e5e5;
+  width:860px;
 }
 
 /* ----------------------------
