@@ -1,0 +1,47 @@
+- name: GH-900 GitHub Foundations
+  issuer: GitHub
+  year: 2024
+  summary: >
+    Demonstrates foundational knowledge of GitHub repositories, workflows,
+    collaboration, and version control best practices.
+
+- name: DP-900 Azure Data Fundamentals
+  issuer: Microsoft
+  year: 2024
+  summary: >
+    Validates understanding of core data concepts, relational and non-relational
+    data, and analytics workloads on Microsoft Azure.
+
+- name: AI-900 Azure AI Fundamentals
+  issuer: Microsoft
+  year: 2024
+  summary: >
+    Covers foundational concepts in artificial intelligence, machine learning,
+    and Azure AI services.
+
+- name: Python Object-Oriented Programming
+  issuer: OpenEDG / Python Institute
+  year: 2024
+  summary: >
+    Demonstrates proficiency in object-oriented programming principles using Python.
+
+- name: Programming with Python Professional Certificate
+  issuer: OpenEDG Python Institute
+  year: 2024
+  summary: >
+    Professional-level certification covering Python syntax, data structures,
+    functions, modules, and problem-solving.
+
+- name: Practical GitHub Project Management and Collaboration
+  issuer: GitHub
+  year: 2024
+  summary: >
+    Hands-on training in GitHub project boards, issues, pull requests, and
+    collaborative workflows.
+
+- name: Practical GitHub Actions
+  issuer: GitHub
+  year: 2024
+  summary: >
+    Demonstrates ability to build CI/CD workflows using GitHub Actions for
+    automation and deployment.

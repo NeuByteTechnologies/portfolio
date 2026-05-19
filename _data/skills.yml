@@ -1,0 +1,62 @@
+- category: Data Engineering
+  skills:
+    - SSIS (ETL)
+    - T-SQL
+    - SQL Server (2012–2019)
+    - BigQuery
+    - Data Warehousing (Kimball)
+    - Fact & Dimension Modeling
+    - SQL Agent Jobs
+    - Stored Procedures & Functions
+    - Query Optimization
+
+- category: Cloud & DevOps
+  skills:
+    - Azure Data Fundamentals (DP-900)
+    - Azure AI Fundamentals (AI-900)
+    - GitHub Foundations (GH-900)
+    - GitHub Actions
+    - GitHub Project Management
+    - CI/CD Concepts
+
+- category: Programming & Scripting
+  skills:
+    - Python (OOP)
+    - C#
+    - .NET Framework (1.1–4.8)
+    - LINQ
+    - Entity Framework
+    - JavaScript / jQuery
+    - JSON / XML
+
+- category: Analytics & Reporting
+  skills:
+    - SSAS (SQL Server Analysis Services)
+    - Crystal Reports
+    - Google Analytics (BigQuery ingestion)
+    - Reporting & Dashboard Support
+
+- category: Business & Systems Analysis
+  skills:
+    - Requirements Gathering
+    - Process Documentation
+    - ICD-9 → ICD-10 Remediation
+    - Cross-Team Collaboration
+    - Production Support
+    - Lean Six Sigma
+
+- category: Web & Application Development
+  skills:
+    - ASP.NET (WebForms & MVC)
+    - HTML / CSS
+    - Kendo UI
+    - Handlebars Templates
+    - UI/UX Collaboration
+
+- category: Tools & Platforms
+  skills:
+    - Team Foundation Server (TFS)
+    - SharePoint 2003 / 2007 / 2010
+    - Visual Studio
+    - SQL Server Management Studio
+    - GitHub

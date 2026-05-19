@@ -1,0 +1,79 @@
+---
+layout: default
+title: Resume
+---
+
+<h1>Resume</h1>
+<h1>Resume</h1>
+
+<section class="resume-summary">
+  <p>
+    With over two decades of experience in software engineering and data integration,
+    I specialize in building scalable ETL workflows, optimizing data pipelines, and
+    improving business processes across financial, medical, and e‑commerce industries.
+    My expertise spans SSIS, T‑SQL, SSAS, BigQuery, and Azure fundamentals, with a
+    strong focus on operational efficiency, data quality, and cross‑team collaboration.
+  </p>
+</section>
+
+<!-- ============================
+     EXPERIENCE
+     ============================ -->
+<h2>Experience</h2>
+<div class="resume-container">
+  {% for job in site.data.work %}
+    {% include job-card.html
+      company=job.company
+      role=job.role
+      start=job.start
+      end=job.end
+      location=job.location
+      summary=job.summary
+      bullets=job.bullets
+    %}
+  {% endfor %}
+</div>
+
+<!-- ============================
+     EDUCATION
+     ============================ -->
+<h2>Education</h2>
+<div class="education-container">
+  {% for edu in site.data.education %}
+    {% include education-card.html
+      school=edu.school
+      degree=edu.degree
+      start=edu.start
+      end=edu.end
+      summary=edu.summary
+    %}
+  {% endfor %}
+</div>
+
+<!-- ============================
+     SKILLS
+     ============================ -->
+<h2>Skills</h2>
+<div class="skills-container">
+  {% for group in site.data.skills %}
+    {% include skill-category.html
+      category=group.category
+      skills=group.skills
+    %}
+  {% endfor %}
+</div>
+
+<!-- ============================
+     CERTIFICATIONS
+     ============================ -->
+<h2>Certifications</h2>
+<div class="cert-container">
+  {% for cert in site.data.certifications %}
+    {% include certification-card.html
+      name=cert.name
+      issuer=cert.issuer
+      year=cert.year
+      summary=cert.summary
+    %}
+  {% endfor %}
+</div>

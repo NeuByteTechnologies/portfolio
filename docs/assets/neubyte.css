@@ -230,3 +230,173 @@ nav a {
   background-color: var(--nb-gray-50);
   color: var(--nb-gray-900);
 }
+
+/* ============================
+   Resume Components
+   ============================ */
+
+   .resume-summary {
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem 1.5rem;
+  background: #fafafa;
+  border-left: 4px solid #007acc;
+  border-radius: 4px;
+}
+
+.resume-summary p {
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Resume Scrolling Container */
+.resume-container {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+/* ----------------------------
+   Job Card
+   ---------------------------- */
+.job-card {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.job-card:last-child {
+  border-bottom: none;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.job-title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.job-dates {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.job-location {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.job-summary {
+  margin: 0.5rem 0 0.75rem;
+  color: #444;
+}
+
+.job-bullets {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.job-bullets li {
+  margin: 0.25rem 0;
+}
+
+/* ----------------------------
+   Education Card
+   ---------------------------- */
+.education-card {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.education-card:last-child {
+  border-bottom: none;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.education-degree {
+  margin: 0;
+  font-weight: 600;
+}
+
+.education-dates {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.education-school {
+  margin: 0.25rem 0 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.education-summary {
+  margin: 0.5rem 0 0.75rem;
+  color: #444;
+}
+
+/* ----------------------------
+   Certification Card
+   ---------------------------- */
+.cert-card {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cert-card:last-child {
+  border-bottom: none;
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.cert-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.cert-meta {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.cert-summary {
+  margin: 0.5rem 0 0.75rem;
+  color: #444;
+}
+
+/* ----------------------------
+   Skill Category
+   ---------------------------- */
+.skill-category {
+  margin-bottom: 1.5rem;
+}
+
+.skill-category-title {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.skill-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.skill-item {
+  margin: 0.25rem 0;
+  color: #444;
+}
