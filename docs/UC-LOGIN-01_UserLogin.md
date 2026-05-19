@@ -1,10 +1,12 @@
-# UC‑LOGIN‑01 — User Login
-Use Case ID
-UC‑LOGIN‑01
-Use Case Name
-User Login
-Module
-Login / Authentication
+---
+layout: default
+title:  UC‑LOGIN‑01 — User Login
+---
+
+# UC‑LOGIN‑01 — User Login  
+**Use Case ID**: UC‑LOGIN‑01  
+**Use Case Name** : User Login  
+**Module** : Login / Authentication  
 
 ## Purpose
 To allow a user to securely authenticate into the application using valid credentials, ensuring only authorized users gain access to protected features such as the Dashboard, Workout Logging, and Program Management.

@@ -1,10 +1,13 @@
+---
+layout: default
+title: UC‑MENU‑03 — Navigate to Dashboard
+---
+
 # UC‑MENU‑03 — Navigate to Dashboard
-Use Case ID
-UC‑MENU‑03
-Use Case Name
-Navigate to Dashboard
-Module
-Menu / Global Navigation
+**Use Case ID** : UC‑MENU‑03  
+**Use Case Name** : Navigate to Dashboard  
+**Module** :  Menu / Global Navigation   
+
 ## Purpose
 To define how the user navigates from the hamburger menu to the Dashboard. This use case covers the interaction, system routing, menu behavior, and accessibility requirements when the user selects Dashboard from the global navigation menu.
 ## Primary Actor

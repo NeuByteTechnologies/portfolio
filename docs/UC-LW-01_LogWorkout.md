@@ -1,10 +1,12 @@
-# UC‑LW‑01 — Log Workout
-Use Case ID  
-UC‑LW‑01
-Use Case Name  
-Log Workout
-Module  
-Workout Logging
+---
+layout: default
+title: UC‑LW‑01 Log Workout
+---
+
+# UC‑L‑01 — Log Workout
+**Use Case ID**: UC‑LW‑01  
+**Use Case Name** : Log Workout  
+**Module** : Workout Logging  
 
 ## Purpose
 To allow a user to record workout activity for the current day’s assigned exercise program, ensuring accurate tracking of sets, reps, weight, duration, and other exercise‑specific metrics. Logged workouts update progress indicators, streaks, and analytics.

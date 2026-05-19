@@ -1,10 +1,13 @@
+---
+layout: default
+title: UC‑PROG‑01 — View Program Detail
+---
+
 # UC‑PROG‑01 — View Program Detail
-Use Case ID
-UC‑PROG‑01
-Use Case Name
-View Program Detail
-Module
-Exercise Programs
+**Use Case ID**: UC‑PROG‑01  
+**Use Case Name**: View Program Detail  
+**Module**: Exercise Programs  
+
 ## Purpose
 To define how the user views the full details of an Exercise Program, including metadata, weekly structure, day previews, and exercise summaries. This use case covers loading program data, rendering the detail page, and ensuring accessibility and performance requirements are met.
 This UC is strictly display‑only — no editing, logging, or execution occurs here.
