@@ -237,6 +237,7 @@ nav a {
    .resume-header {
   text-align: center;
   margin-bottom: 2rem;
+  width: 860px;
 }
 
 .resume-name {
@@ -268,6 +269,7 @@ color: var(--nb-text-secondary);
   background: #fafafa;
   border-left: 4px solid #007acc;
   border-radius: 4px;
+  width: 860px;
 }
 
 .resume-summary p {
