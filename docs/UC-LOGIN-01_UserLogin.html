@@ -1,0 +1,250 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=2">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="assets/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="assets/neubyte.css">
+<style>
+  body { font-family: 'Manrope', sans-serif; }
+  h1, h2, h3 { font-weight: 600; }
+  .logo { text-align: center; margin-bottom: 2rem; }
+</style>
+</head>
+<body>
+
+<div class="logo">
+  <img src="assets/NeuByteTechnologiesLogo59.png" 
+       alt="NeuByte Logo" 
+       style="max-width: 160px; height: auto;">
+</div>
+<nav style="font-family: Manrope, sans-serif; 
+            text-align:center;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.25); 
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            height:52px">
+  <a href="index.html" style="margin-right: 2rem; text-decoration:none;">Home</a>
+  <a href="about.html" style="margin-right: 2rem; text-decoration:none;">About</a>
+  <a href="portfolio.html" style="text-decoration:none;">Portfolio</a>
+</nav>
+<section style="max-width: 860px; margin: 0 auto; padding: 1rem;">
+
+<h1> UC‑LOGIN‑01 — User Login</h1>  
+<strong>Use Case ID</strong>strong>: UC‑LOGIN‑01  
+<strong>Use Case Name</strong>strong> : User Login  
+<strong>Module</strong>strong> : Login / Authentication  
+
+<h2> Purpose</h2>
+To allow a user to securely authenticate into the application using valid credentials, ensuring only authorized users gain access to protected features such as the Dashboard, Workout Logging, and Program Management.
+<h2> Primary Actor</h2>
+<table class="uc-table" ><tr><td ><b>Actor</b></td><td> <b>Description</b></td> </tr>
+<tr><td>App User</td><td >Any authenticated or unauthenticated user interacting with a major feature</td> </tr>
+</table>
+
+<h2> Stakeholders & Interests</h2>
+<table class="uc-table">
+  <tr>
+    <th>Stakeholder</th>
+    <th>Interest</th>
+  </tr>
+  <tr>
+    <td>User</td>
+    <td>Wants fast, secure access to their account.</td>
+  </tr>
+  <tr>
+    <td>System</td>
+    <td>Must validate credentials, enforce security rules, and create a secure session.</td>
+  </tr>
+  <tr>
+    <td>Security Team</td>
+    <td>Requires strong authentication, error handling, and protection against brute‑force attacks.</td>
+  </tr>
+  <tr>
+    <td>Product Owner</td>
+    <td>Wants a smooth login experience with clear error messaging.</td>
+  </tr>
+  <tr>
+    <td>Analytics Team</td>
+    <td>Needs to track successful logins and failed attempts.</td>
+  </tr>
+</table>
+
+
+<h2> Preconditions</h2>
+<li>	User has an existing account.
+<li>	System is online and accessible.
+<li>	User is on the Login page.
+
+<h2> Postconditions</h2>
+Success
+<li>	User is authenticated.
+<li>	A secure session token is created and stored in an HTTP‑only cookie.
+<li>	User is redirected to the Dashboard.
+<h2> Failure</h2>
+<li>	User remains on the Login page.
+<li>	System displays appropriate error messaging.
+
+<h2> Trigger</h2>
+User enters their email and password and selects Log In.
+
+<h2> Main Success Scenario (Basic Flow)</h2>
+1. 	User navigates to the Login page.
+(BR‑Login‑01)
+2. 	System displays the Login form with email and password fields.
+(BR‑Login‑01)
+3. 	User enters email and password.
+(BR‑Login‑02)
+4. 	System validates that both fields are populated.
+(BR‑Login‑02)
+5. 	System validates that the email format is correct.
+(BR‑Login‑03)
+6. 	System authenticates the credentials against stored values.
+(BR‑Login‑04)
+7. 	System verifies the password using secure hashing.
+(BR‑Login‑05)
+8. 	System checks whether the account is active (not locked, disabled, or inactive).
+(BR‑Login‑13)
+9. 	System creates a secure session token.
+(BR‑Login‑08)
+10. 	System stores the session token in an HTTP‑only cookie.
+(BR‑Login‑09)
+11. 	System redirects the user to the Dashboard.
+(BR‑Login‑07)
+12. 	System logs the successful login event.
+(Analytics requirement)
+
+<h2> Alternate Flows</h2>
+A1 — Invalid Credentials
+<ul>
+<li>Step 6 fails.</li>
+<li>	System displays an authentication error message.</li>
+</ul>
+(BR‑Login‑06)
+<ul>
+<li>	User remains on the Login page.</li>
+</ul>
+A2 — Missing Required Fields
+<ul>
+<li>	Step 4 fails.</li>
+<li>	System displays a “Required fields missing” message.</li>
+</ul>
+(BR‑Login‑02)
+A3 — Invalid Email Format
+<ul>
+</li>
+<li>	Step 5 fails.</li>
+<li>	System displays an “Invalid email format” message.</li>
+</li>
+</ul>
+(BR‑Login‑03)
+
+<h2> Exception Flows</h2>
+E1 — Account Locked or Disabled
+<ul>
+<li>	Step 8 fails.</li>  
+<li>	System displays a specific error message.</li>
+</ul>
+(BR‑Login‑13)
+<ul>
+<li>	User remains on the Login page.</li>    
+</ul>
+E2 — Too Many Failed Attempts
+<ul>
+<li>	System detects repeated failed logins.</li> 
+</ul>
+(BR‑Login‑14)
+<ul>
+<li>	System temporarily locks the account.</li>
+<li>	System displays a lockout message.</li>
+</ul>
+E3 — System Error During Authentication
+<ul>
+<li>	Step 6 or 7 fails due to backend or database issue.</li>
+<li>	System displays a generic error message.</li>
+</ul>
+(BR‑Login‑20 fallback)
+<ul>
+<li>	User remains on the Login page.</li>
+</ul>
+<h2> Non‑Functional Requirements</h2>
+<ul>
+<li>	Security: All credentials must be transmitted over HTTPS. (BR‑Login‑15)</li>
+<li>	Performance: Authentication must complete quickly.</li>
+<li>	Accessibility: Login form must support keyboard navigation and screen readers. (SRS‑A11Y‑01)</li>
+<li>	Usability: Error messages must be clear and actionable.</li>
+<li>	Analytics: Login attempts (success/failure) must be logged.</li>
+</ul>
+<h2> Related UI Screens</h2>
+<ul>
+<li>	UIS‑LOGIN‑01 — Login Page</li>
+<li>	UIS‑GLOBAL‑HEADER‑01</li>
+<li>	UIS‑GLOBAL‑FOOTER‑01</li>
+</ul>
+<h2> Flowchart TD</h2>
+
+    %% Entry
+    A[User Navigates to Login Page] --> B[Display Login Form]
+
+    %% User Input
+    B --> C[User Enters Email & Password]
+    C --> D{Fields Populated?}
+    D -->|No| A1[Display Required Fields Error]
+
+    %% Email Format
+    D -->|Yes| E{Valid Email Format?}
+    E -->|No| A2[Display Invalid Email Format]
+
+    %% Authentication
+    E -->|Yes| F[Authenticate Credentials]
+    F --> G{Credentials Valid?}
+    G -->|No| A3[Display Invalid Credentials Error]
+
+    %% Account Status
+    G -->|Yes| H{Account Active?}
+    H -->|No| E1[Display Account Locked/Disabled]
+
+    %% Session Creation
+    H --> I[Create Secure Session Token]
+    I --> J[Store Token in HTTP‑Only Cookie]
+
+    %% Redirect
+    J --> K[Redirect to Dashboard]
+    K --> L[Log Successful Login Event]
+
+    %% End
+    L --> END[User Authenticated]
+
+    %% Exception
+    F -->|System Error| E2[Display System Error Message]
+    </section>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p class="legal">© NeuByte Technologies.</p>
+    <div class="social-icons">
+      <a href="https://www.github.com/gordonneuls/portfolio" class="icon github" target="_blank" rel="noopener noreferrer">
+       <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+          0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+          -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
+          -3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65
+          7.65 0 0 1 8 3.47c.68.003 1.36.092 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08
+          2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+          0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/gordonneuls" class="icon linkedin" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+          <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341a53.79 53.79 0 1 1 
+          53.79-53.79 53.8 53.8 0 0 1-53.8 53.8zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2
+          -48.3 0-55.7 37.7-55.7 76.7V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.7-48.3 
+          87.9-48.3 94 0 111.3 61.9 111.3 142.3z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+  </html>

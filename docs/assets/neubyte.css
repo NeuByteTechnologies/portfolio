@@ -211,3 +211,22 @@ nav a {
   fill: var(--accent);
   transform: translateY(-2px);
 }
+
+.uc-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Manrope, sans-serif;
+}
+
+.uc-table th,
+.uc-table td {
+  border: 1px solid var(--nb-border);
+  padding: 8px 12px;
+  vertical-align: top;
+}
+
+.uc-table th {
+  font-weight: bold;
+  background-color: var(--nb-gray-50);
+  color: var(--nb-gray-900);
+}

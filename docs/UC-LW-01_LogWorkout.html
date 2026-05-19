@@ -1,0 +1,233 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=2">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="assets/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="assets/neubyte.css">
+<style>
+  body { font-family: 'Manrope', sans-serif; }
+  h1, h2, h3 { font-weight: 600; }
+  .logo { text-align: center; margin-bottom: 2rem; }
+</style>
+</head>
+<body>
+
+<div class="logo">
+  <img src="assets/NeuByteTechnologiesLogo59.png" 
+       alt="NeuByte Logo" 
+       style="max-width: 160px; height: auto;">
+</div>
+<nav style="font-family: Manrope, sans-serif; 
+            text-align:center;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.25); 
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            height:52px">
+  <a href="index.html" style="margin-right: 2rem; text-decoration:none;">Home</a>
+  <a href="about.html" style="margin-right: 2rem; text-decoration:none;">About</a>
+  <a href="portfolio.html" style="text-decoration:none;">Portfolio</a>
+</nav>
+<section style="max-width: 860px; margin: 0 auto; padding: 1rem;">
+<h1> UC‑L‑01 — Log Workout</h1>
+<strong>Use Case ID</strong>strong>: UC‑LW‑01  
+<strong>Use Case Name</strong>strong> : Log Workout  
+<strong>Module</strong>strong> : Workout Logging  
+
+<h2> Purpose</h2>
+To allow a user to record workout activity for the current day’s assigned exercise program, ensuring accurate tracking of sets, reps, weight, duration, and other exercise‑specific metrics. Logged workouts update progress indicators, streaks, and analytics.
+
+<h2> Primary Actor</h2>
+<table class="uc-table" ><tr><td ><b>Actor</b></td><td> <b>Description</b></td> </tr>
+<tr><td>App User</td><td >Any authenticated or unauthenticated user interacting with a major feature</td> </tr>
+</table>
+
+
+Stakeholders & Interests
+<table class="uc-table">
+  <tr>
+    <th>Stakeholder</th>
+    <th>Interest</th>
+  </tr>
+  <tr>
+    <td>User</td>
+    <td>Wants a fast, intuitive way to log exercises and track progress.</td>
+  </tr>
+  <tr>
+    <td>System</td>
+    <td>Must validate workout entries and store them reliably.</td>
+  </tr>
+  <tr>
+    <td>Product Owner</td>
+    <td>Wants a smooth logging experience with minimal friction.</td>
+  </tr>
+  <tr>
+    <td>Analytics Team</td>
+    <td>Needs accurate workout data for charts, summaries, and trends.</td>
+  </tr>
+  <tr>
+    <td>Coaching/Program Logic</td>
+    <td>Requires logged data to update streaks, progress, and recommendations.</td>
+  </tr>
+</table>
+
+<h2> Preconditions</h2>
+• User is authenticated.
+• User has an active exercise program.
+• Daily exercise list is available for the current date.
+• System is online and accessible.
+
+<h2> Postconditions</h2>
+<h3> Success </h3>
+• Workout log is saved to the user’s workout history.
+• Dashboard metrics, streaks, and progress indicators are updated.
+• Confirmation message is displayed.
+
+<h3> Failure </h3>
+• No workout data is saved.
+• System displays appropriate error messaging.
+• User remains on the Log Workout screen.
+
+<h3> Trigger</h3>
+User selects “Start Workout” or navigates to the Log Workout screen.
+
+<h3> Main Success Scenario (Basic Flow)</h3>
+1. User navigates to the Log Workout screen.
+(BR‑LW‑01)
+2. System retrieves the exercises scheduled for the current day.
+(BR‑LW‑02)
+3. System displays the exercise list with input fields for sets, reps, weight, duration, or other metrics.
+(BR‑LW‑03)
+4. User enters metrics for each exercise performed.
+(BR‑LW‑04)
+5. System validates that all required fields for each exercise are populated.
+(BR‑LW‑05)
+6. System validates that numeric values (sets, reps, weight, duration) are within acceptable ranges.
+(BR‑LW‑06)
+7. User submits the workout log.
+(BR‑LW‑04)
+8. System saves the workout log to the user’s workout history.
+(BR‑LW‑07)
+9. System updates dashboard metrics, streaks, and progress indicators.
+(BR‑LW‑08)
+10. System logs the successful workout event for analytics.
+(Analytics requirement)
+11. System displays a confirmation message.
+(BR‑LW‑09)
+
+<h3> Alternate Flows</h3>
+A1 — Missing Required Fields
+• Step 5 fails.
+• System highlights missing fields and displays a “Required fields missing” message.
+(BR‑LW‑05)
+• User corrects the data and resubmits.
+
+A2 — Invalid Numeric Values
+• Step 6 fails.
+• System displays an “Invalid value” message for the affected fields.
+(BR‑LW‑06)
+• User corrects the values and resubmits.
+
+A3 — Partial Workout Logging
+• User chooses to log only some exercises.
+• System saves partial data and marks remaining exercises as incomplete.
+(BR‑LW‑10)
+
+<h3> Exception Flows</h3>
+E1 — No Program Data Available
+• Step 2 fails due to missing or corrupted program data.
+• System displays an error message and suggests refreshing or checking program settings.
+(BR‑LW‑11)
+• User remains on the Log Workout screen.
+
+E2 — System Error During Save
+• Step 8 fails due to backend or database issue.
+• System displays a generic error message.
+(BR‑LW‑12 fallback)
+• No data is saved.
+• User remains on the Log Workout screen.
+
+E3 — Network Failure
+• Submission fails due to connectivity issues.
+• System displays a “Network error” message.
+• User may retry once connection is restored.
+
+<h2> Non‑Functional Requirements</h2>
+• Performance: Workout logging must complete quickly.
+• Usability: Input fields must be easy to navigate and edit.
+• Accessibility: Logging interface must support keyboard navigation and screen readers. (SRS‑A11Y‑01)
+• Reliability: Workout logs must be stored with high consistency.
+• Analytics: Workout events must be logged for trend analysis.
+
+<h2> Related UI Screens</h2>
+• UIS‑LW‑01 — Log Workout Page  
+• UIS‑DASH‑01 — Dashboard  
+• UIS‑PROGRAM‑01 — Program Overview  
+• UIS‑GLOBAL‑HEADER‑01  
+• UIS‑GLOBAL‑FOOTER‑01
+
+<h2> Flowchart TD</h2>
+
+%% Entry
+A[User Navigates to Log Workout] --> B[Retrieve Today's Exercises]
+
+%% Data Load
+B --> C{Exercises Available?}
+C -->|No| E1[Display Program Data Error]
+
+%% Display Form
+C -->|Yes| D[Display Exercise List & Input Fields]
+
+%% User Input
+D --> E[User Enters Metrics]
+E --> F{Required Fields Populated?}
+F -->|No| A1[Display Missing Fields Error]
+
+%% Value Validation
+F -->|Yes| G{Values Valid?}
+G -->|No| A2[Display Invalid Value Error]
+
+%% Save
+G -->|Yes| H[Save Workout Log]
+H --> I{Save Successful?}
+I -->|No| E2[Display System Error]
+
+%% Update & Confirm
+I -->|Yes| J[Update Dashboard & Streaks]
+J --> K[Log Workout Event]
+K --> L[Display Confirmation Message]
+
+%% End
+L --> END[Workout Logged]
+
+</section>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p class="legal">© NeuByte Technologies.</p>
+    <div class="social-icons">
+      <a href="https://www.github.com/gordonneuls/portfolio" class="icon github" target="_blank" rel="noopener noreferrer">
+       <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+          0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+          -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
+          -3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65
+          7.65 0 0 1 8 3.47c.68.003 1.36.092 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08
+          2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+          0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/gordonneuls" class="icon linkedin" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+          <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341a53.79 53.79 0 1 1 
+          53.79-53.79 53.8 53.8 0 0 1-53.8 53.8zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2
+          -48.3 0-55.7 37.7-55.7 76.7V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.7-48.3 
+          87.9-48.3 94 0 111.3 61.9 111.3 142.3z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+  </html>

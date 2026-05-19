@@ -1,0 +1,249 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=2">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="assets/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="assets/neubyte.css">
+<style>
+  body { font-family: 'Manrope', sans-serif; }
+  h1, h2, h3 { font-weight: 600; }
+  .logo { text-align: center; margin-bottom: 2rem; }
+</style>
+</head>
+<body>
+
+<div class="logo">
+  <img src="assets/NeuByteTechnologiesLogo59.png" 
+       alt="NeuByte Logo" 
+       style="max-width: 160px; height: auto;">
+</div>
+<nav style="font-family: Manrope, sans-serif; 
+            text-align:center;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.25); 
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            height:52px">
+  <a href="index.html" style="margin-right: 2rem; text-decoration:none;">Home</a>
+  <a href="about.html" style="margin-right: 2rem; text-decoration:none;">About</a>
+  <a href="portfolio.html" style="text-decoration:none;">Portfolio</a>
+</nav>
+<section style="max-width: 860px; margin: 0 auto; padding: 1rem;">
+<h1> UC‑ANL‑06 — Log Feature Usage </h1> 
+<b>Use Case ID</b>: UC‑ANL‑06  
+<b>Use Case Name</b>: Log Feature Usage  
+<b>Module</b>: Analytics  
+
+<h2> Purpose</h2>
+Capture analytics events whenever a user engages with a major application feature (e.g., starting a workout, viewing reports, enabling settings). This enables measurement of feature adoption, engagement frequency, and user behavior patterns across the application.
+
+<h2> Primary Actor</h2>
+<table class="uc-table" ><tr><td ><b>Actor</b></td><td> <b>Description</b></td> </tr>
+<tr><td>App User</td><td >Any authenticated or unauthenticated user interacting with a major feature</td> </tr>
+</table>
+
+<h2> Stakeholders & Interests</h2>
+<table class="uc-table">
+  <tr>
+    <th>Stakeholder</th>
+    <th>Interest</th>
+  </tr>
+  <tr>
+    <td>Product Team</td>
+    <td>Understand which features are used most or least</td>
+  </tr>
+  <tr>
+    <td>UX</td>
+    <td>Identify underused features that may require redesign</td>
+  </tr>
+  <tr>
+    <td>Engineering</td>
+    <td>Ensure feature usage logging is reliable and non‑blocking</td>
+  </tr>
+  <tr>
+    <td>Data/BI</td>
+    <td>Build feature adoption dashboards and engagement metrics</td>
+  </tr>
+  <tr>
+    <td>QA</td>
+    <td>Validate that all feature usage events fire correctly</td>
+  </tr>
+</table>
+
+
+<h2> Preconditions</h2>
+<ul>
+<li>The application is running.</li>
+<li> The user is on a screen that exposes a feature.</li>
+<li>The analytics subsystem is initialized.</li>
+</ul>
+<h2> Postconditions</h2>
+<ul>
+<li> FeatureUsage event is recorded with required metadata.</li>
+<li> If offline, the event is queued for later sync.</li>
+<li> If online, the event is transmitted to the analytics service.</li>
+</ul>
+<h2> Trigger</h2> 
+<ol>
+  <li>The user activates or engages with a major feature.</li>
+  <li>
+    Main Success Scenario (Basic Flow)<br>
+    User activates a feature (e.g., taps “Start Workout,” opens “Reports,” enables a setting).
+  </li>
+  <li>System identifies the feature (<code>feature_name</code>).</li>
+  <li>System captures the screen context (<code>screen_name</code>).</li>
+  <li>System captures metadata (timestamp, device, app version, user ID).</li>
+  <li>System constructs a FeatureUsage analytics event.</li>
+  <li>System transmits the event to the analytics service.</li>
+  <li>System receives confirmation of successful receipt.</li>
+  <li>System logs success locally for debugging and traceability.</li>
+  <li>System continues the feature workflow normally.</li>
+</ol>
+
+<h2> Alternate Flows</h2>
+<b>A1 — Device Offline</b>  
+Steps 1–5 as normal.  
+
+<ol>
+<li>System detects no network connectivity.</li>
+<li>System stores the event in the offline queue.</li>
+<li>System syncs queued events when connectivity is restored.</li>
+</ol>
+
+<b>A2 — Analytics Service Unavailable</b>
+Steps 1–5 as normal.
+
+<ol>
+  <li>System attempts to transmit event.</li>
+  <li>System detects analytics service is unreachable.</li>
+  <li>System writes the event to the offline queue.</li>
+  <li>System marks the event for retry.</li>
+</ol>
+
+<b>A3 — Invalid Feature Identifier</b>  
+Steps 1–2 as normal.  
+
+<ol>
+  <li>System cannot resolve <code>feature_name</code>.</li>
+  <li>System logs a local non‑blocking error.</li>
+  <li>System does not transmit the malformed event.</li>
+  <li>System continues feature execution normally.</li>
+</ol>
+
+<b>Business Rules (Sequential)</b>  
+Continuing from UC‑ANL‑05 (ending at BR‑ANL‑26):  
+
+<em>ID	Rule</em>
+<ul>
+  <li>BR‑ANL‑27 — Feature names must follow a standardized naming convention.</li>
+  <li>BR‑ANL‑28 — Feature usage events must be logged immediately upon activation.</li>
+  <li>BR‑ANL‑29 — Feature usage logging must not block or delay feature execution.</li>
+  <li>BR‑ANL‑30 — All feature usage events must include a UTC timestamp in ISO‑8601 format.</li>
+  <li>BR‑ANL‑31 — Sensitive or user‑entered values must not be logged.</li>
+</ul>
+
+<h2> Data Elements Logged</h2>
+<table class="uc-table">
+  <tr>
+    <th>Field</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>event_id</code></td>
+    <td>Unique identifier for the event</td>
+  </tr>
+  <tr>
+    <td><code>event_type</code></td>
+    <td>Always <code>"NotificationInteraction"</code></td>
+  </tr>
+  <tr>
+    <td><code>notification_type</code></td>
+    <td>Category of notification (Reminder, Alert, System, Marketing)</td>
+  </tr>
+  <tr>
+    <td><code>interaction_type</code></td>
+    <td>Opened, dismissed, ignored</td>
+  </tr>
+  <tr>
+    <td><code>timestamp_utc</code></td>
+    <td>ISO‑8601 timestamp</td>
+  </tr>
+  <tr>
+    <td><code>user_id</code></td>
+    <td>Authenticated user ID or anonymous session ID</td>
+  </tr>
+  <tr>
+    <td><code>device_type</code></td>
+    <td>iOS, Android, Web</td>
+  </tr>
+  <tr>
+    <td><code>os_version</code></td>
+    <td>Operating system version</td>
+  </tr>
+  <tr>
+    <td><code>app_version</code></td>
+    <td>Application version number</td>
+  </tr>
+  <tr>
+    <td><code>network_status</code></td>
+    <td>Online / Offline</td>
+  </tr>
+  <tr>
+    <td><code>session_id</code></td>
+    <td>Current session identifier</td>
+  </tr>
+</table>
+
+<h2> Non‑Functional Requirements</h2>
+- Logging must complete within 50 ms.  
+- Event construction must not degrade feature performance.
+- Offline queue must support at least 500 events.
+- Event transmission must use HTTPS.
+- Feature usage logging must be resilient to intermittent connectivity.
+
+<h2> Acceptance Criteria</h2>
+- Every feature activation logs exactly one FeatureUsage event.
+- Event includes feature_name and screen_name.
+- Events are queued when offline and synced later.
+- No user‑visible errors occur if analytics fails.
+- QA can verify events in the analytics dashboard.
+
+<h2> Flow Diagram (Description)</h2>
+<pre>
+User Activates Feature →  
+System Identifies Feature & Screen →  
+Construct Event →  
+If online → Send Event → Success  
+If offline → Queue Event → Sync Later  
+</pre>
+</section>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p class="legal">© NeuByte Technologies.</p>
+    <div class="social-icons">
+      <a href="https://www.github.com/gordonneuls/portfolio" class="icon github" target="_blank" rel="noopener noreferrer">
+       <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+          0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+          -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
+          -3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65
+          7.65 0 0 1 8 3.47c.68.003 1.36.092 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08
+          2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+          0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/gordonneuls" class="icon linkedin" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+          <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341a53.79 53.79 0 1 1 
+          53.79-53.79 53.8 53.8 0 0 1-53.8 53.8zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2
+          -48.3 0-55.7 37.7-55.7 76.7V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.7-48.3 
+          87.9-48.3 94 0 111.3 61.9 111.3 142.3z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+  </html>
