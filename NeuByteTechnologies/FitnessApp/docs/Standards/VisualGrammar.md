@@ -266,3 +266,8 @@ All diagrams in the repository must follow this visual grammar to ensure:
 - lear, readable diagrams
 - Brand alignment with NeuByte Technologies’ web and resume styling
 - This document is the authoritative standard for NeuByte diagrams.
+
+| Version | Last Updated | Description |
+| --- | --- | --- |
+| 2.0 | 2026‑05‑21 | Major rewrite: unified design tokens with neubyte.css, standardized stroke/spacing/typography rules, updated metadata color, removed legacy references, aligned all diagram standards to Visual Grammar v2.0. |
+| 1.0 | 2026‑05/13 | Initial release of Visual Grammar specification. |
