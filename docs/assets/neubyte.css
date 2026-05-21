@@ -1,25 +1,25 @@
 /* ---------------------------------------------------------
    NeuByte Color System — Core Variables
-   Follows: minimal, semantic, grayscale-first, WCAG AA
+   Unified Design Tokens (CSS is source of truth)
 --------------------------------------------------------- */
 
 :root {
   /* Grayscale Palette */
-  --nb-gray-0:   var(--nb-gray-0);
+  --nb-gray-0:   #ffffff;
   --nb-gray-50:  #f7f7f7;
   --nb-gray-100: #e6e6e6;
   --nb-gray-200: #cccccc;
   --nb-gray-300: #b3b3b3;
   --nb-gray-400: #999999;
   --nb-gray-500: #808080;
-  --nb-gray-600: var(--nb-text-muted)666;
+  --nb-gray-600: #666666;   /* FIXED */
   --nb-gray-700: #4d4d4d;
-  --nb-gray-800: var(--nb-text)333;
+  --nb-gray-800: #333333;   /* FIXED */
   --nb-gray-900: #1a1a1a;
   --nb-gray-1000:#000000;
 
   /* NeuByte Brand Accent */
-  --nb-blue: #0077cc; /* NeuByte Blue */
+  --nb-blue: #0077cc; /* Primary Blue (kept) */
   --nb-blue-light: #3399ff;
   --nb-blue-dark: #005fa3;
 
@@ -31,6 +31,7 @@
   --nb-text: var(--nb-gray-900);
   --nb-text-muted: var(--nb-gray-600);
   --nb-text-inverse: var(--nb-gray-0);
+  --nb-text-meta: #808080; /* NEW */
 
   --nb-border: var(--nb-gray-200);
   --nb-border-strong: var(--nb-gray-400);
@@ -39,16 +40,27 @@
   --nb-accent-hover: var(--nb-blue-dark);
 
   /* Stroke rules for diagrams + UI */
-  --nb-stroke-width: 2px;
+  --nb-stroke-width: 2px; /* Kept */
   --nb-stroke-color: var(--nb-gray-800);
 
-  /* Spacing Scale */
+  /* Arrowhead rules (NEW) */
+  --nb-arrow-stroke-width: 2px;
+  --nb-arrow-stroke-color: var(--nb-stroke-color);
+  --nb-arrowhead-fill: var(--nb-stroke-color);
+
+  /* Spacing Scale (rem-based for accessibility) */
   --nb-space-1: 0.25rem;
   --nb-space-2: 0.5rem;
   --nb-space-3: 0.75rem;
   --nb-space-4: 1rem;
   --nb-space-6: 1.5rem;
   --nb-space-8: 2rem;
+
+  /* Shape spacing (16px) */
+  --nb-shape-spacing: 1rem;
+
+  /* Swimlane padding (24px) */
+  --nb-swimlane-padding: 1.5rem;
 
   /* Radius */
   --nb-radius-sm: 4px;
@@ -59,10 +71,15 @@
   --nb-font: "Manrope", sans-serif;
   --nb-font-size: 16px;
   --nb-line-height: 1.6;
-  
-  /*Scroll Bar*/
+
+  /* Enforced font weights (NEW) */
+  --nb-font-weight-regular: 400;
+  --nb-font-weight-medium: 500;
+  --nb-font-weight-semibold: 600;
+
+  /* Scroll Bar */
   --nb-scrollbar: #c7d2e0;
---nb-scrollbar-hover: #7ea0c8;
+  --nb-scrollbar-hover: #7ea0c8;
 }
 
 /* ---------------------------------------------------------
@@ -77,13 +94,14 @@ body {
   font-family: var(--nb-font);
   font-size: var(--nb-font-size);
   line-height: var(--nb-line-height);
+  font-weight: var(--nb-font-weight-regular); /* NEW */
 }
 
 h1, h2, h3, h4 {
   color: var(--nb-text);
   margin-top: var(--nb-space-8);
   margin-bottom: var(--nb-space-4);
-  font-weight: 600;
+  font-weight: var(--nb-font-weight-semibold); /* NEW */
 }
 
 p {
@@ -114,7 +132,7 @@ a:hover {
   border: 1px solid var(--nb-border);
   border-radius: var(--nb-radius-md);
   padding: var(--nb-space-6);
-  margin-bottom: var(--nb-space-6);
+  margin-bottom: var(--nb-shape-spacing); /* UPDATED */
 }
 
 /* ---------------------------------------------------------
@@ -127,7 +145,7 @@ a:hover {
   background: var(--nb-accent);
   color: var(--nb-text-inverse);
   border-radius: var(--nb-radius-sm);
-  font-weight: 600;
+  font-weight: var(--nb-font-weight-medium); /* NEW */
 }
 
 .nb-button:hover {
@@ -161,12 +179,11 @@ a:hover {
 .nb-header {
   padding: var(--nb-space-8) 0;
   text-align: center;
-  font-weight: 700;
-  text-shadow: 0px 1px 2px rgba(0,0,0,0.25); 
+  font-weight: var(--nb-font-weight-semibold);
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
   align-items: center;
   font-size: 1.5rem;
-  font-weight: bold;
-  height:52px
+  height: 52px;
 }
 
 .nb-logo {
@@ -185,15 +202,19 @@ nav a {
   line-height: calc(1em + 6px);
 }
 
+/* ---------------------------------------------------------
+   Footer
+--------------------------------------------------------- */
+
 .site-footer {
   padding: 2rem 0;
   text-align: center;
-  color: var(--text-muted);
+  color: var(--nb-text-muted);
 }
 
 .site-footer .legal {
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: var(--nb-text-muted);
   margin-bottom: 1rem;
 }
 
@@ -213,14 +234,18 @@ nav a {
 .social-icons svg {
   width: 24px;
   height: 24px;
-  fill: var(--text);
+  fill: var(--nb-text);
   transition: fill 0.2s ease, transform 0.2s ease;
 }
 
 .social-icons a:hover svg {
-  fill: var(--accent);
+  fill: var(--nb-accent);
   transform: translateY(-2px);
 }
+
+/* ---------------------------------------------------------
+   Use Case Table
+--------------------------------------------------------- */
 
 .uc-table {
   border-collapse: collapse;
@@ -236,19 +261,21 @@ nav a {
 }
 
 .uc-table th {
-  font-weight: bold;
+  font-weight: var(--nb-font-weight-semibold);
   background-color: var(--nb-gray-50);
   color: var(--nb-gray-900);
 }
 
-/* ============================
+/* ---------------------------------------------------------
    Resume Components
-   ============================ */
-   .resume-page {
+--------------------------------------------------------- */
+
+.resume-page {
   width: 860px;
   margin: 0 auto;
 }
-   .resume-header {
+
+.resume-header {
   text-align: center;
   margin-bottom: 2rem;
   width: 860px;
@@ -256,13 +283,13 @@ nav a {
 
 .resume-name {
   font-size: 2.2rem;
-  font-weight: 700;
+  font-weight: var(--nb-font-weight-semibold);
   margin: 0;
 }
 
 .resume-title {
   font-size: 1.2rem;
-color: var(--nb-text-secondary);
+  color: var(--nb-text-muted);
   margin: 0.3rem 0 1rem;
 }
 
@@ -277,7 +304,7 @@ color: var(--nb-text-secondary);
   text-decoration: none;
 }
 
-   .resume-summary {
+.resume-summary {
   margin: 1.5rem 0 2rem;
   padding: 1.25rem 1.5rem;
   background: #fafafa;
@@ -300,8 +327,9 @@ color: var(--nb-text-secondary);
   border-radius: 8px;
   background: var(--nb-gray-0);
   border: 1px solid var(--nb-border);
-  width:860px;
+  width: 860px;
 }
+
 .resume-container::-webkit-scrollbar {
   width: 6px;
 }
@@ -326,10 +354,12 @@ color: var(--nb-text-secondary);
 
 /* ----------------------------
    Job Card
-   ---------------------------- */
+---------------------------- */
+
 .job-card {
   padding: 1rem 0;
   border-bottom: 1px solid var(--nb-border-strong);
+  margin-bottom: var(--nb-shape-spacing); /* NEW */
 }
 
 .job-card:last-child {
@@ -344,18 +374,18 @@ color: var(--nb-text-secondary);
 
 .job-title {
   margin: 0;
-  font-weight: 600;
+  font-weight: var(--nb-font-weight-semibold);
 }
 
 .job-dates {
   font-size: 0.9rem;
-  color: var(--nb-text-muted);
+  color: var(--nb-text-meta); /* UPDATED */
 }
 
 .job-location {
   margin: 0.25rem 0;
   font-size: 0.95rem;
-  color: var(--nb-text-muted);
+  color: var(--nb-text-meta); /* UPDATED */
 }
 
 .job-summary {
@@ -374,11 +404,13 @@ color: var(--nb-text-secondary);
 
 /* ----------------------------
    Education Card
-   ---------------------------- */
+---------------------------- */
+
 .education-card {
   padding: 1rem 0;
   border-bottom: 1px solid var(--nb-border-strong);
-  width:860px
+  width: 860px;
+  margin-bottom: var(--nb-shape-spacing); /* NEW */
 }
 
 .education-card:last-child {
@@ -393,17 +425,17 @@ color: var(--nb-text-secondary);
 
 .education-degree {
   margin: 0;
-  font-weight: 600;
+  font-weight: var(--nb-font-weight-semibold);
 }
 
 .education-dates {
   font-size: 0.9rem;
-  color: var(--nb-text-muted);
+  color: var(--nb-text-meta); /* UPDATED */
 }
 
 .education-school {
   margin: 0.25rem 0 0.5rem;
-  font-weight: 500;
+  font-weight: var(--nb-font-weight-medium);
   color: var(--nb-text);
 }
 
@@ -414,11 +446,13 @@ color: var(--nb-text-secondary);
 
 /* ----------------------------
    Certification Card
-   ---------------------------- */
+---------------------------- */
+
 .cert-card {
   padding: 1rem 0;
   border-bottom: 1px solid var(--nb-border-strong);
-  width:860px
+  width: 860px;
+  margin-bottom: var(--nb-shape-spacing); /* NEW */
 }
 
 .cert-card:last-child {
@@ -433,12 +467,12 @@ color: var(--nb-text-secondary);
 
 .cert-name {
   margin: 0;
-  font-weight: 600;
+  font-weight: var(--nb-font-weight-semibold);
 }
 
 .cert-meta {
   font-size: 0.9rem;
-  color: var(--nb-text-muted);
+  color: var(--nb-text-meta); /* UPDATED */
 }
 
 .cert-summary {
@@ -448,28 +482,18 @@ color: var(--nb-text-secondary);
 
 /* ----------------------------
    Skill Category
-   ---------------------------- */
+---------------------------- */
+
 .skill-category {
   margin-bottom: 1.5rem;
-  width:860px
+  width: 860px;
 }
 
 .skill-category-title {
   margin: 0 0 0.5rem;
-  font-weight: 600;
+  font-weight: var(--nb-font-weight-semibold);
 }
 
-.skill-list {
-  margin: 0;
-  padding-left: 1.2rem;
-}
-
-.skill-item {
-  margin: 0.25rem 0;
-  color: var(--nb-text-muted);
-}
-
-/* Two‑Column Skills Layout */
 .skill-list {
   margin: 0;
   padding-left: 0;
@@ -477,7 +501,7 @@ color: var(--nb-text-secondary);
 
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.25rem 1rem; /* row gap, column gap */
+  gap: 0.25rem 1rem;
 }
 
 .skill-item {
@@ -488,6 +512,7 @@ color: var(--nb-text-secondary);
 /* ---------------------------------------------------------
    Print Styles — Resume PDF Export
 --------------------------------------------------------- */
+
 @media print {
 
   body {
