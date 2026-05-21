@@ -25,9 +25,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="in"
      showgrid="false"
-     inkscape:zoom="1"
-     inkscape:cx="440.5"
-     inkscape:cy="480.5"
+     inkscape:zoom="2"
+     inkscape:cx="440.75"
+     inkscape:cy="480.25"
      inkscape:window-width="2400"
      inkscape:window-height="1261"
      inkscape:window-x="2391"
@@ -190,7 +190,7 @@
        id="text20"><tspan
          x="73.289581"
          y="47.360416"
-         id="tspan6">NeuByte Backend Architecture Diagram</tspan></text></g><g
+         id="tspan3">NeuByte Backend Architecture Diagram</tspan></text></g><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"><image
@@ -324,11 +324,11 @@
        transform="translate(-16.404171,0.52916667)"><tspan
          x="94.390984"
          y="176.74167"
-         id="tspan13">User
+         id="tspan5">User
 </tspan><tspan
          x="94.390984"
          y="182.38613"
-         id="tspan14">Repository</tspan></text><rect
+         id="tspan6">Repository</tspan></text><rect
        style="font-variation-settings:'wght' 600;fill:#ffffff;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1"
        id="rect4-8"
        width="23.547916"
@@ -343,11 +343,11 @@
        transform="translate(10.186461,0.66145343)"><tspan
          x="94.390984"
          y="176.74167"
-         id="tspan15">Workout
+         id="tspan7">Workout
 </tspan><tspan
          x="94.390984"
          y="182.38612"
-         id="tspan16">Repository</tspan></text><rect
+         id="tspan8">Repository</tspan></text><rect
        style="font-variation-settings:'wght' 600;fill:#ffffff;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1"
        id="rect4-1"
        width="23.547916"
@@ -362,11 +362,11 @@
        transform="translate(37.173978,0.66145343)"><tspan
          x="94.390984"
          y="176.74167"
-         id="tspan17">Program
+         id="tspan13">Program
 </tspan><tspan
          x="94.390984"
          y="182.38613"
-         id="tspan18">Repository</tspan></text><rect
+         id="tspan14">Repository</tspan></text><rect
        style="font-variation-settings:'wght' 600;fill:#ffffff;stroke:#000000;stroke-width:0.378426;stroke-dasharray:none;stroke-opacity:1"
        id="rect1-3-3"
        width="179.67052"
@@ -396,11 +396,11 @@
        transform="translate(-25.1354,-101.73279)"><tspan
          x="94.390984"
          y="176.74167"
-         id="tspan19">Authentication
+         id="tspan15">Authentication
 </tspan><tspan
          x="94.390984"
          y="182.38613"
-         id="tspan20">Controller</tspan></text><rect
+         id="tspan16">Controller</tspan></text><rect
        style="font-variation-settings:'wght' 600;fill:#ffffff;stroke:#000000;stroke-width:0.298946;stroke-dasharray:none;stroke-opacity:1"
        id="rect4-16-3-8"
        width="30.128136"
@@ -415,11 +415,11 @@
        transform="translate(9.5250877,-101.86516)"><tspan
          x="94.390984"
          y="176.74167"
-         id="tspan21">User
+         id="tspan17">User
 </tspan><tspan
          x="94.390984"
          y="182.38613"
-         id="tspan22">Controller</tspan></text><path
+         id="tspan18">Controller</tspan></text><path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.249473px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Triangle)"
        d="m 144.99166,171.97916 h 15.28975"
        id="path7"
@@ -439,11 +439,11 @@
        transform="translate(44.450056,-101.60064)"><tspan
          x="94.390984"
          y="176.74167"
-         id="tspan23">Notifications
+         id="tspan19">Notifications
 </tspan><tspan
          x="94.390984"
          y="182.38613"
-         id="tspan24">Controller</tspan></text><rect
+         id="tspan20">Controller</tspan></text><rect
        style="font-variation-settings:'wght' 600;fill:#ffffff;stroke:#000000;stroke-width:0.298946;stroke-dasharray:none;stroke-opacity:1"
        id="rect4-16-3-3"
        width="30.128136"
@@ -458,11 +458,11 @@
        transform="translate(79.110494,-101.46836)"><tspan
          x="94.390984"
          y="176.74167"
-         id="tspan25">Preferences
+         id="tspan21">Preferences
 </tspan><tspan
          x="94.390984"
          y="182.38613"
-         id="tspan26">Controller</tspan></text><rect
+         id="tspan22">Controller</tspan></text><rect
        style="font-variation-settings:'wght' 600;fill:#ffffff;stroke:#000000;stroke-width:0.312229;stroke-dasharray:none;stroke-opacity:1"
        id="rect4-16-3-4"
        width="32.892979"
@@ -477,11 +477,11 @@
        transform="translate(114.82933,-101.20377)"><tspan
          x="94.390984"
          y="176.74167"
-         id="tspan27">Workout Logging
+         id="tspan23">Workout Logging
 </tspan><tspan
          x="94.390984"
          y="182.38613"
-         id="tspan28">Controller</tspan></text><rect
+         id="tspan24">Controller</tspan></text><rect
        style="font-variation-settings:'wght' 600;fill:#ffffff;stroke:#000000;stroke-width:0.378426;stroke-dasharray:none;stroke-opacity:1"
        id="rect1-3-3-3"
        width="179.67052"
@@ -522,11 +522,11 @@
        transform="translate(-25.400011,-56.885846)"><tspan
          x="94.390984"
          y="176.74167"
-         id="tspan29">Authentication
+         id="tspan25">Authentication
 </tspan><tspan
          x="94.390984"
          y="182.38613"
-         id="tspan30">Service</tspan></text><rect
+         id="tspan26">Service</tspan></text><rect
        style="font-variation-settings:'wght' 600;fill:#ffffff;stroke:#000000;stroke-width:0.298946;stroke-dasharray:none;stroke-opacity:1"
        id="rect4-16-3-8-6"
        width="30.128136"
@@ -541,11 +541,11 @@
        transform="translate(9.2604656,-57.018216)"><tspan
          x="94.390984"
          y="176.74167"
-         id="tspan31">User
+         id="tspan27">User
 </tspan><tspan
          x="94.390984"
          y="182.38613"
-         id="tspan32">Service</tspan></text><rect
+         id="tspan28">Service</tspan></text><rect
        style="font-variation-settings:'wght' 600;fill:#ffffff;stroke:#000000;stroke-width:0.298946;stroke-dasharray:none;stroke-opacity:1"
        id="rect4-16-3-0-2"
        width="30.128136"
@@ -560,11 +560,11 @@
        transform="translate(44.185248,-56.753696)"><tspan
          x="94.390984"
          y="176.74167"
-         id="tspan33">Notifications
+         id="tspan29">Notifications
 </tspan><tspan
          x="94.390984"
          y="182.38613"
-         id="tspan34">Service</tspan></text><rect
+         id="tspan30">Service</tspan></text><rect
        style="font-variation-settings:'wght' 600;fill:#ffffff;stroke:#000000;stroke-width:0.298946;stroke-dasharray:none;stroke-opacity:1"
        id="rect4-16-3-3-9"
        width="30.128136"
@@ -579,11 +579,11 @@
        transform="translate(78.84548,-56.621416)"><tspan
          x="94.390984"
          y="176.74167"
-         id="tspan35">Preferences
+         id="tspan31">Preferences
 </tspan><tspan
          x="94.390984"
          y="182.38613"
-         id="tspan36">Service</tspan></text><rect
+         id="tspan32">Service</tspan></text><rect
        style="font-variation-settings:'wght' 600;fill:#ffffff;stroke:#000000;stroke-width:0.312229;stroke-dasharray:none;stroke-opacity:1"
        id="rect4-16-3-4-3"
        width="32.892979"
@@ -598,11 +598,11 @@
        transform="translate(114.5642,-56.356826)"><tspan
          x="94.390984"
          y="176.74167"
-         id="tspan37">Workout Logging
+         id="tspan33">Workout Logging
 </tspan><tspan
          x="94.390984"
          y="182.38613"
-         id="tspan38">Service</tspan></text><path
+         id="tspan34">Service</tspan></text><path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.261087px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Triangle)"
        d="m 69.047183,84.986146 0.273954,27.121844"
        id="path16"
@@ -646,5 +646,10 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Triangle);marker-end:url(#Triangle-1)"
        d="M 37.30625,178.06458 63.764583,177.8"
        id="path22"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" /><path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.259935px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Triangle-1)"
+       d="m 103.72872,84.738517 -0.27705,26.461533"
+       id="path2"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" /></g></svg>
