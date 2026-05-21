@@ -260,7 +260,7 @@
      transform="translate(-13.75833,-21.431251)"><tspan
        x="73.289581"
        y="47.360416"
-       id="tspan3">NeuByte Create Account Activity Swim Lane Diagram</tspan></text><path
+       id="tspan7">NeuByte Create Account Activity Swim Lane Diagram</tspan></text><path
      d="M 52.867408,37.316216 V 30.377823 H 245.31801 v 6.938393"
      fill="#ffffff"
      stroke="#000000"
@@ -367,6 +367,13 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;font-family:Manrope;-inkscape-font-specification:Manrope;font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0"
        x="84.390099"
        y="42.068748">User</tspan></text><text
+     xml:space="preserve"
+     style="font-size:4.9389px;line-height:1.6;font-family:Manrope;-inkscape-font-specification:'Manrope, @wght=600';font-variant-ligatures:none;font-variation-settings:'wght' 600;text-align:center;text-anchor:middle;fill:#f0f0f0;stroke-width:0;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+     x="84.278984"
+     y="57.531017"
+     id="Start_Text"><tspan
+       sodipodi:role="line"
+       id="tspan4">Start</tspan></text><text
      xml:space="preserve"
      style="font-size:4.9389px;line-height:1.6;font-family:Manrope;-inkscape-font-specification:'Manrope, @wght=600';font-variant-ligatures:none;font-variation-settings:'wght' 600;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0"
      x="148.67038"
@@ -726,7 +733,25 @@
        sodipodi:role="line"
        id="tspan60"
        x="148.36389"
-       y="172.43404">Navigate to Dashbard</tspan></text></g>
+       y="172.43404">Navigate to Dashbard</tspan></text><text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;line-height:1.6;font-family:Manrope;-inkscape-font-specification:'Manrope, @wght=400';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 400;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0"
+     x="84.278976"
+     y="57.001839"
+     id="Lane1Title-7"
+     inkscape:label="Start"><tspan
+       sodipodi:role="line"
+       id="tspan5"
+       x="84.278976"
+       y="57.001839">Start</tspan></text><text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;line-height:1.6;font-family:Manrope;-inkscape-font-specification:'Manrope, @wght=400';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 400;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0"
+     x="148.20743"
+     y="190.69051"
+     id="Lane1Title-7-6"
+     inkscape:label="End"><tspan
+       sodipodi:role="line"
+       id="tspan6">End</tspan></text></g>
          <metadata
    id="metadata1"><rdf:RDF><cc:Work
        rdf:about=""><dc:title>NeuByte Fitness App Create Account Activity Diagram</dc:title><dc:date>5/21/2026</dc:date><dc:creator><cc:Agent><dc:title>Gordon Neuls</dc:title></cc:Agent></dc:creator><dc:rights><cc:Agent><dc:title>@copyright 2026 Nebyte Technologies</dc:title></cc:Agent></dc:rights></cc:Work></rdf:RDF></metadata></svg>
