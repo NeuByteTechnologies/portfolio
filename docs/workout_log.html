@@ -112,18 +112,20 @@ Represents a single set performed for an exercise, including reps, weight, and o
 <tr><td> reps</td><td> SMALLINT</td><td> YES</td><td> Number of repetitions performed. </td></tr>
 <tr><td> weight</td><td> DECIMAL(6,2)</td><td> YES</td><td> Weight used for the set. </td></tr>
 <tr><td> unit_type_id</td><td> TINYINT</td><td> YES</td><td> FK → unit_type. Weight unit.</td></tr>
-|<tr><td> duration_seconds</td><td> INT</td><td> YES</td><td> Duration of the set (if time-based). </td></tr>
+<tr><td> duration_seconds</td><td> INT</td><td> YES</td><td> Duration of the set (if time-based). </td></tr>
 </tbody>
 </table>
 
-<strong>Foreign Keys:</strong><br/>
+<p><strong>Foreign Keys:</strong><br/>
 - workout_log_exercise_id → workout_log_exercise.workout_log_exercise_id
 - unit_type_id → unit_type.unit_type_id
-
-<strong>Business Rules:</strong><br/>
+</p>
+<p>
+  <strong>Business Rules:</strong><br/>
 - Either reps/weight OR duration may be used depending on exercise type.
 - RPE is optional.
 - Weight must use a valid unit type.
+</p>
 
 <h2> Table: workout_log_interval</h2>
 <strong>Description:</strong><br/>
@@ -144,17 +146,21 @@ Represents interval-based exercises (e.g., running, rowing, cycling) with distan
 </tbody>
 </table>
 
+<p>
 <strong>Foreign Keys</strong><br/>
 - workout_log_exercise_id → workout_log_exercise.workout_log_exercise_id
 - distance_unit_type_id → unit_type.unit_type_id
-
+</p>
+<p>
 <strong>Business Rules:</strong><br/>
 - Distance and duration must be positive if provided.
 - Intervals must be sequential.
-
+</p>
+<p>
 <h2> Table: workout_log_superset</h2>
 <strong>Description:</strong><br/>
 Represents a grouping of exercises performed as a superset or circuit.
+</p>
 
 <table class="uc-table">
   <thead>
@@ -167,13 +173,15 @@ Represents a grouping of exercises performed as a superset or circuit.
 <tr><td> sequence_order</td><td> SMALLINT</td><td> NO</td><td> Order of the superset within the workout.</td></tr>
 </tbody>
 </table>
-
+<p>
 <strong>Foreign Keys:</strong><br/>
 - workout_log_id → workout_log.workout_log_id
-
+</p>
+<p>
 <h2> Table: workout_log_superset_item</h2>
 <strong>Description:</strong><br/>
-Links exercises to a superset in a specific order.<br/>
+Links exercises to a superset in a specific order.
+</p>
 
 <table class="uc-table">
   <thead>
@@ -187,13 +195,16 @@ Links exercises to a superset in a specific order.<br/>
 </tbody>
 </table>
 
+<p>
 <strong>Foreign Keys:</strong><br/>
 - workout_log_superset_id → workout_log_superset.workout_log_superset_id
 - workout_log_exercise_id → workout_log_exercise.workout_log_exercise_id
-
+</p>
+<p>
 <h2> Table: user_weight</h2>
 <strong>Description:</strong><br/>
-Stores historical bodyweight entries for the user.<br/>
+Stores historical bodyweight entries for the user.
+</p>
 
 <table class="uc-table">
   <thead>
@@ -205,15 +216,15 @@ Stores historical bodyweight entries for the user.<br/>
 <tr><td>description</td><td> VARCHAR(255)</td><td> YES</td><td> Optional description.</td></tr>
   </tbody>
   </table>
-
-<strong>Business Rules:</strong><br/>
+<p>
+  <strong>Business Rules:</strong><br/>
 - Weight must be positive.
 - Unit type must be valid.
 
 <h2> Table: workout_type</h2>
 <strong>Description:</strong><br/>
 Defines categories of workouts (e.g., Strength, Cardio, HIIT).
-
+</p>
 
 <table class="uc-table">
   <thead>
