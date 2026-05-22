@@ -63,9 +63,9 @@ This module is foundational and interacts with Authentication, User Profile, Not
 <li>FS‑PROFILE (User Profile)</li>
 </ul>
 <h2> 4.   Functional Requirements</h2>   
-<strong>FR‑ACCT‑01 — Display Create Account Form</strong>   
-<strong>Description:</strong>  
-The system shall display the Create Account form with all required fields.    
+<strong>FR‑ACCT‑01 — Display Create Account Form</strong>  <br/>     
+<strong>Description:</strong><br/>      
+The system shall display the Create Account form with all required fields.    <br/>    
 <strong>Fields:</strong>  
 <ul>
 <li>First Name</li>
@@ -77,9 +77,9 @@ The system shall display the Create Account form with all required fields.
 </ul>
 Maps to: BR‑ACCT‑01, UC‑ACCT‑01  
 
-<strong>FR‑ACCT‑02 — Validate Required Fields</strong>  
-<strong>Description:</strong>  
-All required fields must be validated before submission.    
+<strong>FR‑ACCT‑02 — Validate Required Fields</strong>  <br/>    
+<strong>Description:</strong> <br/>
+All required fields must be validated before submission.<br/>    
 <strong>Rules:</strong>  
 <ul>
 <li>First/Last Name: alphabetic, 2–50 chars </li>
@@ -89,9 +89,9 @@ All required fields must be validated before submission.
 Maps to: BR‑ACCT‑02, UC‑ACCT‑01</li>
 </ul>
 
-<strong>FR‑ACCT‑03 — Enforce Password Policy</strong>  
-<strong>Description:</strong>  
-The system shall enforce the NeuByte password policy.  
+<strong>FR‑ACCT‑03 — Enforce Password Policy</strong>  <br/>    
+<strong>Description:</strong>  <br/>    
+The system shall enforce the NeuByte password policy.  <br/>    
 <strong>Rules:</strong>  
 <ul>
 <li>Minimum 8 characters</li>
@@ -102,9 +102,9 @@ The system shall enforce the NeuByte password policy.
 Maps to: BR‑ACCT‑03, UC‑ACCT‑01</li>
 </ul>
 
-<strong>FR‑ACCT‑04 — Prevent Duplicate Accounts<strong>  
-<strong>Description:</strong>  
-The system shall prevent account creation using an email address already in use.    
+<strong>FR‑ACCT‑04 — Prevent Duplicate Accounts</strong>  <br/>    
+<strong>Description:</strong>  <br/>    
+The system shall prevent account creation using an email address already in use.    <br/>    
 <strong>Behavior:</strong>  
 <ul>
 <li>Display error message</li>
@@ -113,9 +113,9 @@ The system shall prevent account creation using an email address already in use.
 Maps to: BR‑ACCT‑04, UC‑ACCT‑03</li>
 </ul>
 
-<strong>FR‑ACCT‑05 — Create Account Record<strong>  
-<strong>Description:</strong>  
-Upon successful validation, the system shall create a new user account record.  
+<strong>FR‑ACCT‑05 — Create Account Record</strong>  <br/>    
+<strong>Description:</strong>  <br/>    
+Upon successful validation, the system shall create a new user account record.  <br/>    
 <strong>Details:</strong>  
 <ul>
 <li>Store hashed password</li>
@@ -125,9 +125,9 @@ Upon successful validation, the system shall create a new user account record.
 Maps to: BR‑ACCT‑05, UC‑ACCT‑01</li>
 </ul>
 
-<strong>FR‑ACCT‑06 — Trigger Email Verification<strong>  
-<strong>Description:</strong>  
-The system shall send a verification email after account creation.  
+<strong>FR‑ACCT‑06 — Trigger Email Verification</strong>  <br/>    
+<strong>Description:</strong>  <br/>    
+The system shall send a verification email after account creation.  <br/>    
 Details:
 <ul>
 <li>Email includes verification link with token</li>
@@ -136,9 +136,9 @@ Details:
 Maps to: BR‑ACCT‑06, UC‑ACCT‑01</li>
 </ul>
 
-<strong>FR‑ACCT‑07 — Resend Verification Email<strong>  
-<strong>Description:</strong>  
-Users may request a new verification email.  
+<strong>FR‑ACCT‑07 — Resend Verification Email<strong>  <br/>    
+<strong>Description:</strong>  <br/>    
+Users may request a new verification email.  <br/>    
 <strong>Rules:</strong>  
 <ul>
 <li>Limit: 3 resend attempts per hour</li>
@@ -147,27 +147,27 @@ Users may request a new verification email.
 Maps to: BR‑ACCT‑07, UC‑ACCT‑02</li>
 </ul>
 
-<strong>FR‑ACCT‑08 — Handle Expired or Invalid Tokens<strong>  
-<strong>Description:</strong>  
-The system shall detect invalid or expired verification tokens.  
+<strong>FR‑ACCT‑08 — Handle Expired or Invalid Tokens<strong>  <br/>    
+<strong>Description:</strong>  <br/>    
+The system shall detect invalid or expired verification tokens.  <br/>    
 <strong>Behavior:</strong>  
 <li>Display error message</li>
 <li>Provide “Resend Verification Email” option</li>
 <li>Log event for security monitoring
 Maps to: BR‑ACCT‑08, UC‑ACCT‑03</li>
 
-<strong>FR‑ACCT‑09 — Complete Verification<strong>  
-<strong>Description:</strong>  
-When a valid token is used, the system shall activate the user account.  
+<strong>FR‑ACCT‑09 — Complete Verification<strong>  <br/>    
+<strong>Description:</strong>  <br/>    
+When a valid token is used, the system shall activate the user account.  <br/>    
 <strong>Details:</strong>  
 <li>Set account status = “Active”</li>
 <li>Redirect user to onboarding</li>
 <li>Trigger welcome notification
 Maps to: BR‑ACCT‑09, UC‑ACCT‑01</li>
 
-<strong>FR‑ACCT‑10 — Initialize User Profile</strong>  
-<strong>Description:</strong>  
-Upon account activation, the system shall create a default User Profile record.  
+<strong>FR‑ACCT‑10 — Initialize User Profile</strong>  <br/>    
+<strong>Description:</strong>  <br/>    
+Upon account activation, the system shall create a default User Profile record.  <br/>    
 Defaults:
 <ul>
 <li>Units: US Standard</li>
@@ -177,9 +177,9 @@ Defaults:
 Maps to: BR‑ACCT‑10, UC‑ACCT‑01</li>
 </ul>
 
-<strong>FR‑ACCT‑11 — Accessibility Requirements</strong>  
-<strong>Description:</strong>  
-The Create Account flow must comply with Accessibility FS.    
+<strong>FR‑ACCT‑11 — Accessibility Requirements</strong>  <br/>    
+<strong>Description:</strong>  <br/>    
+The Create Account flow must comply with Accessibility FS.    <br/>    
 <strong>Requirements:</strong>  
 <ul>
 <li>All fields have labels</li>
@@ -189,9 +189,9 @@ The Create Account flow must comply with Accessibility FS.
 Maps to: BR‑ACCT‑11, UC‑A11Y‑01 → UC‑A11Y‑10</li>
 </ul>
 
-<strong>FR‑ACCT‑12 — Security Requirements</strong>  
-<strong>Description:</strong>  
-The Create Account process must follow security best practices.    
+<strong>FR‑ACCT‑12 — Security Requirements</strong>  <br/>    
+<strong>Description:</strong>  <br/>    
+The Create Account process must follow security best practices.    <br/>    
 <strong>Rules:</strong>  
 <ul>
 <li>Passwords hashed using PBKDF2 or bcrypt</li>
