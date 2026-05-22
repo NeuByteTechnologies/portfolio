@@ -1,0 +1,233 @@
+---
+layout: default
+title: WorkoutLogging
+---
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=2">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="assets/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="assets/neubyte.css">
+<style>
+  body { font-family: 'Manrope', sans-serif; }
+  h1, h2, h3 { font-weight: 600; }
+  .logo { text-align: center; margin-bottom: 2rem; }
+
+  .code-block {
+    background: #1e1e1e;
+    color: #e5e5e5;
+    padding: 16px;
+    border-radius: 6px;
+    font-family: "Fira Code", "Consolas", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: auto;
+    border: 1px solid #333;
+}
+
+</style>
+</head>
+<body>
+
+{% include header.html %}
+
+<section style="max-width: 860px; margin: 0 auto; padding: 1rem;">
+<h1> DATA DICTIONARY — MODULE 2: WORKOUT LOGGING</h1>
+This module defines all entities related to recording, editing, and retrieving workout execution data, including sets, intervals, notes, and historical logs.
+
+It represents the core transactional engine of the FitnessApp.
+
+<h2> Table: workout_log</h2>
+<strong>Description:</strong><br/>
+Represents a single workout session performed by a user on a specific date. This is the parent entity for all logged sets and intervals.<br/>
+
+<table>
+  <thead>
+    <tr><th>Column </th><th>Type</th><th> Null</th><th> Description </th></tr>
+  </thead>
+  <tbody>
+<tr><td> workout_log_id</td><td> INT</td><td> NO</td><td> Primary key.</td></tr>
+<tr><td> user_id</td><td> INT</td><td> NO</td><td> FK → user. Owner of the workout.</td></tr>
+<tr><td> workout_date</td><td> DATE</td><td> NO</td><td> The date the workout was performed.</td></tr>
+<tr><td>program_id</td><td> INT</td><td> YES</td><td> FK → exercise_program. Optional link if workout came from a program.</td></tr>
+<tr><td> notes</td><td> VARCHAR(500)</td><td> YES</td><td> User-entered notes for the workout.</td></tr>
+<tr><td> created_at</td><td> DATETIME</td><td> NO</td><td> Timestamp when the log was created.</td></tr>
+<tr><td> updated_at</td><td> DATETIME</td><td> YES</td><td> Timestamp when the log was last modified.</td></tr>
+</tbody>
+</table>
+
+<strong>Foreign Keys:</strong><br/>
+- user_id → user.user_id
+- program_id → exercise_program.program_id
+
+<strong>Business Rules:</strong>
+- A user may have multiple workouts per day.
+- Notes are optional.
+- If the workout is free-form (not from a program), program_id is NULL.
+
+<h2> Table: workout_log_exercise</h2>
+<strong>Description:</strong><br/> 
+Represents a specific exercise performed within a workout session. Parent to sets and intervals.</section><br/>
+
+<table>
+  <thead>
+<tr></tr><th> Column</th> <th> Type </th><th> Null </th><th> Description </th></tr>
+</thead>
+<tbody>
+<tr><td> workout_log_exercise_id </td><td> INT </td><td> NO </td><td> Primary key. </td></tr>
+<tr><td> workout_log_id </td><td> INT </td><td> NO </td><td> FK → workout_log. </td></tr>
+<tr><td> exercise_id </td><td> INT </td><td> NO </td><td> FK → exercise. </td></tr>
+<tr><td> sequence_order </td><td> SMALLINT</td> <td> NO</td> <td> Order of the exercise within the workout. </td></tr>
+<tr><td> notes </td><td> VARCHAR(500) </td><td> YES <td> Optional notes for this exercise. </td><tr>
+</tbody>
+</table>
+
+<strong>Foreign Keys:</strong><br/>
+<ul>
+  <li> workout_log_id → workout_log.workout_log_id</li>
+  <li> exercise_id → exercise.exercise_id</li>
+  </ul>
+
+<strong> Business Rules:</strong><br/>
+<ul>
+<li> Exercises must be ordered sequentially.</li>
+<li>Notes apply only to this exercise, not the entire workout.</li>
+</ul>
+
+<h2> Table: workout_log_set</h2>
+<strong>Description:</strong><br/>
+Represents a single set performed for an exercise, including reps, weight, and optional time-based metrics.<br/>
+
+<table>
+  <thead>
+<tr><th>Column </th><th> Type </th><th> Null</th><th> Description </th></tr>
+</thead>
+<tbody>
+<tr><td> workout_log_set_id </td><td>INT </td><td> NO</td><td> Primary key. </td></tr>
+<tr><td> workout_log_exercise_id </td><td> INT </td><td> NO </td><td> FK → workout_log_exercise. </td></tr>
+<tr><td> set_number</td><td> SMALLINT</td><td> NO</td><td> Sequential set number. </td></tr>
+<tr><td> reps</td><td> SMALLINT</td><td> YES</td><td> Number of repetitions performed. </td></tr>
+<tr><td> weight</td><td> DECIMAL(6,2)</td><td> YES</td><td> Weight used for the set. </td></tr>
+<tr><td> unit_type_id</td><td> TINYINT</td><td> YES</td><td> FK → unit_type. Weight unit.</td></tr>
+|<tr><td> duration_seconds</td><td> INT</td><td> YES</td><td> Duration of the set (if time-based). </td></tr>
+</tbody>
+</table>
+
+<strong>Foreign Keys:</strong><br/>
+- workout_log_exercise_id → workout_log_exercise.workout_log_exercise_id
+- unit_type_id → unit_type.unit_type_id
+
+<strong>Business Rules:</strong><br/>
+- Either reps/weight OR duration may be used depending on exercise type.
+- RPE is optional.
+- Weight must use a valid unit type.
+
+<h2> Table: workout_log_interval</h2>
+<strong>Description:</strong><br/>
+Represents interval-based exercises (e.g., running, rowing, cycling) with distance, time, and pace metrics.
+
+<table>
+  <thead>
+<tr><th>Column </th><th> Type </th><th> Null</th><th> Description </th></tr>
+</thead>
+<tbody>
+<tr><td>workout_log_interval_id</td><td> INT</td><td> NO</td><td> Primary key.</td></tr>
+<tr><td>workout_log_exercise_id</td><td> INT</td><td> NO</td><td> FK → workout_log_exercise.</td></tr>
+<tr><td> interval_number</td><td> SMALLINT</td><td> NO</td><td> Sequential interval number.</td></tr>
+<tr><td>distance</td><td> DECIMAL(6,2)</td><td> YES</td><td> Distance covered.</td></tr>
+<tr><td> distance_unit_type_id</td><td> TINYINT</td><td> YES</td><td> FK → unit_type.</td></tr>
+<tr><td>duration_seconds</td><td> INT</td><td> YES</td><td> Time taken for the interval.</td></tr>
+<tr><td>avg_heart_rate</td><td> SMALLINT</td><td> YES</td><td> Average HR for the interval.</td></tr>
+</tbody>
+</table>
+
+<strong>Foreign Keys</strong><br/>
+- workout_log_exercise_id → workout_log_exercise.workout_log_exercise_id
+- distance_unit_type_id → unit_type.unit_type_id
+
+<strong>Business Rules:</strong><br/>
+- Distance and duration must be positive if provided.
+- Intervals must be sequential.
+
+<h2> Table: workout_log_superset</h2>
+<strong>Description:</strong><br/>
+Represents a grouping of exercises performed as a superset or circuit.
+
+<table>
+  <thead>
+<tr><th>Column </th><th> Type </th><th> Null</th><th> Description </th></tr>
+</thead>
+<tbody>
+<tr><td> workout_log_superset_id</td><td> INT</td><td> NO</td><td> Primary key.</td></tr>
+<tr><td> workout_log_id</td><td> INT</td><td> NO</td><td> FK → workout_log.</td></tr>
+<tr><td> name</td><td> VARCHAR(100)</td><td> YES</td><td> Optional name (e.g., “Circuit A”).</td></tr>
+<tr><td> sequence_order</td><td> SMALLINT</td><td> NO</td><td> Order of the superset within the workout.</td></tr>
+</tbody>
+</table>
+
+<strong>Foreign Keys:</strong><br/>
+- workout_log_id → workout_log.workout_log_id
+
+<h2> Table: workout_log_superset_item</h2>
+<strong>Description:</strong><br/>
+Links exercises to a superset in a specific order.<br/>
+
+<table>
+  <thead>
+<tr><th>Column </th><th> Type </th><th> Null</th><th> Description </th></tr>
+</thead>
+<tbody>
+<tr><td> workout_log_superset_item_id</td><td> INT</td><td> NO</td><td> Primary key.</td></tr>
+<tr><td> workout_log_superset_id</td><td> INT</td><td> NO</td><td> FK → workout_log_superset.</td></tr>
+<tr><td> workout_log_exercise_id</td><td> INT</td><td> NO</td><td> FK → workout_log_exercise.</td></tr>
+<tr><td>sequence_order</td><td> SMALLINT</td><td> NO</td><td> Order of the exercise within the superset.</td></tr>
+</tbody>
+</table>
+
+<strong>Foreign Keys:</strong><br/>
+- workout_log_superset_id → workout_log_superset.workout_log_superset_id
+- workout_log_exercise_id → workout_log_exercise.workout_log_exercise_id
+
+<h2> Table: user_weight</h2>
+<strong>Description:</strong><br/>
+Stores historical bodyweight entries for the user.<br/>
+
+<table>
+  <thead>
+<tr><th>Column </th><th> Type </th><th> Null</th><th> Description </th></tr>
+</thead>
+<tbody>
+<tr><td>workout_type_id</td><td> TINYINT</td><td> NO</td><td> Primary key.</td></tr>
+<tr><td>name</td><td> VARCHAR(50)</td><td> NO</td><td> Workout type name.</td></tr>
+<tr><td>description</td><td> VARCHAR(255)</td><td> YES</td><td> Optional description.</td></tr>
+  </tbody>
+  </table>
+
+<strong>Business Rules:</strong><br/>
+- Weight must be positive.
+- Unit type must be valid.
+
+<h2> Table: workout_type</h2>
+<strong>Description:</strong><br/>
+Defines categories of workouts (e.g., Strength, Cardio, HIIT).
+
+
+<table>
+  <thead>
+<tr><th>Column </th><th> Type </th><th> Null</th><th> Description </th></tr>
+</thead>
+<tbody>
+<tr><td> workout_type_id</td><td> TINYINT</td><td> NO</td><td> Primary key.</td></tr>
+<tr><td>name</td><td> VARCHAR(50)</td><td> NO</td><td> Workout type name.</td></tr>
+<tr><td>description</td><td> VARCHAR(255)</td><td> YES</td><td> Optional description.</td></tr>
+  </tbody>
+  </table>
+    </section>
+
+{% include footer.html %}
+
+</body>
+  </html>
