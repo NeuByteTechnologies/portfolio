@@ -23,8 +23,8 @@ title: Log Workout User Interface Specifications
 <section style="max-width: 860px; margin: 0 auto; padding: 1rem;">
 <h1>6.11 UIS-LW-01 Log Workout</h1><br/>
 <h2>6.11.1 Purpose</h2><br/>
-<p>Allow the user to record the details of their completed workout for the current day, including sets, reps, weight, duration, distance, and rest periods as applicable. 
-This enables accurate tracking of workout performance and progress over time.</p>
+Allow the user to record the details of their completed workout for the current day, including sets, reps, weight, duration, distance, and rest periods as applicable. 
+This enables accurate tracking of workout performance and progress over time.<br/>
 
 <h3>6.11.2 Screen Layout — Log Workout</h3> <br/>
 <h4>6.11.2.1 Layout Structure</h4><br/>
@@ -44,7 +44,7 @@ This enables accurate tracking of workout performance and progress over time.</p
 </ul>
 
 <strong>Body</strong><br/>
-<p>A vertically scrolling form that allows the user to log sets, reps, weight, duration, or other metrics for each exercise in the selected workout.</p>
+A vertically scrolling form that allows the user to log sets, reps, weight, duration, or other metrics for each exercise in the selected workout.<br/>
 
 <strong>Elements:</strong><br/>
 
@@ -121,7 +121,7 @@ Each exercise block contains:<br/>
     <li>Uses global error banner pattern (UIS ERR 01)</li>
 </ul>
 
-<h4></h4>6.11.2.4 Interaction Rules & Behaviors</ul>h4><br/>
+<h4>6.11.2.4 Interaction Rules & Behaviors</h4><br/>
 
 <strong>Initial Load</strong><br/>
 
@@ -178,7 +178,7 @@ Each exercise block contains:<br/>
     <li>Show: Distance, Duration</li>
     <li>Hide: Reps, Weight</li>
 </ul>
-<p>
+
 <strong>Rule</strong> <br/>
 Only fields relevant to the exercise type are rendered.
 Hidden fields do not appear in the DOM and are not validated.
@@ -187,13 +187,15 @@ Hidden fields do not appear in the DOM and are not validated.
 <strong>Set Row Behavior</strong><br/>
 The number of set rows is fixed based on the program.
 </p>
+<p>
 <strong>User cannot:</strong><br/>
 <ul>
     <li>Add sets</li>
     <li>Remove sets</li>
     <li>Change the number of sets</li>
 </ul>
-
+</p>
+<p>
 <strong>Each set row includes:</strong><br/>
 <ul>
     <li>Set number (1, 2, 3…)</li>
@@ -296,6 +298,7 @@ BR LW 01 through BR LW 15 BR DASH xx (Recent Activity integration) FS LW xx (Wor
       UIS-WP-01<br/>
 <h3>6.11.5 User Interface Design</h3><br/>
 <h4>6.11.5.1 Log Workout</h4><br/>
+<img src="assets/LogWorkoutUI.png"/>
 </section>
 
 {% include footer.html %}
