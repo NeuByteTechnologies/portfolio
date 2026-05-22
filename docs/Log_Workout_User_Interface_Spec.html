@@ -1,0 +1,304 @@
+---
+layout: default
+title: Log Workout User Interface Specifications
+---
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=2">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="assets/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="assets/neubyte.css">
+<style>
+  body { font-family: 'Manrope', sans-serif; }
+  h1, h2, h3 { font-weight: 600; }
+  .logo { text-align: center; margin-bottom: 2rem; }
+</style>
+</head>
+<body>
+
+{% include header.html %}
+
+<section style="max-width: 860px; margin: 0 auto; padding: 1rem;">
+<h1>6.11 UIS-LW-01 Log Workout</h1><br/>
+<h2>6.11.1 Purpose</h2><br/>
+<p>Allow the user to record the details of their completed workout for the current day, including sets, reps, weight, duration, distance, and rest periods as applicable. 
+This enables accurate tracking of workout performance and progress over time.</p>
+
+<h3>6.11.2 Screen Layout — Log Workout</h3> <br/>
+<h4>6.11.2.1 Layout Structure</h4><br/>
+<strong>Header</strong><br/>
+<ul>
+    <li>Standard authenticated header containing:</li>
+    <ul>
+        <li>NeuByte Logo (left)</li>
+        <li>Notification Icon (right)</li>
+        <li>Hamburger Menu (right)</li>
+            <ul>
+                <li>Header remains fixed at the top</li>
+                <li>Back navigation uses OS native gesture or back button</li>
+                <li>Title is not required (Workout Detail already provides context)</li>
+            </ul>
+    </ul>
+</ul>
+
+<strong>Body</strong><br/>
+<p>A vertically scrolling form that allows the user to log sets, reps, weight, duration, or other metrics for each exercise in the selected workout.</p>
+
+<strong>Elements:</strong><br/>
+
+<ul>
+<li>Workout Title (Week/Day + Name)</li>
+<li>Exercise List (scrollable) Each exercise includes:</li>
+    <ul>
+        <li>Exercise Name</li>
+        <li>Set Rows (1 row per set)</li>
+        <ul>
+                <li>Reps input</li>
+                <li>Weight input (optional)</li>
+            <li>Duration input (if applicable)</li>
+        </ul>
+        <li>Workout Notes (optional text area)</li>
+        <li>Save Workout Button (primary action)</li>
+        <li>Cancel Button (secondary action)</li>
+        <li>	Inline Error Label (appears only when validation fails)</li>
+    </ul>
+</ul>
+
+<strong>Footer</strong><br/>
+<ul>
+        <li>App Version</li>
+        </li>Privacy Policy / Terms links</li>
+        <li>Copyright</li>
+    </ul>   
+
+<h4>6.11.2.3 Component Definitions</h4>
+
+<strong>Workout  Title</strong><br/>
+<ul>
+    <li>Bold, primary text</li>
+    <li>Includes program context (Week/Day)</li>
+</ul>
+
+<strong>Exercise Section</strong><br/>
+Each exercise block contains:<br/>
+
+<ul>
+    <li>Exercise Name (bold)</li>
+    <li>Set Rows</li>
+    <ul>
+        <li>Reps input (numeric)</li>
+        <li>Weight input (numeric, optional)</li>
+        <li>Duration input (if exercise is time based)</li>
+        <li>RPE input (optional)</li>
+    </ul>
+
+<strong>Workout Notes</strong> <br/>
+<ul>
+    <li>Optional text area</li>
+    <li>Multi line input</li>
+</ul>
+
+<strong>Save Workout Button</strong><br/>
+<ul>
+    <li>Primary action</li>
+    <li>Validates all inputs</li>
+    <li>Saves workout log</li>	
+    <li>Returns user to Dashboard or Workout History</li>
+</ul>
+
+<strong>Cancel Button</strong><br/>
+<ul>
+    <li>Secondary action</li>
+    <li>Discards changes</li>
+    <li>Returns to previous screen</li>
+</ul>
+
+<strong>Inline Error Label</strong><br/>
+<ul>
+    <li>Appears only when validation fails</li>
+    <li>Uses global error banner pattern (UIS ERR 01)</li>
+</ul>
+
+<h4></h4>6.11.2.4 Interaction Rules & Behaviors</ul>h4><br/>
+
+<strong>Initial Load</strong><br/>
+
+<ul>
+    <li>App fetches the workout structure for the selected day:</li>
+    <ul>
+        <li>Exercises</li>
+        <li>Expected number of sets per exercise</li>
+        <li>Exercise type (strength, timed, bodyweight, distance, etc.)</li>
+    </ul>
+    <li>UI displays skeleton loaders until data is returned.</li>
+    <li>Each exercise loads in a collapsed state by default.<li>
+    <li>When the data is ready:</li>
+    <ul>
+        <li>Pre‑populate exactly the number of sets defined by the program.</li>
+        <li>No additional sets may be added.</li>
+        <li>No sets may be removed.</li>
+        <li>Set rows remain hidden until the user expands the exercise.</li>
+    </ul>
+
+<strong>Exercise Expansion / Collapse</strong><br/>
+
+<ul>
+        <li>Collapsed State (default):</li>
+        <ul>
+            <li>Shows: Exercise Name, chevron icon, and summary (e.g., “3 sets”).</li>
+            <li>Hides: All set rows and input fields.</li>
+        </ul>
+        <li>Expanded State:</li>
+        <ul>
+            <li>Shows all program‑defined set rows.</li>
+            <li>Shows the appropriate input fields for each set.</li>
+        </ul>
+        <li>Tapping the exercise header toggles between expanded and collapsed.</li>
+        <li>Multiple exercises may be expanded simultaneously (unless you prefer single‑expand behavior).</li>
+        </ul>
+
+<strong>Dynamic Field Rendering (Based on Exercise Type)</strong><br/>
+
+<strong>Strength/Bodyweight Exercise</strong><br/>
+<ul>
+    <li>Show: Reps, Weight</li>
+    <li>Hide: Duration, Distance</li>
+</ul>
+
+<strong>Timed Exercise</strong><br/>
+<ul>
+    <li>Show: Duration</li>
+    <li>Hide: Reps, Weight</li>
+</ul>
+
+<strong>Distance Exercise</strong><br/>
+<ul>
+    <li>Show: Distance, Duration</li>
+    <li>Hide: Reps, Weight</li>
+</ul>
+<p>
+<strong>Rule</strong> <br/>
+Only fields relevant to the exercise type are rendered.
+Hidden fields do not appear in the DOM and are not validated.
+</p>
+<p>
+<strong>Set Row Behavior</strong><br/>
+The number of set rows is fixed based on the program.
+</p>
+<strong>User cannot:</strong><br/>
+<ul>
+    <li>Add sets</li>
+    <li>Remove sets</li>
+    <li>Change the number of sets</li>
+</ul>
+
+<strong>Each set row includes:</strong><br/>
+<ul>
+    <li>Set number (1, 2, 3…)</li>
+    <li>Relevant input fields (based on exercise type)</li>
+</ul>
+<p>
+
+<strong>Validation Rules</strong><br/>
+Validation occurs:</p>
+<ul>
+    <li>On blur (field loses focus)</li>
+    <li>On Save Workout button tap</li>
+</ul>
+
+<strong>Strength/ Bodyweight</strong> <br/>
+<ul>
+    <li>Reps > 0</li>
+    <li>Weight ≥ 0 (if applicable)</li>
+</ul>
+
+<strong>Timed</strong><br/>
+<ul>
+    <li>Duration > 0 seconds</li>
+</ul>
+
+<strong>Distance</strong><br/>
+<ul>
+    <li>Distance > 0</li>
+    <li>Duration > 0 (if required)</li>
+</ul>
+
+<strong>General</strong><br/>
+<ul>
+    <li>All program‑defined sets must have valid entries.
+    <li>Empty sets are not allowed because the program requires them.
+</ul>
+
+<strong>Inline Error Behavior</strong>
+<ul>
+    <li>Errors appear directly under the field.</li>
+    <li>Errors clear automatically when the user corrects the value.</li>
+    </ul>
+
+<strong>Examples:</strong><br/>
+<ul>
+    <li>“Reps must be greater than zero.”</li>
+    <li>“Duration is required for timed exercises.”</li>
+    <li>“Weight cannot be negative.”</li>
+</ul>
+<strong>Global Error Banner</strong>
+<ul>
+    <li>Displayed only when:</li>
+    <li>Save operation fails (network/server error)/<li>
+    <li>Workout structure cannot be loaded</li>
+    <li>Uses global pattern UIS‑ERR‑01.</li>
+    </ul>
+
+<strong>Save Button Behavior</strong><br/>
+<ul>
+    <li>Enabled only when:</li>
+    <ul>
+        <li>All required fields across all sets are valid</li>
+        <li>No inline errors are present</li>
+    </ul>
+    <li>On tap:</li>
+    <ul>
+        <li>Validate all fields</li>
+        <li>Submit workout log</li>
+        <li>On success:</li>
+        <ul>
+            <li>Show toast: “Workout logged”</li>
+            <li>Navigate to Dashboard </li>
+        </ul>
+    <li>On failure:</li>
+        <ul>
+            <li>Show global error banner</li>
+        </ul>
+</ul>
+
+Cancel Behavior
+    <li>Discards all changes.
+    <li>Returns user to Workout Detail (UIS‑PROG‑01).
+    <li>No confirmation modal required.
+
+<h4>6.11.2.5 Accessibility Requirements</h4><br/>
+
+<ul>
+    <li>All form fields keyboard navigable</li>
+    <li>Labels programmatically associated with inputs</li>
+    <li>Inline errors announced via ARIA live region</li>
+    <li>Add Set button must have descriptive ARIA label</li>
+    <li>Minimum tap targets (44–48px)</li>
+    <li>Screen reader announces: “Log Workout screen” on load</li>
+</ul>
+
+<h3>6.11.3 Related Requirements</h3><br/>
+BR LW 01 through BR LW 15 BR DASH xx (Recent Activity integration) FS LW xx (Workout logging functional rules)<br/>
+      
+<h3>6.11.4 Wire Frame Reference</h3><br/>
+      UIS-WP-01<br/>
+<h3>6.11.5 User Interface Design</h3><br/>
+<h4>6.11.5.1 Log Workout</h4><br/>
+</section>
+
+{% include footer.html %}
+
+</body>
+  </html>
