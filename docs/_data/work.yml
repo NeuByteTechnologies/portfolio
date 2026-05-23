@@ -1,186 +1,111 @@
-- company: Melaleuca -  The Wellness Company
-  role: Software Engineer II
+- company: Melaleuca – The Wellness Company
+  role: Senior Systems Analyst / Data Systems Engineer
   location: Idaho Falls, Idaho
   start: May 2018
   end: January 2026
-  summary:
-    Developed and maintained data integration workflows, optimizing order recovery and enhancing marketing efforts through Salesforce communication and web analytics. Focused on SSIS, T-SQL, and BigQuery to support data-driven decision-making.
+  summary: >
+    Supported modernization of enterprise data workflows by analyzing legacy ETL processes,
+    documenting system behavior, and implementing SQL‑driven transformations. Partnered with
+    marketing, finance, and engineering teams to improve data quality, reporting accuracy,
+    and cross‑system integrations.
   bullets:
-    - Developed SSIS packages with C# scripting components for the credit card replacement process, recovering approximately $20K USD per month in previously declined orders across multiple countries.
-    - Built SSIS packages to send customer and order data to Salesforce for email and SMS marketing campaigns, increasing sales and customer retention in multiple international markets and the United States.
-    - Updated BigQuery queries to bring in Google Analytics web data, enabling more focused campaigns based on sessions, pages, and clicks.
-    - Maintained data warehouse ETL using SSIS packages and SQL Agent jobs to pull data into staging databases.
-    - Implemented T-SQL stored procedures to clean, transform, and load fact and dimension tables in the data warehouse.
-    - Performed query optimization using execution plans, index analysis, and data validation to ensure efficient execution plans.
+    - Analyzed and modernized SSIS workflows supporting credit card recovery, improving order retention and recovering ~$20K per month across multiple countries.
+    - Designed and maintained data integration pipelines sending customer and order data to Salesforce, enabling targeted email/SMS campaigns and improving customer engagement.
+    - Integrated Google Analytics web data into BigQuery, enabling more accurate segmentation and campaign performance analysis.
+    - Documented and maintained data warehouse ETL processes, including staging, cleansing, and dimensional modeling.
+    - Developed and optimized T‑SQL stored procedures and transformations supporting fact and dimension tables.
+    - Performed data validation, profiling, and query optimization to ensure accuracy, reliability, and efficient execution plans.
 
 - company: Motorola Solutions
-  role: Staff Engineer 1 Software
+  role: Staff Engineer I – Analytics & Systems Integration
   location: Temecula, CA
   start: March 2018
   end: May 2018
-  summary: 
-    Continued the same responsibilities as at Airbus DS Communications after acquisition by Motorola Solutions, supporting analytics and data integration for public safety communications.
+  summary: >
+    Supported analytics and data integration systems for public safety communications following
+    the acquisition of Airbus DS Communications. Ensured continuity of reporting, data flows,
+    and system behavior during organizational transition.
   bullets:
-    - Maintained and supported VESTA Analytics and related data integration components following the acquisition of Airbus DS Communications.
-    - Ensured continuity of analytics and reporting solutions during organizational transition.
+    - Maintained VESTA Analytics data workflows and reporting components during post‑acquisition integration.
+    - Analyzed system behavior and data flows to ensure uninterrupted reporting for public safety agencies.
 
-- company: Airbus DS Communications, Inc
-  role: Software Designer
+- company: Airbus DS Communications
+  role: Software Designer / Systems Analyst
   location: Temecula, CA
   start: February 2014
   end: March 2018
-  summary: 
-    Focused on enhancing software applications and data integration processes for public safety communications, including analytics, SSIS, and SSAS.
+  summary: >
+    Enhanced analytics and reporting platforms for public safety systems by analyzing legacy
+    components, modernizing SSIS/SSAS workflows, and improving system reliability and user experience.
   bullets:
-    - Designed and upgraded the VESTA Analytics web application, improving overall user experience.
-    - Migrated SSIS Data Flow Task components, enhancing error logging capabilities.
-    - Upgraded the SSAS cube, optimizing reporting efficiency and data processing.
+    - Upgraded and enhanced the VESTA Analytics web application, improving usability and reporting clarity.
+    - Modernized SSIS Data Flow components, improving error handling and operational stability.
+    - Upgraded SSAS cubes to improve reporting performance and data processing efficiency.
 
 - company: NAMM California
   role: Business Systems Analyst
   location: Ontario, California
   start: August 2013
   end: March 2014
-  summary: 
-    Supported medical coding remediation and application maintenance during the transition from ICD-9 to ICD-10.
+  summary: >
+    Supported ICD‑10 remediation by analyzing legacy applications, documenting requirements,
+    and ensuring system readiness for regulatory compliance.
   bullets:
-    - Analyzed existing applications, databases, and reports for required upgrades from ICD-9 to ICD-10.
-    - Documented business and system processes, requirements, and specifications for ICD-10 remediation.
-    - Provided production application support for multiple VB.NET desktop and web applications, as well as Crystal Reports.
+    - Analyzed applications, databases, and reports to identify ICD‑9 → ICD‑10 upgrade requirements.
+    - Documented business processes, system workflows, and functional specifications for remediation.
+    - Provided production support for VB.NET applications and Crystal Reports.
 
 - company: NeuByte Technologies
-  role: Principle Software Engineer
+  role: Principal Systems Analyst / Software Engineer (Consultant)
   location: Temecula, CA
   start: June 2012
   end: February 2014
   summary: >
-    Operated as a consulting/contract vehicle, delivering custom web and business solutions under a DBA structure.
+    Delivered custom business and web solutions as a consulting entity, supporting requirements
+    analysis, system design, and data‑driven application development.
   bullets:
-    - Contracted as a web developer by Access Partners to design and develop a custom CRM website using ASP.NET 4.0 and SQL Server 2008.
-    - Utilized Entity Framework 4.0, MVC 4.0, LINQ, and jQuery to build a modern, data-driven CRM application.
+    - Designed and developed a custom CRM system using ASP.NET, SQL Server, and Entity Framework.
+    - Analyzed business workflows and translated requirements into technical specifications and UI components.
 
-- company: CU Direct
-  role: Contractor - Software Developer
-  location: Ontario, CA
-  start: April 2013
-  end: August 2013
-  summary: 
-    Developed tooling and web applications to improve consistency and efficiency in financial software development.
-  bullets:
-    - Created T4 templates to generate classes with properties for localization and enumerations from databases, ensuring consistency from database to business logic.
-    - Developed an MVC application using .NET 4.0, jQuery, JSON, Handlebars templates, Kendo UI components, and SQL Server.
-    - Used LINQ with a custom Entity Framework to call stored procedures and populate web pages with data.
-
-- company: SAIC
-  role: Contractor - Software Engineer
-  start: August 2012
-  end: April 2013
-  summary: 
-    Supported software lifecycle governance, SharePoint environments, and operations for enterprise collaboration platforms.
-  bullets:
-    - Configured Team Foundation Server work item templates to improve software lifecycle management.
-    - Authored governance documentation for consistent use of SharePoint, Project Server, and Project Portfolio Analytics.
-    - Set up a SharePoint 2010 development virtual machine template for consistent development environments.
-    - Provided Tier Two operations support for SharePoint help desk tickets.
-
-- company: CareFusion
-  role: Consultant, Business Metrics/Analytics
+- company: CareFusion / Cardinal Health
+  role: Business Systems Analyst – Data Warehousing & Analytics
+  location: San Diego, CA
   start: July 2009
   end: June 2012
-  summary: 
-    Delivered data warehousing and analytics solutions using Kimball methodologies and Lean Six Sigma practices.
+  summary: >
+    Supported enterprise data warehousing initiatives using Kimball methodologies, Lean Six Sigma,
+    and structured requirements analysis. Contributed to modernization of reporting and analytics
+    platforms across operational and financial domains.
   bullets:
-    - Developed data warehouses and data marts to enhance data accessibility.
-    - Implemented ETL processes to ensure efficient data integration and data quality.
-    - Contributed to Cardinal Health’s Operational Excellence program through Lean Six Sigma methodologies for process improvement.
+    - Developed and enhanced data warehouses and data marts using star schema design.
+    - Analyzed data workflows and implemented ETL processes to improve data quality and accessibility.
+    - Supported Operational Excellence initiatives through process analysis and Lean Six Sigma practices.
 
 - company: Cardinal Health
-  role: Senior Business Systems Analyst
+  role: Senior Business Systems Analyst – Data & Process Improvement
+  location: San Diego, CA
   start: June 2008
   end: June 2009
-  summary: 
-    Focused on data warehousing, ETL, and process improvement using Kimball and Lean Six Sigma approaches.
-  bullets:
-    - Developed data warehouses and data marts utilizing Kimball methodologies with star schema databases.
-    - Participated in ETL processes to ensure efficient data integration and management.
-    - Applied Lean Six Sigma principles to support Operational Excellence initiatives.
-
-- company: Cardinal Health
-  role: Senior Analyst, Application Design and Development
-  start: May 2006
-  end: June 2008
-  summary: 
-    Supported customer support operations with SharePoint administration, ASP.NET applications, and reporting solutions.
-  bullets:
-    - Managed SharePoint 2003 and 2007 administration for the Customer Support Operations department.
-    - Developed ASP.NET web applications for field personnel using .NET 1.1 and 2.0.
-    - Performed SQL database development for reporting and transactional applications.
-    - Created Crystal Reports for the Genesys 7.2 Call Center application to enhance data visibility.
-
-- company: Insurance Technologies
-  role: Software Engineer
-  start: May 2005
-  end: May 2006
-  summary: 
-    Built customized financial software solutions using object-oriented techniques and Microsoft technologies.
-  bullets:
-    - Developed custom software configurations using object-oriented programming methodologies.
-    - Created client customizations for Foresight software using ASP.NET, C#, SQL Server 2000, and XML.
-    - Collaborated with clients to understand requirements and deliver tailored solutions.
-
-- company: LPL Financial
-  role: Senior Programmer / Analyst
-  start: October 2000
-  end: April 2005
   summary: >
-    Led intranet development and supported mutual fund trading systems for a large financial organization.
+    Focused on data warehousing, ETL analysis, and process improvement using Kimball and Lean Six Sigma
+    methodologies. Supported modernization of reporting and operational systems.
   bullets:
-    - Led development of the company intranet site using ASP, Visual Basic, and SQL Server 2000 for 800 employees.
-    - Built ASP.NET applications for intranet administration and job postings to improve internal communication.
-    - Provided primary production support for internal mutual fund trading software managing significant assets.
+    - Analyzed and enhanced ETL workflows supporting enterprise data integration.
+    - Documented system behavior, data flows, and reporting requirements.
+    - Applied Lean Six Sigma principles to improve data and operational processes.
 
-- company: Comps.com
-  role: Web Developer
-  start: June 1999
-  end: January 2000
-  summary: 
-    Developed web applications and shared code libraries for commercial real estate loan processing.
-  bullets:
-    - Developed an online loan application for commercial real estate loans.
-    - Created a common company code library using ASP web development with a Delphi backend.
-
-- company: eAssist Global Solutions
-  role: Web Developer
-  start: 2000
-  end: 2000
-  summary: 
-    Built and customized CRM-related web interfaces and support tools.
-  bullets:
-    - Developed web interfaces for the CRM online help system using ASP, XML, and SQL Server.
-    - Customized third-party software using VBML to modify workflows in the CRM.
-    - Provided second-tier support for the CRM product.
-    - Developed a custom bug tracking program to help technical support capture issues.
-
-- company: Webmatic
-  role: Jr. Software Engineer
-  location: San Diego, CA
-  start: November 1998
-  end: May 1999
-  summary: 
-    Contributed to web application development, collaborating closely with contractors and QA to stabilize products.
-  bullets:
-    - Developed the web interface for a wizard application, transitioning it from prototype to functional model.
-    - Collaborated with contractors to guide their development efforts.
-    - Partnered with QA staff to track bugs and manage builds, improving product reliability.
-
-- company: Net Profit Technologies
-  role: Web Designer/Programmer
-  location: San Diego, CA
+- company: Early Career Software Engineer / Systems Analyst
+  role: Various Roles (Web Developer → Senior Programmer/Analyst)
+  location: Southern California
   start: August 1997
-  end: October 1998
-  summary: 
-    Designed and developed corporate web presence and data-driven applications with reporting.
+  end: June 2008
+  summary: >
+    Progressed through increasingly responsible roles supporting enterprise applications, reporting
+    systems, and financial operations. Contributed to modernization of intranet applications, CRM
+    systems, and reporting workflows across multiple organizations.
   bullets:
-    - Designed and developed the corporate website, enhancing online presence.
-    - Created ASP-based applications integrated with Crystal Reports for improved data management.
-    - Focused on user interface design for enterprise-level projects to ensure a seamless user experience.
+    - Supported mutual fund trading systems and internal financial applications at LPL Financial.
+    - Developed intranet and operational applications using ASP, ASP.NET, SQL Server, and VB.
+    - Created reporting solutions using Crystal Reports and SQL‑based data extraction.
+    - Customized CRM workflows and developed support tools for enterprise users.
+    - Collaborated with QA, contractors, and business stakeholders to stabilize and enhance systems.

@@ -18,6 +18,39 @@ title: Resume
 </section>
 
 <!-- ============================
+     SKILLS
+     ============================ -->
+<h2>Skills</h2>
+<div class="skills-container">
+  {% for group in site.data.skills %}
+    {% include skill-category.html
+      category=group.category
+      skills=group.skills
+    %}
+  {% endfor %}
+</div>
+
+<!--============================
+Projects
+=============================-->
+
+<section id="projects">
+  <h2>Projects</h2>
+  {% for project in site.data.projects %}
+    <div class="project">
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.summary }}</p>
+      <ul>
+        {% for bullet in project.bullets %}
+          <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>
+
+
+<!-- ============================
      EXPERIENCE
      ============================ -->
 <h2>Experience</h2>
@@ -47,19 +80,6 @@ title: Resume
       start=edu.start
       end=edu.end
       summary=edu.summary
-    %}
-  {% endfor %}
-</div>
-
-<!-- ============================
-     SKILLS
-     ============================ -->
-<h2>Skills</h2>
-<div class="skills-container">
-  {% for group in site.data.skills %}
-    {% include skill-category.html
-      category=group.category
-      skills=group.skills
     %}
   {% endfor %}
 </div>
