@@ -185,4 +185,42 @@ NeuByte typography is:
 
 consistent across diagrams, documentation, and UI
 
+### 11. Table Typography Rules
+Tables must follow NeuByte’s readability and structural standards across Markdown, HTML, Word, and Excel.
+
+#### 11.1 Structure
+
+- Always include a header row
+- Use sentence case for column headers
+- Avoid merged cells
+- Keep column count minimal and meaningful
+- Avoid nested tables
+- Keep rows short and scannable
+
+#### 11.2 Alignment
+
+- Left-align all text columns
+- Right-align numeric values
+- Center-align icons or status indicators
+- Maintain consistent alignment across the table
+
+#### 11.3 Spacing
+
+- Ensure consistent cell padding (handled by CSS in HTML, templates in Word/Excel)
+- Add one blank line before and after tables in Markdown
+- Avoid excessive whitespace inside cells
+
+#### 11.4 Content Rules
+
+- Do not place long paragraphs inside cells
+- Use bullet lists sparingly
+- Use consistent terminology and column order across documents
+- Avoid color-only meaning; ensure text labels accompany status colors
+
+#### 11.5 Accessibility
+
+- Maintain sufficient contrast between text and background
+- Ensure header row is visually distinct
+- Avoid relying solely on color to convey meaning
+
 Typography defines the voice of the NeuByte design system.
