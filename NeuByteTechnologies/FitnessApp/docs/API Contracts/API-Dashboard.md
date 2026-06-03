@@ -10,7 +10,8 @@ The Dashboard returns a single JSON object containing all sections needed for th
 json  
 {  
   "user_info": {  
-    "name": "string",  
+    "first_name": "string",  
+    "last_name": "string",  
     "email": "string",  
     "last_login": "2026-05-18T06:30:00Z"  
   },  
