@@ -1,0 +1,305 @@
+<section>
+
+  <!-- Title -->
+  <h1>{{ spec.id }} — {{ spec.name }}</h1>
+  {% if spec.section %}
+    <p><strong>Section:</strong> {{ spec.section }}</p>
+  {% endif %}
+  {% if spec.module %}
+    <p><strong>Module:</strong> {{ spec.module }}</p>
+  {% endif %}
+
+  <!-- Purpose -->
+  {% if spec.purpose %}
+    <h2>Purpose</h2>
+    <p>{{ spec.purpose }}</p>
+  {% endif %}
+
+  <!-- Layout -->
+  {% if spec.layout %}
+    <h2>Screen Layout</h2>
+
+    {% if spec.layout.header %}
+      <h3>Header</h3>
+      <p>{{ spec.layout.header.description }}</p>
+      <ul>
+        {% for item in spec.layout.header.elements %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+
+      {% if spec.layout.header.behavior %}
+        <p><strong>Behavior:</strong></p>
+        <ul>
+          {% for b in spec.layout.header.behavior %}
+            <li>{{ b }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endif %}
+
+    {% if spec.layout.body %}
+      <h3>Body</h3>
+      <p>{{ spec.layout.body.description }}</p>
+      <ul>
+        {% for item in spec.layout.body.elements %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if spec.layout.footer %}
+      <h3>Footer</h3>
+      <ul>
+        {% for item in spec.layout.footer.elements %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
+
+  <!-- Components -->
+  {% if spec.components %}
+    <h2>Component Definitions</h2>
+
+    {% for comp in spec.components %}
+      {% assign key = comp[0] %}
+      {% assign data = comp[1] %}
+
+      <h3>{{ key | replace: "_", " " | capitalize }}</h3>
+
+      {% if data.description %}
+        <p>{{ data.description }}</p>
+      {% endif %}
+
+      {% if data.rules %}
+        <p><strong>Rules:</strong></p>
+        <ul>
+          {% for r in data.rules %}
+            <li>{{ r }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if data.includes %}
+        <p><strong>Includes:</strong></p>
+        <ul>
+          {% for inc in data.includes %}
+            <li>{{ inc }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if data.set_row_fields %}
+        <p><strong>Set Row Fields:</strong></p>
+        <ul>
+          {% for f in data.set_row_fields %}
+            <li>{{ f }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  <!-- Interaction Rules -->
+  {% if spec.interaction %}
+    <h2>Interaction Rules & Behaviors</h2>
+
+    {% if spec.interaction.initial_load %}
+      <h3>Initial Load</h3>
+      <ul>
+        {% for step in spec.interaction.initial_load.steps %}
+          <li>{{ step }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if spec.interaction.expansion_collapse %}
+      <h3>Exercise Expansion / Collapse</h3>
+
+      <p><strong>Collapsed State:</strong></p>
+      <ul>
+        {% for item in spec.interaction.expansion_collapse.collapsed_state %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+
+      <p><strong>Expanded State:</strong></p>
+      <ul>
+        {% for item in spec.interaction.expansion_collapse.expanded_state %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+
+      {% if spec.interaction.expansion_collapse.rules %}
+        <p><strong>Rules:</strong></p>
+        <ul>
+          {% for r in spec.interaction.expansion_collapse.rules %}
+            <li>{{ r }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endif %}
+
+    {% if spec.interaction.dynamic_fields %}
+      <h3>Dynamic Field Rendering</h3>
+      <p>{{ spec.interaction.dynamic_fields.rule }}</p>
+
+      {% for type in spec.interaction.dynamic_fields.types %}
+        {% assign t = type[0] %}
+        {% assign data = type[1] %}
+        <h4>{{ t | replace: "_", " " | capitalize }}</h4>
+
+        <p><strong>Show:</strong></p>
+        <ul>
+          {% for s in data.show %}
+            <li>{{ s }}</li>
+          {% endfor %}
+        </ul>
+
+        <p><strong>Hide:</strong></p>
+        <ul>
+          {% for h in data.hide %}
+            <li>{{ h }}</li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    {% endif %}
+
+    {% if spec.interaction.set_rows %}
+      <h3>Set Row Behavior</h3>
+      <p>{{ spec.interaction.set_rows.description }}</p>
+      <ul>
+        {% for r in spec.interaction.set_rows.rules %}
+          <li>{{ r }}</li>
+        {% endfor %}
+      </ul>
+
+      <p><strong>Each set row includes:</strong></p>
+      <ul>
+        {% for item in spec.interaction.set_rows.each_row_includes %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
+
+  <!-- Validation -->
+  {% if spec.validation %}
+    <h2>Validation Rules</h2>
+
+    <p><strong>Validation occurs:</strong></p>
+    <ul>
+      {% for w in spec.validation.when %}
+        <li>{{ w }}</li>
+      {% endfor %}
+    </ul>
+
+    {% for type in spec.validation %}
+      {% assign key = type[0] %}
+      {% assign data = type[1] %}
+
+      {% if key != "when" and key != "inline_error_behavior" and key != "general" %}
+        <h3>{{ key | replace: "_", " " | capitalize }}</h3>
+        <ul>
+          {% for r in data.rules %}
+            <li>{{ r }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endfor %}
+
+    {% if spec.validation.general %}
+      <h3>General Validation</h3>
+      <ul>
+        {% for r in spec.validation.general.rules %}
+          <li>{{ r }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if spec.validation.inline_error_behavior %}
+      <h3>Inline Error Behavior</h3>
+      <ul>
+        {% for r in spec.validation.inline_error_behavior.rules %}
+          <li>{{ r }}</li>
+        {% endfor %}
+      </ul>
+
+      <p><strong>Examples:</strong></p>
+      <ul>
+        {% for ex in spec.validation.inline_error_behavior.examples %}
+          <li>{{ ex }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
+
+  <!-- Save Behavior -->
+  {% if spec.save_behavior %}
+    <h2>Save Button Behavior</h2>
+
+    <p><strong>Enabled when:</strong></p>
+    <ul>
+      {% for item in spec.save_behavior.enabled_when %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <p><strong>On tap:</strong></p>
+    <ul>
+      {% for step in spec.save_behavior.on_tap.steps %}
+        <li>{{ step }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <!-- Cancel Behavior -->
+  {% if spec.cancel_behavior %}
+    <h2>Cancel Behavior</h2>
+    <ul>
+      {% for step in spec.cancel_behavior.steps %}
+        <li>{{ step }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <!-- Accessibility -->
+  {% if spec.accessibility %}
+    <h2>Accessibility Requirements</h2>
+    <ul>
+      {% for rule in spec.accessibility.rules %}
+        <li>{{ rule }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <!-- Related Requirements -->
+  {% if spec.related_requirements %}
+    <h2>Related Requirements</h2>
+    <ul>
+      {% for req in spec.related_requirements %}
+        <li>{{ req }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <!-- Wireframe -->
+  {% if spec.wireframe_reference %}
+    <h2>Wireframe Reference</h2>
+    <ul>
+      {% for wf in spec.wireframe_reference %}
+        <li>{{ wf }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <!-- Design Screens -->
+  {% if spec.design %}
+    <h2>User Interface Design</h2>
+
+    {% for screen in spec.design.screens %}
+      <h3>{{ screen.name }}</h3>
+      {% if screen.image %}
+        <img src="{{ screen.image }}" alt="{{ screen.name }}" style="max-width:100%; border:1px solid #ccc; border-radius:6px;">
+      {% endif %}

@@ -1,0 +1,145 @@
+<section>
+
+  <!-- Title -->
+  <h1>{{ usecase.id }} — {{ usecase.name }}</h1>
+
+  <!-- Metadata -->
+  <p><strong>Use Case ID:</strong> {{ usecase.id }}</p>
+  <p><strong>Use Case Name:</strong> {{ usecase.name }}</p>
+  <p><strong>Module:</strong> {{ usecase.module }}</p>
+
+  <!-- Purpose -->
+  <h2>Purpose</h2>
+  <p>{{ usecase.purpose }}</p>
+
+  <!-- Primary Actor -->
+  <h2>Primary Actor</h2>
+  <table class="uc-table">
+    <tr>
+      <th>Actor</th>
+      <th>Description</th>
+    </tr>
+    {% for actor in usecase.primary_actor %}
+    <tr>
+      <td>{{ actor.name }}</td>
+      <td>{{ actor.description }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <!-- Stakeholders -->
+  <h2>Stakeholders & Interests</h2>
+  <table class="uc-table">
+    <tr>
+      <th>Stakeholder</th>
+      <th>Interest</th>
+    </tr>
+    {% for s in usecase.stakeholders %}
+    <tr>
+      <td>{{ s.name }}</td>
+      <td>{{ s.interest }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <!-- Preconditions -->
+  <h2>Preconditions</h2>
+  <ul>
+    {% for item in usecase.preconditions %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+
+  <!-- Postconditions -->
+  <h2>Postconditions</h2>
+
+  <h3>Success</h3>
+  <ul>
+    {% for item in usecase.postconditions.success %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Failure</h3>
+  <ul>
+    {% for item in usecase.postconditions.failure %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+
+  <!-- Trigger -->
+  <h2>Trigger</h2>
+  <p>{{ usecase.trigger }}</p>
+
+  <!-- Main Success Scenario -->
+  <h2>Main Success Scenario (Basic Flow)</h2>
+  <ol>
+    {% for step in usecase.main_success_scenario %}
+      <li>
+        {{ step.text }}
+        {% if step.br %}
+          <span class="br-ref">({{ step.br }})</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+
+  <!-- Alternate Flows -->
+  <h2>Alternate Flows</h2>
+  {% for flow in usecase.alternate_flows %}
+    <h3>{{ flow.id }} — {{ flow.title }}</h3>
+    <ul>
+      {% for item in flow.steps %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    {% if flow.br %}
+      <p class="br-ref">({{ flow.br }})</p>
+    {% endif %}
+  {% endfor %}
+
+  <!-- Exception Flows -->
+  <h2>Exception Flows</h2>
+  {% for flow in usecase.exception_flows %}
+    <h3>{{ flow.id }} — {{ flow.title }}</h3>
+    <ul>
+      {% for item in flow.steps %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    {% if flow.br %}
+      <p class="br-ref">({{ flow.br }})</p>
+    {% endif %}
+  {% endfor %}
+
+  <!-- Non-Functional Requirements -->
+  <h2>Non‑Functional Requirements</h2>
+  <ul>
+    {% for item in usecase.non_functional %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+
+  <!-- Related UI Screens -->
+  <h2>Related UI Screens</h2>
+  <ul>
+    {% for item in usecase.related_ui %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+
+  <!-- Related Diagrams -->
+  {% if usecase.related_diagrams %}
+    <h2>Related Diagrams</h2>
+    <ul>
+      {% for d in usecase.related_diagrams %}
+        <li>
+          <a href="{{ d.url }}" target="_blank" rel="noopener noreferrer">
+            {{ d.text }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+</section>

@@ -1,0 +1,152 @@
+<section>
+
+  <!-- Title -->
+  <h1>{{ spec.id }} — {{ spec.name }}</h1>
+  <p><strong>Module:</strong> {{ spec.module }}</p>
+
+  <!-- Purpose -->
+  <h2>Purpose</h2>
+  <p>{{ spec.purpose }}</p>
+
+  <!-- Scope -->
+  <h2>Scope</h2>
+
+  {% if spec.scope.covers %}
+    <p><strong>This FS covers:</strong></p>
+    <ul>
+      {% for item in spec.scope.covers %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if spec.scope.excludes %}
+    <p><strong>This FS does not include:</strong></p>
+    <ul>
+      {% for item in spec.scope.excludes %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <!-- References -->
+  {% if spec.references %}
+    <h2>References</h2>
+    <ul>
+      {% for ref in spec.references %}
+        <li>{{ ref }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <!-- Functional Requirements -->
+  <h2>Functional Requirements</h2>
+
+  {% for fr in spec.functional_requirements %}
+    <h3>{{ fr.id }} — {{ fr.title }}</h3>
+
+    {% if fr.description %}
+      <p><strong>Description:</strong><br/>{{ fr.description }}</p>
+    {% endif %}
+
+    {% if fr.fields %}
+      <p><strong>Fields:</strong></p>
+      <ul>
+        {% for f in fr.fields %}
+          <li>{{ f }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if fr.rules %}
+      <p><strong>Rules:</strong></p>
+      <ul>
+        {% for r in fr.rules %}
+          <li>{{ r }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if fr.behavior %}
+      <p><strong>Behavior:</strong></p>
+      <ul>
+        {% for b in fr.behavior %}
+          <li>{{ b }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if fr.details %}
+      <p><strong>Details:</strong></p>
+      <ul>
+        {% for d in fr.details %}
+          <li>{{ d }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if fr.defaults %}
+      <p><strong>Defaults:</strong></p>
+      <ul>
+        {% for d in fr.defaults %}
+          <li>{{ d }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if fr.requirements %}
+      <p><strong>Requirements:</strong></p>
+      <ul>
+        {% for req in fr.requirements %}
+          <li>{{ req }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if fr.maps_to %}
+      <p><strong>Maps to:</strong> {{ fr.maps_to | join: ", " }}</p>
+    {% endif %}
+
+  {% endfor %}
+
+  <!-- Non-Functional Requirements -->
+  {% if spec.non_functional %}
+    <h2>Non‑Functional Requirements</h2>
+    <ul>
+      {% for item in spec.non_functional %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <!-- Dependencies -->
+  {% if spec.dependencies %}
+    <h2>Dependencies</h2>
+    <ul>
+      {% for dep in spec.dependencies %}
+        <li>{{ dep }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <!-- Acceptance Criteria -->
+  {% if spec.acceptance_criteria %}
+    <h2>Acceptance Criteria</h2>
+    <ul>
+      {% for ac in spec.acceptance_criteria %}
+        <li>{{ ac }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <!-- Open Questions -->
+  {% if spec.open_questions %}
+    <h2>Open Questions</h2>
+    <ul>
+      {% for q in spec.open_questions %}
+        <li>{{ q }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+</section>
