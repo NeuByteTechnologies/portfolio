@@ -1,8 +1,8 @@
-theme: null
-plugins:
-  - jekyll-include-cache
+theme: null   
+plugins:  
+  - jekyll-include-cache  
 
-# Load custom CSS
+# Load custom CSS  test rebuild
 minima:
   skin: classic
   include_css:
