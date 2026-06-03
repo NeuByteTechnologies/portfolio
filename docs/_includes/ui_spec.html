@@ -295,11 +295,13 @@
   {% endif %}
 
   <!-- Design Screens -->
-  {% if spec.design %}
-    <h2>User Interface Design</h2>
+   {% if spec.design %}
+  <h2>User Interface Design</h2>
 
-    {% for screen in spec.design.screens %}
-      <h3>{{ screen.name }}</h3>
-      {% if screen.image %}
-        <img src="{{ screen.image }}" alt="{{ screen.name }}" style="max-width:100%; border:1px solid #ccc; border-radius:6px;">
-      {% endif %}
+  {% for screen in spec.design.screens %}
+    <h3>{{ screen.name }}</h3>
+    {% if screen.image %}
+      <img src="{{ screen.image }}" alt="{{ screen.name }}" style="max-width:100%; border:1px solid #ccc; border-radius:6px;">
+    {% endif %}
+  {% endfor %}
+{% endif %}
