@@ -1,0 +1,178 @@
+portfolio_overview:
+  title: "Portfolio Overview"
+  paragraphs:
+    - >
+      The NeuByte Fitness App Portfolio is a full‑cycle engineering project designed
+      to demonstrate system design, documentation, architecture, UI/UX planning,
+      and modern development practices. It showcases how I approach building
+      maintainable, scalable systems with clarity, structure, and strong visual grammar.
+
+project_summary:
+  title: "Project Summary"
+  paragraphs:
+    - >
+      The Fitness App is a comprehensive system for tracking workouts, nutrition,
+      progress, and analytics. It is inspired by my own multi‑year fitness journey
+      and long‑term use of platforms like Fitbit and Samsung Health.
+  bullet_points:
+    - "Enterprise‑grade documentation"
+    - "Lean architecture and system design"
+    - "UI/UX specification and workflow modeling"
+    - "API design and backend planning"
+    - "Azure‑hosted data and integration patterns"
+    - "GitHub‑based project management and pipelines"
+
+why_this_project:
+  title: "Why This Project"
+  paragraphs:
+    - >
+      My experience with fitness tracking apps over the past eight years made this
+      the perfect domain for a portfolio project.
+  bullet_points:
+    - "Data modeling"
+    - "API design"
+    - "UI/UX flows"
+    - "Reporting and analytics"
+    - "Cloud architecture"
+    - "Real‑world user behavior"
+  closing: >
+    This allows me to demonstrate a complete engineering lifecycle from concept
+    to documentation to implementation.
+
+tech_stack:
+  title: "Tech Stack Overview"
+  backend:
+    title: "Backend & APIs"
+    items:
+      - "Python (API layer)"
+      - "Azure App Services"
+      - "RESTful API design"
+      - "Authentication & MFA flows"
+      - "Database"
+      - "Azure MySQL (cost‑optimized for portfolio use)"
+      - "Data dictionary & schema documentation"
+      - "Star schema for reporting models"
+  frontend:
+    title: "Frontend"
+    items:
+      - "Modern Web UI"
+      - "Lightweight components"
+      - "Minimal JavaScript footprint"
+      - "Razor / C# backend support"
+  reporting:
+    title: "Reporting"
+    items:
+      - "Power BI"
+      - "Azure Pipelines for scheduled refresh"
+      - "OLTP → Star Schema transformation"
+  devops:
+    title: "Tooling & DevOps"
+    items:
+      - "GitHub Projects"
+      - "GitHub Issues"
+      - "GitHub Source Control"
+      - "Markdown‑based documentation"
+      - "UML & diagramming (Inkscape, Draw.io)"
+
+artifacts:
+  title: "Key Artifacts & Documentation Samples"
+  description: >
+    This portfolio includes full enterprise‑grade documentation across:
+  categories:
+    - "Business Requirements"
+    - "Functional Specifications"
+    - "UI Specifications"
+    - "API Contracts"
+    - "Data Dictionary"
+    - "Test Cases"
+    - "Use Cases"
+    - "System Diagrams"
+  samples:
+    ui_specs:
+      title: "UI Specification Samples"
+      links:
+        - text: "Log Workout UI Spec"
+          url: "Log_Workout_User_Interface_Spec.html"
+    functional_specs:
+      title: "Functional Specification Samples"
+      links:
+        - text: "Account Functional Specification"
+          url: "Account_functional_spec.html"
+    data_dictionary:
+      title: "Data Dictionary Sample"
+      links:
+        - text: "Workout Tables"
+          url: "workout_log.html"
+    use_cases:
+      title: "Use Case Samples"
+      links:
+        - text: "UC‑LOGIN‑01 User Login"
+          url: "UC-LOGIN-01_UserLogin.html"
+        - text: "UC‑MENU‑03 Navigate Dashboard"
+          url: "UC-MENU-03_NavigateDashboard.html"
+        - text: "UC‑PROG‑01 View Program Detail"
+          url: "UC-PROG-01_ViewProgramDetail.html"
+        - text: "UC‑LW‑01 Log Workout"
+          url: "UC-LW-01_LogWorkout.html"
+        - text: "UC‑ANL‑06 Log Feature Usage"
+          url: "UC‑ANL‑06_LogFeatureUsage.html"
+    diagrams:
+      title: "System Diagram Samples"
+      links:
+        - text: "Context Diagram"
+          url: "assets/SystemContextDiagram.svg"
+        - text: "Sequence Diagram"
+          url: "assets/ExerciseProgramsSequenceDiagram.svg"
+        - text: "Data Flow Diagram"
+          url: "assets/CreateAccountDataFlowDiagram.svg"
+        - text: "Domain Model"
+          url: "assets/FitnessAppDiagram.svg"
+
+system_roles:
+  title: "System Roles"
+  roles:
+    - name: "App User (Primary Role)"
+      responsibilities:
+        - "Logging workouts"
+        - "Tracking progress"
+        - "Viewing analytics"
+        - "Managing profile and settings"
+    - name: "App Admin (Operational Role)"
+      responsibilities:
+        - "Managing user accounts"
+        - "Monitoring logs and system health"
+        - "Ensuring data integrity"
+
+skills_demonstrated:
+  title: "Skills Demonstrated"
+  items:
+    - "System architecture & UML"
+    - "Enterprise documentation"
+    - "UI/UX specification"
+    - "API design"
+    - "Cloud architecture (Azure)"
+    - "Data modeling & analytics"
+    - "GitHub project management"
+    - "Modern web development"
+    - "Python backend development"
+    - "C# / Razor integration"
+
+roadmap:
+  title: "Project Roadmap"
+  items:
+    - text: "Documentation system"
+      done: true
+    - text: "Use cases & diagrams"
+      done: true
+    - text: "Data dictionary"
+      done: true
+    - text: "UI specification"
+      done: true
+    - text: "API implementation"
+      done: false
+    - text: "Frontend development"
+      done: false
+    - text: "Power BI reporting"
+      done: false
+    - text: "Deployment & integration"
+      done: false

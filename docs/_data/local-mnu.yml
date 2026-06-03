@@ -1,0 +1,15 @@
+- name: "Resume"
+  url: "https://portfolio.neubyte.com/resume/"
+  tooltip: "Professional resume with experience, skills, and project history."
+
+- name: "Use Cases"
+  url: "https://portfolio.neubyte.com/usecases/"
+  tooltip: "All system use cases for the NeuByte platform."
+
+- name: "Functional Specs"
+  url: "https://portfolio.neubyte.com/functional-specs/"
+  tooltip: "Functional specifications defining system behavior and requirements."
+
+- name: "UI Specs"
+  url: "https://portfolio.neubyte.com/ui-specs/"
+  tooltip: "User interface specifications, layouts, and interaction rules."

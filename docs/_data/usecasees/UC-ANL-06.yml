@@ -1,0 +1,130 @@
+id: "UC-ANL-06"
+name: "Log Feature Usage"
+module: "Analytics"
+
+purpose: >
+  Capture analytics events whenever a user engages with a major application feature
+  (e.g., starting a workout, viewing reports, enabling settings). This enables measurement
+  of feature adoption, engagement frequency, and user behavior patterns across the application.
+
+primary_actor:
+  - name: "App User"
+    description: "Any authenticated or unauthenticated user interacting with a major feature."
+
+stakeholders:
+  - name: "Product Team"
+    interest: "Understand which features are used most or least."
+  - name: "UX"
+    interest: "Identify underused features that may require redesign."
+  - name: "Engineering"
+    interest: "Ensure feature usage logging is reliable and non‑blocking."
+  - name: "Data/BI"
+    interest: "Build feature adoption dashboards and engagement metrics."
+  - name: "QA"
+    interest: "Validate that all feature usage events fire correctly."
+
+preconditions:
+  - "The application is running."
+  - "The user is on a screen that exposes a feature."
+  - "The analytics subsystem is initialized."
+
+postconditions:
+  success:
+    - "FeatureUsage event is recorded with required metadata."
+    - "If offline, the event is queued for later sync."
+    - "If online, the event is transmitted to the analytics service."
+  failure:
+    - "Event may not be transmitted."
+    - "System may log a local error."
+
+trigger: >
+  The user activates or engages with a major feature.
+
+main_success_scenario:
+  - text: "User activates a feature (e.g., taps 'Start Workout,' opens 'Reports,' enables a setting)."
+  - text: "System identifies the feature (feature_name)."
+  - text: "System captures the screen context (screen_name)."
+  - text: "System captures metadata (timestamp, device, app version, user ID)."
+  - text: "System constructs a FeatureUsage analytics event."
+  - text: "System transmits the event to the analytics service."
+  - text: "System receives confirmation of successful receipt."
+  - text: "System logs success locally for debugging and traceability."
+  - text: "System continues the feature workflow normally."
+
+alternate_flows:
+  - id: "A1"
+    title: "Device Offline"
+    steps:
+      - "Steps 1–5 occur as normal."
+      - "System detects no network connectivity."
+      - "System stores the event in the offline queue."
+      - "System syncs queued events when connectivity is restored."
+
+  - id: "A2"
+    title: "Analytics Service Unavailable"
+    steps:
+      - "Steps 1–5 occur as normal."
+      - "System attempts to transmit the event."
+      - "System detects analytics service is unreachable."
+      - "System writes the event to the offline queue."
+      - "System marks the event for retry."
+
+  - id: "A3"
+    title: "Invalid Feature Identifier"
+    steps:
+      - "Steps 1–2 occur as normal."
+      - "System cannot resolve feature_name."
+      - "System logs a local non‑blocking error."
+      - "System does not transmit the malformed event."
+      - "System continues feature execution normally."
+
+exception_flows: []
+
+non_functional:
+  - "Logging must complete within 50 ms."
+  - "Event construction must not degrade feature performance."
+  - "Offline queue must support at least 500 events."
+  - "Event transmission must use HTTPS."
+  - "Feature usage logging must be resilient to intermittent connectivity."
+
+related_ui: []
+
+related_diagrams: []
+
+business_rules:
+  - "BR‑ANL‑27 — Feature names must follow a standardized naming convention."
+  - "BR‑ANL‑28 — Feature usage events must be logged immediately upon activation."
+  - "BR‑ANL‑29 — Feature usage logging must not block or delay feature execution."
+  - "BR‑ANL‑30 — All feature usage events must include a UTC timestamp in ISO‑8601 format."
+  - "BR‑ANL‑31 — Sensitive or user‑entered values must not be logged."
+
+data_elements:
+  - field: "event_id"
+    description: "Unique identifier for the event."
+  - field: "event_type"
+    description: "Always 'FeatureUsage'."
+  - field: "feature_name"
+    description: "Name of the feature activated."
+  - field: "screen_name"
+    description: "Screen where the feature was activated."
+  - field: "timestamp_utc"
+    description: "ISO‑8601 timestamp."
+  - field: "user_id"
+    description: "Authenticated user ID or anonymous session ID."
+  - field: "device_type"
+    description: "iOS, Android, Web."
+  - field: "os_version"
+    description: "Operating system version."
+  - field: "app_version"
+    description: "Application version number."
+  - field: "network_status"
+    description: "Online / Offline."
+  - field: "session_id"
+    description: "Current session identifier."
+
+acceptance_criteria:
+  - "Every feature activation logs exactly one FeatureUsage event."
+  - "Event includes feature_name and screen_name."
+  - "Events are queued when offline and synced later."
+  - "No user‑visible errors occur if analytics fails."
+  - "QA can verify events in the analytics dashboard."

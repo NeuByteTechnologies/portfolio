@@ -1,0 +1,214 @@
+id: "UIS-LW-01"
+name: "Log Workout"
+section: "6.11"
+module: "Workout Logging"
+
+purpose: >
+  Allow the user to record the details of their completed workout for the current day,
+  including sets, reps, weight, duration, distance, and rest periods as applicable.
+  This enables accurate tracking of workout performance and progress over time.
+
+layout:
+  header:
+    description: "Standard authenticated header."
+    elements:
+      - "NeuByte Logo (left)"
+      - "Notification Icon (right)"
+      - "Hamburger Menu (right)"
+    behavior:
+      - "Header remains fixed at the top."
+      - "Back navigation uses OS native gesture or back button."
+      - "Title is not required (Workout Detail already provides context)."
+
+  body:
+    description: >
+      A vertically scrolling form that allows the user to log sets, reps, weight,
+      duration, or other metrics for each exercise in the selected workout.
+    elements:
+      - "Workout Title (Week/Day + Name)"
+      - "Exercise List (scrollable)"
+      - "Workout Notes (optional text area)"
+      - "Save Workout Button (primary action)"
+      - "Cancel Button (secondary action)"
+      - "Inline Error Label (appears only when validation fails)"
+
+  footer:
+    elements:
+      - "App Version"
+      - "Privacy Policy / Terms links"
+      - "Copyright"
+
+components:
+  workout_title:
+    description: "Workout title with program context."
+    rules:
+      - "Bold, primary text."
+      - "Includes program context (Week/Day)."
+
+  exercise_section:
+    description: "Exercise block containing name and set rows."
+    includes:
+      - "Exercise Name (bold)"
+      - "Set Rows"
+    set_row_fields:
+      - "Reps input (numeric)"
+      - "Weight input (numeric, optional)"
+      - "Duration input (if exercise is time based)"
+      - "RPE input (optional)"
+
+  workout_notes:
+    description: "Optional notes for the workout."
+    rules:
+      - "Optional text area."
+      - "Multi-line input."
+
+  save_button:
+    description: "Primary action to save the workout."
+    behavior:
+      - "Validates all inputs."
+      - "Saves workout log."
+      - "Returns user to Dashboard or Workout History."
+
+  cancel_button:
+    description: "Secondary action to discard changes."
+    behavior:
+      - "Discards changes."
+      - "Returns to previous screen."
+
+  inline_error_label:
+    description: "Inline error messaging for invalid fields."
+    rules:
+      - "Appears only when validation fails."
+      - "Uses global error banner pattern (UIS‑ERR‑01)."
+
+interaction:
+  initial_load:
+    steps:
+      - "App fetches the workout structure for the selected day."
+      - "Exercises, expected number of sets, and exercise type are retrieved."
+      - "UI displays skeleton loaders until data is returned."
+      - "Each exercise loads in a collapsed state by default."
+      - "Pre‑populate exactly the number of sets defined by the program."
+      - "No additional sets may be added or removed."
+      - "Set rows remain hidden until the user expands the exercise."
+
+  expansion_collapse:
+    collapsed_state:
+      - "Shows: Exercise Name, chevron icon, and summary (e.g., '3 sets')."
+      - "Hides: all set rows and input fields."
+    expanded_state:
+      - "Shows all program‑defined set rows."
+      - "Shows appropriate input fields for each set."
+    rules:
+      - "Tapping the exercise header toggles between expanded and collapsed."
+      - "Multiple exercises may be expanded simultaneously."
+
+  dynamic_fields:
+    rule: >
+      Only fields relevant to the exercise type are rendered. Hidden fields do not
+      appear in the DOM and are not validated.
+    types:
+      strength_bodyweight:
+        show:
+          - "Reps"
+          - "Weight"
+        hide:
+          - "Duration"
+          - "Distance"
+      timed:
+        show:
+          - "Duration"
+        hide:
+          - "Reps"
+          - "Weight"
+      distance:
+        show:
+          - "Distance"
+          - "Duration"
+        hide:
+          - "Reps"
+          - "Weight"
+
+  set_rows:
+    description: "Program‑defined, fixed set rows."
+    rules:
+      - "Number of set rows is fixed based on the program."
+      - "User cannot add sets."
+      - "User cannot remove sets."
+      - "User cannot change the number of sets."
+    each_row_includes:
+      - "Set number (1, 2, 3…)"
+      - "Relevant input fields (based on exercise type)."
+
+validation:
+  when:
+    - "On blur (field loses focus)."
+    - "On Save Workout button tap."
+  strength_bodyweight:
+    rules:
+      - "Reps > 0."
+      - "Weight ≥ 0 (if applicable)."
+  timed:
+    rules:
+      - "Duration > 0 seconds."
+  distance:
+    rules:
+      - "Distance > 0."
+      - "Duration > 0 (if required)."
+  general:
+    rules:
+      - "All program‑defined sets must have valid entries."
+      - "Empty sets are not allowed because the program requires them."
+  inline_error_behavior:
+    rules:
+      - "Errors appear directly under the field."
+      - "Errors clear automatically when the user corrects the value."
+    examples:
+      - "Reps must be greater than zero."
+      - "Duration is required for timed exercises."
+      - "Weight cannot be negative."
+  global_error_banner:
+    rules:
+      - "Displayed only when save operation fails (network/server error)."
+      - "Displayed when workout structure cannot be loaded."
+      - "Uses global pattern UIS‑ERR‑01."
+
+save_behavior:
+  enabled_when:
+    - "All required fields across all sets are valid."
+    - "No inline errors are present."
+  on_tap:
+    steps:
+      - "Validate all fields."
+      - "Submit workout log."
+      - "On success: show toast 'Workout logged'."
+      - "On success: navigate to Dashboard."
+      - "On failure: show global error banner."
+
+cancel_behavior:
+  steps:
+    - "Discards all changes."
+    - "Returns user to Workout Detail (UIS‑PROG‑01)."
+    - "No confirmation modal required."
+
+accessibility:
+  rules:
+    - "All form fields keyboard navigable."
+    - "Labels programmatically associated with inputs."
+    - "Inline errors announced via ARIA live region."
+    - "Minimum tap targets (44–48px)."
+    - "Screen reader announces: 'Log Workout screen' on load."
+
+related_requirements:
+  - "BR‑LW‑01 through BR‑LW‑15."
+  - "BR‑DASH‑xx (Recent Activity integration)."
+  - "FS‑LW‑xx (Workout logging functional rules)."
+
+wireframe_reference:
+  - "UIS‑WP‑01"
+
+design:
+  screens:
+    - id: "UIS-LW-01"
+      name: "Log Workout"
+      image: "assets/LogWorkoutUI.png"

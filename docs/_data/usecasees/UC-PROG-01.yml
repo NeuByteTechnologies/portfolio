@@ -1,0 +1,123 @@
+id: "UC-PROG-01"
+name: "View Program Detail"
+module: "Exercise Programs"
+
+purpose: >
+  To define how the user views the full details of an Exercise Program, including metadata,
+  weekly structure, day previews, and exercise summaries. This use case covers loading program
+  data, rendering the detail page, and ensuring accessibility and performance requirements are met.
+  This use case is strictly display‑only — no editing, logging, or execution occurs here.
+
+primary_actor:
+  - name: "App User"
+    description: "Any authenticated or unauthenticated user interacting with a major feature."
+
+stakeholders:
+  - name: "User"
+    interest: "Wants clear, organized access to program details."
+  - name: "System"
+    interest: "Must retrieve and render program data efficiently."
+  - name: "Product Owner"
+    interest: "Wants intuitive navigation and consistent behavior."
+  - name: "UX/UI Team"
+    interest: "Requires smooth transitions and accessibility compliance."
+  - name: "Security Team"
+    interest: "Ensures only authorized users can access program details."
+
+preconditions:
+  - "User is authenticated."
+  - "Program list has been loaded (UC‑EP‑01 ViewPrograms)."
+  - "User has selected a specific program (UC‑EP‑02 ViewProgramDetail)."
+  - "Program exists in the system."
+
+postconditions:
+  success:
+    - "Program detail page is displayed."
+    - "Program metadata, weekly structure, and day previews are visible."
+    - "User can navigate between weeks and days."
+    - "User may choose to activate the program (handled in UC‑EP‑05 ActivateProgram)."
+  failure:
+    - "Program detail page does not load."
+    - "System may display an error message."
+
+trigger: >
+  User selects a program from the Exercise Program List.
+
+main_success_scenario:
+  - text: "User selects a program from the program list."
+    br: "BR‑PROG‑01"
+  - text: "System receives the request to load program details."
+    br: "FS‑PROG‑DETAIL‑01"
+  - text: "System retrieves the program metadata, including program name, duration, difficulty, description, and target goals."
+    br: "BR‑PROG‑02 → BR‑PROG‑06"
+  - text: "System retrieves the weekly structure and day‑level summaries."
+    br: "BR‑PROG‑07 → BR‑PROG‑12"
+  - text: "System retrieves exercise summaries for each day."
+    br: "BR‑PROG‑13 → BR‑PROG‑18"
+  - text: "System renders the Program Detail page, including metadata header, week selector, day preview cards, and exercise summaries."
+    br: "UIS‑PROG‑01"
+  - text: "System sets focus to the top of the Program Detail screen for accessibility."
+    br: "SRS‑A11Y‑01"
+  - text: "User views the Program Detail page."
+
+alternate_flows:
+  - id: "A1"
+    title: "User Navigates Between Weeks"
+    steps:
+      - "User selects a different week from the week selector."
+      - "System loads the corresponding day previews."
+      - "System updates the UI without reloading the entire page."
+    br: "BR‑PROG‑11"
+
+  - id: "A2"
+    title: "User Expands a Day Preview"
+    steps:
+      - "User taps a day card."
+      - "System expands the card to show exercise summaries."
+    br: "BR‑PROG‑13"
+
+  - id: "A3"
+    title: "Program Has Variable Length"
+    steps:
+      - "Some programs may have fewer or more weeks."
+      - "System dynamically renders the correct number of weeks."
+    br: "BR‑PROG‑07"
+
+exception_flows:
+  - id: "E1"
+    title: "Program Not Found"
+    steps:
+      - "Program ID does not exist or was removed."
+      - "System displays: 'This program is no longer available.'"
+      - "System logs the event."
+
+  - id: "E2"
+    title: "Data Load Failure"
+    steps:
+      - "System cannot retrieve program details."
+      - "System displays: 'Unable to load program details. Please try again.'"
+      - "System logs the failure."
+
+  - id: "E3"
+    title: "Unauthorized Access"
+    steps:
+      - "User attempts to view a restricted program."
+      - "System blocks access and logs a security event."
+    br: "BR‑PROG‑20"
+
+non_functional:
+  - "Performance: Program detail must load within 500ms."
+  - "Accessibility: All sections must support screen readers and keyboard navigation."
+  - "Responsiveness: Layout must adapt to mobile, tablet, and desktop."
+  - "Security: Only authorized users may view program details."
+  - "Scalability: Must support programs with large numbers of exercises."
+  - "Consistency: UI must match the Exercise Program module’s visual patterns."
+
+related_ui:
+  - "UIS‑PROG‑01 — Program Detail Page"
+  - "UIS‑PROG‑02 — Week Selector"
+  - "UIS‑PROG‑03 — Day Preview Cards"
+  - "UIS‑GLOBAL‑HEADER‑01"
+  - "UIS‑GLOBAL‑FOOTER‑01"
+
+related_diagrams: []
