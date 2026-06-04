@@ -641,7 +641,7 @@ nav a {
 
 .nb-local-item a {
   display: block;
-  padding: 6px 4px;
+  padding: 1px 1px;
   font-size: .90rem;
   color: var(--nb-text-subtle);
   text-decoration: none;
@@ -683,7 +683,7 @@ nav a {
   }
 
   .nb-local-item a {
-    padding-left: 10px;
+    padding-left: 5px;
   font-size: 0.9rem;
   }
 }
