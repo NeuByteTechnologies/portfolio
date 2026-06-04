@@ -76,7 +76,9 @@
   <br/>
 
   <!-- Artifact Samples -->
-  {% for section in site.data.fitness_portfolio.artifacts.samples %}
+{% for key in site.data.fitness_portfolio.artifacts.samples %}
+  {% assign section = site.data.fitness_portfolio.artifacts.samples[key] %}
+
     <b>{{ section.title }}</b>
     <ul>
       {% for link in section.links %}
