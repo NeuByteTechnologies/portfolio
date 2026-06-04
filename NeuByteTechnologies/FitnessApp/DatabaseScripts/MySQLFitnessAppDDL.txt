@@ -1,0 +1,409 @@
+-- Create database
+CREATE DATABASE IF NOT EXISTS FitApp
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+USE FitApp;
+
+-- =========================================================
+-- Tables
+-- =========================================================
+
+CREATE TABLE app_event (
+    app_event_id        BIGINT NOT NULL AUTO_INCREMENT,
+    user_id             INT NULL,
+    event_type_id       TINYINT NOT NULL,
+    event_timestamp     DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+    event_payload       LONGTEXT NULL,
+    CONSTRAINT PK_app_event_id PRIMARY KEY (app_event_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE email_type (
+    email_type_id           TINYINT NOT NULL AUTO_INCREMENT,
+    email_type_description  VARCHAR(50) NOT NULL,
+    CONSTRAINT PK_email_type_id PRIMARY KEY (email_type_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE error_severity (
+    error_severity_id   TINYINT NOT NULL,
+    severity_name       VARCHAR(20) NOT NULL,
+    severity_level      TINYINT NOT NULL,
+    CONSTRAINT PK_error_severity_id PRIMARY KEY (error_severity_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE event_type (
+    event_type_id       TINYINT NOT NULL AUTO_INCREMENT,
+    event_description   VARCHAR(100) NULL,
+    CONSTRAINT PK_event_type_id PRIMARY KEY (event_type_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE workout_type (
+    workout_type_id             TINYINT NOT NULL AUTO_INCREMENT,
+    workout_type_description    VARCHAR(50) NOT NULL,
+    CONSTRAINT PK_workout_type PRIMARY KEY (workout_type_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE exercise (
+    exercise_id             INT NOT NULL AUTO_INCREMENT,
+    exercise_name           VARCHAR(50) NOT NULL,
+    exersise_description    VARCHAR(1000) NOT NULL,
+    workout_type_id         TINYINT NOT NULL,
+    CONSTRAINT PK_exercise_id PRIMARY KEY (exercise_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE exercise_program (
+    exercise_program_id     INT NOT NULL AUTO_INCREMENT,
+    exercise_program_name   VARCHAR(50) NOT NULL,
+    weeks_in_program        TINYINT NOT NULL,
+    workout_days            TINYINT NOT NULL,
+    rest_day_interval       TINYINT NOT NULL,
+    CONSTRAINT PK_exercise_program_id PRIMARY KEY (exercise_program_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE exercise_program_item (
+    exercise_program_item_id    INT NOT NULL AUTO_INCREMENT,
+    exercise_program_id         INT NOT NULL,
+    program_week                TINYINT NOT NULL,
+    program_day                 TINYINT NOT NULL,
+    rest_day_flag               TINYINT(1) NOT NULL,
+    superset_group_id           TINYINT NULL,
+    superset_order              TINYINT NULL,
+    superset_rounds             TINYINT NULL,
+    superset_rest_duration      TIME(6) NULL,
+    target_sets                 TINYINT NULL,
+    target_reps                 INT NULL,
+    target_weight               INT NULL,
+    target_distance_value       DECIMAL(10,2) NULL,
+    target_distance_unit        TINYINT NULL,
+    target_duration             TIME(6) NULL,
+    interval_work_duration      TIME(6) NULL,
+    interval_rest_duration      TIME(6) NULL,
+    interval_rounds             TINYINT NULL,
+    target_machine_calories     INT NULL,
+    exercise_id                 INT NULL,
+    exercise_order              TINYINT NULL,
+    CONSTRAINT PK_exercise_program_item_id PRIMARY KEY (exercise_program_item_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE help_category_type (
+    help_category_type_id           TINYINT NOT NULL AUTO_INCREMENT,
+    help_category_type_description  VARCHAR(50) NOT NULL,
+    CONSTRAINT PK_help_category_type_id PRIMARY KEY (help_category_type_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE help_frequently_asked_question (
+    help_frequently_asked_question_id   INT NOT NULL AUTO_INCREMENT,
+    help_category_type_id               TINYINT NOT NULL,
+    question                            VARCHAR(255) NOT NULL,
+    answer                              VARCHAR(1000) NOT NULL,
+    CONSTRAINT PK_help_faq PRIMARY KEY (help_frequently_asked_question_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE notification_delivery_type (
+    notification_delivery_type_id   TINYINT NOT NULL AUTO_INCREMENT,
+    delivery_type_description       VARCHAR(50) NOT NULL,
+    CONSTRAINT PK_notification_delivery_type PRIMARY KEY (notification_delivery_type_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE notification_type (
+    notification_type_id            TINYINT NOT NULL,
+    notification_type_description   VARCHAR(50) NOT NULL,
+    default_delivery_type_id        TINYINT NOT NULL,
+    CONSTRAINT PK_notification_type PRIMARY KEY (notification_type_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE notification (
+    notification_id             BIGINT NOT NULL AUTO_INCREMENT,
+    user_id                     INT NOT NULL,
+    notification_type_id        TINYINT NOT NULL,
+    notification_delivery_type_id   TINYINT NOT NULL,
+    notification_title          VARCHAR(200) NOT NULL,
+    notification_message        VARCHAR(2000) NOT NULL,
+    created_at                  DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+    delivered_at                DATETIME(6) NULL,
+    read_at                     DATETIME(6) NULL,
+    is_read                     TINYINT(1) NOT NULL DEFAULT 0,
+    is_archived                 TINYINT(1) NOT NULL DEFAULT 0,
+    CONSTRAINT PK_notification_id PRIMARY KEY (notification_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE notification_event (
+    notification_event_id   TINYINT NOT NULL AUTO_INCREMENT,
+    notification_type_id    TINYINT NOT NULL,
+    event_name              VARCHAR(50) NOT NULL,
+    event_description       VARCHAR(255) NULL,
+    CONSTRAINT PK_notification_event PRIMARY KEY (notification_event_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE phone_type (
+    phone_type_id           TINYINT NOT NULL AUTO_INCREMENT,
+    phone_type_description  VARCHAR(50) NOT NULL,
+    CONSTRAINT PK_phone_type_id PRIMARY KEY (phone_type_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE unit_type (
+    unit_type_id        TINYINT NOT NULL AUTO_INCREMENT,
+    unit_category       VARCHAR(20) NOT NULL,
+    unit_name           VARCHAR(50) NOT NULL,
+    unit_abbreviation   VARCHAR(10) NOT NULL,
+    conversion_factor   DECIMAL(18,8) NOT NULL,
+    CONSTRAINT PK_unit_type PRIMARY KEY (unit_type_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE preference (
+    preference_id           TINYINT NOT NULL,
+    preference_name         VARCHAR(50) NOT NULL,
+    default_unit_type_id    TINYINT NULL,
+    default_value           VARCHAR(50) NULL,
+    CONSTRAINT PK_preference PRIMARY KEY (preference_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE user_type (
+    user_type_id            TINYINT NOT NULL AUTO_INCREMENT,
+    user_type_description   VARCHAR(50) NOT NULL,
+    CONSTRAINT PK_user_type_id PRIMARY KEY (user_type_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE user (
+    user_id         INT NOT NULL AUTO_INCREMENT,
+    user_type_id    TINYINT NOT NULL,
+    first_name      VARCHAR(100) NOT NULL,
+    last_name       VARCHAR(100) NOT NULL,
+    hash_pass       BINARY(256) NOT NULL,
+    last_update     DATETIME(6) NOT NULL,
+    CONSTRAINT PK_user_id PRIMARY KEY (user_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE user_contact (
+    user_contact_id     INT NOT NULL AUTO_INCREMENT,
+    user_id             INT NOT NULL,
+    email_address       VARCHAR(256) NOT NULL,
+    email_type_id       TINYINT NOT NULL,
+    phone_number        VARCHAR(10) NOT NULL,
+    phone_type_id       TINYINT NOT NULL,
+    CONSTRAINT PK_user_contact_id PRIMARY KEY (user_contact_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE user_mfa (
+    user_id             INT NOT NULL,
+    mfa_secret          LONGBLOB NOT NULL,
+    mfa_enabled         TINYINT(1) NOT NULL DEFAULT 1,
+    enrolled_at         DATETIME(6) NOT NULL,
+    last_verified_at    DATETIME(6) NULL,
+    failed_attempts     TINYINT NULL,
+    locked_until        DATETIME(6) NULL,
+    CONSTRAINT PK_user_mfa_id PRIMARY KEY (user_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE user_notification_preference (
+    user_notification_preference_id    INT NOT NULL AUTO_INCREMENT,
+    user_id                            INT NOT NULL,
+    notification_type_id               TINYINT NOT NULL,
+    notification_delivery_type_id      TINYINT NOT NULL,
+    is_enabled                         TINYINT(1) NOT NULL DEFAULT 1,
+    CONSTRAINT PK_user_notification_preference PRIMARY KEY (user_notification_preference_id),
+    CONSTRAINT UQ_user_notif_pref_unique UNIQUE (user_id, notification_type_id, notification_delivery_type_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE user_preference (
+    user_preference_id INT NOT NULL AUTO_INCREMENT,
+    user_id            INT NOT NULL,
+    preference_id      TINYINT NOT NULL,
+    preference_value   VARCHAR(50) NULL,
+    unit_type_id       TINYINT NULL,
+    CONSTRAINT PK_user_preference PRIMARY KEY (user_preference_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE user_weight (
+    user_weight_id          BIGINT NOT NULL,
+    user_id                 INT NOT NULL,
+    weight                  DECIMAL(10,2) NOT NULL,
+    unit_type_id            TINYINT NOT NULL,
+    last_update_date_time   DATETIME(6) NOT NULL,
+    CONSTRAINT PK_user_weight PRIMARY KEY (user_weight_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE workout_status (
+    workout_status_id               TINYINT NOT NULL AUTO_INCREMENT,
+    workout_status_description      VARCHAR(50) NOT NULL,
+    CONSTRAINT PK_workout_status_log PRIMARY KEY (workout_status_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE workout_log (
+    workout_log_id      BIGINT NOT NULL AUTO_INCREMENT,
+    user_id             INT NOT NULL,
+    exercise_program_id INT NULL,
+    workout_start_time  DATETIME(6) NOT NULL,
+    workout_end_time    DATETIME(6) NULL,
+    workout_status_id   TINYINT NOT NULL,
+    workout_note        VARCHAR(2000) NULL,
+    CONSTRAINT PK_workout_log PRIMARY KEY (workout_log_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE workout_log_interval (
+    workout_log_interval_id     BIGINT NOT NULL AUTO_INCREMENT,
+    workout_log_id              BIGINT NOT NULL,
+    interval_number             TINYINT NOT NULL,
+    interval_type_id            TINYINT NOT NULL,
+    actual_work_duration        TIME(6) NULL,
+    actual_rest_duration        TIME(6) NULL,
+    actual_distance_value       DECIMAL(10,2) NULL,
+    actual_distance_unit_type_id TINYINT NULL,
+    actual_calories             INT NULL,
+    CONSTRAINT PK_workout_log_interval PRIMARY KEY (workout_log_interval_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE workout_log_set (
+    workout_log_set_id      BIGINT NOT NULL AUTO_INCREMENT,
+    workout_log_id          BIGINT NOT NULL,
+    exercise_program_item_id INT NOT NULL,
+    set_number              TINYINT NOT NULL,
+    reps                    INT NULL,
+    weight                  INT NULL,
+    weight_unit_type_id     TINYINT NULL,
+    duration                TIME(6) NULL,
+    distance_value          DECIMAL(10,2) NULL,
+    distance_unit_type_id   TINYINT NULL,
+    machine_calories        INT NULL,
+    CONSTRAINT PK_workout_log_set PRIMARY KEY (workout_log_set_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE error_log (
+    error_log_id        BIGINT NOT NULL AUTO_INCREMENT,
+    error_timestamp     DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+    error_message       VARCHAR(2000) NOT NULL,
+    stack_trace         LONGTEXT NULL,
+    user_id             INT NULL,
+    request_path        VARCHAR(500) NULL,
+    http_status_code    INT NULL,
+    error_severity_id   TINYINT NOT NULL,
+    CONSTRAINT PK_error_log_id PRIMARY KEY (error_log_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- =========================================================
+-- Foreign Keys
+-- =========================================================
+
+ALTER TABLE app_event
+  ADD CONSTRAINT FK_app_event_event_type
+  FOREIGN KEY (event_type_id) REFERENCES event_type (event_type_id);
+
+ALTER TABLE error_log
+  ADD CONSTRAINT FK_error_severity_id_error_severity
+  FOREIGN KEY (error_severity_id) REFERENCES error_severity (error_severity_id);
+
+ALTER TABLE error_log
+  ADD CONSTRAINT FK_error_log_user
+  FOREIGN KEY (user_id) REFERENCES user (user_id);
+
+ALTER TABLE exercise
+  ADD CONSTRAINT FK_exercise_workout_type
+  FOREIGN KEY (workout_type_id) REFERENCES workout_type (workout_type_id);
+
+ALTER TABLE exercise_program_item
+  ADD CONSTRAINT FK_exercise_program_item_exercise
+  FOREIGN KEY (exercise_id) REFERENCES exercise (exercise_id);
+
+ALTER TABLE exercise_program_item
+  ADD CONSTRAINT FK_exercise_program_item_exercise_program
+  FOREIGN KEY (exercise_program_id) REFERENCES exercise_program (exercise_program_id);
+
+ALTER TABLE help_frequently_asked_question
+  ADD CONSTRAINT FK_help_frequently_asked_question_help_category_type
+  FOREIGN KEY (help_category_type_id) REFERENCES help_category_type (help_category_type_id);
+
+ALTER TABLE notification
+  ADD CONSTRAINT FK_notification_delivery_type
+  FOREIGN KEY (notification_delivery_type_id) REFERENCES notification_delivery_type (notification_delivery_type_id);
+
+ALTER TABLE notification
+  ADD CONSTRAINT FK_notification_type_id
+  FOREIGN KEY (notification_type_id) REFERENCES notification_type (notification_type_id);
+
+ALTER TABLE notification
+  ADD CONSTRAINT FK_notification_user
+  FOREIGN KEY (user_id) REFERENCES user (user_id);
+
+ALTER TABLE notification_event
+  ADD CONSTRAINT FK_notification_event_type
+  FOREIGN KEY (notification_type_id) REFERENCES notification_type (notification_type_id);
+
+ALTER TABLE preference
+  ADD CONSTRAINT FK_preference_unit_type
+  FOREIGN KEY (default_unit_type_id) REFERENCES unit_type (unit_type_id);
+
+ALTER TABLE user
+  ADD CONSTRAINT FK_user_user_type
+  FOREIGN KEY (user_type_id) REFERENCES user_type (user_type_id);
+
+ALTER TABLE user_contact
+  ADD CONSTRAINT FK_email_type_id_email_type
+  FOREIGN KEY (email_type_id) REFERENCES email_type (email_type_id);
+
+ALTER TABLE user_contact
+  ADD CONSTRAINT FK_phone_type_id_phone_type
+  FOREIGN KEY (phone_type_id) REFERENCES phone_type (phone_type_id);
+
+ALTER TABLE user_contact
+  ADD CONSTRAINT FK_user_contact_user
+  FOREIGN KEY (user_id) REFERENCES user (user_id);
+
+ALTER TABLE user_mfa
+  ADD CONSTRAINT FK_user_mfa_id_user
+  FOREIGN KEY (user_id) REFERENCES user (user_id);
+
+ALTER TABLE user_notification_preference
+  ADD CONSTRAINT FK_user_notif_pref_delivery
+  FOREIGN KEY (notification_delivery_type_id) REFERENCES notification_delivery_type (notification_delivery_type_id);
+
+ALTER TABLE user_notification_preference
+  ADD CONSTRAINT FK_user_notif_pref_type
+  FOREIGN KEY (notification_type_id) REFERENCES notification_type (notification_type_id);
+
+ALTER TABLE user_notification_preference
+  ADD CONSTRAINT FK_user_notif_pref_user
+  FOREIGN KEY (user_id) REFERENCES user (user_id);
+
+ALTER TABLE user_preference
+  ADD CONSTRAINT FK_user_preference_preference
+  FOREIGN KEY (preference_id) REFERENCES preference (preference_id);
+
+ALTER TABLE user_preference
+  ADD CONSTRAINT FK_user_preference_unit_type
+  FOREIGN KEY (unit_type_id) REFERENCES unit_type (unit_type_id);
+
+ALTER TABLE user_preference
+  ADD CONSTRAINT FK_user_preference_user
+  FOREIGN KEY (user_id) REFERENCES user (user_id);
+
+ALTER TABLE user_weight
+  ADD CONSTRAINT FK_user_weight_user
+  FOREIGN KEY (user_id) REFERENCES user (user_id);
+
+ALTER TABLE workout_log
+  ADD CONSTRAINT FK_exercise_program
+  FOREIGN KEY (exercise_program_id) REFERENCES exercise_program (exercise_program_id);
+
+ALTER TABLE workout_log
+  ADD CONSTRAINT FK_workout_log_user
+  FOREIGN KEY (user_id) REFERENCES user (user_id);
+
+ALTER TABLE workout_log
+  ADD CONSTRAINT FK_workout_status
+  FOREIGN KEY (workout_status_id) REFERENCES workout_status (workout_status_id);
+
+ALTER TABLE workout_log_interval
+  ADD CONSTRAINT FK_actual_distance_unit_type_id
+  FOREIGN KEY (actual_distance_unit_type_id) REFERENCES unit_type (unit_type_id);
+
+ALTER TABLE workout_log_interval
+  ADD CONSTRAINT FK_workout_log_interval_workout_log
+  FOREIGN KEY (workout_log_id) REFERENCES workout_log (workout_log_id);
+
+ALTER TABLE workout_log_set
+  ADD CONSTRAINT FK_distance_unit_type_id
+  FOREIGN KEY (distance_unit_type_id) REFERENCES unit_type (unit_type_id);
+
+ALTER TABLE workout_log_set
+  ADD CONSTRAINT FK_weight_unit_type_id
+  FOREIGN KEY (weight_unit_type_id) REFERENCES unit_type (unit_type_id);

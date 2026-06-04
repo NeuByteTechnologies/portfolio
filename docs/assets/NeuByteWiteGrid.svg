@@ -7,8 +7,11 @@
    width="816"
    height="1056"
    viewBox="0 0 816 1056"
-   sodipodi:docname="NueByteWiteGrid.svg"
+   sodipodi:docname="NeuByteWiteGrid.svg"
    inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   inkscape:export-filename="NeuByteWiteGrid.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -33,15 +36,16 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="1.4142136"
-     inkscape:cx="409.06127"
-     inkscape:cy="257.74042"
+     inkscape:cx="409.41482"
+     inkscape:cy="257.74041"
      inkscape:window-width="2400"
      inkscape:window-height="1261"
-     inkscape:window-x="2391"
+     inkscape:window-x="4791"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer-MC0"
-     inkscape:document-units="in">
+     inkscape:document-units="in"
+     showguides="true">
     <inkscape:page
        x="0"
        y="0"
@@ -51,275 +55,338 @@
        height="1056"
        margin="903.18799 675.61469 14.897333 13.051467"
        bleed="12" />
+    <sodipodi:guide
+       position="234.05234,1118.2254"
+       orientation="1,0"
+       id="guide1"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <g
      id="layer-MC0"
      inkscape:groupmode="layer"
-     inkscape:label="Layer 1">
+     inkscape:label="Grid">
     <g
        id="g1"
-       transform="matrix(3.5314817,0,0,3.7439499,-36.527088,-43.756845)">
+       transform="matrix(3.5314817,0,0,3.7439499,-36.527088,-43.756845)"
+       inkscape:label="GridGroup">
       <path
          id="path1"
          d="m 32.789,735.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box1.4" />
       <path
          id="path2"
          d="m 46.289,735.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e6eaf0;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box2.4" />
       <path
          id="path3"
          d="m 100.289,735.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#f2f9f4;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box6.4" />
       <path
          id="path4"
          d="m 86.789,735.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#ebe6f3;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box5.4" />
       <path
          id="path5"
          d="m 73.289,735.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e6eaf0;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box4.4" />
       <path
          id="path6"
          d="m 59.789,735.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#fffded;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box3.4" />
       <path
          id="path7"
          d="m 113.789,735.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#ebe6f3;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box7.4" />
       <path
          id="path8"
          d="m 32.789,694.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e6eaf0;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box7.1" />
       <path
          id="path9"
          d="m 46.289,694.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#f2f9f4;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box7.2" />
       <path
          id="path10"
          d="m 100.289,694.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#ebe6f3;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box7.6" />
       <path
          id="path11"
          d="m 86.789,694.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#ebe6f3;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box7.5" />
       <path
          id="path12"
          d="m 73.289,694.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e6eaf0;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box7.4" />
       <path
          id="path13"
          d="m 59.789,694.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#f2f9f4;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box7.3" />
       <path
          id="path14"
          d="m 113.789,694.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#ebe6f3;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box7.7" />
       <path
          id="path15"
          d="m 32.789,775.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e7f6fd;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box1.1" />
       <path
          id="path16"
          d="m 46.289,775.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e7f6fd;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box1.2" />
       <path
          id="path17"
          d="m 100.289,775.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#f1dbe5;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box1.6" />
       <path
          id="path18"
          d="m 86.789,775.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#f1dbe5;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box1.5" />
       <path
          id="path19"
          d="m 73.289,775.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e7f6fd;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box1.4" />
       <path
          id="path20"
          d="m 59.789,775.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e7f6fd;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box1.3" />
       <path
          id="path21"
          d="m 113.789,775.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#fce5ef;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box1.7" />
       <path
          id="path22"
          d="m 32.789,762.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#fce5ef;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box2.1" />
       <path
          id="path23"
          d="m 46.289,762.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#fce5ef;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box2.2" />
       <path
          id="path24"
          d="m 100.289,762.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#fce5ef;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box2.6" />
       <path
          id="path25"
          d="m 86.789,762.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#fce5ef;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box2.5" />
       <path
          id="path26"
          d="m 73.289,762.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#f1dbe5;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box2.4" />
       <path
          id="path27"
          d="m 59.789,762.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#f1dbe5;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box2.3" />
       <path
          id="path28"
          d="m 113.789,762.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#fce5ef;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box2.7" />
       <path
          id="path29"
          d="m 32.789,748.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e6eaf0;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box3.1" />
       <path
          id="path30"
          d="m 46.289,748.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#fffded;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box3.2" />
       <path
          id="path31"
          d="m 100.289,748.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#ebe6f3;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box3.6" />
       <path
          id="path32"
          d="m 86.789,748.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#ebe6f3;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box3.5" />
       <path
          id="path33"
          d="m 73.289,748.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e6eaf0;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box3.4" />
       <path
          id="path34"
          d="m 59.789,748.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#fffded;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box3.3" />
       <path
          id="path35"
          d="m 113.789,748.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#ebe6f3;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box3.7" />
       <path
          id="path36"
          d="m 32.789,708.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e6eaf0;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box1.6" />
       <path
          id="path37"
          d="m 46.289,708.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#f2f9f4;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box2.6" />
       <path
          id="path38"
          d="m 100.289,708.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#f2f9f4;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box6.6" />
       <path
          id="path39"
          d="m 86.789,708.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#ebe6f3;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box6.5" />
       <path
          id="path40"
          d="m 73.289,708.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e6eaf0;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box4.6" />
       <path
          id="path41"
          d="m 59.789,708.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#f2f9f4;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box3.6" />
       <path
          id="path42"
          d="m 113.789,708.327 h -13.5 v 13.5 h 13.5 z"
          style="fill:#ebe6f3;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box6.7" />
       <path
          id="path43"
          d="m 32.789,721.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e6eaf0;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box1.5" />
       <path
          id="path44"
          d="m 46.289,721.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#f2f9f4;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box2.5" />
       <path
          id="path45"
          d="m 100.289,721.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#ebe6f3;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box5.6" />
       <path
          id="path46"
          d="m 86.789,721.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#ebe6f3;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box5.5" />
       <path
          id="path47"
          d="m 73.289,721.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e6eaf0;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box5.4" />
       <path
          id="path48"
          d="m 59.789,721.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#e6eaf0;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box5.3" />
       <path
          id="path49"
          d="m 113.789,721.827 h -13.5 v 13.5 h 13.5 z"
          style="fill:#fffded;fill-opacity:1;fill-rule:nonzero;stroke:#d1d3d4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)" />
-      <text
-         id="text49"
-         xml:space="preserve"
-         transform="matrix(1.3333333,0,0,1.3333333,13.5612,120.23107)"><tspan
-           id="tspan49"
-           style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23px;font-family:'Eras Demi ITC';writing-mode:lr-tb;fill:#426ab3;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           x="0"
-           y="0">NeuByte</tspan></text>
-      <text
-         id="text50"
-         xml:space="preserve"
-         transform="matrix(1.3333333,0,0,1.3333333,13.974667,141.0312)"><tspan
-           id="tspan50"
-           style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;font-family:'Courier New';writing-mode:lr-tb;fill:#636466;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           x="0"
-           y="0">Technologies</tspan></text>
+         transform="matrix(1.3333333,0,0,-1.3333333,-12,1068)"
+         inkscape:label="box5.7" />
     </g>
+    <text
+       id="text49"
+       xml:space="preserve"
+       transform="matrix(3.346232,0,0,3.9512176,-36.527088,-43.756845)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.538px;font-family:'Eras Demi ITC';-inkscape-font-specification:'Eras Demi ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.47892"
+       x="14.039696"
+       y="114.94639"
+       inkscape:label="NeuByte"><tspan
+         id="tspan49"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.538px;font-family:'Eras Demi ITC';-inkscape-font-specification:'Eras Demi ITC, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;fill:#426ab3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.47892"
+         x="14.039696"
+         y="114.94639">NeuByte</tspan></text>
+    <text
+       id="text50"
+       xml:space="preserve"
+       transform="scale(0.9712107,1.0296427)"
+       inkscape:label="Technologies"
+       x="13.204336"
+       y="462.54584"
+       style="font-size:58.1786px;stroke-width:4.84822"><tspan
+         id="tspan50"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:63.0268px;font-family:'Courier New';writing-mode:lr-tb;fill:#636466;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.84822"
+         x="13.204336"
+         y="462.54584">Technologies</tspan></text>
   </g>
 </svg>
