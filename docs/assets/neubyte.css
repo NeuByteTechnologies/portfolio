@@ -186,7 +186,7 @@ a:hover {
 .nb-header {
   background: var(--nb-gray-900);              /* replaces #111 */
   color: var(--nb-text-inverse);               /* replaces #fff */
-  padding: var(--nb-space-8) 0;                /* merged padding */
+  padding: var(--nb-space-4) 0;                /* merged padding */
   border-bottom: 2px solid var(--nb-border-strong); /* replaces #444 */
   text-align: center;
   font-weight: var(--nb-font-weight-semibold);
@@ -578,7 +578,7 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 10px;
+  padding: 6px 10px;
 }
 
 /* Logo */
