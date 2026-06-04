@@ -642,12 +642,13 @@ nav a {
 .nb-local-item a {
   display: block;
   padding: 6px 4px;
+  font-size: .90rem;
   color: var(--nb-text-subtle);
   text-decoration: none;
 }
 
 .nb-local-item a:hover {
-  color: #00e0ff;
+  color:var(--nb-accent-hover);
 }
 
 /* Mobile hamburger */
