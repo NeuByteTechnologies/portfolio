@@ -204,6 +204,8 @@ nav {
 
 .nb-header nav{
   background-image: url("NeuByteGrIdMenuBar.svg");
+  background-repeat: repeat-x;
+  background-size: auto;
 }
 
 nav a {
@@ -596,6 +598,7 @@ nav a {
 .nb-global-link {
   color: #fff;
   text-decoration: none;
+  font-size: 0.95rem;
   padding: 6px 4px;
 }
 
@@ -673,5 +676,8 @@ nav a {
 
   .nb-local-item a {
     padding-left: 20px;
+  font-size: 0.9rem;
   }
 }
+
+
