@@ -176,11 +176,16 @@ a:hover {
    Header / Hero
 --------------------------------------------------------- */
 
+/* Header container */
+
 .nb-header {
-  padding: var(--nb-space-8) 0;
+  background: var(--nb-gray-900);              /* replaces #111 */
+  color: var(--nb-text-inverse);               /* replaces #fff */
+  padding: var(--nb-space-8) 0;                /* merged padding */
+  border-bottom: 2px solid var(--nb-border-strong); /* replaces #444 */
   text-align: center;
   font-weight: var(--nb-font-weight-semibold);
-  text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.25);   /* acceptable shadow */
   align-items: center;
   font-size: 1.5rem;
   height: 52px;
@@ -192,10 +197,13 @@ a:hover {
 }
 
 nav {
-  background-image: url("NeuByteGrIdMenuBar.svg");
   background-repeat: no-repeat;
   background-size: 600px;
   background-position: center;
+}
+
+.nb-header nav{
+  background-image: url("NeuByteGrIdMenuBar.svg");
 }
 
 nav a {
@@ -554,4 +562,116 @@ nav a {
     padding: 1.5rem 1rem;
     width: 100%;
     box-sizing: border-box;
+}
+
+/* Navigation bar */
+.nb-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+/* Logo */
+.nb-logo a {
+  color: #00e0ff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Global menu */
+.nb-global-menu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nb-global-item {
+  position: relative;
+}
+
+.nb-global-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 4px;
+}
+
+.nb-global-link:hover {
+  color: #00e0ff;
+}
+
+/* Mega menu container */
+.nb-mega-menu {
+  display: none;
+  position: absolute;
+  top: 32px;
+  left: 0;
+  background: #222;
+  padding: 16px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  min-width: 240px;
+  z-index: 1000;
+}
+
+/* Hover behavior */
+.nb-global-item:hover .nb-mega-menu {
+  display: block;
+}
+
+/* Local menu list */
+.nb-local-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nb-local-item a {
+  display: block;
+  padding: 6px 4px;
+  color: #ddd;
+  text-decoration: none;
+}
+
+.nb-local-item a:hover {
+  color: #00e0ff;
+}
+
+/* Mobile hamburger */
+.nb-hamburger {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* Mobile behavior */
+@media (max-width: 800px) {
+  .nb-global-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: #111;
+    width: 100%;
+  }
+
+  body.nb-mobile-open .nb-global-menu {
+    display: flex;
+  }
+
+  .nb-hamburger {
+    display: block;
+  }
+
+  .nb-mega-menu {
+    position: static;
+    border: none;
+    padding: 0;
+  }
+
+  .nb-local-item a {
+    padding-left: 20px;
+  }
 }
