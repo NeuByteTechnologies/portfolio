@@ -77,9 +77,9 @@
 
   <!-- Artifact Samples -->
   {% for section in site.data.fitness_portfolio.artifacts.samples %}
-    <b>{{ section[1].title }}</b>
+    <b>{{ section.title }}</b>
     <ul>
-      {% for link in section[1].links %}
+      {% for link in section.links %}
         <li>
           <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
             {{ link.text }}
