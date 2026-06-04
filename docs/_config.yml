@@ -1,6 +1,6 @@
-theme: null   
-plugins:  
-  - jekyll-include-cache  
+theme: minima   
+plugins: 
+    - jekyll-include-cache
 
 # Load custom CSS  test rebuild
 minima:
