@@ -202,11 +202,13 @@ nav {
   background-position: center;
 }
 
+/*--
 .nb-header nav{
   background-image: url("NeuByteGrIdMenuBar.svg");
   background-repeat: repeat-x;
   background-size: auto;
 }
+--*/
 
 nav a {
   line-height: calc(1em + 6px);
