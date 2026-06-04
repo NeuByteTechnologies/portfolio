@@ -17,6 +17,11 @@
   --nb-gray-800: #333333;   /* FIXED */
   --nb-gray-900: #1a1a1a;
   --nb-gray-1000:#000000;
+  --nb-surface-dark: var(--nb-gray-800);      /* replaces #222 */
+  --nb-border-dark: var(--nb-gray-700);       /* replaces #444 */
+  --nb-text-subtle: var(--nb-gray-300);       /* replaces #ddd */
+  --nb-surface-soft: var(--nb-gray-50);       /* replaces #fafafa */
+
 
   /* NeuByte Brand Accent */
   --nb-blue: #0077cc; /* Primary Blue (kept) */
@@ -319,7 +324,7 @@ nav a {
 .resume-summary {
   margin: 1.5rem 0 2rem;
   padding: 1.25rem 1.5rem;
-  background: #fafafa;
+  background: var( --nb-surface-soft);
   border-left: 4px solid var(--nb-accent);
   border-radius: 4px;
   width: 860px;
@@ -578,7 +583,7 @@ nav a {
 
 /* Logo */
 .nb-logo a {
-  color: #00e0ff;
+  color:var(--nb-accent);
   font-size: 1.4rem;
   font-weight: 700;
   text-decoration: none;
@@ -598,14 +603,14 @@ nav a {
 }
 
 .nb-global-link {
-  color: #fff;
+  color: var(--nb-accent);
   text-decoration: none;
   font-size: 0.95rem;
   padding: 6px 4px;
 }
 
 .nb-global-link:hover {
-  color: #00e0ff;
+  color:var(--nb-accent-hover);
 }
 
 /* Mega menu container */
@@ -614,9 +619,9 @@ nav a {
   position: absolute;
   top: 32px;
   left: 0;
-  background: #222;
+  background: var(--nb-surface-dark);
   padding: 16px;
-  border: 1px solid #444;
+  border: 1px solid var( --nb-border-dark);
   border-radius: 6px;
   min-width: 240px;
   z-index: 1000;
@@ -637,7 +642,7 @@ nav a {
 .nb-local-item a {
   display: block;
   padding: 6px 4px;
-  color: #ddd;
+  color: var(--nb-text-subtle);
   text-decoration: none;
 }
 
