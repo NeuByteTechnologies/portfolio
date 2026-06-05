@@ -1,4 +1,4 @@
-id: "FS-ACCT"
+FS-ACCT:
 name: "Account Management Functional Specification"
 module: "Account"
 
