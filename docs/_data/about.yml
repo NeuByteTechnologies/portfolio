@@ -23,7 +23,7 @@ purpose:
     - "Provide a unified view of multiple repositories and modules"
     - "Highlight real-world engineering patterns and workflows"
     - "Serve as a reference for hiring managers and collaborators"
-  closing: "Each repository in the NeuByte ecosystem contributes a different part of the overall engineering story—from documentation and standards to APIs, web components, and data engineering pipelines."
+  closing: "Each repository in the NeuByte ecosystem contributes a different part of the overall engineering storyâ€”from documentation and standards to APIs, web components, and data engineering pipelines."
 
 structure:
   intro: "This portfolio uses a multi-repo architecture with a unified global navigation system. Each repository contains its own documentation, pages, and artifacts, while the global menu provides a seamless way to explore the entire ecosystem."
