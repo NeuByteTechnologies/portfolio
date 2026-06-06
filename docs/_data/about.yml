@@ -1,0 +1,43 @@
+title: "About NeuByte Technologies"
+
+intro:
+  - "NeuByte Technologies is a documentation‑driven engineering initiative focused on building clear, structured, and scalable technical artifacts. The goal is to demonstrate professional‑grade systems analysis, architecture, and engineering documentation using a modular, maintainable platform."
+  - "This portfolio showcases real and simulated engineering work, including requirements, architecture, API design, data workflows, and project documentation. Every module is built using a consistent design system, reusable components, and YAML‑driven content to reflect modern documentation practices."
+
+author:
+  name: "Gordon Neuls"
+  bio: "I specialize in systems analysis, documentation, and engineering support. My work focuses on bridging the gap between business requirements and technical implementation through:"
+  bullets:
+    - "Clear requirements and functional specifications"
+    - "Architecture and system design documentation"
+    - "Use case modeling and workflow analysis"
+    - "API documentation and integration planning"
+    - "Cross‑team communication and project alignment"
+  closing: "This portfolio reflects my approach to building structured, maintainable documentation ecosystems that support engineering teams and accelerate delivery."
+
+purpose:
+  intro: "The NeuByte portfolio is designed to:"
+  bullets:
+    - "Demonstrate professional documentation and analysis skills"
+    - "Showcase architecture, diagrams, and engineering artifacts"
+    - "Provide a unified view of multiple repositories and modules"
+    - "Highlight real‑world engineering patterns and workflows"
+    - "Serve as a reference for hiring managers and collaborators"
+  closing: "Each repository in the NeuByte ecosystem contributes a different part of the overall engineering story—from documentation and standards to APIs, web components, and data engineering pipelines."
+
+structure:
+  intro: "This portfolio uses a multi‑repo architecture with a unified global navigation system. Each repository contains its own documentation, pages, and artifacts, while the global menu provides a seamless way to explore the entire ecosystem."
+  items:
+    - label: "Portfolio"
+      description: "Documentation hub and Systems Analyst résumé"
+    - label: "Architecture"
+      description: "System diagrams and design documentation"
+    - label: "Standards"
+      description: "Coding, documentation, and process standards"
+    - label: "Fitness API"
+      description: "Backend API documentation and endpoints"
+    - label: "Fitness Web"
+      description: "Frontend components and UI documentation"
+    - label: "Data Engineering"
+      description: "Pipelines, ETL workflows, and engineering utilities"
+  closing: "The goal is to provide a clear, intuitive, and professional experience for reviewers, engineers, and collaborators."

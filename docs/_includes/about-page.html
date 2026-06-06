@@ -1,0 +1,54 @@
+<section class="nb-content">
+
+  <h1>{{ data.title }}</h1>
+
+  {% for paragraph in data.intro %}
+    <p>{{ paragraph }}</p>
+  {% endfor %}
+
+  <hr/>
+
+  <h2>About the Author</h2>
+
+  <p>
+    My name is <strong>{{ data.author.name }}</strong>.
+    {{ data.author.bio }}
+  </p>
+
+  <ul>
+    {% for item in data.author.bullets %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>{{ data.author.closing }}</p>
+
+  <hr/>
+
+  <h2>Purpose of This Portfolio</h2>
+
+  <p>{{ data.purpose.intro }}</p>
+
+  <ul>
+    {% for item in data.purpose.bullets %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>{{ data.purpose.closing }}</p>
+
+  <hr/>
+
+  <h2>How the Site Is Structured</h2>
+
+  <p>{{ data.structure.intro }}</p>
+
+  <ul>
+    {% for item in data.structure.items %}
+      <li><strong>{{ item.label }}:</strong> {{ item.description }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>{{ data.structure.closing }}</p>
+
+</section>
