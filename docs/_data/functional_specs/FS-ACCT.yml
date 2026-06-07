@@ -203,4 +203,4 @@ acceptance_criteria:
 open_questions:
   - "Should we allow social login in future phases?"
   - "Should we enforce email domain restrictions?"
-  - "Should we support phone‑based verification later?"
+  - "Should we support phone‑based verification later?"  
