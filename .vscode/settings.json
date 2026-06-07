@@ -1,0 +1,7 @@
+{
+    "editor.autoClosingQuotes": "never",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.includeComments": false,
+    "editor.unicodeHighlight.includeStrings": false,
+    "editor.unicodeHighlight.invisibleCharacters": false
+}
