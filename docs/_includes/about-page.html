@@ -1,8 +1,8 @@
 <section class="nb-content">
 
-  <h1>{{ data.title }}</h1>
+  <h1>{{ include.data.title }}</h1>
 
-  {% for paragraph in data.intro %}
+  {% for paragraph in include.data.intro %}
     <p>{{ paragraph }}</p>
   {% endfor %}
 
@@ -11,44 +11,44 @@
   <h2>About the Author</h2>
 
   <p>
-    My name is <strong>{{ data.author.name }}</strong>.
-    {{ data.author.bio }}
+    My name is <strong>{{ include.data.author.name }}</strong>.
+    {{ include.data.author.bio }}
   </p>
 
   <ul>
-    {% for item in data.author.bullets %}
+    {% for item in include.data.author.bullets %}
       <li>{{ item }}</li>
     {% endfor %}
   </ul>
 
-  <p>{{ data.author.closing }}</p>
+  <p>{{ include.data.author.closing }}</p>
 
   <hr/>
 
   <h2>Purpose of This Portfolio</h2>
 
-  <p>{{ data.purpose.intro }}</p>
+  <p>{{ include.data.purpose.intro }}</p>
 
   <ul>
-    {% for item in data.purpose.bullets %}
+    {% for item in include.data.purpose.bullets %}
       <li>{{ item }}</li>
     {% endfor %}
   </ul>
 
-  <p>{{ data.purpose.closing }}</p>
+  <p>{{ include.data.purpose.closing }}</p>
 
   <hr/>
 
   <h2>How the Site Is Structured</h2>
 
-  <p>{{ data.structure.intro }}</p>
+  <p>{{ include.data.structure.intro }}</p>
 
   <ul>
-    {% for item in data.structure.items %}
+    {% for item in include.data.structure.items %}
       <li><strong>{{ item.label }}:</strong> {{ item.description }}</li>
     {% endfor %}
   </ul>
 
-  <p>{{ data.structure.closing }}</p>
+  <p>{{ include.data.structure.closing }}</p>
 
 </section>
