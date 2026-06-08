@@ -7,5 +7,4 @@ plugins:
 minima:
   skin: classic
   include_css:
-    - assets/custom.css
-    
+    - assets/custom.css  
