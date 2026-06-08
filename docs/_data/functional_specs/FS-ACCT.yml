@@ -204,3 +204,19 @@ open_questions:
   - "Should we allow social login in future phases"
   - "Should we enforce email domain restrictions"
   - "Should we support phone-based verification later"
+  
+requirements:
+  - "The system shall..."
+  - "The user must..."
+
+fields:
+  - id: email
+    label: "Email Address"
+    type: string
+    required: true
+    validation: "Must be a valid email"
+
+behaviors:
+  - "Send verification email on account creation"
+  - "Lock account after 5 failed attempts"
+
