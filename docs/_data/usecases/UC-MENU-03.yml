@@ -43,17 +43,17 @@ trigger: >
 
 main_success_scenario:
   - text: "User selects Dashboard from the menu."
-    br: "BR‑MENU‑04"
+    br: "BR-MENU-04"
   - text: "System receives the navigation request."
-    br: "FS‑MENU‑NAV‑01"
+    br: "FS-MENU-NAV-01"
   - text: "System closes the menu panel."
-    br: "Triggers UC‑MENU‑02 Close Menu"
+    br: "Triggers UC-MENU-02 Close Menu"
   - text: "System routes the user to the Dashboard screen."
-    br: "BR‑DASH‑01"
+    br: "BR-DASH-01"
   - text: "System loads Dashboard data (identity, program, weight, activity, notifications)."
-    br: "BR‑DASH‑01 → BR‑DASH‑15"
+    br: "BR-DASH-01 ? BR-DASH-15"
   - text: "System sets focus to the top of the Dashboard for accessibility."
-    br: "SRS‑A11Y‑01"
+    br: "SRS-A11Y-01"
   - text: "User is now viewing the Dashboard."
 
 alternate_flows:
@@ -69,7 +69,7 @@ alternate_flows:
     steps:
       - "User selects Dashboard while already on the Dashboard screen."
       - "System still closes the menu."
-      - "System refreshes Dashboard data (optional per BR‑DASH‑15)."
+      - "System refreshes Dashboard data (optional per BR-DASH-15)."
       - "User remains on Dashboard."
 
 exception_flows:
@@ -89,15 +89,15 @@ exception_flows:
 
 non_functional:
   - "Performance: Dashboard must load within 1 second on modern devices."
-  - "Accessibility: Menu item must be keyboard‑navigable and screen‑reader friendly."
+  - "Accessibility: Menu item must be keyboard-navigable and screen-reader friendly."
   - "Responsiveness: Navigation must work consistently across mobile, tablet, and desktop."
   - "Consistency: Behavior must match all other menu navigation UCs."
   - "Security: Dashboard must only be accessible to authenticated users."
 
 related_ui:
-  - "UIS‑MENU‑01 — Side Navigation Panel"
-  - "UIS‑DASH‑01 — Dashboard"
-  - "UIS‑GLOBAL‑HEADER‑01"
-  - "UIS‑GLOBAL‑FOOTER‑01"
+  - "UIS-MENU-01 � Side Navigation Panel"
+  - "UIS-DASH-01 � Dashboard"
+  - "UIS-GLOBAL-HEADER-01"
+  - "UIS-GLOBAL-FOOTER-01"
 
 related_diagrams: []

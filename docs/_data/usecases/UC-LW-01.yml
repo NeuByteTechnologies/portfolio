@@ -4,7 +4,7 @@ module: "Workout Logging"
 
 purpose: >
   To allow a user to record workout activity for the current day’s assigned exercise program,
-  ensuring accurate tracking of sets, reps, weight, duration, and other exercise‑specific metrics.
+  ensuring accurate tracking of sets, reps, weight, duration, and other exercise-specific metrics.
   Logged workouts update progress indicators, streaks, and analytics.
 
 primary_actor:
@@ -44,27 +44,27 @@ trigger: >
 
 main_success_scenario:
   - text: "User navigates to the Log Workout screen."
-    br: "BR‑LW‑01"
+    br: "BR-01"
   - text: "System retrieves the exercises scheduled for the current day."
-    br: "BR‑LW‑02"
+    br: "BR-02"
   - text: "System displays the exercise list with input fields for sets, reps, weight, duration, or other metrics."
-    br: "BR‑LW‑03"
+    br: "BR-03"
   - text: "User enters metrics for each exercise performed."
-    br: "BR‑LW‑04"
+    br: "BR-04"
   - text: "System validates that all required fields for each exercise are populated."
-    br: "BR‑LW‑05"
+    br: "BR-05"
   - text: "System validates that numeric values (sets, reps, weight, duration) are within acceptable ranges."
-    br: "BR‑LW‑06"
+    br: "BR-06"
   - text: "User submits the workout log."
-    br: "BR‑LW‑04"
+    br: "BR-04"
   - text: "System saves the workout log to the user’s workout history."
-    br: "BR‑LW‑07"
+    br: "BR-07"
   - text: "System updates dashboard metrics, streaks, and progress indicators."
-    br: "BR‑LW‑08"
+    br: "BR-08"
   - text: "System logs the successful workout event for analytics."
     br: "Analytics requirement"
   - text: "System displays a confirmation message."
-    br: "BR‑LW‑09"
+    br: "BR-09"
 
 alternate_flows:
   - id: "A1"
@@ -73,7 +73,7 @@ alternate_flows:
       - "Step 5 fails."
       - "System highlights missing fields and displays a 'Required fields missing' message."
       - "User corrects the data and resubmits."
-    br: "BR‑LW‑05"
+    br: "BR-05"
 
   - id: "A2"
     title: "Invalid Numeric Values"
@@ -81,14 +81,14 @@ alternate_flows:
       - "Step 6 fails."
       - "System displays an 'Invalid value' message for the affected fields."
       - "User corrects the values and resubmits."
-    br: "BR‑LW‑06"
+    br: "BR-06"
 
   - id: "A3"
     title: "Partial Workout Logging"
     steps:
       - "User chooses to log only some exercises."
       - "System saves partial data and marks remaining exercises as incomplete."
-    br: "BR‑LW‑10"
+    br: "BR-10"
 
 exception_flows:
   - id: "E1"
@@ -97,7 +97,7 @@ exception_flows:
       - "Step 2 fails due to missing or corrupted program data."
       - "System displays an error message and suggests refreshing or checking program settings."
       - "User remains on the Log Workout screen."
-    br: "BR‑LW‑11"
+    br: "BR-11"
 
   - id: "E2"
     title: "System Error During Save"
@@ -106,7 +106,7 @@ exception_flows:
       - "System displays a generic error message."
       - "No data is saved."
       - "User remains on the Log Workout screen."
-    br: "BR‑LW‑12"
+    br: "BR-12"
 
   - id: "E3"
     title: "Network Failure"
@@ -118,15 +118,15 @@ exception_flows:
 non_functional:
   - "Performance: Workout logging must complete quickly."
   - "Usability: Input fields must be easy to navigate and edit."
-  - "Accessibility: Logging interface must support keyboard navigation and screen readers. (SRS‑A11Y‑01)"
+  - "Accessibility: Logging interface must support keyboard navigation and screen readers. (SRS-A11Y-01)"
   - "Reliability: Workout logs must be stored with high consistency."
   - "Analytics: Workout events must be logged for trend analysis."
 
 related_ui:
-  - "UIS‑LW‑01 — Log Workout Page"
-  - "UIS‑DASH‑01 — Dashboard"
-  - "UIS‑PROGRAM‑01 — Program Overview"
-  - "UIS‑GLOBAL‑HEADER‑01"
-  - "UIS‑GLOBAL‑FOOTER‑01"
+  - "UIS-01 — Log Workout Page"
+  - "UIS-DASH-01 — Dashboard"
+  - "UIS-PROGRAM-01 — Program Overview"
+  - "UIS-GLOBAL-HEADER-01"
+  - "UIS-GLOBAL-FOOTER-01"
 
 related_diagrams: []

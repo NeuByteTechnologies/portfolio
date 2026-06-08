@@ -17,7 +17,7 @@ stakeholders:
   - name: "System"
     interest: "Must validate credentials, enforce security rules, and create a secure session."
   - name: "Security Team"
-    interest: "Requires strong authentication, error handling, and protection against brute‑force attacks."
+    interest: "Requires strong authentication, error handling, and protection against brute-force attacks."
   - name: "Product Owner"
     interest: "Wants a smooth login experience with clear error messaging."
   - name: "Analytics Team"
@@ -31,7 +31,7 @@ preconditions:
 postconditions:
   success:
     - "User is authenticated."
-    - "A secure session token is created and stored in an HTTP‑only cookie."
+    - "A secure session token is created and stored in an HTTP-only cookie."
     - "User is redirected to the Dashboard."
   failure:
     - "User remains on the Login page."
@@ -42,27 +42,27 @@ trigger: >
 
 main_success_scenario:
   - text: "User navigates to the Login page."
-    br: "BR‑Login‑01"
+    br: "BR-Login-01"
   - text: "System displays the Login form with email and password fields."
-    br: "BR‑Login‑01"
+    br: "BR-Login-01"
   - text: "User enters email and password."
-    br: "BR‑Login‑02"
+    br: "BR-Login-02"
   - text: "System validates that both fields are populated."
-    br: "BR‑Login‑02"
+    br: "BR-Login-02"
   - text: "System validates that the email format is correct."
-    br: "BR‑Login‑03"
+    br: "BR-Login-03"
   - text: "System authenticates the credentials against stored values."
-    br: "BR‑Login‑04"
+    br: "BR-Login-04"
   - text: "System verifies the password using secure hashing."
-    br: "BR‑Login‑05"
+    br: "BR-Login-05"
   - text: "System checks whether the account is active (not locked, disabled, or inactive)."
-    br: "BR‑Login‑13"
+    br: "BR-Login-13"
   - text: "System creates a secure session token."
-    br: "BR‑Login‑08"
-  - text: "System stores the session token in an HTTP‑only cookie."
-    br: "BR‑Login‑09"
+    br: "BR-Login-08"
+  - text: "System stores the session token in an HTTP-only cookie."
+    br: "BR-Login-09"
   - text: "System redirects the user to the Dashboard."
-    br: "BR‑Login‑07"
+    br: "BR-Login-07"
   - text: "System logs the successful login event."
     br: "Analytics requirement"
 
@@ -73,21 +73,21 @@ alternate_flows:
       - "Step 6 fails."
       - "System displays an authentication error message."
       - "User remains on the Login page."
-    br: "BR‑Login‑06"
+    br: "BR-Login-06"
 
   - id: "A2"
     title: "Missing Required Fields"
     steps:
       - "Step 4 fails."
       - "System displays a 'Required fields missing' message."
-    br: "BR‑Login‑02"
+    br: "BR-Login-02"
 
   - id: "A3"
     title: "Invalid Email Format"
     steps:
       - "Step 5 fails."
       - "System displays an 'Invalid email format' message."
-    br: "BR‑Login‑03"
+    br: "BR-Login-03"
 
 exception_flows:
   - id: "E1"
@@ -96,7 +96,7 @@ exception_flows:
       - "Step 8 fails."
       - "System displays a specific error message."
       - "User remains on the Login page."
-    br: "BR‑Login‑13"
+    br: "BR-Login-13"
 
   - id: "E2"
     title: "Too Many Failed Attempts"
@@ -104,7 +104,7 @@ exception_flows:
       - "System detects repeated failed logins."
       - "System temporarily locks the account."
       - "System displays a lockout message."
-    br: "BR‑Login‑14"
+    br: "BR-Login-14"
 
   - id: "E3"
     title: "System Error During Authentication"
@@ -112,18 +112,18 @@ exception_flows:
       - "Step 6 or 7 fails due to backend or database issue."
       - "System displays a generic error message."
       - "User remains on the Login page."
-    br: "BR‑Login‑20"
+    br: "BR-Login-20"
 
 non_functional:
-  - "Security: All credentials must be transmitted over HTTPS. (BR‑Login‑15)"
+  - "Security: All credentials must be transmitted over HTTPS. (BR-Login-15)"
   - "Performance: Authentication must complete quickly."
-  - "Accessibility: Login form must support keyboard navigation and screen readers. (SRS‑A11Y‑01)"
+  - "Accessibility: Login form must support keyboard navigation and screen readers. (SRS-A11Y-01)"
   - "Usability: Error messages must be clear and actionable."
   - "Analytics: Login attempts (success/failure) must be logged."
 
 related_ui:
-  - "UIS‑LOGIN‑01 — Login Page"
-  - "UIS‑GLOBAL‑HEADER‑01"
-  - "UIS‑GLOBAL‑FOOTER‑01"
+  - "UIS-LOGIN-01 — Login Page"
+  - "UIS-GLOBAL-HEADER-01"
+  - "UIS-GLOBAL-FOOTER-01"
 
 related_diagrams: []
