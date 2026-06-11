@@ -97,16 +97,16 @@ artifacts:
     use_cases:
       title: Use Case Samples
       links:
-      - text: "UC\u2011LOGIN\u201101 User Login"
+      - text: "UC-LOGIN-01 User Login"
         url: UC-LOGIN-01_UserLogin.html
-      - text: "UC\u2011MENU\u201103 Navigate Dashboard"
+      - text: "UC-MENU-03 Navigate Dashboard"
         url: UC-MENU-03_NavigateDashboard.html
-      - text: "UC\u2011PROG\u201101 View Program Detail"
+      - text: "UC-PROG-01 View Program Detail"
         url: UC-PROG-01_ViewProgramDetail.html
-      - text: "UC\u2011LW\u201101 Log Workout"
+      - text: "UC-LW-01 Log Workout"
         url: UC-LW-01_LogWorkout.html
-      - text: "UC\u2011ANL\u201106 Log Feature Usage"
-        url: "UC\u2011ANL\u201106_LogFeatureUsage.html"
+      - text: "UC-ANL-06 Log Feature Usage"
+        url: UC-ANL-06_LogFeatureUsage.html
     diagrams:
       title: System Diagram Samples
       links:
