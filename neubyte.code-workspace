@@ -1,0 +1,12 @@
+{
+  "folders": [
+    { "path": "neubyte-utils" },
+    { "path": "portfolio-neubyte" },
+    { "path": "neubyte-standards" },
+    { "path": "neubyte-architecture" }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "C:/Github/neubyte-utils/.venv/Scripts/python.exe",
+    "python.terminal.activateEnvironment": true
+  }
+}

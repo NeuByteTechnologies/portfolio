@@ -1,37 +1,26 @@
-title: "NeuByte Technologies"
-subtitle: "Engineering Portfolio & Project Documentation"
-
-intro: >
-  Welcome to the NeuByte Technologies portfolio.
-  This site serves as the central hub for documentation, architecture,
-  and engineering work across the NeuByte ecosystem.
-  It highlights systems analysis, technical documentation, and project
-  artifacts created for real and simulated engineering initiatives.
-
+title: NeuByte Technologies
+subtitle: Engineering Portfolio & Project Documentation
+intro: Welcome to the NeuByte Technologies portfolio. This site serves as the central
+  hub for documentation, architecture, and engineering work across the NeuByte ecosystem.
+  It highlights systems analysis, technical documentation, and project artifacts created
+  for real and simulated engineering initiatives.
 visitor_log:
-  heading: "Visitor Feedback & Portfolio Log"
-  description: >
-    Your feedback helps improve the clarity, structure, and overall quality
-    of this portfolio. If you're reviewing this project for hiring,
-    collaboration, or professional interest, you’re invited to sign the Visitor Log.
-
-  link_text: "Sign the Visitor Log"
-  link_url: "https://docs.google.com/forms/d/e/1FAIpQLSd8H5Ipt4iF11FtdI9xNy0E5f-6lY2Hu6C1bVssOud8K33_xg/viewform?usp=sharing&ouid=113811357249936509002"
-
+  heading: Visitor Feedback & Portfolio Log
+  description: "Your feedback helps improve the clarity, structure, and overall quality\
+    \ of this portfolio. If you're reviewing this project for hiring, collaboration,\
+    \ or professional interest, you\u2019re invited to sign the Visitor Log."
+  link_text: Sign the Visitor Log
+  link_url: https://docs.google.com/forms/d/e/1FAIpQLSd8H5Ipt4iF11FtdI9xNy0E5f-6lY2Hu6C1bVssOud8K33_xg/viewform?usp=sharing&ouid=113811357249936509002
   what_you_can_share:
-    - "How you discovered this portfolio"
-    - "Which modules or diagrams you reviewed"
-    - "Suggestions for clarity or improvement"
-    - "Opportunities for collaboration or follow‑up"
-
-  why_this_exists: >
-    GitHub does not provide identity‑level analytics for repository views.
-    This Visitor Log offers a simple, professional way for reviewers to:
-
+  - How you discovered this portfolio
+  - Which modules or diagrams you reviewed
+  - Suggestions for clarity or improvement
+  - "Opportunities for collaboration or follow\u2011up"
+  why_this_exists: "GitHub does not provide identity\u2011level analytics for repository\
+    \ views. This Visitor Log offers a simple, professional way for reviewers to:"
   why_list:
-    - "Provide feedback"
-    - "Identify themselves"
-    - "Ask questions"
-    - "Connect for follow‑up"
-
-closing: "Your insights directly support the continuous improvement of this project."
+  - Provide feedback
+  - Identify themselves
+  - Ask questions
+  - "Connect for follow\u2011up"
+closing: Your insights directly support the continuous improvement of this project.

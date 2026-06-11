@@ -1,222 +1,201 @@
-id: "FS-ACCT"
-name: "Account Management Functional Specification"
-module: "Account"
-
-purpose: >
-  The Account module defines all functionality required for users to create, manage,
-  and maintain their NeuByte account. This includes account creation, authentication
+id: FS-ACCT
+name: Account Management Functional Specification
+module: Account
+purpose: The Account module defines all functionality required for users to create,
+  manage, and maintain their NeuByte account. This includes account creation, authentication
   prerequisites, profile initialization, validation rules, and system behaviors related
   to onboarding. This module is foundational and interacts with Authentication, User
   Profile, Notifications, and Analytics.
-
 scope:
   covers:
-    - "Account creation"
-    - "Required fields and validation"
-    - "Email verification trigger"
-    - "Initial profile setup"
-    - "Error handling"
-    - "Accessibility requirements"
-    - "Security and data integrity rules"
+  - Account creation
+  - Required fields and validation
+  - Email verification trigger
+  - Initial profile setup
+  - Error handling
+  - Accessibility requirements
+  - Security and data integrity rules
   excludes:
-    - "Login"
-    - "Logout"
-    - "Session management (covered in Authentication FS)"
-
+  - Login
+  - Logout
+  - Session management (covered in Authentication FS)
 references:
-  - "Business Requirements: BR-ACCT-01 to BR-ACCT-12"
-  - "Use Cases: UC-ACCT-01 (Create Account)"
-  - "Use Cases: UC-ACCT-02 (Resend Verification)"
-  - "Use Cases: UC-ACCT-03 (Account Validation Errors)"
-  - "RTM: Account Module Rows"
-  - "FS-AUTH (Authentication)"
-  - "FS-PROFILE (User Profile)"
-
+- 'Business Requirements: BR-ACCT-01 to BR-ACCT-12'
+- 'Use Cases: UC-ACCT-01 (Create Account)'
+- 'Use Cases: UC-ACCT-02 (Resend Verification)'
+- 'Use Cases: UC-ACCT-03 (Account Validation Errors)'
+- 'RTM: Account Module Rows'
+- FS-AUTH (Authentication)
+- FS-PROFILE (User Profile)
 functional_requirements:
-
-  - id: "FR-ACCT-01"
-    title: "Display Create Account Form"
-    description: "The system shall display the Create Account form with all required fields."
-    fields:
-      - "First Name"
-      - "Last Name"
-      - "Email"
-      - "Password"
-      - "Confirm Password"
-      - "Optional: Referral Code"
-    maps_to:
-      - "BR-ACCT-01"
-      - "UC-ACCT-01"
-
-  - id: "FR-ACCT-02"
-    title: "Validate Required Fields"
-    description: "All required fields must be validated before submission."
-    rules:
-      - "First/Last Name: alphabetic, 2-50 chars"
-      - "Email: valid email format"
-      - "Password: must meet password policy (see FR-ACCT-03)"
-      - "Confirm Password: must match Password"
-    maps_to:
-      - "BR-ACCT-02"
-      - "UC-ACCT-01"
-
-  - id: "FR-ACCT-03"
-    title: "Enforce Password Policy"
-    description: "The system shall enforce the NeuByte password policy."
-    rules:
-      - "Minimum 8 characters"
-      - "At least one uppercase letter"
-      - "At least one number"
-      - "At least one special character"
-      - "No spaces"
-    maps_to:
-      - "BR-ACCT-03"
-      - "UC-ACCT-01"
-
-  - id: "FR-ACCT-04"
-    title: "Prevent Duplicate Accounts"
-    description: "The system shall prevent account creation using an email address already in use."
-    behavior:
-      - "Display error message"
-      - "Provide link to Login"
-      - "Provide link to Reset Password"
-    maps_to:
-      - "BR-ACCT-04"
-      - "UC-ACCT-03"
-
-  - id: "FR-ACCT-05"
-    title: "Create Account Record"
-    description: "Upon successful validation, the system shall create a new user account record."
-    details:
-      - "Store hashed password"
-      - "Store email in lowercase"
-      - "Set account status = Pending Verification"
-      - "Generate verification token"
-    maps_to:
-      - "BR-ACCT-05"
-      - "UC-ACCT-01"
-
-  - id: "FR-ACCT-06"
-    title: "Trigger Email Verification"
-    description: "The system shall send a verification email after account creation."
-    details:
-      - "Email includes verification link with token"
-      - "Token expires in 24 hours"
-      - "Email is logged in Notification History"
-    maps_to:
-      - "BR-ACCT-06"
-      - "UC-ACCT-01"
-
-  - id: "FR-ACCT-07"
-    title: "Resend Verification Email"
-    description: "Users may request a new verification email."
-    rules:
-      - "Limit: 3 resend attempts per hour"
-      - "New token invalidates previous token"
-      - "Display confirmation message"
-    maps_to:
-      - "BR-ACCT-07"
-      - "UC-ACCT-02"
-
-  - id: "FR-ACCT-08"
-    title: "Handle Expired or Invalid Tokens"
-    description: "The system shall detect invalid or expired verification tokens."
-    behavior:
-      - "Display error message"
-      - "Provide Resend Verification Email option"
-      - "Log event for security monitoring"
-    maps_to:
-      - "BR-ACCT-08"
-      - "UC-ACCT-03"
-
-  - id: "FR-ACCT-09"
-    title: "Complete Verification"
-    description: "When a valid token is used, the system shall activate the user account."
-    details:
-      - "Set account status = Active"
-      - "Redirect user to onboarding"
-      - "Trigger welcome notification"
-    maps_to:
-      - "BR-ACCT-09"
-      - "UC-ACCT-01"
-
-  - id: "FR-ACCT-10"
-    title: "Initialize User Profile"
-    description: "Upon account activation, the system shall create a default User Profile record."
-    defaults:
-      - "Units: US Standard"
-      - "Notifications: Enabled"
-      - "Empty program list"
-      - "Empty weight history"
-    maps_to:
-      - "BR-ACCT-10"
-      - "UC-ACCT-01"
-
-  - id: "FR-ACCT-11"
-    title: "Accessibility Requirements"
-    description: "The Create Account flow must comply with Accessibility FS."
-    requirements:
-      - "All fields have labels"
-      - "Errors announced via ARIA live region"
-      - "Keyboard-only navigation supported"
-      - "Focus moves to first error on submit"
-    maps_to:
-      - "BR-ACCT-11"
-      - "UC-A11Y-01 to UC-A11Y-10"
-
-  - id: "FR-ACCT-12"
-    title: "Security Requirements"
-    description: "The Create Account process must follow security best practices."
-    rules:
-      - "Passwords hashed using PBKDF2 or bcrypt"
-      - "Tokens must be single-use"
-      - "Rate limiting on account creation attempts"
-      - "Log all suspicious activity"
-    maps_to:
-      - "BR-ACCT-12"
-      - "UC-ACCT-03"
-
+- id: FR-ACCT-01
+  title: Display Create Account Form
+  description: The system shall display the Create Account form with all required
+    fields.
+  fields:
+  - First Name
+  - Last Name
+  - Email
+  - Password
+  - Confirm Password
+  - 'Optional: Referral Code'
+  maps_to:
+  - BR-ACCT-01
+  - UC-ACCT-01
+- id: FR-ACCT-02
+  title: Validate Required Fields
+  description: All required fields must be validated before submission.
+  rules:
+  - 'First/Last Name: alphabetic, 2-50 chars'
+  - 'Email: valid email format'
+  - 'Password: must meet password policy (see FR-ACCT-03)'
+  - 'Confirm Password: must match Password'
+  maps_to:
+  - BR-ACCT-02
+  - UC-ACCT-01
+- id: FR-ACCT-03
+  title: Enforce Password Policy
+  description: The system shall enforce the NeuByte password policy.
+  rules:
+  - Minimum 8 characters
+  - At least one uppercase letter
+  - At least one number
+  - At least one special character
+  - No spaces
+  maps_to:
+  - BR-ACCT-03
+  - UC-ACCT-01
+- id: FR-ACCT-04
+  title: Prevent Duplicate Accounts
+  description: The system shall prevent account creation using an email address already
+    in use.
+  behavior:
+  - Display error message
+  - Provide link to Login
+  - Provide link to Reset Password
+  maps_to:
+  - BR-ACCT-04
+  - UC-ACCT-03
+- id: FR-ACCT-05
+  title: Create Account Record
+  description: Upon successful validation, the system shall create a new user account
+    record.
+  details:
+  - Store hashed password
+  - Store email in lowercase
+  - Set account status = Pending Verification
+  - Generate verification token
+  maps_to:
+  - BR-ACCT-05
+  - UC-ACCT-01
+- id: FR-ACCT-06
+  title: Trigger Email Verification
+  description: The system shall send a verification email after account creation.
+  details:
+  - Email includes verification link with token
+  - Token expires in 24 hours
+  - Email is logged in Notification History
+  maps_to:
+  - BR-ACCT-06
+  - UC-ACCT-01
+- id: FR-ACCT-07
+  title: Resend Verification Email
+  description: Users may request a new verification email.
+  rules:
+  - 'Limit: 3 resend attempts per hour'
+  - New token invalidates previous token
+  - Display confirmation message
+  maps_to:
+  - BR-ACCT-07
+  - UC-ACCT-02
+- id: FR-ACCT-08
+  title: Handle Expired or Invalid Tokens
+  description: The system shall detect invalid or expired verification tokens.
+  behavior:
+  - Display error message
+  - Provide Resend Verification Email option
+  - Log event for security monitoring
+  maps_to:
+  - BR-ACCT-08
+  - UC-ACCT-03
+- id: FR-ACCT-09
+  title: Complete Verification
+  description: When a valid token is used, the system shall activate the user account.
+  details:
+  - Set account status = Active
+  - Redirect user to onboarding
+  - Trigger welcome notification
+  maps_to:
+  - BR-ACCT-09
+  - UC-ACCT-01
+- id: FR-ACCT-10
+  title: Initialize User Profile
+  description: Upon account activation, the system shall create a default User Profile
+    record.
+  defaults:
+  - 'Units: US Standard'
+  - 'Notifications: Enabled'
+  - Empty program list
+  - Empty weight history
+  maps_to:
+  - BR-ACCT-10
+  - UC-ACCT-01
+- id: FR-ACCT-11
+  title: Accessibility Requirements
+  description: The Create Account flow must comply with Accessibility FS.
+  requirements:
+  - All fields have labels
+  - Errors announced via ARIA live region
+  - Keyboard-only navigation supported
+  - Focus moves to first error on submit
+  maps_to:
+  - BR-ACCT-11
+  - UC-A11Y-01 to UC-A11Y-10
+- id: FR-ACCT-12
+  title: Security Requirements
+  description: The Create Account process must follow security best practices.
+  rules:
+  - Passwords hashed using PBKDF2 or bcrypt
+  - Tokens must be single-use
+  - Rate limiting on account creation attempts
+  - Log all suspicious activity
+  maps_to:
+  - BR-ACCT-12
+  - UC-ACCT-03
 non_functional:
-  - "Must complete account creation in under 3 seconds"
-  - "Must support high-latency networks"
-  - "Must support mobile and desktop"
-  - "Must not expose internal error details"
-  - "Must log all account creation events"
-
+- Must complete account creation in under 3 seconds
+- Must support high-latency networks
+- Must support mobile and desktop
+- Must not expose internal error details
+- Must log all account creation events
 dependencies:
-  - "Notification Service"
-  - "Authentication Service"
-  - "User Profile Service"
-  - "Email Provider"
-  - "Security Token Generator"
-
+- Notification Service
+- Authentication Service
+- User Profile Service
+- Email Provider
+- Security Token Generator
 acceptance_criteria:
-  - "All required fields validated"
-  - "Duplicate emails blocked"
-  - "Password policy enforced"
-  - "Verification email sent"
-  - "Token validation works"
-  - "Account activates successfully"
-  - "Profile initializes correctly"
-  - "Errors are accessible and announced"
-
+- All required fields validated
+- Duplicate emails blocked
+- Password policy enforced
+- Verification email sent
+- Token validation works
+- Account activates successfully
+- Profile initializes correctly
+- Errors are accessible and announced
 open_questions:
-  - "Should we allow social login in future phases"
-  - "Should we enforce email domain restrictions"
-  - "Should we support phone-based verification later"
-  
+- Should we allow social login in future phases
+- Should we enforce email domain restrictions
+- Should we support phone-based verification later
 requirements:
-  - "The system shall..."
-  - "The user must..."
-
+- The system shall...
+- The user must...
 fields:
-  - id: email
-    label: "Email Address"
-    type: string
-    required: true
-    validation: "Must be a valid email"
-
+- id: email
+  label: Email Address
+  type: string
+  required: true
+  validation: Must be a valid email
 behaviors:
-  - "Send verification email on account creation"
-  - "Lock account after 5 failed attempts"
-
+- Send verification email on account creation
+- Lock account after 5 failed attempts

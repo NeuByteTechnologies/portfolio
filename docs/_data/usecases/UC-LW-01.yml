@@ -1,132 +1,119 @@
-id: "UC-LW-01"
-name: "Log Workout"
-module: "Workout Logging"
-
-purpose: >
-  To allow a user to record workout activity for the current day’s assigned exercise program,
-  ensuring accurate tracking of sets, reps, weight, duration, and other exercise-specific metrics.
-  Logged workouts update progress indicators, streaks, and analytics.
-
+id: UC-LW-01
+name: Log Workout
+module: Workout Logging
+purpose: "To allow a user to record workout activity for the current day\u2019s assigned\
+  \ exercise program, ensuring accurate tracking of sets, reps, weight, duration,\
+  \ and other exercise-specific metrics. Logged workouts update progress indicators,\
+  \ streaks, and analytics."
 primary_actor:
-  - name: "App User"
-    description: "Any authenticated or unauthenticated user interacting with a major feature."
-
+- name: App User
+  description: Any authenticated or unauthenticated user interacting with a major
+    feature.
 stakeholders:
-  - name: "User"
-    interest: "Wants a fast, intuitive way to log exercises and track progress."
-  - name: "System"
-    interest: "Must validate workout entries and store them reliably."
-  - name: "Product Owner"
-    interest: "Wants a smooth logging experience with minimal friction."
-  - name: "Analytics Team"
-    interest: "Needs accurate workout data for charts, summaries, and trends."
-  - name: "Coaching/Program Logic"
-    interest: "Requires logged data to update streaks, progress, and recommendations."
-
+- name: User
+  interest: Wants a fast, intuitive way to log exercises and track progress.
+- name: System
+  interest: Must validate workout entries and store them reliably.
+- name: Product Owner
+  interest: Wants a smooth logging experience with minimal friction.
+- name: Analytics Team
+  interest: Needs accurate workout data for charts, summaries, and trends.
+- name: Coaching/Program Logic
+  interest: Requires logged data to update streaks, progress, and recommendations.
 preconditions:
-  - "User is authenticated."
-  - "User has an active exercise program."
-  - "Daily exercise list is available for the current date."
-  - "System is online and accessible."
-
+- User is authenticated.
+- User has an active exercise program.
+- Daily exercise list is available for the current date.
+- System is online and accessible.
 postconditions:
   success:
-    - "Workout log is saved to the user’s workout history."
-    - "Dashboard metrics, streaks, and progress indicators are updated."
-    - "A confirmation message is displayed."
+  - "Workout log is saved to the user\u2019s workout history."
+  - Dashboard metrics, streaks, and progress indicators are updated.
+  - A confirmation message is displayed.
   failure:
-    - "No workout data is saved."
-    - "System displays appropriate error messaging."
-    - "User remains on the Log Workout screen."
-
-trigger: >
-  User selects “Start Workout” or navigates to the Log Workout screen.
-
+  - No workout data is saved.
+  - System displays appropriate error messaging.
+  - User remains on the Log Workout screen.
+trigger: "User selects \u201CStart Workout\u201D or navigates to the Log Workout screen."
 main_success_scenario:
-  - text: "User navigates to the Log Workout screen."
-    br: "BR-01"
-  - text: "System retrieves the exercises scheduled for the current day."
-    br: "BR-02"
-  - text: "System displays the exercise list with input fields for sets, reps, weight, duration, or other metrics."
-    br: "BR-03"
-  - text: "User enters metrics for each exercise performed."
-    br: "BR-04"
-  - text: "System validates that all required fields for each exercise are populated."
-    br: "BR-05"
-  - text: "System validates that numeric values (sets, reps, weight, duration) are within acceptable ranges."
-    br: "BR-06"
-  - text: "User submits the workout log."
-    br: "BR-04"
-  - text: "System saves the workout log to the user’s workout history."
-    br: "BR-07"
-  - text: "System updates dashboard metrics, streaks, and progress indicators."
-    br: "BR-08"
-  - text: "System logs the successful workout event for analytics."
-    br: "Analytics requirement"
-  - text: "System displays a confirmation message."
-    br: "BR-09"
-
+- text: User navigates to the Log Workout screen.
+  br: BR-01
+- text: System retrieves the exercises scheduled for the current day.
+  br: BR-02
+- text: System displays the exercise list with input fields for sets, reps, weight,
+    duration, or other metrics.
+  br: BR-03
+- text: User enters metrics for each exercise performed.
+  br: BR-04
+- text: System validates that all required fields for each exercise are populated.
+  br: BR-05
+- text: System validates that numeric values (sets, reps, weight, duration) are within
+    acceptable ranges.
+  br: BR-06
+- text: User submits the workout log.
+  br: BR-04
+- text: "System saves the workout log to the user\u2019s workout history."
+  br: BR-07
+- text: System updates dashboard metrics, streaks, and progress indicators.
+  br: BR-08
+- text: System logs the successful workout event for analytics.
+  br: Analytics requirement
+- text: System displays a confirmation message.
+  br: BR-09
 alternate_flows:
-  - id: "A1"
-    title: "Missing Required Fields"
-    steps:
-      - "Step 5 fails."
-      - "System highlights missing fields and displays a 'Required fields missing' message."
-      - "User corrects the data and resubmits."
-    br: "BR-05"
-
-  - id: "A2"
-    title: "Invalid Numeric Values"
-    steps:
-      - "Step 6 fails."
-      - "System displays an 'Invalid value' message for the affected fields."
-      - "User corrects the values and resubmits."
-    br: "BR-06"
-
-  - id: "A3"
-    title: "Partial Workout Logging"
-    steps:
-      - "User chooses to log only some exercises."
-      - "System saves partial data and marks remaining exercises as incomplete."
-    br: "BR-10"
-
+- id: A1
+  title: Missing Required Fields
+  steps:
+  - Step 5 fails.
+  - System highlights missing fields and displays a 'Required fields missing' message.
+  - User corrects the data and resubmits.
+  br: BR-05
+- id: A2
+  title: Invalid Numeric Values
+  steps:
+  - Step 6 fails.
+  - System displays an 'Invalid value' message for the affected fields.
+  - User corrects the values and resubmits.
+  br: BR-06
+- id: A3
+  title: Partial Workout Logging
+  steps:
+  - User chooses to log only some exercises.
+  - System saves partial data and marks remaining exercises as incomplete.
+  br: BR-10
 exception_flows:
-  - id: "E1"
-    title: "No Program Data Available"
-    steps:
-      - "Step 2 fails due to missing or corrupted program data."
-      - "System displays an error message and suggests refreshing or checking program settings."
-      - "User remains on the Log Workout screen."
-    br: "BR-11"
-
-  - id: "E2"
-    title: "System Error During Save"
-    steps:
-      - "Step 8 fails due to backend or database issue."
-      - "System displays a generic error message."
-      - "No data is saved."
-      - "User remains on the Log Workout screen."
-    br: "BR-12"
-
-  - id: "E3"
-    title: "Network Failure"
-    steps:
-      - "Submission fails due to connectivity issues."
-      - "System displays a 'Network error' message."
-      - "User may retry once connection is restored."
-
+- id: E1
+  title: No Program Data Available
+  steps:
+  - Step 2 fails due to missing or corrupted program data.
+  - System displays an error message and suggests refreshing or checking program settings.
+  - User remains on the Log Workout screen.
+  br: BR-11
+- id: E2
+  title: System Error During Save
+  steps:
+  - Step 8 fails due to backend or database issue.
+  - System displays a generic error message.
+  - No data is saved.
+  - User remains on the Log Workout screen.
+  br: BR-12
+- id: E3
+  title: Network Failure
+  steps:
+  - Submission fails due to connectivity issues.
+  - System displays a 'Network error' message.
+  - User may retry once connection is restored.
 non_functional:
-  - "Performance: Workout logging must complete quickly."
-  - "Usability: Input fields must be easy to navigate and edit."
-  - "Accessibility: Logging interface must support keyboard navigation and screen readers. (SRS-A11Y-01)"
-  - "Reliability: Workout logs must be stored with high consistency."
-  - "Analytics: Workout events must be logged for trend analysis."
-
+- 'Performance: Workout logging must complete quickly.'
+- 'Usability: Input fields must be easy to navigate and edit.'
+- 'Accessibility: Logging interface must support keyboard navigation and screen readers.
+  (SRS-A11Y-01)'
+- 'Reliability: Workout logs must be stored with high consistency.'
+- 'Analytics: Workout events must be logged for trend analysis.'
 related_ui:
-  - "UIS-01 — Log Workout Page"
-  - "UIS-DASH-01 — Dashboard"
-  - "UIS-PROGRAM-01 — Program Overview"
-  - "UIS-GLOBAL-HEADER-01"
-  - "UIS-GLOBAL-FOOTER-01"
-
+- "UIS-01 \u2014 Log Workout Page"
+- "UIS-DASH-01 \u2014 Dashboard"
+- "UIS-PROGRAM-01 \u2014 Program Overview"
+- UIS-GLOBAL-HEADER-01
+- UIS-GLOBAL-FOOTER-01
 related_diagrams: []

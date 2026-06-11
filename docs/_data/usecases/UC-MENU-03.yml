@@ -1,103 +1,89 @@
-id: "UC-MENU-03"
-name: "Navigate to Dashboard"
-module: "Menu / Global Navigation"
-
-purpose: >
-  To define how the user navigates from the hamburger menu to the Dashboard. This use case
-  covers the interaction, system routing, menu behavior, and accessibility requirements when
-  the user selects Dashboard from the global navigation menu.
-
+id: UC-MENU-03
+name: Navigate to Dashboard
+module: Menu / Global Navigation
+purpose: To define how the user navigates from the hamburger menu to the Dashboard.
+  This use case covers the interaction, system routing, menu behavior, and accessibility
+  requirements when the user selects Dashboard from the global navigation menu.
 primary_actor:
-  - name: "App User"
-    description: "Any authenticated or unauthenticated user interacting with a major feature."
-
+- name: App User
+  description: Any authenticated or unauthenticated user interacting with a major
+    feature.
 stakeholders:
-  - name: "User"
-    interest: "Wants quick, predictable access to the Dashboard from anywhere in the app."
-  - name: "System"
-    interest: "Must route the user correctly and close the menu."
-  - name: "Product Owner"
-    interest: "Wants intuitive navigation and consistent behavior."
-  - name: "UX/UI Team"
-    interest: "Requires smooth transitions and accessibility compliance."
-  - name: "Security Team"
-    interest: "Ensures only authenticated users can access the Dashboard."
-
+- name: User
+  interest: Wants quick, predictable access to the Dashboard from anywhere in the
+    app.
+- name: System
+  interest: Must route the user correctly and close the menu.
+- name: Product Owner
+  interest: Wants intuitive navigation and consistent behavior.
+- name: UX/UI Team
+  interest: Requires smooth transitions and accessibility compliance.
+- name: Security Team
+  interest: Ensures only authenticated users can access the Dashboard.
 preconditions:
-  - "User is authenticated."
-  - "Menu panel is open."
-  - "Dashboard menu item is visible and enabled."
-
+- User is authenticated.
+- Menu panel is open.
+- Dashboard menu item is visible and enabled.
 postconditions:
   success:
-    - "Menu closes."
-    - "User is routed to the Dashboard."
-    - "Dashboard content loads successfully."
-    - "Focus is placed on the top of the Dashboard screen for accessibility."
+  - Menu closes.
+  - User is routed to the Dashboard.
+  - Dashboard content loads successfully.
+  - Focus is placed on the top of the Dashboard screen for accessibility.
   failure:
-    - "User remains on the current screen."
-    - "System may display an error message if routing fails."
-
-trigger: >
-  User taps or selects the Dashboard menu item.
-
+  - User remains on the current screen.
+  - System may display an error message if routing fails.
+trigger: User taps or selects the Dashboard menu item.
 main_success_scenario:
-  - text: "User selects Dashboard from the menu."
-    br: "BR-MENU-04"
-  - text: "System receives the navigation request."
-    br: "FS-MENU-NAV-01"
-  - text: "System closes the menu panel."
-    br: "Triggers UC-MENU-02 Close Menu"
-  - text: "System routes the user to the Dashboard screen."
-    br: "BR-DASH-01"
-  - text: "System loads Dashboard data (identity, program, weight, activity, notifications)."
-    br: "BR-DASH-01 ? BR-DASH-15"
-  - text: "System sets focus to the top of the Dashboard for accessibility."
-    br: "SRS-A11Y-01"
-  - text: "User is now viewing the Dashboard."
-
+- text: User selects Dashboard from the menu.
+  br: BR-MENU-04
+- text: System receives the navigation request.
+  br: FS-MENU-NAV-01
+- text: System closes the menu panel.
+  br: Triggers UC-MENU-02 Close Menu
+- text: System routes the user to the Dashboard screen.
+  br: BR-DASH-01
+- text: System loads Dashboard data (identity, program, weight, activity, notifications).
+  br: BR-DASH-01 ? BR-DASH-15
+- text: System sets focus to the top of the Dashboard for accessibility.
+  br: SRS-A11Y-01
+- text: User is now viewing the Dashboard.
 alternate_flows:
-  - id: "A1"
-    title: "User Selects Dashboard via Keyboard"
-    steps:
-      - "User navigates to the Dashboard menu item using Tab."
-      - "User presses Enter or Space."
-      - "System performs the same steps as the Basic Flow."
-
-  - id: "A2"
-    title: "Dashboard Already Displayed"
-    steps:
-      - "User selects Dashboard while already on the Dashboard screen."
-      - "System still closes the menu."
-      - "System refreshes Dashboard data (optional per BR-DASH-15)."
-      - "User remains on Dashboard."
-
+- id: A1
+  title: User Selects Dashboard via Keyboard
+  steps:
+  - User navigates to the Dashboard menu item using Tab.
+  - User presses Enter or Space.
+  - System performs the same steps as the Basic Flow.
+- id: A2
+  title: Dashboard Already Displayed
+  steps:
+  - User selects Dashboard while already on the Dashboard screen.
+  - System still closes the menu.
+  - System refreshes Dashboard data (optional per BR-DASH-15).
+  - User remains on Dashboard.
 exception_flows:
-  - id: "E1"
-    title: "Routing Failure"
-    steps:
-      - "System cannot navigate to the Dashboard due to a routing or network error."
-      - "System displays a fallback message: 'Unable to load Dashboard. Please try again.'"
-      - "System logs the error."
-
-  - id: "E2"
-    title: "Dashboard Data Load Failure"
-    steps:
-      - "System navigates successfully but fails to load Dashboard data."
-      - "System displays partial UI with error states or placeholders."
-      - "System logs the failure."
-
+- id: E1
+  title: Routing Failure
+  steps:
+  - System cannot navigate to the Dashboard due to a routing or network error.
+  - 'System displays a fallback message: ''Unable to load Dashboard. Please try again.'''
+  - System logs the error.
+- id: E2
+  title: Dashboard Data Load Failure
+  steps:
+  - System navigates successfully but fails to load Dashboard data.
+  - System displays partial UI with error states or placeholders.
+  - System logs the failure.
 non_functional:
-  - "Performance: Dashboard must load within 1 second on modern devices."
-  - "Accessibility: Menu item must be keyboard-navigable and screen-reader friendly."
-  - "Responsiveness: Navigation must work consistently across mobile, tablet, and desktop."
-  - "Consistency: Behavior must match all other menu navigation UCs."
-  - "Security: Dashboard must only be accessible to authenticated users."
-
+- 'Performance: Dashboard must load within 1 second on modern devices.'
+- 'Accessibility: Menu item must be keyboard-navigable and screen-reader friendly.'
+- 'Responsiveness: Navigation must work consistently across mobile, tablet, and desktop.'
+- 'Consistency: Behavior must match all other menu navigation UCs.'
+- 'Security: Dashboard must only be accessible to authenticated users.'
 related_ui:
-  - "UIS-MENU-01 — Side Navigation Panel"
-  - "UIS-DASH-01 — Dashboard"
-  - "UIS-GLOBAL-HEADER-01"
-  - "UIS-GLOBAL-FOOTER-01"
-
+- "UIS-MENU-01 \u2014 Side Navigation Panel"
+- "UIS-DASH-01 \u2014 Dashboard"
+- UIS-GLOBAL-HEADER-01
+- UIS-GLOBAL-FOOTER-01
 related_diagrams: []

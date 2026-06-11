@@ -1,7 +1,6 @@
-- name: "Resume"
-  url: "https://portfolio.neubyte.com/resume.html"
-  tooltip: "Professional resume with experience, skills, and project history."
-
-- name: "Portfolio"
-  url: "https://portfolio.neubyte.com/portfolio.html"
-  tooltip: "All system use cases for the NeuByte platform."
+- name: Resume
+  url: https://portfolio.neubyte.com/resume.html
+  tooltip: Professional resume with experience, skills, and project history.
+- name: Portfolio
+  url: https://portfolio.neubyte.com/portfolio.html
+  tooltip: All system use cases for the NeuByte platform.

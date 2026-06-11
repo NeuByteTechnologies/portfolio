@@ -1,129 +1,115 @@
-id: "UC-LOGIN-01"
-name: "User Login"
-module: "Login / Authentication"
-
-purpose: >
-  To allow a user to securely authenticate into the application using valid credentials,
-  ensuring only authorized users gain access to protected features such as the Dashboard,
-  Workout Logging, and Program Management.
-
+id: UC-LOGIN-01
+name: User Login
+module: Login / Authentication
+purpose: To allow a user to securely authenticate into the application using valid
+  credentials, ensuring only authorized users gain access to protected features such
+  as the Dashboard, Workout Logging, and Program Management.
 primary_actor:
-  - name: "App User"
-    description: "Any authenticated or unauthenticated user interacting with a major feature."
-
+- name: App User
+  description: Any authenticated or unauthenticated user interacting with a major
+    feature.
 stakeholders:
-  - name: "User"
-    interest: "Wants fast, secure access to their account."
-  - name: "System"
-    interest: "Must validate credentials, enforce security rules, and create a secure session."
-  - name: "Security Team"
-    interest: "Requires strong authentication, error handling, and protection against brute-force attacks."
-  - name: "Product Owner"
-    interest: "Wants a smooth login experience with clear error messaging."
-  - name: "Analytics Team"
-    interest: "Needs to track successful logins and failed attempts."
-
+- name: User
+  interest: Wants fast, secure access to their account.
+- name: System
+  interest: Must validate credentials, enforce security rules, and create a secure
+    session.
+- name: Security Team
+  interest: Requires strong authentication, error handling, and protection against
+    brute-force attacks.
+- name: Product Owner
+  interest: Wants a smooth login experience with clear error messaging.
+- name: Analytics Team
+  interest: Needs to track successful logins and failed attempts.
 preconditions:
-  - "User has an existing account."
-  - "System is online and accessible."
-  - "User is on the Login page."
-
+- User has an existing account.
+- System is online and accessible.
+- User is on the Login page.
 postconditions:
   success:
-    - "User is authenticated."
-    - "A secure session token is created and stored in an HTTP-only cookie."
-    - "User is redirected to the Dashboard."
+  - User is authenticated.
+  - A secure session token is created and stored in an HTTP-only cookie.
+  - User is redirected to the Dashboard.
   failure:
-    - "User remains on the Login page."
-    - "System displays appropriate error messaging."
-
-trigger: >
-  User enters their email and password and selects Log In.
-
+  - User remains on the Login page.
+  - System displays appropriate error messaging.
+trigger: User enters their email and password and selects Log In.
 main_success_scenario:
-  - text: "User navigates to the Login page."
-    br: "BR-Login-01"
-  - text: "System displays the Login form with email and password fields."
-    br: "BR-Login-01"
-  - text: "User enters email and password."
-    br: "BR-Login-02"
-  - text: "System validates that both fields are populated."
-    br: "BR-Login-02"
-  - text: "System validates that the email format is correct."
-    br: "BR-Login-03"
-  - text: "System authenticates the credentials against stored values."
-    br: "BR-Login-04"
-  - text: "System verifies the password using secure hashing."
-    br: "BR-Login-05"
-  - text: "System checks whether the account is active (not locked, disabled, or inactive)."
-    br: "BR-Login-13"
-  - text: "System creates a secure session token."
-    br: "BR-Login-08"
-  - text: "System stores the session token in an HTTP-only cookie."
-    br: "BR-Login-09"
-  - text: "System redirects the user to the Dashboard."
-    br: "BR-Login-07"
-  - text: "System logs the successful login event."
-    br: "Analytics requirement"
-
+- text: User navigates to the Login page.
+  br: BR-Login-01
+- text: System displays the Login form with email and password fields.
+  br: BR-Login-01
+- text: User enters email and password.
+  br: BR-Login-02
+- text: System validates that both fields are populated.
+  br: BR-Login-02
+- text: System validates that the email format is correct.
+  br: BR-Login-03
+- text: System authenticates the credentials against stored values.
+  br: BR-Login-04
+- text: System verifies the password using secure hashing.
+  br: BR-Login-05
+- text: System checks whether the account is active (not locked, disabled, or inactive).
+  br: BR-Login-13
+- text: System creates a secure session token.
+  br: BR-Login-08
+- text: System stores the session token in an HTTP-only cookie.
+  br: BR-Login-09
+- text: System redirects the user to the Dashboard.
+  br: BR-Login-07
+- text: System logs the successful login event.
+  br: Analytics requirement
 alternate_flows:
-  - id: "A1"
-    title: "Invalid Credentials"
-    steps:
-      - "Step 6 fails."
-      - "System displays an authentication error message."
-      - "User remains on the Login page."
-    br: "BR-Login-06"
-
-  - id: "A2"
-    title: "Missing Required Fields"
-    steps:
-      - "Step 4 fails."
-      - "System displays a 'Required fields missing' message."
-    br: "BR-Login-02"
-
-  - id: "A3"
-    title: "Invalid Email Format"
-    steps:
-      - "Step 5 fails."
-      - "System displays an 'Invalid email format' message."
-    br: "BR-Login-03"
-
+- id: A1
+  title: Invalid Credentials
+  steps:
+  - Step 6 fails.
+  - System displays an authentication error message.
+  - User remains on the Login page.
+  br: BR-Login-06
+- id: A2
+  title: Missing Required Fields
+  steps:
+  - Step 4 fails.
+  - System displays a 'Required fields missing' message.
+  br: BR-Login-02
+- id: A3
+  title: Invalid Email Format
+  steps:
+  - Step 5 fails.
+  - System displays an 'Invalid email format' message.
+  br: BR-Login-03
 exception_flows:
-  - id: "E1"
-    title: "Account Locked or Disabled"
-    steps:
-      - "Step 8 fails."
-      - "System displays a specific error message."
-      - "User remains on the Login page."
-    br: "BR-Login-13"
-
-  - id: "E2"
-    title: "Too Many Failed Attempts"
-    steps:
-      - "System detects repeated failed logins."
-      - "System temporarily locks the account."
-      - "System displays a lockout message."
-    br: "BR-Login-14"
-
-  - id: "E3"
-    title: "System Error During Authentication"
-    steps:
-      - "Step 6 or 7 fails due to backend or database issue."
-      - "System displays a generic error message."
-      - "User remains on the Login page."
-    br: "BR-Login-20"
-
+- id: E1
+  title: Account Locked or Disabled
+  steps:
+  - Step 8 fails.
+  - System displays a specific error message.
+  - User remains on the Login page.
+  br: BR-Login-13
+- id: E2
+  title: Too Many Failed Attempts
+  steps:
+  - System detects repeated failed logins.
+  - System temporarily locks the account.
+  - System displays a lockout message.
+  br: BR-Login-14
+- id: E3
+  title: System Error During Authentication
+  steps:
+  - Step 6 or 7 fails due to backend or database issue.
+  - System displays a generic error message.
+  - User remains on the Login page.
+  br: BR-Login-20
 non_functional:
-  - "Security: All credentials must be transmitted over HTTPS. (BR-Login-15)"
-  - "Performance: Authentication must complete quickly."
-  - "Accessibility: Login form must support keyboard navigation and screen readers. (SRS-A11Y-01)"
-  - "Usability: Error messages must be clear and actionable."
-  - "Analytics: Login attempts (success/failure) must be logged."
-
+- 'Security: All credentials must be transmitted over HTTPS. (BR-Login-15)'
+- 'Performance: Authentication must complete quickly.'
+- 'Accessibility: Login form must support keyboard navigation and screen readers.
+  (SRS-A11Y-01)'
+- 'Usability: Error messages must be clear and actionable.'
+- 'Analytics: Login attempts (success/failure) must be logged.'
 related_ui:
-  - "UIS-LOGIN-01 — Login Page"
-  - "UIS-GLOBAL-HEADER-01"
-  - "UIS-GLOBAL-FOOTER-01"
-
+- "UIS-LOGIN-01 \u2014 Login Page"
+- UIS-GLOBAL-HEADER-01
+- UIS-GLOBAL-FOOTER-01
 related_diagrams: []
