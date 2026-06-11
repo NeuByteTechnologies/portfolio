@@ -1,72 +1,72 @@
 <section>
   <!-- Portfolio Overview -->
-  <h1>{{ site.data.["fitness-portfolio"].portfolio_overview.title}}</h1>
- {% for paragraph in  site.data.["fitness-portfolio"].portfolio_overview.paragraphs %}
+  <h1>{{ site.data["fitness-portfolio"].portfolio_overview.title}}</h1>
+ {% for paragraph in  site.data["fitness-portfolio"].portfolio_overview.paragraphs %}
     <p>{{ paragraph }}</p>
   {% endfor %}
 <!-- Project Summary -->
-  <h1>{{  site.data.["fitness-portfolio"].project_summary.title }}</h1>
-  {% for paragraph in  site.data.["fitness-portfolio"].project_summary.paragraphs %}
+  <h1>{{  site.data["fitness-portfolio"].project_summary.title }}</h1>
+  {% for paragraph in  site.data["fitness-portfolio"].project_summary.paragraphs %}
     <p>{{ paragraph }}</p>
   {% endfor %}
 
   <ul>
-    {% for item in  site.data.["fitness-portfolio"].project_summary.bullet_points %}
+    {% for item in  site.data["fitness-portfolio"].project_summary.bullet_points %}
       <li>{{ item }}</li>
     {% endfor %}
   </ul>
 
   <!-- Why This Project -->
-  <h1>{{  site.data.["fitness-portfolio"].why_this_project.title }}</h1>
-  {% for paragraph in  site.data.["fitness-portfolio"].why_this_project.paragraphs %}
+  <h1>{{  site.data["fitness-portfolio"].why_this_project.title }}</h1>
+  {% for paragraph in  site.data["fitness-portfolio"].why_this_project.paragraphs %}
     <p>{{ paragraph }}</p>
   {% endfor %}
 
   <ul>
-    {% for item in  site.data.["fitness-portfolio"].why_this_project.bullet_points %}
+    {% for item in  site.data["fitness-portfolio"].why_this_project.bullet_points %}
       <li>{{ item }}</li>
     {% endfor %}
   </ul>
 
-  <p>{{  site.data.["fitness-portfolio"].why_this_project.closing }}</p>
+  <p>{{  site.data["fitness-portfolio"].why_this_project.closing }}</p>
 
   <!-- Tech Stack Overview -->
-  <h1>{{  site.data.["fitness-portfolio"].tech_stack.title }}</h1>
+  <h1>{{  site.data["fitness-portfolio"].tech_stack.title }}</h1>
 
-  <b>{{  site.data.["fitness-portfolio"].tech_stack.backend.title }}</b>
+  <b>{{  site.data["fitness-portfolio"].tech_stack.backend.title }}</b>
   <ul>
-    {% for item in  site.data.["fitness-portfolio"].tech_stack.backend.items %}
+    {% for item in  site.data["fitness-portfolio"].tech_stack.backend.items %}
       <li>{{ item }}</li>
     {% endfor %}
   </ul>
 
-  <b>{{  site.data.["fitness-portfolio"].tech_stack.frontend.title }}</b>
+  <b>{{  site.data["fitness-portfolio"].tech_stack.frontend.title }}</b>
   <ul>
-    {% for item in  site.data.["fitness-portfolio"].tech_stack.frontend.items %}
+    {% for item in  site.data["fitness-portfolio"].tech_stack.frontend.items %}
       <li>{{ item }}</li>
     {% endfor %}
   </ul>
 
-  <b>{{  site.data.["fitness-portfolio"].tech_stack.reporting.title }}</b>
+  <b>{{  site.data["fitness-portfolio"].tech_stack.reporting.title }}</b>
   <ul>
-    {% for item in  site.data.["fitness-portfolio"].tech_stack.reporting.items %}
+    {% for item in  site.data["fitness-portfolio"].tech_stack.reporting.items %}
       <li>{{ item }}</li>
     {% endfor %}
   </ul>
 
-  <b>{{  site.data.["fitness-portfolio"].tech_stack.devops.title }}</b>
+  <b>{{  site.data["fitness-portfolio"].tech_stack.devops.title }}</b>
   <ul>
-    {% for item in  site.data.["fitness-portfolio"].tech_stack.devops.items %}
+    {% for item in  site.data["fitness-portfolio"].tech_stack.devops.items %}
       <li>{{ item }}</li>
     {% endfor %}
   </ul>
 
   <!-- Key Artifacts -->
-  <h1>{{  site.data.["fitness-portfolio"].artifacts.title }}</h1>
-  <p>{{  site.data.["fitness-portfolio"].artifacts.description }}</p>
+  <h1>{{  site.data["fitness-portfolio"].artifacts.title }}</h1>
+  <p>{{  site.data["fitness-portfolio"].artifacts.description }}</p>
 
   <ul>
-    {% for item in  site.data.["fitness-portfolio"].artifacts.categories %}
+    {% for item in  site.data["fitness-portfolio"].artifacts.categories %}
       <li>{{ item }}</li>
     {% endfor %}
   </ul>
@@ -74,8 +74,8 @@
   <br/>
 
   <!-- Artifact Samples -->
-{% for key in  site.data.["fitness-portfolio"].artifacts.samples %}
-  {% assign section =  site.data.["fitness-portfolio"].artifacts.samples[key] %}
+{% for key in  site.data["fitness-portfolio"].artifacts.samples %}
+  {% assign section =  site.data["fitness-portfolio"].artifacts.samples[key] %}
 
     <b>{{ section.title }}</b>
     <ul>
@@ -90,9 +90,9 @@
   {% endfor %}
 
   <!-- System Roles -->
-  <h1>{{  site.data.["fitness-portfolio"].system_roles.title }}</h1>
+  <h1>{{  site.data["fitness-portfolio"].system_roles.title }}</h1>
 
-  {% for role in  site.data.["fitness-portfolio"].system_roles.roles %}
+  {% for role in  site.data["fitness-portfolio"].system_roles.roles %}
     <h2>{{ role.name }}</h2>
     <b>Responsibilities include:</b>
     <ul>
@@ -103,17 +103,17 @@
   {% endfor %}
 
   <!-- Skills Demonstrated -->
-  <h1>{{  site.data.["fitness-portfolio"].skills_demonstrated.title }}</h1>
+  <h1>{{  site.data["fitness-portfolio"].skills_demonstrated.title }}</h1>
   <ul>
-    {% for skill in  site.data.["fitness-portfolio"].skills_demonstrated.items %}
+    {% for skill in  site.data["fitness-portfolio"].skills_demonstrated.items %}
       <li>{{ skill }}</li>
     {% endfor %}
   </ul>
 
   <!-- Project Roadmap -->
-  <h1>{{  site.data.["fitness-portfolio"].roadmap.title }}</h1>
+  <h1>{{  site.data["fitness-portfolio"].roadmap.title }}</h1>
   <ol>
-    {% for item in  site.data.["fitness-portfolio"].roadmap.items %}
+    {% for item in  site.data["fitness-portfolio"].roadmap.items %}
       <li>
         {% if item.done %}
            ☑  {{ item.text }}
@@ -123,5 +123,5 @@
       </li>
     {% endfor %}
   </ol>
-  
+
 </section>
