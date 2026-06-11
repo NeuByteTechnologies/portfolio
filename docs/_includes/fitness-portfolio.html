@@ -74,20 +74,19 @@
   <br/>
 
   <!-- Artifact Samples -->
-{% for key in  site.data["fitness-portfolio"].artifacts.samples %}
-  {% assign section =  site.data["fitness-portfolio"].artifacts.samples[key] %}
+{% for key, section in site.data["fitness-portfolio"].artifacts.samples %}
+  <b>{{ section.title }}</b>
+  <ul>
+    {% for link in section.links %}
+      <li>
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+          {{ link.text }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
 
-    <b>{{ section.title }}</b>
-    <ul>
-      {% for link in section.links %}
-        <li>
-          <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
-            {{ link.text }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
 
   <!-- System Roles -->
   <h1>{{  site.data["fitness-portfolio"].system_roles.title }}</h1>
