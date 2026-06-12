@@ -1,46 +1,10 @@
 <header class="nb-header">
-
   <nav class="nb-nav">
 
-    <!-- Logo / Home -->
-    <div class="nb-logo">
-      <a href="https://portfolio.neubyte.com"><img src="/assets/NeuByteWiteGrid.png" height="72px"/></a>
-    </div>
 
-    <!-- Global Navigation -->
-    <ul class="nb-global-menu">
+      {% include logo.html %}
 
-      {% assign global = site.data["global-menu"] %}
-
-      {% for item in global %}
-        {% assign local = site.data[item.local_menu] %}
-
-        <li class="nb-global-item">
-
-          <!-- Global Menu Link -->
-          <a href="{{ item.url }}" class="nb-global-link" title="{{ item.tooltip }}">
-            {{ item.name }}
-          </a>
-
-          <!-- Mega Menu (only if local menu exists) -->
-          {% if local %}
-            <div class="nb-mega-menu">
-              <ul class="nb-local-menu">
-                {% for entry in local %}
-                  <li class="nb-local-item">
-                    <a href="{{ entry.url }}" title="{{ entry.tooltip }}">
-                      {{ entry.name }}
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-          {% endif %}
-
-        </li>
-      {% endfor %}
-
-    </ul>
+    {% include global-menu.html %}
 
     <!-- Mobile Hamburger -->
     <div class="nb-hamburger" onclick="document.body.classList.toggle('nb-mobile-open')">
@@ -48,5 +12,4 @@
     </div>
 
   </nav>
-
 </header>
