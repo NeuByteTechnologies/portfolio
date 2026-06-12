@@ -2,7 +2,7 @@
     <!-- Global Navigation -->
     <ul class="nb-global-menu">
 
-      {% assign global = site.data["global-menu"] %}
+      {% assign global = site.data.global["global-menu"] %}
 
       {% for item in global %}
         {% assign local = site.data[item.local_menu] %}
