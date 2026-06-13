@@ -1,0 +1,30 @@
+- id: portfolio
+  name: Portfolio
+  url: https://portfolio.neubyte.com
+  tooltip: The portfolio of documentation including BRD, FS, Use Cases, and more.
+  local_menu: local-menu
+- id: architecture
+  name: Architecture
+  url: https://architecture.neubyte.com
+  tooltip: Architectural documentation describing system and solution design.
+  local_menu: null
+- id: standards
+  name: Standards
+  url: https://standards.neubyte.com
+  tooltip: Standards used across the NeuByte ecosystem.
+  local_menu: null
+- id: fitness-api
+  name: Fitness API
+  url: https://github.com/NeuByteTechnologies/fitness-api
+  tooltip: Source code for the Fitness API backend.
+  local_menu: null
+- id: fitness-web
+  name: Fitness Web
+  url: https://github.com/NeuByteTechnologies/fitness-web
+  tooltip: Frontend web application for the Fitness platform.
+  local_menu: null
+- id: data-engineering
+  name: Data Engineering
+  url: https://github.com/NeuByteTechnologies/data-engineering
+  tooltip: Data pipelines, ETL workflows, and engineering utilities.
+  local_menu: null
