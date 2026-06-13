@@ -1,5 +1,3 @@
-source: docs
-
 theme: minima
 plugins:
   - jekyll-include-cache
@@ -7,5 +5,9 @@ plugins:
 minima:
   skin: classic
   include_css:
-    - assets/custom.css  
-    
+    - assets/custom.css
+
+safe: false
+
+include:
+  - _includes/global
