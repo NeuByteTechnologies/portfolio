@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="https://cdn.neubyte.com/assets/img/favicon.ico?v=2">
+<link rel="apple-touch-icon" href="https://cdn.neubyte.com/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="https://cdn.neubyte.com/assets/json/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.neubyte.com/assets/css/neubyte.css">
+</head>
+<body>
+<header class="nb-header">
+  <nav class="nb-nav">
+
+
+          <!-- Logo / Home -->
+    <div class="nb-logo">
+      <a href="https://portfolio.neubyte.com"><img src="/assets/NeuByteWiteGrid.png" height="72px"/></a>
+    </div>
+
+
+    
+    <!-- Global Navigation -->
+    <ul class="nb-global-menu">
+
+      
+
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://portfolio.neubyte.com" class="nb-global-link" title="The portfolio of documentation including BRD, FS, Use Cases, and more.">
+            Portfolio
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+            <div class="nb-mega-menu">
+              <ul class="nb-local-menu">
+                
+                  <li class="nb-local-item">
+                    <a href="https://portfolio.neubyte.com/resume.html" title="Professional resume with experience, skills, and project history.">
+                      Resume
+                    </a>
+                  </li>
+                
+                  <li class="nb-local-item">
+                    <a href="https://portfolio.neubyte.com/portfolio.html" title="All system use cases for the NeuByte platform.">
+                      Portfolio
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://architecture.neubyte.com" class="nb-global-link" title="Architectural documentation describing system and solution design.">
+            Architecture
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://standards.neubyte.com" class="nb-global-link" title="Standards used across the NeuByte ecosystem.">
+            Standards
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://github.com/NeuByteTechnologies/fitness-api" class="nb-global-link" title="Source code for the Fitness API backend.">
+            Fitness API
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://github.com/NeuByteTechnologies/fitness-web" class="nb-global-link" title="Frontend web application for the Fitness platform.">
+            Fitness Web
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://github.com/NeuByteTechnologies/data-engineering" class="nb-global-link" title="Data pipelines, ETL workflows, and engineering utilities.">
+            Data Engineering
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+
+    </ul>
+
+
+    <!-- Mobile Hamburger -->
+    <div class="nb-hamburger" onclick="document.body.classList.toggle('nb-mobile-open')">
+      ☰
+    </div>
+
+  </nav>
+</header>
+
+  <main class="content">
+    
+
+<section>
+
+  <!-- Title -->
+  <h1>FS-ACCT — Account Management Functional Specification</h1>
+  <p><strong>Module:</strong> Account</p>
+
+  <!-- Purpose -->
+  <h2>Purpose</h2>
+  <p>The Account module defines all functionality required for users to create, manage, and maintain their NeuByte account. This includes account creation, authentication prerequisites, profile initialization, validation rules, and system behaviors related to onboarding. This module is foundational and interacts with Authentication, User Profile, Notifications, and Analytics.</p>
+
+  <!-- Scope -->
+  <h2>Scope</h2>
+
+  
+    <p><strong>This FS covers:</strong></p>
+    <ul>
+      
+        <li>Account creation</li>
+      
+        <li>Required fields and validation</li>
+      
+        <li>Email verification trigger</li>
+      
+        <li>Initial profile setup</li>
+      
+        <li>Error handling</li>
+      
+        <li>Accessibility requirements</li>
+      
+        <li>Security and data integrity rules</li>
+      
+    </ul>
+  
+
+  
+    <p><strong>This FS does not include:</strong></p>
+    <ul>
+      
+        <li>Login</li>
+      
+        <li>Logout</li>
+      
+        <li>Session management (covered in Authentication FS)</li>
+      
+    </ul>
+  
+
+  <!-- References -->
+  
+    <h2>References</h2>
+    <ul>
+      
+        <li>Business Requirements: BR-ACCT-01 to BR-ACCT-12</li>
+      
+        <li>Use Cases: UC-ACCT-01 (Create Account)</li>
+      
+        <li>Use Cases: UC-ACCT-02 (Resend Verification)</li>
+      
+        <li>Use Cases: UC-ACCT-03 (Account Validation Errors)</li>
+      
+        <li>RTM: Account Module Rows</li>
+      
+        <li>FS-AUTH (Authentication)</li>
+      
+        <li>FS-PROFILE (User Profile)</li>
+      
+    </ul>
+  
+
+  <!-- Functional Requirements -->
+  <h2>Functional Requirements</h2>
+
+  
+    <h3>FR-ACCT-01 — Display Create Account Form</h3>
+
+    
+      <p><strong>Description:</strong><br/>The system shall display the Create Account form with all required fields.</p>
+    
+
+    
+      <p><strong>Fields:</strong></p>
+      <ul>
+        
+          <li>First Name</li>
+        
+          <li>Last Name</li>
+        
+          <li>Email</li>
+        
+          <li>Password</li>
+        
+          <li>Confirm Password</li>
+        
+          <li>Optional: Referral Code</li>
+        
+      </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+      <p><strong>Maps to:</strong> BR-ACCT-01, UC-ACCT-01</p>
+    
+
+  
+    <h3>FR-ACCT-02 — Validate Required Fields</h3>
+
+    
+      <p><strong>Description:</strong><br/>All required fields must be validated before submission.</p>
+    
+
+    
+
+    
+      <p><strong>Rules:</strong></p>
+      <ul>
+        
+          <li>First/Last Name: alphabetic, 2-50 chars</li>
+        
+          <li>Email: valid email format</li>
+        
+          <li>Password: must meet password policy (see FR-ACCT-03)</li>
+        
+          <li>Confirm Password: must match Password</li>
+        
+      </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+      <p><strong>Maps to:</strong> BR-ACCT-02, UC-ACCT-01</p>
+    
+
+  
+    <h3>FR-ACCT-03 — Enforce Password Policy</h3>
+
+    
+      <p><strong>Description:</strong><br/>The system shall enforce the NeuByte password policy.</p>
+    
+
+    
+
+    
+      <p><strong>Rules:</strong></p>
+      <ul>
+        
+          <li>Minimum 8 characters</li>
+        
+          <li>At least one uppercase letter</li>
+        
+          <li>At least one number</li>
+        
+          <li>At least one special character</li>
+        
+          <li>No spaces</li>
+        
+      </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+      <p><strong>Maps to:</strong> BR-ACCT-03, UC-ACCT-01</p>
+    
+
+  
+    <h3>FR-ACCT-04 — Prevent Duplicate Accounts</h3>
+
+    
+      <p><strong>Description:</strong><br/>The system shall prevent account creation using an email address already in use.</p>
+    
+
+    
+
+    
+
+    
+      <p><strong>Behavior:</strong></p>
+      <ul>
+        
+          <li>Display error message</li>
+        
+          <li>Provide link to Login</li>
+        
+          <li>Provide link to Reset Password</li>
+        
+      </ul>
+    
+
+    
+
+    
+
+    
+
+    
+      <p><strong>Maps to:</strong> BR-ACCT-04, UC-ACCT-03</p>
+    
+
+  
+    <h3>FR-ACCT-05 — Create Account Record</h3>
+
+    
+      <p><strong>Description:</strong><br/>Upon successful validation, the system shall create a new user account record.</p>
+    
+
+    
+
+    
+
+    
+
+    
+      <p><strong>Details:</strong></p>
+      <ul>
+        
+          <li>Store hashed password</li>
+        
+          <li>Store email in lowercase</li>
+        
+          <li>Set account status = Pending Verification</li>
+        
+          <li>Generate verification token</li>
+        
+      </ul>
+    
+
+    
+
+    
+
+    
+      <p><strong>Maps to:</strong> BR-ACCT-05, UC-ACCT-01</p>
+    
+
+  
+    <h3>FR-ACCT-06 — Trigger Email Verification</h3>
+
+    
+      <p><strong>Description:</strong><br/>The system shall send a verification email after account creation.</p>
+    
+
+    
+
+    
+
+    
+
+    
+      <p><strong>Details:</strong></p>
+      <ul>
+        
+          <li>Email includes verification link with token</li>
+        
+          <li>Token expires in 24 hours</li>
+        
+          <li>Email is logged in Notification History</li>
+        
+      </ul>
+    
+
+    
+
+    
+
+    
+      <p><strong>Maps to:</strong> BR-ACCT-06, UC-ACCT-01</p>
+    
+
+  
+    <h3>FR-ACCT-07 — Resend Verification Email</h3>
+
+    
+      <p><strong>Description:</strong><br/>Users may request a new verification email.</p>
+    
+
+    
+
+    
+      <p><strong>Rules:</strong></p>
+      <ul>
+        
+          <li>Limit: 3 resend attempts per hour</li>
+        
+          <li>New token invalidates previous token</li>
+        
+          <li>Display confirmation message</li>
+        
+      </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+      <p><strong>Maps to:</strong> BR-ACCT-07, UC-ACCT-02</p>
+    
+
+  
+    <h3>FR-ACCT-08 — Handle Expired or Invalid Tokens</h3>
+
+    
+      <p><strong>Description:</strong><br/>The system shall detect invalid or expired verification tokens.</p>
+    
+
+    
+
+    
+
+    
+      <p><strong>Behavior:</strong></p>
+      <ul>
+        
+          <li>Display error message</li>
+        
+          <li>Provide Resend Verification Email option</li>
+        
+          <li>Log event for security monitoring</li>
+        
+      </ul>
+    
+
+    
+
+    
+
+    
+
+    
+      <p><strong>Maps to:</strong> BR-ACCT-08, UC-ACCT-03</p>
+    
+
+  
+    <h3>FR-ACCT-09 — Complete Verification</h3>
+
+    
+      <p><strong>Description:</strong><br/>When a valid token is used, the system shall activate the user account.</p>
+    
+
+    
+
+    
+
+    
+
+    
+      <p><strong>Details:</strong></p>
+      <ul>
+        
+          <li>Set account status = Active</li>
+        
+          <li>Redirect user to onboarding</li>
+        
+          <li>Trigger welcome notification</li>
+        
+      </ul>
+    
+
+    
+
+    
+
+    
+      <p><strong>Maps to:</strong> BR-ACCT-09, UC-ACCT-01</p>
+    
+
+  
+    <h3>FR-ACCT-10 — Initialize User Profile</h3>
+
+    
+      <p><strong>Description:</strong><br/>Upon account activation, the system shall create a default User Profile record.</p>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+      <p><strong>Defaults:</strong></p>
+      <ul>
+        
+          <li>Units: US Standard</li>
+        
+          <li>Notifications: Enabled</li>
+        
+          <li>Empty program list</li>
+        
+          <li>Empty weight history</li>
+        
+      </ul>
+    
+
+    
+
+    
+      <p><strong>Maps to:</strong> BR-ACCT-10, UC-ACCT-01</p>
+    
+
+  
+    <h3>FR-ACCT-11 — Accessibility Requirements</h3>
+
+    
+      <p><strong>Description:</strong><br/>The Create Account flow must comply with Accessibility FS.</p>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+      <p><strong>Requirements:</strong></p>
+      <ul>
+        
+          <li>All fields have labels</li>
+        
+          <li>Errors announced via ARIA live region</li>
+        
+          <li>Keyboard-only navigation supported</li>
+        
+          <li>Focus moves to first error on submit</li>
+        
+      </ul>
+    
+
+    
+      <p><strong>Maps to:</strong> BR-ACCT-11, UC-A11Y-01 to UC-A11Y-10</p>
+    
+
+  
+    <h3>FR-ACCT-12 — Security Requirements</h3>
+
+    
+      <p><strong>Description:</strong><br/>The Create Account process must follow security best practices.</p>
+    
+
+    
+
+    
+      <p><strong>Rules:</strong></p>
+      <ul>
+        
+          <li>Passwords hashed using PBKDF2 or bcrypt</li>
+        
+          <li>Tokens must be single-use</li>
+        
+          <li>Rate limiting on account creation attempts</li>
+        
+          <li>Log all suspicious activity</li>
+        
+      </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+      <p><strong>Maps to:</strong> BR-ACCT-12, UC-ACCT-03</p>
+    
+
+  
+
+  <!-- Non-Functional Requirements -->
+  
+    <h2>Non‑Functional Requirements</h2>
+    <ul>
+      
+        <li>Must complete account creation in under 3 seconds</li>
+      
+        <li>Must support high-latency networks</li>
+      
+        <li>Must support mobile and desktop</li>
+      
+        <li>Must not expose internal error details</li>
+      
+        <li>Must log all account creation events</li>
+      
+    </ul>
+  
+
+  <!-- Dependencies -->
+  
+    <h2>Dependencies</h2>
+    <ul>
+      
+        <li>Notification Service</li>
+      
+        <li>Authentication Service</li>
+      
+        <li>User Profile Service</li>
+      
+        <li>Email Provider</li>
+      
+        <li>Security Token Generator</li>
+      
+    </ul>
+  
+
+  <!-- Acceptance Criteria -->
+  
+    <h2>Acceptance Criteria</h2>
+    <ul>
+      
+        <li>All required fields validated</li>
+      
+        <li>Duplicate emails blocked</li>
+      
+        <li>Password policy enforced</li>
+      
+        <li>Verification email sent</li>
+      
+        <li>Token validation works</li>
+      
+        <li>Account activates successfully</li>
+      
+        <li>Profile initializes correctly</li>
+      
+        <li>Errors are accessible and announced</li>
+      
+    </ul>
+  
+
+  <!-- Open Questions -->
+  
+    <h2>Open Questions</h2>
+    <ul>
+      
+        <li>Should we allow social login in future phases</li>
+      
+        <li>Should we enforce email domain restrictions</li>
+      
+        <li>Should we support phone-based verification later</li>
+      
+    </ul>
+  
+
+</section>
+
+
+  </main>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p class="legal">© NeuByte Technologies.</p>
+    <div class="social-icons">
+      <a href="https://github.com/NeuByteTechnologies/portfolio" class="icon github" target="_blank" rel="noopener noreferrer">
+       <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+          0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+          -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
+          -3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65
+          7.65 0 0 1 8 3.47c.68.003 1.36.092 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08
+          2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+          0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/gordonneuls" class="icon linkedin" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+          <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341a53.79 53.79 0 1 1 
+          53.79-53.79 53.8 53.8 0 0 1-53.8 53.8zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2
+          -48.3 0-55.7 37.7-55.7 76.7V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.7-48.3 
+          87.9-48.3 94 0 111.3 61.9 111.3 142.3z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

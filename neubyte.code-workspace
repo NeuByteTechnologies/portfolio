@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../architecture"
+		},
+		{
+			"path": "../../neubyte-utils"
+		},
+		{
+			"path": "../../resume"
+		},
+		{
+			"path": "../../standards"
+		}
+	],
+    "settings": {}
+}

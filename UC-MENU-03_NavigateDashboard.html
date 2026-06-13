@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="https://cdn.neubyte.com/assets/img/favicon.ico?v=2">
+<link rel="apple-touch-icon" href="https://cdn.neubyte.com/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="https://cdn.neubyte.com/assets/json/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.neubyte.com/assets/css/neubyte.css">
+</head>
+<body>
+<header class="nb-header">
+  <nav class="nb-nav">
+
+
+          <!-- Logo / Home -->
+    <div class="nb-logo">
+      <a href="https://portfolio.neubyte.com"><img src="/assets/NeuByteWiteGrid.png" height="72px"/></a>
+    </div>
+
+
+    
+    <!-- Global Navigation -->
+    <ul class="nb-global-menu">
+
+      
+
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://portfolio.neubyte.com" class="nb-global-link" title="The portfolio of documentation including BRD, FS, Use Cases, and more.">
+            Portfolio
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+            <div class="nb-mega-menu">
+              <ul class="nb-local-menu">
+                
+                  <li class="nb-local-item">
+                    <a href="https://portfolio.neubyte.com/resume.html" title="Professional resume with experience, skills, and project history.">
+                      Resume
+                    </a>
+                  </li>
+                
+                  <li class="nb-local-item">
+                    <a href="https://portfolio.neubyte.com/portfolio.html" title="All system use cases for the NeuByte platform.">
+                      Portfolio
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://architecture.neubyte.com" class="nb-global-link" title="Architectural documentation describing system and solution design.">
+            Architecture
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://standards.neubyte.com" class="nb-global-link" title="Standards used across the NeuByte ecosystem.">
+            Standards
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://github.com/NeuByteTechnologies/fitness-api" class="nb-global-link" title="Source code for the Fitness API backend.">
+            Fitness API
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://github.com/NeuByteTechnologies/fitness-web" class="nb-global-link" title="Frontend web application for the Fitness platform.">
+            Fitness Web
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://github.com/NeuByteTechnologies/data-engineering" class="nb-global-link" title="Data pipelines, ETL workflows, and engineering utilities.">
+            Data Engineering
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+
+    </ul>
+
+
+    <!-- Mobile Hamburger -->
+    <div class="nb-hamburger" onclick="document.body.classList.toggle('nb-mobile-open')">
+      ☰
+    </div>
+
+  </nav>
+</header>
+
+  <main class="content">
+    
+
+<section>
+
+  <!-- Title -->
+  <h1>UC-MENU-03 — Navigate to Dashboard</h1>
+
+  <!-- Metadata -->
+  <p><strong>Use Case ID:</strong> UC-MENU-03</p>
+  <p><strong>Use Case Name:</strong> Navigate to Dashboard</p>
+  <p><strong>Module:</strong> Menu / Global Navigation</p>
+
+  <!-- Purpose -->
+  <h2>Purpose</h2>
+  <p>To define how the user navigates from the hamburger menu to the Dashboard. This use case covers the interaction, system routing, menu behavior, and accessibility requirements when the user selects Dashboard from the global navigation menu.</p>
+
+  <!-- Primary Actor -->
+  <h2>Primary Actor</h2>
+  <table class="uc-table">
+    <tr>
+      <th>Actor</th>
+      <th>Description</th>
+    </tr>
+    
+    <tr>
+      <td>App User</td>
+      <td>Any authenticated or unauthenticated user interacting with a major feature.</td>
+    </tr>
+    
+  </table>
+
+  <!-- Stakeholders -->
+  <h2>Stakeholders & Interests</h2>
+  <table class="uc-table">
+    <tr>
+      <th>Stakeholder</th>
+      <th>Interest</th>
+    </tr>
+    
+    <tr>
+      <td>User</td>
+      <td>Wants quick, predictable access to the Dashboard from anywhere in the app.</td>
+    </tr>
+    
+    <tr>
+      <td>System</td>
+      <td>Must route the user correctly and close the menu.</td>
+    </tr>
+    
+    <tr>
+      <td>Product Owner</td>
+      <td>Wants intuitive navigation and consistent behavior.</td>
+    </tr>
+    
+    <tr>
+      <td>UX/UI Team</td>
+      <td>Requires smooth transitions and accessibility compliance.</td>
+    </tr>
+    
+    <tr>
+      <td>Security Team</td>
+      <td>Ensures only authenticated users can access the Dashboard.</td>
+    </tr>
+    
+  </table>
+
+  <!-- Preconditions -->
+  <h2>Preconditions</h2>
+  <ul>
+    
+      <li>User is authenticated.</li>
+    
+      <li>Menu panel is open.</li>
+    
+      <li>Dashboard menu item is visible and enabled.</li>
+    
+  </ul>
+
+  <!-- Postconditions -->
+  <h2>Postconditions</h2>
+
+  <h3>Success</h3>
+  <ul>
+    
+      <li>Menu closes.</li>
+    
+      <li>User is routed to the Dashboard.</li>
+    
+      <li>Dashboard content loads successfully.</li>
+    
+      <li>Focus is placed on the top of the Dashboard screen for accessibility.</li>
+    
+  </ul>
+
+  <h3>Failure</h3>
+  <ul>
+    
+      <li>User remains on the current screen.</li>
+    
+      <li>System may display an error message if routing fails.</li>
+    
+  </ul>
+
+  <!-- Trigger -->
+  <h2>Trigger</h2>
+  <p>User taps or selects the Dashboard menu item.</p>
+
+  <!-- Main Success Scenario -->
+  <h2>Main Success Scenario (Basic Flow)</h2>
+  <ol>
+    
+      <li>
+        User selects Dashboard from the menu.
+        
+          <span class="br-ref">(BR-MENU-04)</span>
+        
+      </li>
+    
+      <li>
+        System receives the navigation request.
+        
+          <span class="br-ref">(FS-MENU-NAV-01)</span>
+        
+      </li>
+    
+      <li>
+        System closes the menu panel.
+        
+          <span class="br-ref">(Triggers UC-MENU-02 Close Menu)</span>
+        
+      </li>
+    
+      <li>
+        System routes the user to the Dashboard screen.
+        
+          <span class="br-ref">(BR-DASH-01)</span>
+        
+      </li>
+    
+      <li>
+        System loads Dashboard data (identity, program, weight, activity, notifications).
+        
+          <span class="br-ref">(BR-DASH-01 ? BR-DASH-15)</span>
+        
+      </li>
+    
+      <li>
+        System sets focus to the top of the Dashboard for accessibility.
+        
+          <span class="br-ref">(SRS-A11Y-01)</span>
+        
+      </li>
+    
+      <li>
+        User is now viewing the Dashboard.
+        
+      </li>
+    
+  </ol>
+
+  <!-- Alternate Flows -->
+  <h2>Alternate Flows</h2>
+  
+    <h3>A1 — User Selects Dashboard via Keyboard</h3>
+    <ul>
+      
+        <li>User navigates to the Dashboard menu item using Tab.</li>
+      
+        <li>User presses Enter or Space.</li>
+      
+        <li>System performs the same steps as the Basic Flow.</li>
+      
+    </ul>
+    
+  
+    <h3>A2 — Dashboard Already Displayed</h3>
+    <ul>
+      
+        <li>User selects Dashboard while already on the Dashboard screen.</li>
+      
+        <li>System still closes the menu.</li>
+      
+        <li>System refreshes Dashboard data (optional per BR-DASH-15).</li>
+      
+        <li>User remains on Dashboard.</li>
+      
+    </ul>
+    
+  
+
+  <!-- Exception Flows -->
+  <h2>Exception Flows</h2>
+  
+    <h3>E1 — Routing Failure</h3>
+    <ul>
+      
+        <li>System cannot navigate to the Dashboard due to a routing or network error.</li>
+      
+        <li>System displays a fallback message: 'Unable to load Dashboard. Please try again.'</li>
+      
+        <li>System logs the error.</li>
+      
+    </ul>
+    
+  
+    <h3>E2 — Dashboard Data Load Failure</h3>
+    <ul>
+      
+        <li>System navigates successfully but fails to load Dashboard data.</li>
+      
+        <li>System displays partial UI with error states or placeholders.</li>
+      
+        <li>System logs the failure.</li>
+      
+    </ul>
+    
+  
+
+  <!-- Non-Functional Requirements -->
+  <h2>Non‑Functional Requirements</h2>
+  <ul>
+    
+      <li>Performance: Dashboard must load within 1 second on modern devices.</li>
+    
+      <li>Accessibility: Menu item must be keyboard-navigable and screen-reader friendly.</li>
+    
+      <li>Responsiveness: Navigation must work consistently across mobile, tablet, and desktop.</li>
+    
+      <li>Consistency: Behavior must match all other menu navigation UCs.</li>
+    
+      <li>Security: Dashboard must only be accessible to authenticated users.</li>
+    
+  </ul>
+
+  <!-- Related UI Screens -->
+  <h2>Related UI Screens</h2>
+  <ul>
+    
+      <li>UIS-MENU-01 — Side Navigation Panel</li>
+    
+      <li>UIS-DASH-01 — Dashboard</li>
+    
+      <li>UIS-GLOBAL-HEADER-01</li>
+    
+      <li>UIS-GLOBAL-FOOTER-01</li>
+    
+  </ul>
+
+  <!-- Related Diagrams -->
+  
+    <h2>Related Diagrams</h2>
+    <ul>
+      
+    </ul>
+  
+
+</section>
+
+
+  </main>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p class="legal">© NeuByte Technologies.</p>
+    <div class="social-icons">
+      <a href="https://github.com/NeuByteTechnologies/portfolio" class="icon github" target="_blank" rel="noopener noreferrer">
+       <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+          0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+          -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
+          -3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65
+          7.65 0 0 1 8 3.47c.68.003 1.36.092 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08
+          2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+          0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/gordonneuls" class="icon linkedin" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+          <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341a53.79 53.79 0 1 1 
+          53.79-53.79 53.8 53.8 0 0 1-53.8 53.8zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2
+          -48.3 0-55.7 37.7-55.7 76.7V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.7-48.3 
+          87.9-48.3 94 0 111.3 61.9 111.3 142.3z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

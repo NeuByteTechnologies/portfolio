@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="https://cdn.neubyte.com/assets/img/favicon.ico?v=2">
+<link rel="apple-touch-icon" href="https://cdn.neubyte.com/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="https://cdn.neubyte.com/assets/json/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.neubyte.com/assets/css/neubyte.css">
+</head>
+<body>
+<header class="nb-header">
+  <nav class="nb-nav">
+
+
+          <!-- Logo / Home -->
+    <div class="nb-logo">
+      <a href="https://portfolio.neubyte.com"><img src="/assets/NeuByteWiteGrid.png" height="72px"/></a>
+    </div>
+
+
+    
+    <!-- Global Navigation -->
+    <ul class="nb-global-menu">
+
+      
+
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://portfolio.neubyte.com" class="nb-global-link" title="The portfolio of documentation including BRD, FS, Use Cases, and more.">
+            Portfolio
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+            <div class="nb-mega-menu">
+              <ul class="nb-local-menu">
+                
+                  <li class="nb-local-item">
+                    <a href="https://portfolio.neubyte.com/resume.html" title="Professional resume with experience, skills, and project history.">
+                      Resume
+                    </a>
+                  </li>
+                
+                  <li class="nb-local-item">
+                    <a href="https://portfolio.neubyte.com/portfolio.html" title="All system use cases for the NeuByte platform.">
+                      Portfolio
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://architecture.neubyte.com" class="nb-global-link" title="Architectural documentation describing system and solution design.">
+            Architecture
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://standards.neubyte.com" class="nb-global-link" title="Standards used across the NeuByte ecosystem.">
+            Standards
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://github.com/NeuByteTechnologies/fitness-api" class="nb-global-link" title="Source code for the Fitness API backend.">
+            Fitness API
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://github.com/NeuByteTechnologies/fitness-web" class="nb-global-link" title="Frontend web application for the Fitness platform.">
+            Fitness Web
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+        
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="https://github.com/NeuByteTechnologies/data-engineering" class="nb-global-link" title="Data pipelines, ETL workflows, and engineering utilities.">
+            Data Engineering
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          
+
+        </li>
+      
+
+    </ul>
+
+
+    <!-- Mobile Hamburger -->
+    <div class="nb-hamburger" onclick="document.body.classList.toggle('nb-mobile-open')">
+      ☰
+    </div>
+
+  </nav>
+</header>
+
+  <main class="content">
+    
+
+<section>
+
+  <!-- Title -->
+  <h1>UIS-LW-01 — Log Workout</h1>
+  
+    <p><strong>Section:</strong> 6.11</p>
+  
+  
+    <p><strong>Module:</strong> Workout Logging</p>
+  
+
+  <!-- Purpose -->
+  
+    <h2>Purpose</h2>
+    <p>Allow the user to record the details of their completed workout for the current day, including sets, reps, weight, duration, distance, and rest periods as applicable. This enables accurate tracking of workout performance and progress over time.</p>
+  
+
+  <!-- Layout -->
+  
+    <h2>Screen Layout</h2>
+
+    
+      <h3>Header</h3>
+      <p>Standard authenticated header.</p>
+      <ul>
+        
+          <li>NeuByte Logo (left)</li>
+        
+          <li>Notification Icon (right)</li>
+        
+          <li>Hamburger Menu (right)</li>
+        
+      </ul>
+
+      
+        <p><strong>Behavior:</strong></p>
+        <ul>
+          
+            <li>Header remains fixed at the top.</li>
+          
+            <li>Back navigation uses OS native gesture or back button.</li>
+          
+            <li>Title is not required (Workout Detail already provides context).</li>
+          
+        </ul>
+      
+    
+
+    
+      <h3>Body</h3>
+      <p>A vertically scrolling form that allows the user to log sets, reps, weight, duration, or other metrics for each exercise in the selected workout.</p>
+      <ul>
+        
+          <li>Workout Title (Week/Day + Name)</li>
+        
+          <li>Exercise List (scrollable)</li>
+        
+          <li>Workout Notes (optional text area)</li>
+        
+          <li>Save Workout Button (primary action)</li>
+        
+          <li>Cancel Button (secondary action)</li>
+        
+          <li>Inline Error Label (appears only when validation fails)</li>
+        
+      </ul>
+    
+
+    
+      <h3>Footer</h3>
+      <ul>
+        
+          <li>App Version</li>
+        
+          <li>Privacy Policy / Terms links</li>
+        
+          <li>Copyright</li>
+        
+      </ul>
+    
+  
+
+  <!-- Components -->
+  
+    <h2>Component Definitions</h2>
+
+    
+      
+      
+
+      <h3>Workout title</h3>
+
+      
+        <p>Workout title with program context.</p>
+      
+
+      
+        <p><strong>Rules:</strong></p>
+        <ul>
+          
+            <li>Bold, primary text.</li>
+          
+            <li>Includes program context (Week/Day).</li>
+          
+        </ul>
+      
+
+      
+
+      
+    
+      
+      
+
+      <h3>Exercise section</h3>
+
+      
+        <p>Exercise block containing name and set rows.</p>
+      
+
+      
+
+      
+        <p><strong>Includes:</strong></p>
+        <ul>
+          
+            <li>Exercise Name (bold)</li>
+          
+            <li>Set Rows</li>
+          
+        </ul>
+      
+
+      
+        <p><strong>Set Row Fields:</strong></p>
+        <ul>
+          
+            <li>Reps input (numeric)</li>
+          
+            <li>Weight input (numeric, optional)</li>
+          
+            <li>Duration input (if exercise is time based)</li>
+          
+            <li>RPE input (optional)</li>
+          
+        </ul>
+      
+    
+      
+      
+
+      <h3>Workout notes</h3>
+
+      
+        <p>Optional notes for the workout.</p>
+      
+
+      
+        <p><strong>Rules:</strong></p>
+        <ul>
+          
+            <li>Optional text area.</li>
+          
+            <li>Multi-line input.</li>
+          
+        </ul>
+      
+
+      
+
+      
+    
+      
+      
+
+      <h3>Save button</h3>
+
+      
+        <p>Primary action to save the workout.</p>
+      
+
+      
+
+      
+
+      
+    
+      
+      
+
+      <h3>Cancel button</h3>
+
+      
+        <p>Secondary action to discard changes.</p>
+      
+
+      
+
+      
+
+      
+    
+      
+      
+
+      <h3>Inline error label</h3>
+
+      
+        <p>Inline error messaging for invalid fields.</p>
+      
+
+      
+        <p><strong>Rules:</strong></p>
+        <ul>
+          
+            <li>Appears only when validation fails.</li>
+          
+            <li>Uses global error banner pattern (UIS‑ERR‑01).</li>
+          
+        </ul>
+      
+
+      
+
+      
+    
+  
+
+  <!-- Interaction Rules -->
+  
+    <h2>Interaction Rules & Behaviors</h2>
+
+    
+      <h3>Initial Load</h3>
+      <ul>
+        
+          <li>App fetches the workout structure for the selected day.</li>
+        
+          <li>Exercises, expected number of sets, and exercise type are retrieved.</li>
+        
+          <li>UI displays skeleton loaders until data is returned.</li>
+        
+          <li>Each exercise loads in a collapsed state by default.</li>
+        
+          <li>Pre‑populate exactly the number of sets defined by the program.</li>
+        
+          <li>No additional sets may be added or removed.</li>
+        
+          <li>Set rows remain hidden until the user expands the exercise.</li>
+        
+      </ul>
+    
+
+    
+      <h3>Exercise Expansion / Collapse</h3>
+
+      <p><strong>Collapsed State:</strong></p>
+      <ul>
+        
+          <li>Shows: Exercise Name, chevron icon, and summary (e.g., '3 sets').</li>
+        
+          <li>Hides: all set rows and input fields.</li>
+        
+      </ul>
+
+      <p><strong>Expanded State:</strong></p>
+      <ul>
+        
+          <li>Shows all program‑defined set rows.</li>
+        
+          <li>Shows appropriate input fields for each set.</li>
+        
+      </ul>
+
+      
+        <p><strong>Rules:</strong></p>
+        <ul>
+          
+            <li>Tapping the exercise header toggles between expanded and collapsed.</li>
+          
+            <li>Multiple exercises may be expanded simultaneously.</li>
+          
+        </ul>
+      
+    
+
+    
+      <h3>Dynamic Field Rendering</h3>
+      <p>Only fields relevant to the exercise type are rendered. Hidden fields do not appear in the DOM and are not validated.</p>
+
+      
+        
+        
+        <h4>Strength bodyweight</h4>
+
+        <p><strong>Show:</strong></p>
+        <ul>
+          
+            <li>Reps</li>
+          
+            <li>Weight</li>
+          
+        </ul>
+
+        <p><strong>Hide:</strong></p>
+        <ul>
+          
+            <li>Duration</li>
+          
+            <li>Distance</li>
+          
+        </ul>
+      
+        
+        
+        <h4>Timed</h4>
+
+        <p><strong>Show:</strong></p>
+        <ul>
+          
+            <li>Duration</li>
+          
+        </ul>
+
+        <p><strong>Hide:</strong></p>
+        <ul>
+          
+            <li>Reps</li>
+          
+            <li>Weight</li>
+          
+        </ul>
+      
+        
+        
+        <h4>Distance</h4>
+
+        <p><strong>Show:</strong></p>
+        <ul>
+          
+            <li>Distance</li>
+          
+            <li>Duration</li>
+          
+        </ul>
+
+        <p><strong>Hide:</strong></p>
+        <ul>
+          
+            <li>Reps</li>
+          
+            <li>Weight</li>
+          
+        </ul>
+      
+    
+
+    
+      <h3>Set Row Behavior</h3>
+      <p>Program‑defined, fixed set rows.</p>
+      <ul>
+        
+          <li>Number of set rows is fixed based on the program.</li>
+        
+          <li>User cannot add sets.</li>
+        
+          <li>User cannot remove sets.</li>
+        
+          <li>User cannot change the number of sets.</li>
+        
+      </ul>
+
+      <p><strong>Each set row includes:</strong></p>
+      <ul>
+        
+          <li>Set number (1, 2, 3…)</li>
+        
+          <li>Relevant input fields (based on exercise type).</li>
+        
+      </ul>
+    
+  
+
+  <!-- Validation -->
+  
+    <h2>Validation Rules</h2>
+
+    <p><strong>Validation occurs:</strong></p>
+    <ul>
+      
+        <li>On blur (field loses focus).</li>
+      
+        <li>On Save Workout button tap.</li>
+      
+    </ul>
+
+    
+      
+      
+
+      
+    
+      
+      
+
+      
+        <h3>Strength bodyweight</h3>
+        <ul>
+          
+            <li>Reps > 0.</li>
+          
+            <li>Weight ≥ 0 (if applicable).</li>
+          
+        </ul>
+      
+    
+      
+      
+
+      
+        <h3>Timed</h3>
+        <ul>
+          
+            <li>Duration > 0 seconds.</li>
+          
+        </ul>
+      
+    
+      
+      
+
+      
+        <h3>Distance</h3>
+        <ul>
+          
+            <li>Distance > 0.</li>
+          
+            <li>Duration > 0 (if required).</li>
+          
+        </ul>
+      
+    
+      
+      
+
+      
+    
+      
+      
+
+      
+    
+      
+      
+
+      
+        <h3>Global error banner</h3>
+        <ul>
+          
+            <li>Displayed only when save operation fails (network/server error).</li>
+          
+            <li>Displayed when workout structure cannot be loaded.</li>
+          
+            <li>Uses global pattern UIS‑ERR‑01.</li>
+          
+        </ul>
+      
+    
+
+    
+      <h3>General Validation</h3>
+      <ul>
+        
+          <li>All program‑defined sets must have valid entries.</li>
+        
+          <li>Empty sets are not allowed because the program requires them.</li>
+        
+      </ul>
+    
+
+    
+      <h3>Inline Error Behavior</h3>
+      <ul>
+        
+          <li>Errors appear directly under the field.</li>
+        
+          <li>Errors clear automatically when the user corrects the value.</li>
+        
+      </ul>
+
+      <p><strong>Examples:</strong></p>
+      <ul>
+        
+          <li>Reps must be greater than zero.</li>
+        
+          <li>Duration is required for timed exercises.</li>
+        
+          <li>Weight cannot be negative.</li>
+        
+      </ul>
+    
+  
+
+  <!-- Save Behavior -->
+  
+    <h2>Save Button Behavior</h2>
+
+    <p><strong>Enabled when:</strong></p>
+    <ul>
+      
+        <li>All required fields across all sets are valid.</li>
+      
+        <li>No inline errors are present.</li>
+      
+    </ul>
+
+    <p><strong>On tap:</strong></p>
+    <ul>
+      
+        <li>Validate all fields.</li>
+      
+        <li>Submit workout log.</li>
+      
+        <li>On success: show toast 'Workout logged'.</li>
+      
+        <li>On success: navigate to Dashboard.</li>
+      
+        <li>On failure: show global error banner.</li>
+      
+    </ul>
+  
+
+  <!-- Cancel Behavior -->
+  
+    <h2>Cancel Behavior</h2>
+    <ul>
+      
+        <li>Discards all changes.</li>
+      
+        <li>Returns user to Workout Detail (UIS‑PROG‑01).</li>
+      
+        <li>No confirmation modal required.</li>
+      
+    </ul>
+  
+
+  <!-- Accessibility -->
+  
+    <h2>Accessibility Requirements</h2>
+    <ul>
+      
+        <li>All form fields keyboard navigable.</li>
+      
+        <li>Labels programmatically associated with inputs.</li>
+      
+        <li>Inline errors announced via ARIA live region.</li>
+      
+        <li>Minimum tap targets (44–48px).</li>
+      
+        <li>Screen reader announces: 'Log Workout screen' on load.</li>
+      
+    </ul>
+  
+
+  <!-- Related Requirements -->
+  
+    <h2>Related Requirements</h2>
+    <ul>
+      
+        <li>BR‑LW‑01 through BR‑LW‑15.</li>
+      
+        <li>BR‑DASH‑xx (Recent Activity integration).</li>
+      
+        <li>FS‑LW‑xx (Workout logging functional rules).</li>
+      
+    </ul>
+  
+
+  <!-- Wireframe -->
+  
+    <h2>Wireframe Reference</h2>
+    <ul>
+      
+        <li>UIS‑WP‑01</li>
+      
+    </ul>
+  
+
+  <!-- Design Screens -->
+   
+  <h2>User Interface Design</h2>
+
+  
+    <h3>Log Workout</h3>
+    
+      <img src="assets/LogWorkoutUI.png" alt="Log Workout" style="max-width:100%; border:1px solid #ccc; border-radius:6px;">
+    
+  
+
+
+
+  </main>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p class="legal">© NeuByte Technologies.</p>
+    <div class="social-icons">
+      <a href="https://github.com/NeuByteTechnologies/portfolio" class="icon github" target="_blank" rel="noopener noreferrer">
+       <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+          0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+          -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
+          -3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65
+          7.65 0 0 1 8 3.47c.68.003 1.36.092 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08
+          2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+          0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/gordonneuls" class="icon linkedin" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+          <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341a53.79 53.79 0 1 1 
+          53.79-53.79 53.8 53.8 0 0 1-53.8 53.8zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2
+          -48.3 0-55.7 37.7-55.7 76.7V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.7-48.3 
+          87.9-48.3 94 0 111.3 61.9 111.3 142.3z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
