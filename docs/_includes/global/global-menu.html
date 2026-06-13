@@ -1,0 +1,35 @@
+
+    <!-- Global Navigation -->
+    <ul class="nb-global-menu">
+
+      {% assign global = site.data.global["global-menu"] %}
+
+      {% for item in global %}
+        {% assign local = site.data[item.local_menu] %}
+
+        <li class="nb-global-item">
+
+          <!-- Global Menu Link -->
+          <a href="{{ item.url }}" class="nb-global-link" title="{{ item.tooltip }}">
+            {{ item.name }}
+          </a>
+
+          <!-- Mega Menu (only if local menu exists) -->
+          {% if local %}
+            <div class="nb-mega-menu">
+              <ul class="nb-local-menu">
+                {% for entry in local %}
+                  <li class="nb-local-item">
+                    <a href="{{ entry.url }}" title="{{ entry.tooltip }}">
+                      {{ entry.name }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+
+        </li>
+      {% endfor %}
+
+    </ul>
