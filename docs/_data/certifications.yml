@@ -1,3 +1,10 @@
+- name: Microsoft Certified:Power BI Data Analyst Associate
+  issuer: Microsoft
+  year: 2026
+  summary: Validates the ability to prepare, model, visualize, and analyze data using
+    Power BI, including building semantic models, designing intuitive reports, and
+    applying DAX to deliver accurate, actionable business insights across enterprise
+    analytics environments.
 - name: GH-900 GitHub Foundations
   issuer: Microsoft
   year: 2026
