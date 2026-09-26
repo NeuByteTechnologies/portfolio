@@ -28,7 +28,7 @@ jobs:
         run: |
           gh search issues --owner NeuByteTechnologies \
             --json number,title,body,labels,repository,createdAt,updatedAt,url \
-            --limit 2000 > all-issues.json
+            --limit 1000 > all-issues.json
 
       - name: Convert JSON to PSV
         run: |
