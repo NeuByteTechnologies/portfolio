@@ -35,10 +35,28 @@ jobs:
           jq -r '
             .[] |
             [
-              .repository,
+              (
+                .repository
+                | if type=="object"
+                  then .name
+                  else tostring
+                end
+              ),
               .number,
-              (.title | gsub("\n"; " ")),
-              (.body | gsub("\n"; " ") | gsub("\\\""; "\\\"\\\"")),
+              (
+                .title
+                | if type=="string"
+                  then gsub("\n"; " ")
+                  else tostring
+                end
+              ),
+              (
+                .body
+                | if type=="string"
+                  then gsub("\n"; " ") | gsub("\\\""; "\\\"\\\"")
+                  else tostring
+                end
+              ),
               (
                 .labels
                 | if type=="array"
@@ -54,8 +72,9 @@ jobs:
               .createdAt,
               .updatedAt,
               .url
-            ] |
-            join("|")
+            ]
+            | map(tostring)
+            | join("|")
           ' all-issues.json > all-issues.psv
 
       - name: Upload PSV artifact
