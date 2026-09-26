@@ -39,7 +39,18 @@ jobs:
               .number,
               (.title | gsub("\n"; " ")),
               (.body | gsub("\n"; " ") | gsub("\\\""; "\\\"\\\"")),
-              (.labels | if type=="array" then map(.name) | join(";") else "" end),
+              (
+                .labels
+                | if type=="array"
+                  then map(
+                    if type=="object" and has("name")
+                    then .name
+                    else tostring
+                    end
+                  ) | join(";")
+                  else tostring
+                end
+              ),
               .createdAt,
               .updatedAt,
               .url
