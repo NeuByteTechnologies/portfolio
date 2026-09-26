@@ -38,7 +38,7 @@ jobs:
               .repository,
               .number,
               (.title | gsub("\n"; " ")),
-              (.body | gsub("\n"; " ") | gsub("\""; "'\"'")),
+              (.body | gsub("\n"; " ") | gsub("\\\""; "\\\"\\\"")),
               (.labels | map(.name) | join(";")),
               .createdAt,
               .updatedAt,
