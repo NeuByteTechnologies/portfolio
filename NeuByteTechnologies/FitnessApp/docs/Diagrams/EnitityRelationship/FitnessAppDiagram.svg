@@ -8375,14 +8375,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="2"
-     inkscape:cx="407"
-     inkscape:cy="86.25"
+     inkscape:cx="407.25"
+     inkscape:cy="446.25"
      inkscape:window-width="2400"
      inkscape:window-height="1261"
-     inkscape:window-x="4791"
+     inkscape:window-x="2391"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1"
+     inkscape:current-layer="g3"
      showgrid="false"
      inkscape:document-units="in"
      showguides="true">
@@ -8413,7 +8413,8 @@
          style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          aria-label=" "
          transform="matrix(1.3333333,0,0,1.3333333,720.13333,766.17333)"
-         clip-path="url(#clipPath3)" />
+         clip-path="url(#clipPath3)"
+         inkscape:label="path2" />
     </g>
     <g
        id="g3">
@@ -21600,6 +21601,6 @@
        transform="matrix(3.7795276,0,0,3.7795276,-101.8647,-108.39997)"><tspan
          x="73.289581"
          y="47.360416"
-         id="tspan3">NeuByte Entity Relationship Diagram</tspan></text>
+         id="tspan4">NeuByte FitApp Entity Relationship Diagram</tspan></text>
   </g>
 </svg>
