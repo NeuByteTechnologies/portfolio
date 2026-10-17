@@ -1,2 +1,20 @@
 /vendor
 .bundle
+
+# Jekyll build artifacts
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/
+vendor/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor backups
+*~
+*.swp
+
+# Logs
+*.log
