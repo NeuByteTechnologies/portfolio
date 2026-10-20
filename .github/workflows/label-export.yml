@@ -1,10 +1,10 @@
-name: Export All NeuByte Labels (JSON)
+name: Export All NeuByte Labels (PSV)
 
 on:
-  workflow_dispatch:   # manual run only
+  workflow_dispatch: # manual run only
 
 permissions:
-  contents: read        # required for gh repo list
+  contents: read
 
 jobs:
   export-labels:
@@ -24,15 +24,14 @@ jobs:
             https://cli.github.com/packages stable main" \
             | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
           sudo apt update
-          sudo apt install gh -y
+          sudo apt install gh jq -y
 
       - name: Authenticate GitHub CLI
         run: |
           echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
 
-      - name: Export labels from all NeuByte repos
+      - name: Export labels from all NeuByte repos (JSON)
         run: |
-          # Dynamically discover all repos in the organization
           repos=$(gh repo list NeuByteTechnologies --json name --jq '.[].name')
 
           echo "[" > all-labels.json
@@ -40,25 +39,39 @@ jobs:
 
           for repo in $repos; do
             echo "Exporting labels for $repo..."
-
-            # Fetch labels via GitHub API
             labels=$(gh api repos/NeuByteTechnologies/$repo/labels)
 
-            # Add comma between repo blocks
             if [ "$first" = true ]; then
               first=false
             else
               echo "," >> all-labels.json
             fi
 
-            # Write repo block
             echo "{ \"repository\": \"$repo\", \"labels\": $labels }" >> all-labels.json
           done
 
           echo "]" >> all-labels.json
 
-      - name: Upload Labels Artifact
+      - name: Convert JSON to PSV (flattened)
+        run: |
+          jq -r '
+            .[] as $repo |
+            $repo.labels[]? |
+            [
+              $repo.repository,
+              .name,
+              .color,
+              (.description // ""),
+              (.archived // false),
+              (.archived_at // ""),
+              (.archived_by // "")
+            ]
+            | map(tostring)
+            | join("|")
+          ' all-labels.json > all-labels.psv
+
+      - name: Upload PSV artifact
         uses: actions/upload-artifact@v4
         with:
-          name: neubyte-labels-json
-          path: all-labels.json
+          name: neubyte-labels-psv
+          path: all-labels.psv
