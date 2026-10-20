@@ -1,0 +1,84 @@
+name: Export All NeuByte Milestones (PSV)
+
+on:
+  workflow_dispatch: # manual run only
+
+permissions:
+  contents: read
+
+jobs:
+  export-milestones:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install GitHub CLI
+        run: |
+          type -p curl >/dev/null || sudo apt install curl -y
+          curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg \
+            | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+          sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] \
+            https://cli.github.com/packages stable main" \
+            | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+          sudo apt update
+          sudo apt install gh jq -y
+
+      - name: Authenticate GitHub CLI
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
+      - name: Export milestones from all NeuByte repos (JSON)
+        run: |
+          # Dynamically discover all repos in the organization
+          repos=$(gh repo list NeuByteTechnologies --json name --jq '.[].name')
+
+          echo "[" > all-milestones.json
+          first=true
+
+          for repo in $repos; do
+            echo "Exporting milestones for $repo..."
+
+            # Fetch milestones via GitHub API
+            milestones=$(gh api repos/NeuByteTechnologies/$repo/milestones)
+
+            # Add comma between repo blocks
+            if [ "$first" = true ]; then
+              first=false
+            else
+              echo "," >> all-milestones.json
+            fi
+
+            # Write repo block
+            echo "{ \"repository\": \"$repo\", \"milestones\": $milestones }" >> all-milestones.json
+          done
+
+          echo "]" >> all-milestones.json
+
+      - name: Convert JSON to PSV (flattened)
+        run: |
+          jq -r '
+            .[] as $repo |
+            $repo.milestones[]? |
+            [
+              $repo.repository,
+              .title,
+              (.description // ""),
+              .state,
+              .open_issues,
+              .closed_issues,
+              (.due_on // ""),
+              (.created_at // ""),
+              (.updated_at // "")
+            ]
+            | map(tostring)
+            | join("|")
+          ' all-milestones.json > all-milestones.psv
+
+      - name: Upload PSV artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: neubyte-milestones-psv
+          path: all-milestones.psv
