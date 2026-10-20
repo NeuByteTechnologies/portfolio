@@ -1,5 +1,8 @@
 name: Export All NeuByte Labels (JSON)
 
+permissions:
+  pages: none
+
 on:
   workflow_dispatch:   # manual run
 
