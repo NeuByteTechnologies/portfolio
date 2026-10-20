@@ -5,7 +5,6 @@ on:
 
 permissions:
   contents: read        # required for gh repo list
-  metadata: read        # required for labels API
 
 jobs:
   export-labels:
