@@ -1,0 +1,88 @@
+name: Export All NeuByte Repo Metadata (PSV)
+
+on:
+  workflow_dispatch: # manual run only
+
+permissions:
+  contents: read
+
+jobs:
+  export-repo-metadata:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install GitHub CLI
+        run: |
+          type -p curl >/dev/null || sudo apt install curl -y
+          curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg \
+            | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+          sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] \
+            https://cli.github.com/packages stable main" \
+            | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+          sudo apt update
+          sudo apt install gh jq -y
+
+      - name: Authenticate GitHub CLI
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
+      - name: Export repo metadata (JSON)
+        run: |
+          repos=$(gh repo list NeuByteTechnologies --json name --jq '.[].name')
+
+          echo "[" > all-repos.json
+          first=true
+
+          for repo in $repos; do
+            echo "Exporting metadata for $repo..."
+            metadata=$(gh api repos/NeuByteTechnologies/$repo)
+
+            if [ "$first" = true ]; then
+              first=false
+            else
+              echo "," >> all-repos.json
+            fi
+
+            echo "$metadata" >> all-repos.json
+          done
+
+          echo "]" >> all-repos.json
+
+      - name: Convert JSON to PSV (flattened)
+        run: |
+          jq -r '
+            .[] |
+            [
+              .name,
+              (.description // ""),
+              .visibility,
+              .default_branch,
+              (.archived // false),
+              (.disabled // false),
+              .created_at,
+              .updated_at,
+              .pushed_at,
+              (.size // 0),
+              (.has_issues // false),
+              (.has_projects // false),
+              (.has_wiki // false),
+              (.has_pages // false),
+              (.forks_count // 0),
+              (.stargazers_count // 0),
+              (.watchers_count // 0),
+              (.open_issues_count // 0),
+              (.topics | join(";"))
+            ]
+            | map(tostring)
+            | join("|")
+          ' all-repos.json > all-repos.psv
+
+      - name: Upload PSV artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: neubyte-repo-metadata-psv
+          path: all-repos.psv
