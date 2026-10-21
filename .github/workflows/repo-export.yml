@@ -32,7 +32,7 @@ jobs:
 
       - name: Export repo metadata (JSON)
         run: |
-          repos=$(gh repo list NeuByteTechnologies --json name --jq '.[].name')
+          repos=$(gh repo list NeuByteTechnologies --visibility all --json name --jq '.[].name')
 
           echo "[" > all-repos.json
           first=true
