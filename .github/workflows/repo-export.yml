@@ -32,12 +32,11 @@ jobs:
 
       - name: Export repo metadata (JSON)
         run: |
-          repos=$(gh api orgs/NeuByteTechnologies/repos --paginate --jq '.[].name')
-
           echo "[" > all-repos.json
           first=true
 
-          for repo in $repos; do
+          # Correct repo discovery: one repo name per line
+          gh api orgs/NeuByteTechnologies/repos --paginate --jq '.[].name' | while read repo; do
             echo "Exporting metadata for $repo..."
             metadata=$(gh api repos/NeuByteTechnologies/$repo)
 
